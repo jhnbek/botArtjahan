@@ -1,0 +1,32 @@
+{
+  "manifest_id": "mi-valid-minimal",
+  "dataset_id": "synthetic-crypto-spot-valid",
+  "inventory_profile": "crypto_spot_24_7_utc_manifest",
+  "instrument_type": "crypto_spot",
+  "symbols": ["BTCUSDT"],
+  "timeframes": ["M15"],
+  "data_vendor": "synthetic_fixture",
+  "dataset_version": "fixture-v1",
+  "exported_at_utc": "2026-05-29T00:00:00Z",
+  "source_format": "jsonl",
+  "price_adjustment_policy": "exchange_raw_unadjusted",
+  "session_calendar_id": "crypto_24_7_utc",
+  "timezone_policy": "UTC",
+  "volume_unit": "base_asset",
+  "gap_policy": "report_and_quarantine",
+  "corporate_actions_policy": "null_not_applicable",
+  "futures_roll_policy": "null_not_applicable",
+  "license_or_source_notes": "synthetic fixture only",
+  "expected_file_count": 1,
+  "files": [
+    {
+      "relative_path": "bars/BTCUSDT_M15.jsonl",
+      "symbol": "BTCUSDT",
+      "timeframe": "M15",
+      "file_role": "bars",
+      "expected_rows": 100,
+      "expected_sha256": null,
+      "expected_size_bytes": null
+    }
+  ]
+}

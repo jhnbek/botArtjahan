@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  source-and-fixtures:
+    runs-on: windows-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Compile Python sources
+        run: python -m compileall -q knowledge_bot
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate synthetic safety fixtures
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $commands = @(
+            "validate-fixtures",
+            "validate-manifest-inventory-fixtures",
+            "validate-manifest-metadata-fixtures",
+            "validate-manifest-metadata-execution-fixtures",
+            "validate-public-seed-checksum-fixtures",
+            "validate-scn002-fixtures",
+            "scan-capabilities"
+          )
+          foreach ($command in $commands) {
+            python -m knowledge_bot.backtest_harness.cli $command | Out-Null
+            if ($LASTEXITCODE -ne 0) {
+              exit $LASTEXITCODE
+            }
+          }

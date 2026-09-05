@@ -1,0 +1,6 @@
+{
+  "case_id": "missing_required_file_entry_field",
+  "manifest_file": "manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["file_entry_missing_field:timeframe"]
+}

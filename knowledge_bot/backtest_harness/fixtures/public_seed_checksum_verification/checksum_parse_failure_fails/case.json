@@ -1,0 +1,17 @@
+{
+  "case_id": "checksum_parse_failure_fails",
+  "expected_valid": false,
+  "expected_error_codes": [
+    "checksum_parse_error"
+  ],
+  "expected_archive_checked_count": 0,
+  "expected_checksum_file_checked_count": 1,
+  "entries": [
+    {
+      "archive_file": "archives/archive.zip",
+      "checksum_file": "checksums/archive.zip.CHECKSUM",
+      "manifest_expected_sha256": "07271dfec42947d59cb281ec9961d5ac86c799b4c8bcd88822172668c8d373f4",
+      "expected_size_bytes": 42
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "manifest_url_rejected",
+  "manifest_file": "https://example.invalid/manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["manifest_input_url"]
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "url_and_wildcard_paths_rejected",
+  "manifest_file": "manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["file_entry_path_url", "file_entry_path_wildcard"]
+}

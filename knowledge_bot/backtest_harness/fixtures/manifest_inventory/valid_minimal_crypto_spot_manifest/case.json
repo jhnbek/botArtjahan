@@ -1,0 +1,6 @@
+{
+  "case_id": "valid_minimal_crypto_spot_manifest",
+  "manifest_file": "manifest.json",
+  "expected_valid": true,
+  "expected_error_codes": []
+}

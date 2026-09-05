@@ -1,0 +1,6 @@
+{
+  "case_id": "malformed_json_manifest_rejected",
+  "manifest_file": "manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["manifest_parse_error"]
+}

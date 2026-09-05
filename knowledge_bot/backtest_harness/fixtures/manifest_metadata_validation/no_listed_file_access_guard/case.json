@@ -1,0 +1,9 @@
+{
+  "case_id": "no_listed_file_access_guard",
+  "manifest_file": "manifest.json",
+  "expected_valid": true,
+  "expected_error_codes": [],
+  "expected_listed_market_file_open_attempt_count": 0,
+  "expected_listed_file_hash_attempt_count": 0,
+  "expected_listed_file_size_probe_attempt_count": 0
+}

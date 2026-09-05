@@ -1,0 +1,81 @@
+{
+  "case_id": "valid_reviewed_seed_passes",
+  "expected_valid": true,
+  "expected_error_codes": [],
+  "expected_archive_checked_count": 12,
+  "expected_checksum_file_checked_count": 12,
+  "entries": [
+    {
+      "archive_file": "archives/BTCUSDT-1h-2024-01.zip",
+      "checksum_file": "checksums/BTCUSDT-1h-2024-01.zip.CHECKSUM",
+      "manifest_expected_sha256": "7dedeae04cb5f3f56466bfb6eaad509e5bf63832f0eb26ce353539108c78bd0e",
+      "expected_size_bytes": 46
+    },
+    {
+      "archive_file": "archives/BTCUSDT-1h-2024-02.zip",
+      "checksum_file": "checksums/BTCUSDT-1h-2024-02.zip.CHECKSUM",
+      "manifest_expected_sha256": "b98143f3c58afa2bfbe75033cf088d05334a416f294b522e416fe8d193f37531",
+      "expected_size_bytes": 46
+    },
+    {
+      "archive_file": "archives/BTCUSDT-1h-2024-03.zip",
+      "checksum_file": "checksums/BTCUSDT-1h-2024-03.zip.CHECKSUM",
+      "manifest_expected_sha256": "a351333e87935c566d9750c4629d98d8a6de27615d9ba5c1aa413ff164b9ca15",
+      "expected_size_bytes": 46
+    },
+    {
+      "archive_file": "archives/BTCUSDT-15m-2024-01.zip",
+      "checksum_file": "checksums/BTCUSDT-15m-2024-01.zip.CHECKSUM",
+      "manifest_expected_sha256": "dbcf88b56038c5cd0b679f98a897b09b11ab808cad778d749605fb152c7bd2e5",
+      "expected_size_bytes": 47
+    },
+    {
+      "archive_file": "archives/BTCUSDT-15m-2024-02.zip",
+      "checksum_file": "checksums/BTCUSDT-15m-2024-02.zip.CHECKSUM",
+      "manifest_expected_sha256": "94ca8023a7aad342471d8a47cf4d4ee4d1ee4591c0df0272ce54228600a5daf7",
+      "expected_size_bytes": 47
+    },
+    {
+      "archive_file": "archives/BTCUSDT-15m-2024-03.zip",
+      "checksum_file": "checksums/BTCUSDT-15m-2024-03.zip.CHECKSUM",
+      "manifest_expected_sha256": "ac8aa9846420f7f958110c8ff0a4690ef6bacd0e5d2272fdf613ccc1ac903c10",
+      "expected_size_bytes": 47
+    },
+    {
+      "archive_file": "archives/ETHUSDT-1h-2024-01.zip",
+      "checksum_file": "checksums/ETHUSDT-1h-2024-01.zip.CHECKSUM",
+      "manifest_expected_sha256": "7bc659c1fdf45c4001761d62e2cf4bfdc91b7892f495dc8ff0f218d48aaa3d7e",
+      "expected_size_bytes": 46
+    },
+    {
+      "archive_file": "archives/ETHUSDT-1h-2024-02.zip",
+      "checksum_file": "checksums/ETHUSDT-1h-2024-02.zip.CHECKSUM",
+      "manifest_expected_sha256": "5dd107e0c3080ac9b50caddf2d450f968a2f4fcbbff7638495bd4d1e7d190968",
+      "expected_size_bytes": 46
+    },
+    {
+      "archive_file": "archives/ETHUSDT-1h-2024-03.zip",
+      "checksum_file": "checksums/ETHUSDT-1h-2024-03.zip.CHECKSUM",
+      "manifest_expected_sha256": "d1ee5bef05c06319681b3c11640eb49480900c74c78846aee1e244e50fb449c0",
+      "expected_size_bytes": 46
+    },
+    {
+      "archive_file": "archives/ETHUSDT-15m-2024-01.zip",
+      "checksum_file": "checksums/ETHUSDT-15m-2024-01.zip.CHECKSUM",
+      "manifest_expected_sha256": "165444cd8c9f88887523ec3ab2c768dfd7ccaa2b7b440bb787ebcc60d2db801d",
+      "expected_size_bytes": 47
+    },
+    {
+      "archive_file": "archives/ETHUSDT-15m-2024-02.zip",
+      "checksum_file": "checksums/ETHUSDT-15m-2024-02.zip.CHECKSUM",
+      "manifest_expected_sha256": "4dabd88d2db9e780c2caf1a9c7bd530ad6f460718b35c91f3d6cdbc1fc888079",
+      "expected_size_bytes": 47
+    },
+    {
+      "archive_file": "archives/ETHUSDT-15m-2024-03.zip",
+      "checksum_file": "checksums/ETHUSDT-15m-2024-03.zip.CHECKSUM",
+      "manifest_expected_sha256": "1cd7c7fb81d4855281f391fbf27f8fd6c11f03cb48cbfd876ac63d03e3cb7e9e",
+      "expected_size_bytes": 47
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "case_id": "valid_crypto_spot_m15",
+  "expected_valid": true,
+  "expected_error_codes": [],
+  "instrument_type": "crypto_spot",
+  "timeframe": "M15",
+  "price_adjustment_policy": "raw_unadjusted_fixture",
+  "session_calendar_id": "crypto_24_7_utc",
+  "data_vendor": "synthetic_fixture",
+  "dataset_version": "fixture-v1",
+  "source_path": "bars.jsonl",
+  "row_count": 2,
+  "file_sha256": "f34b3a08726c4ece4fdfbafcdf3fc7d0817b8dfdde9c79a05200959c51bccac1",
+  "decision_timestamp_utc": "2026-01-01T00:30:00+00:00"
+}

@@ -1,0 +1,18 @@
+* text=auto
+
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+
+# These are deliberately tiny synthetic byte fixtures, not real ZIP archives.
+knowledge_bot/backtest_harness/fixtures/public_seed_checksum_verification/**/*.zip binary
+knowledge_bot/backtest_harness/fixtures/public_seed_checksum_verification/**/*.CHECKSUM text eol=lf

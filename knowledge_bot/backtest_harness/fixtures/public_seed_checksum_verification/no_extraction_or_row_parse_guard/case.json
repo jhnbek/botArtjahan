@@ -1,0 +1,15 @@
+{
+  "case_id": "no_extraction_or_row_parse_guard",
+  "expected_valid": true,
+  "expected_error_codes": [],
+  "expected_archive_checked_count": 1,
+  "expected_checksum_file_checked_count": 1,
+  "entries": [
+    {
+      "archive_file": "archives/archive.zip",
+      "checksum_file": "checksums/archive.zip.CHECKSUM",
+      "manifest_expected_sha256": "07271dfec42947d59cb281ec9961d5ac86c799b4c8bcd88822172668c8d373f4",
+      "expected_size_bytes": 42
+    }
+  ]
+}

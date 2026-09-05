@@ -1,0 +1,6 @@
+{
+  "case_id": "glob_input_rejected",
+  "manifest_file": "manifests/*.json",
+  "expected_valid": false,
+  "expected_error_codes": ["manifest_input_wildcard"]
+}

@@ -1,0 +1,6 @@
+{
+  "case_id": "expected_file_count_mismatch_rejected",
+  "manifest_file": "manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["expected_file_count_mismatch"]
+}
