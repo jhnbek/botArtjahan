@@ -1,0 +1,43 @@
+# MM\-032\-032
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Главные причины потерь — отсутствие плана, неиспользование стопов, слишком большой риск и психологическая неготовность принять стоп\. Если риск больше морально допустимого, после стопа начинается желание отбиться, появляются сделки, которых нет, и человек нарушает правила\.
+
+## Цитата
+
+самая основная причина\.\.\. неиспользование стопов или большие риски
+
+## Интерпретация
+
+Советник должен ограничивать риск не только балансом, но и заранее заданной психологически приемлемой суммой потери\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 02:06:46.460](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-81bac2d4a51c15dd3481008f94b6905370dd3252cc7edfeeff36584955824702)
+- [legacy\_source: 02:07:12.720](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-2aa17d756846c16c15e09ed8a2246bc5ca6481ca8015604fc5c9028b868c152c)
+- [legacy\_source: 02:09:27.720](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-da48d96d6d3c5c682c080ceb735e67deff175537f013e5ce46b6b2ffec1e670c)
+- [legacy\_source: 02:06:24.610](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-4274a9b5f2ea875ad2eef432f63045129cef27ac6687880bfc1855ec8d3ca69f)
+- [legacy\_source: 02:05:10.320](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-31a5c186a5b4359b8d776ea5466caeee235e3a98fd4f3840d836d6c1005c5b88)
+- [legacy\_source: 02:06:05.230](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-1259a6e70e49459c5eadd3136ca219db9e7c9b1c7951adf16525c17642cd2609)
+- [legacy\_source: 02:07:21.980](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-448c1b9333ea2d6daffac77286d5d07df10e727c051fec2bc96b341a37135d6a)
+- [legacy\_source: 02:07:51.790](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-229a6a87e5dd766a1ee24fb1c3a109039c1441b459de0c82c512878b7f5b9147)
+- [legacy\_source: 02:05:36.690](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-7d03fa1bf7fbd9193a2a79aebc6db24e3ad22f5652e698e7163be71d8405cb73)
+- [legacy\_source: 02:08:59.410](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-7cab72e4c0e5a16718a5604125eea9bb01ae19d2ec5073450148434b1b3cd7dc)
+- [legacy\_source: 02:04:39.340](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-263288534ad96efbc6accf2aa41c9a7b5d6ca5cf2def1fafdd5c84965ca3b780)
+- [legacy\_source: 02:08:30.990](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-9f09653e24b3f372ace73b6fb24a0fa4cb857da22078bdc7456e4b65cb87cf42)
+- [legacy\_source\_frame\_reference: 02:05:06.688](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/frame-0006.md#e-390e1304a11fa2c8219f74a231b0a81551775964a91c8211fe610de2c3ccdce9)
+  [Открыть кадр](../../../blobs/32/320f5957c7e0a4f8eeec52efb3647cf28d60e086cacbe94763096a14be6a1cfd)
+- [legacy\_source: 02:08:15.280](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-24cd7f163da0d5a3adc01489326dd9ee26c193affaef5e9c1d42de4e20474206)
+- [legacy\_source: 02:05:06.220](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0003.md#e-bdd2e34c0864c8f2285ef91054f46397f231fd3bad3cb9848147a303b7cb4570)
+  [Открыть кадр](../../../blobs/32/320f5957c7e0a4f8eeec52efb3647cf28d60e086cacbe94763096a14be6a1cfd)
+
+## Сохранённые связи
+
+- derived\_from / observed\_multimodal\_claim: [MM\-032\-032](../d7/d78c2d3a4d4acf3f950d7ff16a90e4850010cc50563adc6775fd23f7f34b0019.md)

@@ -1,0 +1,36 @@
+# MM\-010\-020
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+В распиле уровня ориентиром силы является закрытие дня: где закрывается бар, та сторона в моменте сильнее, но входить до завершения борьбы нельзя\.
+
+## Цитата
+
+Где закрывается бар, тот и сильнее\.\.\. когда мы видим, что уровень пилится, мы понимаем, что там борьба\.
+
+## Интерпретация
+
+Close помогает читать pressure, но не отменяет запрет торговать active saw\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:39:40.700](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-30db78a91766d8fc93c22872f1dac00762698d0638bc3ea734f75cba179ab9fd)
+  [Открыть кадр](../../../blobs/3f/3fd3f17cd0e7bf8962cc060ef972fdefadc6baf07c16ee108ed349e34b1cbcf0)
+- [legacy\_source: 00:39:12.330](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-b434a1991230cc7445350a61a54f9d366c834e6c00a8f06d417d5c0db4dac1fd)
+- [legacy\_source: 00:40:53.420](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-1161517898df10b09856d909b02b1938c4c8e3655f582366626b4c065ae1986a)
+- [legacy\_source: 00:40:23.560](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-de0109d05c475741d401e1dbb3318a9aaa2cb04ce7858acb84ab952463a68218)
+- [legacy\_source\_frame\_reference: 00:39:49.250](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/frame-0002.md#e-f98ff62944f8b5d6bd25c5feca194c30db21bbcc12d115a30b996296623d4a82)
+  [Открыть кадр](../../../blobs/3f/3fd3f17cd0e7bf8962cc060ef972fdefadc6baf07c16ee108ed349e34b1cbcf0)
+- [legacy\_source: 00:39:54.230](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-2fed0a6d86421f2f03ec5c1bd8eefe439298613e90933ed66e889b258d881801)
+- [legacy\_source\_frame\_reference: 00:43:46.625](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/frame-0003.md#e-bd6bc812f876c8b0652964bdcc865431b743c723ee3db603682fccf3f92a3d93)
+  [Открыть кадр](../../../blobs/fa/fa9250ce524ab5d04afe164ae6144372b289c98cbecb04f92582ca2ced9d8d8b)
+
+## Сохранённые связи
+
+- derived\_from / observed\_multimodal\_claim: [MM\-010\-020](../54/5402e93eaff035dcfe89d64bed4af41829af0cd7700a27a2c75888d32af4704f.md)

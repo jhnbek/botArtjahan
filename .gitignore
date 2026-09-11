@@ -1,5 +1,5 @@
-# Only reviewed source, documentation and synthetic tests belong in this repository.
-# Private datasets, exports, logs, credentials and generated files stay local.
+# Reviewed code and the approved public knowledge snapshot are allowed explicitly.
+# Credentials, personal working files and other datasets remain excluded.
 *
 !/.gitignore
 !/.gitattributes
@@ -17,3 +17,13 @@
 !/.github/
 !/.github/workflows/
 !/.github/workflows/ci.yml
+!/knowledge/
+!/knowledge/README.md
+!/knowledge/manifest.json
+!/knowledge/packed-manifest.json
+!/knowledge/knowledge.sqlite.gz
+!/knowledge/blobs/
+!/knowledge/blobs/*/
+!/knowledge/blobs/*/*
+!/knowledge/catalog/
+!/knowledge/catalog/**

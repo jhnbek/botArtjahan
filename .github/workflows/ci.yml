@@ -40,3 +40,7 @@ jobs:
 
       - name: Run synthetic tests
         run: python -m unittest discover -s tests -p "test_knowledge_core_*.py" -v
+
+      - name: Restore and validate the published knowledge snapshot
+        if: runner.os == 'Linux'
+        run: python -m knowledge_core restore-published knowledge "${{ runner.temp }}/lecture-knowledge"

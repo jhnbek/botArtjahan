@@ -26,7 +26,7 @@ def main(argv=None):
     show.add_argument("identifier")
     show.add_argument("--namespace")
     show.add_argument("--run-id", help="Inspect a retained historical import")
-    for name in ("export", "restore"):
+    for name in ("export", "restore", "restore-published"):
         command = commands.add_parser(name, help="Verified, lossless local " + name)
         command.add_argument("source")
         command.add_argument("destination")
@@ -47,6 +47,9 @@ def main(argv=None):
         elif args.command == "export":
             from .transfer import export_core
             result = export_core(args.source, args.destination)
+        elif args.command == "restore-published":
+            from .published import restore_published
+            result = restore_published(args.source, args.destination)
         else:
             from .transfer import restore_core
             result = restore_core(args.source, args.destination)

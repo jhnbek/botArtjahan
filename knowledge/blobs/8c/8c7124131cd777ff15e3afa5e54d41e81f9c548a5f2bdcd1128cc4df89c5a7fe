@@ -1,0 +1,1450 @@
+{
+  "generated_at": "2026-05-28T01:32:01.170415+00:00",
+  "engine": "easyocr",
+  "languages": [
+    "ru",
+    "en"
+  ],
+  "min_conf": 0.3,
+  "max_dimension": 960,
+  "repair_version": "ocr_unicode_path_repair_v1",
+  "frames": [
+    {
+      "path": "frames/frame_00001.jpg",
+      "time": 0.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00002.jpg",
+      "time": 60.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00003.jpg",
+      "time": 120.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00004.jpg",
+      "time": 180.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00005.jpg",
+      "time": 240.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00006.jpg",
+      "time": 300.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00009.jpg",
+      "time": 457.133,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00010.jpg",
+      "time": 517.133,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00011.jpg",
+      "time": 577.133,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00013.jpg",
+      "time": 700.616,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00014.jpg",
+      "time": 731.816,
+      "text": "1\nш\n|1",
+      "lines": [
+        {
+          "text": "1",
+          "conf": 0.69,
+          "bbox": [
+            [
+              58.666666666666664,
+              48.0
+            ],
+            [
+              90.66666666666666,
+              48.0
+            ],
+            [
+              90.66666666666666,
+              56.0
+            ],
+            [
+              58.666666666666664,
+              56.0
+            ]
+          ]
+        },
+        {
+          "text": "ш",
+          "conf": 0.886,
+          "bbox": [
+            [
+              480.0,
+              453.3333333333333
+            ],
+            [
+              533.3333333333333,
+              453.3333333333333
+            ],
+            [
+              533.3333333333333,
+              464.0
+            ],
+            [
+              480.0,
+              464.0
+            ]
+          ]
+        },
+        {
+          "text": "|1",
+          "conf": 0.349,
+          "bbox": [
+            [
+              964.0,
+              676.0
+            ],
+            [
+              1044.0,
+              676.0
+            ],
+            [
+              1044.0,
+              694.6666666666666
+            ],
+            [
+              964.0,
+              694.6666666666666
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00015.jpg",
+      "time": 796.833,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00016.jpg",
+      "time": 862.017,
+      "text": "асм;\ntapaitan\nWak\n8\n#l1'\nH\n]\nJak,\n[++141+1*1+г1",
+      "lines": [
+        {
+          "text": "асм;",
+          "conf": 0.447,
+          "bbox": [
+            [
+              32.0,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              37.33333333333333
+            ],
+            [
+              32.0,
+              37.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "tapaitan",
+          "conf": 0.335,
+          "bbox": [
+            [
+              96.0,
+              45.33333333333333
+            ],
+            [
+              145.33333333333331,
+              45.33333333333333
+            ],
+            [
+              145.33333333333331,
+              61.33333333333333
+            ],
+            [
+              96.0,
+              61.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "Wak",
+          "conf": 0.833,
+          "bbox": [
+            [
+              448.0,
+              266.66666666666663
+            ],
+            [
+              480.0,
+              266.66666666666663
+            ],
+            [
+              480.0,
+              277.3333333333333
+            ],
+            [
+              448.0,
+              277.3333333333333
+            ]
+          ]
+        },
+        {
+          "text": "8",
+          "conf": 0.327,
+          "bbox": [
+            [
+              6.666666666666666,
+              289.3333333333333
+            ],
+            [
+              22.666666666666664,
+              289.3333333333333
+            ],
+            [
+              22.666666666666664,
+              326.66666666666663
+            ],
+            [
+              6.666666666666666,
+              326.66666666666663
+            ]
+          ]
+        },
+        {
+          "text": "#l1'",
+          "conf": 0.494,
+          "bbox": [
+            [
+              304.0,
+              266.66666666666663
+            ],
+            [
+              408.0,
+              266.66666666666663
+            ],
+            [
+              408.0,
+              336.0
+            ],
+            [
+              304.0,
+              336.0
+            ]
+          ]
+        },
+        {
+          "text": "H",
+          "conf": 0.78,
+          "bbox": [
+            [
+              277.3333333333333,
+              325.3333333333333
+            ],
+            [
+              320.0,
+              325.3333333333333
+            ],
+            [
+              320.0,
+              362.66666666666663
+            ],
+            [
+              277.3333333333333,
+              362.66666666666663
+            ]
+          ]
+        },
+        {
+          "text": "]",
+          "conf": 0.402,
+          "bbox": [
+            [
+              501.3333333333333,
+              392.0
+            ],
+            [
+              581.3333333333333,
+              392.0
+            ],
+            [
+              581.3333333333333,
+              400.0
+            ],
+            [
+              501.3333333333333,
+              400.0
+            ]
+          ]
+        },
+        {
+          "text": "Jak,",
+          "conf": 0.321,
+          "bbox": [
+            [
+              448.0,
+              432.0
+            ],
+            [
+              480.0,
+              432.0
+            ],
+            [
+              480.0,
+              442.66666666666663
+            ],
+            [
+              448.0,
+              442.66666666666663
+            ]
+          ]
+        },
+        {
+          "text": "[++141+1*1+г1",
+          "conf": 0.309,
+          "bbox": [
+            [
+              100.0,
+              406.66666666666663
+            ],
+            [
+              286.1925755884712,
+              365.8017713607709
+            ],
+            [
+              294.66666666666663,
+              406.66666666666663
+            ],
+            [
+              108.47409107819544,
+              446.19822863922906
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00017.jpg",
+      "time": 922.017,
+      "text": "un\n7ee",
+      "lines": [
+        {
+          "text": "un",
+          "conf": 0.473,
+          "bbox": [
+            [
+              32.0,
+              26.666666666666664
+            ],
+            [
+              74.66666666666666,
+              26.666666666666664
+            ],
+            [
+              74.66666666666666,
+              37.33333333333333
+            ],
+            [
+              32.0,
+              37.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "7ee",
+          "conf": 0.979,
+          "bbox": [
+            [
+              884.0,
+              678.6666666666666
+            ],
+            [
+              942.6666666666666,
+              678.6666666666666
+            ],
+            [
+              942.6666666666666,
+              696.0
+            ],
+            [
+              884.0,
+              696.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00018.jpg",
+      "time": 1001.217,
+      "text": "пn\n#\na",
+      "lines": [
+        {
+          "text": "пn",
+          "conf": 0.538,
+          "bbox": [
+            [
+              32.0,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              37.33333333333333
+            ],
+            [
+              32.0,
+              37.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "#",
+          "conf": 0.828,
+          "bbox": [
+            [
+              581.3333333333333,
+              298.66666666666663
+            ],
+            [
+              658.6666666666666,
+              298.66666666666663
+            ],
+            [
+              658.6666666666666,
+              373.3333333333333
+            ],
+            [
+              581.3333333333333,
+              373.3333333333333
+            ]
+          ]
+        },
+        {
+          "text": "a",
+          "conf": 0.627,
+          "bbox": [
+            [
+              1102.6666666666665,
+              678.6666666666666
+            ],
+            [
+              1161.3333333333333,
+              678.6666666666666
+            ],
+            [
+              1161.3333333333333,
+              694.6666666666666
+            ],
+            [
+              1102.6666666666665,
+              694.6666666666666
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00019.jpg",
+      "time": 1061.217,
+      "text": "пn",
+      "lines": [
+        {
+          "text": "пn",
+          "conf": 0.538,
+          "bbox": [
+            [
+              32.0,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              37.33333333333333
+            ],
+            [
+              32.0,
+              37.33333333333333
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00020.jpg",
+      "time": 1121.217,
+      "text": "пn\nIjt\na",
+      "lines": [
+        {
+          "text": "пn",
+          "conf": 0.538,
+          "bbox": [
+            [
+              32.0,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              26.666666666666664
+            ],
+            [
+              61.33333333333333,
+              37.33333333333333
+            ],
+            [
+              32.0,
+              37.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "Ijt",
+          "conf": 0.648,
+          "bbox": [
+            [
+              365.3333333333333,
+              362.66666666666663
+            ],
+            [
+              432.0,
+              362.66666666666663
+            ],
+            [
+              432.0,
+              429.3333333333333
+            ],
+            [
+              365.3333333333333,
+              429.3333333333333
+            ]
+          ]
+        },
+        {
+          "text": "a",
+          "conf": 0.514,
+          "bbox": [
+            [
+              1200.0953644121528,
+              636.8381457648611
+            ],
+            [
+              1226.4825789535437,
+              632.6573064979154
+            ],
+            [
+              1227.904635587847,
+              643.1618542351388
+            ],
+            [
+              1201.517421046456,
+              647.3426935020846
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00021.jpg",
+      "time": 1181.217,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00023.jpg",
+      "time": 1296.517,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00024.jpg",
+      "time": 1356.517,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00026.jpg",
+      "time": 1476.517,
+      "text": "7ee",
+      "lines": [
+        {
+          "text": "7ee",
+          "conf": 0.978,
+          "bbox": [
+            [
+              881.3333333333333,
+              678.6666666666666
+            ],
+            [
+              942.6666666666666,
+              678.6666666666666
+            ],
+            [
+              942.6666666666666,
+              696.0
+            ],
+            [
+              881.3333333333333,
+              696.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00027.jpg",
+      "time": 1517.467,
+      "text": "a",
+      "lines": [
+        {
+          "text": "a",
+          "conf": 0.627,
+          "bbox": [
+            [
+              1102.6666666666665,
+              678.6666666666666
+            ],
+            [
+              1161.3333333333333,
+              678.6666666666666
+            ],
+            [
+              1161.3333333333333,
+              694.6666666666666
+            ],
+            [
+              1102.6666666666665,
+              694.6666666666666
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00028.jpg",
+      "time": 1577.467,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00029.jpg",
+      "time": 1637.467,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00030.jpg",
+      "time": 1697.467,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00031.jpg",
+      "time": 1757.467,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00033.jpg",
+      "time": 1886.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00035.jpg",
+      "time": 2006.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00036.jpg",
+      "time": 2066.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00037.jpg",
+      "time": 2126.0,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00038.jpg",
+      "time": 2186.0,
+      "text": "ве",
+      "lines": [
+        {
+          "text": "ве",
+          "conf": 0.427,
+          "bbox": [
+            [
+              902.6666666666666,
+              678.6666666666666
+            ],
+            [
+              942.6666666666666,
+              678.6666666666666
+            ],
+            [
+              942.6666666666666,
+              694.6666666666666
+            ],
+            [
+              902.6666666666666,
+              694.6666666666666
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00040.jpg",
+      "time": 2332.567,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00043.jpg",
+      "time": 2512.567,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00044.jpg",
+      "time": 2572.567,
+      "text": "a",
+      "lines": [
+        {
+          "text": "a",
+          "conf": 0.589,
+          "bbox": [
+            [
+              1102.6666666666665,
+              678.6666666666666
+            ],
+            [
+              1161.3333333333333,
+              678.6666666666666
+            ],
+            [
+              1161.3333333333333,
+              694.6666666666666
+            ],
+            [
+              1102.6666666666665,
+              694.6666666666666
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00045.jpg",
+      "time": 2631.9,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00046.jpg",
+      "time": 2691.9,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00047.jpg",
+      "time": 2734.25,
+      "text": "\"Iн4",
+      "lines": [
+        {
+          "text": "\"Iн4",
+          "conf": 0.368,
+          "bbox": [
+            [
+              347.9438389874929,
+              310.4378596120712
+            ],
+            [
+              468.323520916159,
+              275.67647908384095
+            ],
+            [
+              485.38949434584043,
+              346.89547372126214
+            ],
+            [
+              363.67647908384095,
+              380.323520916159
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00048.jpg",
+      "time": 2808.467,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00049.jpg",
+      "time": 2868.467,
+      "text": "{iШ",
+      "lines": [
+        {
+          "text": "{iШ",
+          "conf": 0.316,
+          "bbox": [
+            [
+              340.0695670389813,
+              368.1518915264899
+            ],
+            [
+              434.4853799830222,
+              386.62128329092826
+            ],
+            [
+              423.93043296101865,
+              433.1814418068434
+            ],
+            [
+              329.5146200169777,
+              414.71205004240505
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00051.jpg",
+      "time": 3016.3,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00052.jpg",
+      "time": 3076.3,
+      "text": "в 0",
+      "lines": [
+        {
+          "text": "в 0",
+          "conf": 0.969,
+          "bbox": [
+            [
+              1241.3333333333333,
+              676.0
+            ],
+            [
+              1276.0,
+              676.0
+            ],
+            [
+              1276.0,
+              692.0
+            ],
+            [
+              1241.3333333333333,
+              692.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00053.jpg",
+      "time": 3136.3,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00054.jpg",
+      "time": 3214.95,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00055.jpg",
+      "time": 3274.95,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00057.jpg",
+      "time": 3385.017,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00058.jpg",
+      "time": 3450.383,
+      "text": "#Бl = :",
+      "lines": [
+        {
+          "text": "#Бl = :",
+          "conf": 0.383,
+          "bbox": [
+            [
+              296.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              61.33333333333333
+            ],
+            [
+              296.0,
+              61.33333333333333
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00059.jpg",
+      "time": 3477.667,
+      "text": "ее\n7 П}N",
+      "lines": [
+        {
+          "text": "ее",
+          "conf": 0.494,
+          "bbox": [
+            [
+              902.6666666666666,
+              678.6666666666666
+            ],
+            [
+              940.0,
+              678.6666666666666
+            ],
+            [
+              940.0,
+              694.6666666666666
+            ],
+            [
+              902.6666666666666,
+              694.6666666666666
+            ]
+          ]
+        },
+        {
+          "text": "7 П}N",
+          "conf": 0.348,
+          "bbox": [
+            [
+              964.0,
+              676.0
+            ],
+            [
+              1041.3333333333333,
+              676.0
+            ],
+            [
+              1041.3333333333333,
+              696.0
+            ],
+            [
+              964.0,
+              696.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00060.jpg",
+      "time": 3566.45,
+      "text": "#Бl = :\nHГ",
+      "lines": [
+        {
+          "text": "#Бl = :",
+          "conf": 0.364,
+          "bbox": [
+            [
+              296.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              61.33333333333333
+            ],
+            [
+              296.0,
+              61.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "HГ",
+          "conf": 0.315,
+          "bbox": [
+            [
+              13.333333333333332,
+              418.66666666666663
+            ],
+            [
+              48.0,
+              418.66666666666663
+            ],
+            [
+              48.0,
+              453.3333333333333
+            ],
+            [
+              13.333333333333332,
+              453.3333333333333
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00061.jpg",
+      "time": 3655.717,
+      "text": "7 ПНН",
+      "lines": [
+        {
+          "text": "7 ПНН",
+          "conf": 0.359,
+          "bbox": [
+            [
+              964.0,
+              676.0
+            ],
+            [
+              1044.0,
+              676.0
+            ],
+            [
+              1044.0,
+              696.0
+            ],
+            [
+              964.0,
+              696.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00062.jpg",
+      "time": 3740.25,
+      "text": "#Бl = :\n@",
+      "lines": [
+        {
+          "text": "#Бl = :",
+          "conf": 0.383,
+          "bbox": [
+            [
+              296.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              61.33333333333333
+            ],
+            [
+              296.0,
+              61.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "@",
+          "conf": 0.605,
+          "bbox": [
+            [
+              585.3333333333333,
+              33.33333333333333
+            ],
+            [
+              614.6666666666666,
+              33.33333333333333
+            ],
+            [
+              614.6666666666666,
+              60.0
+            ],
+            [
+              585.3333333333333,
+              60.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00063.jpg",
+      "time": 3800.25,
+      "text": "#Бl =",
+      "lines": [
+        {
+          "text": "#Бl =",
+          "conf": 0.375,
+          "bbox": [
+            [
+              296.0,
+              29.333333333333332
+            ],
+            [
+              392.0,
+              29.333333333333332
+            ],
+            [
+              392.0,
+              61.33333333333333
+            ],
+            [
+              296.0,
+              61.33333333333333
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00064.jpg",
+      "time": 3854.5,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00065.jpg",
+      "time": 3914.5,
+      "text": "#Бl = :\n₽",
+      "lines": [
+        {
+          "text": "#Бl = :",
+          "conf": 0.383,
+          "bbox": [
+            [
+              296.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              61.33333333333333
+            ],
+            [
+              296.0,
+              61.33333333333333
+            ]
+          ]
+        },
+        {
+          "text": "₽",
+          "conf": 0.382,
+          "bbox": [
+            [
+              34.666666666666664,
+              125.33333333333333
+            ],
+            [
+              229.33333333333331,
+              125.33333333333333
+            ],
+            [
+              229.33333333333331,
+              136.0
+            ],
+            [
+              34.666666666666664,
+              136.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00066.jpg",
+      "time": 3959.417,
+      "text": "#Бl = :",
+      "lines": [
+        {
+          "text": "#Бl = :",
+          "conf": 0.383,
+          "bbox": [
+            [
+              296.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              29.333333333333332
+            ],
+            [
+              432.0,
+              61.33333333333333
+            ],
+            [
+              296.0,
+              61.33333333333333
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00067.jpg",
+      "time": 4034.033,
+      "text": "7 П}Н",
+      "lines": [
+        {
+          "text": "7 П}Н",
+          "conf": 0.531,
+          "bbox": [
+            [
+              964.0,
+              676.0
+            ],
+            [
+              1044.0,
+              676.0
+            ],
+            [
+              1044.0,
+              696.0
+            ],
+            [
+              964.0,
+              696.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00068.jpg",
+      "time": 4094.033,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00070.jpg",
+      "time": 4214.033,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00073.jpg",
+      "time": 4394.033,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00074.jpg",
+      "time": 4454.033,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00077.jpg",
+      "time": 4634.033,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00078.jpg",
+      "time": 4694.033,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00079.jpg",
+      "time": 4754.033,
+      "text": "30 /",
+      "lines": [
+        {
+          "text": "30 /",
+          "conf": 0.887,
+          "bbox": [
+            [
+              384.0,
+              333.3333333333333
+            ],
+            [
+              448.0,
+              333.3333333333333
+            ],
+            [
+              448.0,
+              376.0
+            ],
+            [
+              384.0,
+              376.0
+            ]
+          ]
+        }
+      ],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00081.jpg",
+      "time": 4889.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00082.jpg",
+      "time": 4949.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00083.jpg",
+      "time": 5009.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00084.jpg",
+      "time": 5069.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00085.jpg",
+      "time": 5129.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00086.jpg",
+      "time": 5189.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00088.jpg",
+      "time": 5309.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    },
+    {
+      "path": "frames/frame_00089.jpg",
+      "time": 5369.066,
+      "text": "",
+      "lines": [],
+      "repair_version": "ocr_unicode_path_repair_v1"
+    }
+  ]
+}

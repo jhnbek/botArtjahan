@@ -1,0 +1,39 @@
+# MM\-026\-019
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Нет фиксированного правила, сколько дней ждать после паранормального бара; решение строится по последнему дневному закрытию, близости к уровню, отсутствию реакции на ЛП и появлению поджатия\.
+
+## Цитата
+
+правил нет, надо ждать три дня\.\.\. Такого этого всего нет\. Есть просто график
+
+## Интерпретация
+
+Модель должна оценивать новое закрытие каждый день, а не использовать жесткий таймер ожидания\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:28:54.220](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/source_unit-0001.md#e-a01e58e0c570b9d8998b3f4f05b067edb84be9b76adf034ab7a354ad0a542390)
+- [legacy\_source: 00:27:51.680](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/source_unit-0001.md#e-545d7e197b12ae9274fe3de8659e4cd0bc1be0f653c16cc52447c35f517d86f8)
+- [legacy\_source: 00:28:34.070](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/source_unit-0001.md#e-10f5615e04bcc8dda7cc80ef2c14f17d42825d3fafb47b6d9a60201c55cb8b7b)
+  [Открыть кадр](../../../blobs/6d/6dedcebe5153109b3004e1fb277bbd2b35df31a0a50af2ae4d4d78b945812d43)
+- [legacy\_source: 00:29:22.560](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/source_unit-0001.md#e-0cc219f9c38a291434f47cae2f247977fe3ece38d29fd051c1112fbe3fb28926)
+  [Открыть кадр](../../../blobs/f2/f29bf9081642d4cd481d613c69c301354cd0e8a1621b77539158f1ae5fd62a38)
+- [legacy\_source\_frame\_reference: 00:28:42.219](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/frame-0002.md#e-5e4731e781233aaa4df8bb228898461e337bb8177cb15d6799abf09a32586437)
+  [Открыть кадр](../../../blobs/6d/6dedcebe5153109b3004e1fb277bbd2b35df31a0a50af2ae4d4d78b945812d43)
+- [legacy\_source: 00:27:23.130](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/source_unit-0001.md#e-d21fcb3f349d3df6037a9d4e7324beedbcfc6a6b083afe4a6340d7f01896a254)
+- [legacy\_source: 00:28:16.350](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/source_unit-0001.md#e-53c8942fb626dfd868b51ae61277bb028719359b31dd13db48f7aed5f69d3c5a)
+- [legacy\_source: 00:29:45.300](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/source_unit-0001.md#e-bd02f6619429d914a87c4397329950fa221bf7b73e79db940fe799b464531392)
+- [legacy\_source\_frame\_reference: 00:29:22.375](../../lectures/a596b3431b6f215ca6d00b62f7cc1c54fa2cca6621538e28e787fbb578eca455/frame-0002.md#e-0b99496714f9075c7d557a63df9d79b53265e37a0635a2eff8ab386661e13214)
+  [Открыть кадр](../../../blobs/f2/f29bf9081642d4cd481d613c69c301354cd0e8a1621b77539158f1ae5fd62a38)
+
+## Сохранённые связи
+
+- derived\_from / observed\_multimodal\_claim: [MM\-026\-019](../43/4395c7de0734acacfb14bf56cafa63c57650c736951c7cc39986844a43f84e99.md)

@@ -1,0 +1,40 @@
+# MM\-028\-075
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Интереснее торговать чистый и подтвержденный уровень, который видят участники рынка и за которым есть свободная зона, чем распиленный уровень паранормального бара с ближайшим препятствием\.
+
+## Цитата
+
+нам не интересен этот уровень, интересен вот этот чистый, который подтверждается\.\.\. чтобы участники рынка тоже его видели
+
+## Интерпретация
+
+Уровень должен оцениваться по чистоте, текущей реакции и запасу хода; распиленный уровень может оставаться на графике, но быть неторгуемым\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source\_frame\_reference: 01:59:31.906](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/frame-0009.md#e-4eced923567d3d220ba3fd5cfc2d946fa57a83d6bc8c726690027c3f587b096a)
+  [Открыть кадр](../../../blobs/16/16d86e538a13b764837a3d366bae0147142d80d7ed5a02e7f335f42c96be69ba)
+- [legacy\_source\_frame\_reference: 02:00:07.281](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/frame-0009.md#e-0b6d510fd5352d8cab8254de0cef06026524478f51000086ce39d1001ba1f28b)
+  [Открыть кадр](../../../blobs/8a/8aed7503c559bf736e5305f6cb128efe1142ae39f9b47f91f6bade686a3d1fcb)
+- [legacy\_source: 01:59:34.840](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-e8304ad6592892882668c5cab3cf1dc970e4b61a7b7b84c1b3b9aa2e2755a477)
+- [legacy\_source: 01:58:49.870](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-2f5c180ff0a2d60ac350b857a004f3a28411ffa2671814f1a71f9035018b9856)
+- [legacy\_source\_frame\_reference: 02:01:35.281](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/frame-0009.md#e-d19f1be1e49b6bb13dff2c865a60825a459cae5fc457eb8e32d24049ffdeff68)
+  [Открыть кадр](../../../blobs/44/44f7277ccd8a35000c891beb9b9962497e5c76d09a6ae5ceddf46e2f92cdba9e)
+- [legacy\_source: 01:58:20.360](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-9e4899f8e489291349033daf6eed2b5faa4f7dd20907457e5c6a1734fffbbdd2)
+- [legacy\_source: 01:59:13.670](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-3514434871bbcb28666992e80787b4fc09ad2bde1f0c5914fee575f955483f6a)
+  [Открыть кадр](../../../blobs/16/16d86e538a13b764837a3d366bae0147142d80d7ed5a02e7f335f42c96be69ba)
+- [legacy\_source: 02:00:07.440](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-acea50f8162ba62bc3e54c811f4ff26075d7a71461014fc975130b49b24bff85)
+  [Открыть кадр](../../../blobs/8a/8aed7503c559bf736e5305f6cb128efe1142ae39f9b47f91f6bade686a3d1fcb)
+- [legacy\_source: 01:58:02.840](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-b8fc55f6ae46ed89df80b5bcf959715cb312aad6822fe3b2aa3a863b3c16018b)
+- [legacy\_source: 02:00:37.180](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-7c0d6d89e6f0e0aefc2c3e433d23f9f6f5de539f91f8b2a162fd014c84bde196)
+- [legacy\_source: 02:00:50.690](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-ca83cbfcff54aa2148f47490abbbad6032a97cadc9902cb3532f580b04105400)
+- [legacy\_source: 02:01:18.060](../../lectures/677c1629eb4471f7434e314e0bbc8251e05bf7e59cb7841b951c2b24efa75666/source_unit-0003.md#e-15301698f238122d327add5871e13a06a82e6f5df31059da4a3456b71d0861bf)
+  [Открыть кадр](../../../blobs/44/44f7277ccd8a35000c891beb9b9962497e5c76d09a6ae5ceddf46e2f92cdba9e)

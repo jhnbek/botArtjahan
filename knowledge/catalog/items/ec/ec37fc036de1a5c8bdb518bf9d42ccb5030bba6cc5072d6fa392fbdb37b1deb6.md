@@ -1,0 +1,47 @@
+# MM\-032\-005
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Для пробоя автор выстраивает последовательность: сначала дневной уровень и дневной бар, затем H1 для понимания момента начала, затем M5 для точки входа\. Большие бары на H1 требуют ожидания, а мелкий подход, ближний ретест и закрытие вблизи уровня повышают вероятность следующего часа в пробой\.
+
+## Цитата
+
+изначально мы отталкиваемся от дневного таймфрейма, после этого переходим на часовой таймфрейм
+
+## Интерпретация
+
+Советник должен разделять уровневую идею, часовой тайминг и M5\-исполнение как разные стадии одного сценария\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:16:13.230](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-7e2393369d274c2db3ecb5386045d9169d6025e0608595c9b5746f1ee8651427)
+  [Открыть кадр](../../../blobs/21/21d757b5841bae891e8dd4795a6502e4322dfd5528ba5e2734f8b2f37b2b61a0)
+- [legacy\_source: 00:12:38.380](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-554d294b19b8dd0a440e04ff36b40adb1bc853531d6bbe2fc5a27102c1b2ccd8)
+  [Открыть кадр](../../../blobs/23/23af6f66cb421931001ce75ac82ab47891a82d5fdbc037dd24797a9255952834)
+- [legacy\_source\_frame\_reference: 00:16:24.875](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/frame-0001.md#e-a9f9c45bd0fa7c903069f48bfb86ecc5816a75cb809787be2be767402636e1d5)
+  [Открыть кадр](../../../blobs/21/21d757b5841bae891e8dd4795a6502e4322dfd5528ba5e2734f8b2f37b2b61a0)
+- [legacy\_source\_frame\_reference: 00:13:47.375](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/frame-0001.md#e-3bebbd130141a456e0029071a41d52766debc7ab33215ed70a73ef43db43a8de)
+  [Открыть кадр](../../../blobs/ec/ec5f3b64c2c130d7edfc6440b23e4d7fb5c89b5400245da117ca7572318528a0)
+- [legacy\_source: 00:15:22.060](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-866bb92468ef05189dc9dcf437fe1868dc0b3fb9f1738fb0604e6174d39239a1)
+  [Открыть кадр](../../../blobs/ed/ede40ddac8140e560ade2df38df6cfced7230614be416ae21b113e8c2762ee8d)
+- [legacy\_source: 00:13:09.070](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-36f3e5757a4f8f2c39e7a199de0364b1c56a83a00989e518be343a8aa5d26867)
+- [legacy\_source\_frame\_reference: 00:12:17.781](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/frame-0001.md#e-109fd8f244d58d2cf34005d9cacdb10a3f8e09b38b358a3703c3bccf4652ca35)
+  [Открыть кадр](../../../blobs/26/26eadf6d0d2b83b2387085c24ecaa4e94f291e665eb4924084506ae54fb3d6be)
+- [legacy\_source: 00:14:36.110](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-64b349cfaafc2c715d72f2571423385f03bb93e842a15c3b53eae2dde7b70c9b)
+- [legacy\_source: 00:12:04.870](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-a156cc9c605f63076294e1e43c1cb85c7919729c02165d5fc981d65ef5d46eff)
+  [Открыть кадр](../../../blobs/26/26eadf6d0d2b83b2387085c24ecaa4e94f291e665eb4924084506ae54fb3d6be)
+- [legacy\_source: 00:15:01.830](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-44a6083333cf2ab049b430b304eaf49b5640a7d906b4164849223546648904aa)
+- [legacy\_source\_frame\_reference: 00:12:47.375](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/frame-0001.md#e-36963adb54b1fe471407dba8e284a4f51a8a24ca1fa4f5e3bf261f24790232a5)
+  [Открыть кадр](../../../blobs/23/23af6f66cb421931001ce75ac82ab47891a82d5fdbc037dd24797a9255952834)
+- [legacy\_source: 00:15:51.210](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-9b2b800e982501133b2a8c582ea0499f08dff759151c606713a2f84bd207fe98)
+- [legacy\_source\_frame\_reference: 00:15:38.031](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/frame-0001.md#e-98c11500ede6cd4d8b76fa8c4b884d8ccd30d8e0db00a054c293dbc968a21004)
+  [Открыть кадр](../../../blobs/ed/ede40ddac8140e560ade2df38df6cfced7230614be416ae21b113e8c2762ee8d)
+- [legacy\_source: 00:14:06.670](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-4169f46582a891ae99dae2e2b49f31c22f885457dfb4a548146085e2938b6c94)
+- [legacy\_source: 00:13:40.030](../../lectures/2957f9fa4b08e0c45fa35c8d241786d73c269601a5ee8282df33b52a5d480063/source_unit-0001.md#e-973032eba0f70c286376d7e0e79f558af47ea3c5c1f8ac05658578e889c9cd36)
+  [Открыть кадр](../../../blobs/ec/ec5f3b64c2c130d7edfc6440b23e4d7fb5c89b5400245da117ca7572318528a0)
