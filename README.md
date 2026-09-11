@@ -1,151 +1,74 @@
-# botArtjahan / Trader Brain
+# knowledge_core
 
-Локальный исследовательский проект на Python: импорт видеолекций, построение
-поисковой базы знаний, RAG-интерфейсы, детекторы торговых сценариев,
-fixture-first проверка бэктест-контрактов и desktop UI.
+Локальное ядро базы знаний на SQLite для извлечённых материалов лекций:
+транскриптов, кадров, OCR, утверждений, правил и понятий. Оно сохраняет
+происхождение записей, историю изменений и решения проверяющих, предоставляет
+текстовый поиск, проверку целостности, экспорт и восстановление.
 
-> Проект предназначен для исследований и обучения. Это не финансовый совет и
-> не готовая торговая система. Автоматическое исполнение сделок в опубликованном
-> составе отсутствует.
+Нужен **Python 3.12** со стандартным модулем `sqlite3` и поддержкой **FTS5**.
+Сторонние пакеты, установка через `pip`, файл `.env`, API-ключи, сеть и исходные
+видео для работы не требуются. Команды выполняются из корня репозитория.
 
-## Что находится в репозитории
+Основные файлы:
 
-- `knowledge_bot/` — исходный код пайплайна, поиска, интерфейсов и детекторов.
-- `knowledge_bot/backtest_harness/` — read-only harness и синтетические fixtures.
-- `BACKTEST_RESULTS.md` — историческая сводка локальных экспериментов с
-  явно указанными ограничениями.
-- `RUN_TRADER_BRAIN.bat` — Windows launcher: packaged build при его наличии,
-  иначе запуск GUI из исходников.
-- `RUN_SHADOW_TRACKER.bat` — локальный shadow-трекер без выставления ордеров.
-
-Репозиторий намеренно не содержит секреты, транскрипты, изображения лекций,
-собранную базу знаний, исторические рыночные данные, локальные базы, логи,
-экспериментальные ledger-файлы и сборки приложения.
-
-## Требования
-
-- Python 3.12.
-- Windows и PowerShell — основной проверенный локальный сценарий.
-- `ffmpeg` в `PATH` нужен только для импорта видео.
-- Для OCR, vision и GUI нужны соответствующие зависимости из
-  `requirements.txt`.
-
-`requirements.txt` содержит ограниченные диапазоны зависимостей времени выполнения, но не
-является платформенным lock-файлом. Для GPU установите совместимую сборку
-PyTorch отдельно до установки остальных пакетов.
-
-## Установка
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```text
+knowledge_core/  пакет, схема SQLite, CLI и подробная документация
+tests/          тесты на синтетических данных
+SECURITY.md     правила сообщения об уязвимостях
+LICENSE         лицензия
 ```
 
-Опциональная конфигурация LLM:
+## Начало работы
 
 ```powershell
-Copy-Item .env.example .env
-# Заполните .env локально. Не добавляйте его в Git.
+python -m knowledge_core --help
 ```
 
-Без API-ключа доступен prompt-only режим. Также поддерживается локальный
-OpenAI-compatible endpoint или Ollama.
+Для создания базы адаптеру импорта нужна отдельно сохранённая структура
+извлечённых материалов: транскрипты, кадры, OCR, фрагменты, утверждения и реестры
+правил и проверок. Обязательные входные файлы перечислены в
+[документации импорта](knowledge_core/README.md#импорт).
+`knowledge_bot/knowledge_taxonomy.json` внутри исходного каталога — опциональный
+справочник данных; старый исполняемый код для импорта не нужен.
 
-## Данные
-
-Команды поиска и интерфейсы ожидают локально собранную корневую
-`_knowledge_base/`. Данные создаются из вашего собственного корпуса и остаются
-вне Git. Runner ниже хранит корпус в `_new_lecture_corpus/`, а базу знаний по
-умолчанию создаёт в `_knowledge_base/`.
-
-Пример импорта нового корпуса:
+Пример для локальных каталогов **вне Git-репозиториев**:
 
 ```powershell
-$sourceDir = "D:\path\to\your\videos"
+$sourceRoot = 'D:\data\retained-extractions'
+$knowledgeRoot = 'D:\data\knowledge\snapshot-001'
+$backupRoot = 'D:\data\knowledge-backups\snapshot-001'
 
-.\.venv\Scripts\python.exe -X utf8 .\knowledge_bot\run_new_lecture_pipeline.py `
-  --source-dir $sourceDir `
-  --pipeline-root .\_new_lecture_corpus `
-  --model base `
-  --language ru
+python -m knowledge_core import --source $sourceRoot --destination $knowledgeRoot
+python -m knowledge_core validate $knowledgeRoot
+python -m knowledge_core search $knowledgeRoot 'уровень' --limit 10
+python -m knowledge_core show $knowledgeRoot '<target_id из результата search>'
+python -m knowledge_core export $knowledgeRoot $backupRoot
+python -m knowledge_core restore $backupRoot 'D:\data\knowledge\restored-001'
 ```
 
-Подробности о структуре данных и командах находятся в
-`knowledge_bot/README.md`.
+Замените пути и идентификатор своими значениями. Каталог базы содержит
+`knowledge.sqlite` и `blobs/`; переносить их нужно вместе. Новая база и
+восстановленная копия принимаются после проверки. Существующие каталоги
+назначения не заменяются.
 
-## Запуск
+## Данные и достоверность
 
-Поиск по уже собранной базе:
+Конкретные тексты лекций, кадры и OCR, собранная SQLite-база, исходные видео и
+приватные логи **не входят в репозиторий**. Рабочие данные и резервные копии
+хранятся отдельно от кода.
 
-```powershell
-.\.venv\Scripts\python.exe -X utf8 .\knowledge_bot\search_lectures.py `
-  "БСУ БПУ уровень" --top 5
-```
-
-Prompt-only чат:
-
-```powershell
-.\.venv\Scripts\python.exe -X utf8 .\knowledge_bot\chat_lectures.py `
-  --provider prompt
-```
-
-Desktop UI из исходников:
-
-```powershell
-.\RUN_TRADER_BRAIN.bat
-```
+Импорт сохраняет исходные записи, статусы и зафиксированные решения, присваивая
+редакциям знаний `imported_unverified`. Старое одобрение остаётся отдельной
+записью и не превращается в подтверждение достоверности. Техническая проверка
+сохранности и связей не заменяет содержательную проверку утверждений, цитат,
+условий и противоречий.
 
 ## Проверки
 
-Быстрая синтаксическая проверка:
-
 ```powershell
-.\.venv\Scripts\python.exe -m compileall -q knowledge_bot
+python -m unittest discover -s tests -p 'test_knowledge_core_*.py' -v
 ```
 
-Регрессионные unit-тесты:
-
-```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -v
-```
-
-Синтетические fixture-наборы не читают приватный корпус или реальные
-исторические данные:
-
-```powershell
-$commands = @(
-  "validate-fixtures",
-  "validate-manifest-inventory-fixtures",
-  "validate-manifest-metadata-fixtures",
-  "validate-manifest-metadata-execution-fixtures",
-  "validate-public-seed-checksum-fixtures",
-  "validate-scn002-fixtures",
-  "scan-capabilities"
-)
-
-foreach ($command in $commands) {
-  .\.venv\Scripts\python.exe -X utf8 -m knowledge_bot.backtest_harness.cli $command
-  if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-}
-```
-
-Эти же проверки выполняются в GitHub Actions без секретов и без публикации
-артефактов.
-
-## Ограничения и безопасность
-
-- `_knowledge_base/` и исходный корпус не поставляются, поэтому поиск и UI не
-  работают до локальной сборки данных.
-- Сводка бэктестов не является обещанием доходности; исходные локальные CSV не
-  публикуются.
-- Базовый broker adapter не реализует реальную биржевую интеграцию.
-- Не включайте live-флаги и не добавляйте ключи бирж без отдельного аудита
-  исполнения, риска и хранения секретов.
-
-О найденной уязвимости сообщайте по инструкции в `SECURITY.md`.
-
-## Лицензия
-
-Исходный код опубликован без open-source лицензии. Все права сохранены; см.
-`LICENSE`.
+Тесты используют синтетические данные во временных каталогах. Подробнее о
+формате данных, истории версий, поиске и резервных копиях — в
+[knowledge_core/README.md](knowledge_core/README.md).
