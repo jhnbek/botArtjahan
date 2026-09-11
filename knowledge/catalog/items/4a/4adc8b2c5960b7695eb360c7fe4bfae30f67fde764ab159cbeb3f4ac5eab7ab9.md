@@ -1,0 +1,41 @@
+# MM\-049\-024
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Невозможно быть специалистом во всех ситуациях\. Нужно выбрать 1\-3 модели, дотачивать их, изучать ошибки и нюансы, пока появляется чувство энергии именно этой картинки\. Кто\-то специализируется на ложных пробоях, кто\-то на разворотах дневки, и это лучше, чем торговать все подряд\.
+
+## Цитата
+
+невозможно во всем быть спецом\.\.\. хорошо взять определенные ситуации и улучшаться в них
+
+## Интерпретация
+
+Справочник должен помогать сузить торговую область, а не расширять количество сигналов без контроля\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 03:13:43.800](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-30dfc8efd732ec1945062d8f9b2144bb00d8e69a06cf7e3c4f0d9776d3a113fa)
+- [legacy\_source: 03:10:45.610](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-0e00c4379767f05d3688da4652a499e445ab4c0231e4c37ee850902cd3cb4763)
+- [legacy\_source: 03:11:15.920](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-d62a4e2149e7f3c340adb9c238b46a2b33d39f8a9aa2a4d741e398401ddb8e7a)
+- [legacy\_source: 03:14:09.020](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-0c741a436271d5532e40eacdbbab814dc8e300bcb0f0802c1724d0f25dad1413)
+- [legacy\_source: 03:10:18.330](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-3ad6c4a80452fd536b81d8f5f6dba36dc5773b81d3ceb91f07be417d1b61016c)
+- [legacy\_source: 03:09:49.560](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-a405e4f3cf06dfa5e85a257047ffcd68f109d83710ab99d50192a2b341d013c6)
+- [legacy\_source: 03:12:03.820](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-6c97ebdca2871708fe57285da2dd537f8e9ee9ae7e1afb05a40f22747a147afb)
+- [legacy\_source: 03:11:37.940](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-ddcb562b76092568efc9ef42610758ba696e7b11931af6362ea42b16d9dd0f80)
+- [legacy\_source: 03:12:24.250](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-bd6594b785f57a928a6225c8c7f5f1747ea2e8e97526c63d357ffe7b360ebab5)
+- [legacy\_source: 03:14:23.750](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-9e18ce3ce2ffc85927274b53a5d14976ed01c757211cdd5f3887276de9f7c896)
+- [legacy\_source: 03:09:22.230](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-5f2871904a1e0ce822f521d20cde6a00ed7a142fd3949bb4b8eab984db8d4552)
+- [legacy\_source: 03:13:24.080](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-8890d7d0beb6288460092cad34c3c885a9aba474fa6fa94bc03201b42b698a74)
+- [legacy\_source: 03:12:45.290](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-a994fdd0660ead3fb690dfe65791a492fe4645f90a84b5d426447f6b8f6c8973)
+- [legacy\_source: 03:12:56.320](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-626499da1bb0ee9f3ac3138ca4d34770369c714586827b43fa13a8f355661d6a)
+- [legacy\_source: 03:14:47.160](../../lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0005.md#e-0dc2ae25094e59b35a3ffd1116b547d6e4bca745e0729195020d4fa69b78b266)
+
+## Сохранённые связи
+
+- derived\_from / observed\_multimodal\_claim: [MM\-049\-024](../35/35eac5c7a115c3b688ff08bff65f2d6b7f4cc07a377b207e19c4bf2e33108e67.md)

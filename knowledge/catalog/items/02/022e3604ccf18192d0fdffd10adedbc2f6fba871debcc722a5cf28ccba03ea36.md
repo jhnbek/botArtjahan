@@ -1,0 +1,37 @@
+# MM\-053\-011
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+На американском рынке открытие 9:30 по Нью\-Йорку дает максимальную волатильность: участники закрывают старые позиции, открывают новые, реагируют на утренние новости и отчеты\. К 10:30\-11:00 волатильность часто падает, рынок становится понятнее, а 11:00 рассматривается как важная точка начала более спокойной обеденной сессии\. VWAP в это время помогает понять, у кого контроль\.
+
+## Цитата
+
+рынок открывается по Нью\-Йорку в 9\.30\.\.\. в 11 уже многие принимают решение\.\.\. мне интереснее входить на маленькой волатильности
+
+## Интерпретация
+
+Время относительно открытия важно для входа: после первого объема и падения волатильности сигналы становятся чище\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:53:11.650](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-1e32b1ba2216ca7f7e96b0723416eca3f914866fd86341718c927a54d2fefe1d)
+- [legacy\_source: 00:54:35.270](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-8b78ac5b537564c39f77a32c6e312ae503fd69a9e8fe26ccb7135a7083130ad0)
+  [Открыть кадр](../../../blobs/6c/6cd902fbdf98ac79a073ca530d08f65863792beccf586ea5d11035e78587563c)
+- [legacy\_source: 00:51:12.110](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-81e09adb2b7306b4c703e6d43ae430970b203afe3de6a368e76acc491bfb2c0d)
+- [legacy\_source: 00:54:12.820](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-809c45b8648a7b68a4917ce7ed3e798f0b2dae14409c645b8adf5892bc198dec)
+- [legacy\_source: 00:52:43.470](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-29ed43216f8334fccc8ff1790c2b907d862bf1499bf12ec312449892e957573a)
+- [legacy\_source: 00:53:42.020](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-259b3a09fd0129e0b68866b01bf4015b28becdc1c270607ab5bc1318397ff439)
+- [legacy\_source: 00:51:42.610](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-8238b805e5960d0151b8f6a964f21226da42fa14b2181f104c6cac6106c9c036)
+  [Открыть кадр](../../../blobs/35/35047c4366f00b6f9db4b2625ee76cd125aa742a25609f7e76de2aca8f1d84db)
+- [legacy\_source\_frame\_reference: 00:54:56.700](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/frame-0002.md#e-f5855dc3d33e7a4b19ebe8dc696f53b68edb176efad5a7ebf4d6382ac5a1f9cf)
+  [Открыть кадр](../../../blobs/6c/6cd902fbdf98ac79a073ca530d08f65863792beccf586ea5d11035e78587563c)
+- [legacy\_source: 00:52:13.770](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-e95f4d0d62739756c272a4b754c0a98ddf26f4619e990a3bbd654fe5ce045f7b)
+- [legacy\_source: 00:50:41.100](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/source_unit-0002.md#e-877cd84f467a4c536baba0a1865f5623369b05df9e785dcccdf66d786190431a)
+- [legacy\_source\_frame\_reference: 00:51:56.700](../../lectures/d5990344cfa9d9c086505eb61814fe28a83c1e9653e37d182c74e65c9bf8614b/frame-0002.md#e-6681635d29ab43eabf78a9711129c2b8ffd3c11615137f621265d2b7bd60e9ab)
+  [Открыть кадр](../../../blobs/35/35047c4366f00b6f9db4b2625ee76cd125aa742a25609f7e76de2aca8f1d84db)

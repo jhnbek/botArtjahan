@@ -1,0 +1,37 @@
+# MM\-010\-009
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Распиленный уровень не торгуется, пока не появится подтверждение: бар полностью в одной плоскости уровня, включая high, low, open и close, либо сильное движение от уровня\.
+
+## Цитата
+
+Полностью он оказался за пределами уровня\.\.\. и хвост, верхний, нижний, и закрытие, и открытие полностью в одной из плоскостей\. После этого мы имеем право торговать этот уровень\.
+
+## Интерпретация
+
+После распила нужен state reset: level tradable только после явного подтверждения победившей стороны\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:43:14.600](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0002.md#e-9c61071934c3cbca3f8849c6abbfcc5e48b4e20abd82cc0c79798327dae33c21)
+- [legacy\_source: 00:42:46.760](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0002.md#e-a8963893fba4956aca93d54fa9d07866455bd1b8a0f716f28551ae934e6361b4)
+- [legacy\_source: 00:40:53.420](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-1161517898df10b09856d909b02b1938c4c8e3655f582366626b4c065ae1986a)
+- [legacy\_source: 00:09:54.770](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-adfcb89ff0b61398e7f1901da3eda06b57a86f6ed3745888d923bea05a11548f)
+- [legacy\_source: 00:43:42.620](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0002.md#e-e277cf5ffdd02e16e7c7b299b84cb12a65468f0e225366166269ead392621ea4)
+  [Открыть кадр](../../../blobs/fa/fa9250ce524ab5d04afe164ae6144372b289c98cbecb04f92582ca2ced9d8d8b)
+- [legacy\_source: 00:41:49.650](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-1e18a219a2784b34734e15765f63b585cc68781c9aaf8815b8f376188890cbe6)
+- [legacy\_source: 00:42:25.900](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-646748edae3ad5d9f6c351d5973c86138784d886f9296c6aa82ef8a7cc7623e9)
+- [legacy\_source\_frame\_reference: 00:43:46.625](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/frame-0003.md#e-bd6bc812f876c8b0652964bdcc865431b743c723ee3db603682fccf3f92a3d93)
+  [Открыть кадр](../../../blobs/fa/fa9250ce524ab5d04afe164ae6144372b289c98cbecb04f92582ca2ced9d8d8b)
+- [legacy\_source: 00:41:19.580](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0001.md#e-0223c2794e232370add0323e5f2eb5e6684ef79a266c70a29b96b0e43997a6aa)
+
+## Сохранённые связи
+
+- derived\_from / observed\_multimodal\_claim: [MM\-010\-009](../9b/9b66c625b4472a97d3b6b2f68f4bb5d98de088079e1888574cad238b7707be92.md)

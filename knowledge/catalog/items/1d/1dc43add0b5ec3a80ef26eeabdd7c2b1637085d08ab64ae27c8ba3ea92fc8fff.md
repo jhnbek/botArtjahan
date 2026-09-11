@@ -1,0 +1,43 @@
+# MM\-004\-002
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Market order нужен, чтобы быстро войти или выйти по ближайшей доступной цене; его главный плюс \- гарантия получения сделки, главный минус \- риск проскальзывания\.
+
+## Цитата
+
+Задача этого ордера\.\.\. быстро зайти или выйти из сделки\.\.\. Из плюсов это гарантия получения сделки\.\.\. Из недостатков\.\.\. проскальзывание\.
+
+## Интерпретация
+
+Market execution дает приоритет факту исполнения, а не контролю цены; это важно для моделирования входа, выхода и риска\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:04:39.440](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-efb726a7fe369146b9bdce9af41db4aecd189742708c9443cfe8a1baf6b798a4)
+- [legacy\_source: 00:09:50.590](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-5ccb9a5e3a0352a775e4595872ec088fda3b7be458145960c441ab10fa850fe8)
+  [Открыть кадр](../../../blobs/52/52c885add159549894fd3eddc03d15f70a5e805b44953f465287c78d06e48df6)
+- [legacy\_source: 00:05:45.640](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-04ae327c310f70f9ed6288e74be4c56a65fafe057d0723d9352129df6a2098f5)
+  [Открыть кадр](../../../blobs/d6/d634335f8a35e0ee442cf6a6ca28271ee9fe8eed02e1267acd47073ba1e46124)
+- [legacy\_source: 00:06:14.780](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-d39f0ce6ff7c5485c384b4f67a083469b021841e3ed504cadbf37f5f79e8cc80)
+  [Открыть кадр](../../../blobs/de/de95033d03794fbdffee2891025bd13e4f0b10f6569d8974c80d40fa3584f742)
+- [legacy\_source\_frame\_reference: 00:14:31.156](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/frame-0002.md#e-a7b72e1130df1d682d6f2d9094e530fd38e39654ca178f01a387ffa39ea9da3d)
+  [Открыть кадр](../../../blobs/5d/5df162823db9993fc8651a880dac70b412e61bbe5a743be7ba3074e40c1c29e7)
+- [legacy\_source: 00:06:54.270](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-2491f46d7406d032b60b262c5b4e8e984a6d6528d259f6547a482d26d6fa8d54)
+- [legacy\_source: 00:14:03.140](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-a6231bbbc9517063d3e901ed82c121a452e9c9e6e78eb9b4ee947669c39b3bc7)
+  [Открыть кадр](../../../blobs/5d/5df162823db9993fc8651a880dac70b412e61bbe5a743be7ba3074e40c1c29e7)
+- [legacy\_source\_frame\_reference: 00:05:24.125](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/frame-0001.md#e-801d85eb552e4871dff2f99452e66a469dbcbedaafb4c076315079d09d9653c1)
+  [Открыть кадр](../../../blobs/35/350fe52816f868098ca7aff52e45a441b5d4f4b920eaef86a1a975c5d2db51e1)
+- [legacy\_source: 00:07:25.290](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-234b008309f99c1966db5606e8e07435e8cdf65efcaa9ac830490a300202a9a1)
+  [Открыть кадр](../../../blobs/b0/b0eec2bb70124c1b9e5cf9cdf234dfc6c357110c8535cc830af00f88abb5fe08)
+  [Открыть кадр](../../../blobs/38/38d33e8bf2d51959af51cc0f1795ded77d36925dac5aa741531e5351297ce6d7)
+- [legacy\_source\_frame\_reference: 00:06:17.500](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/frame-0001.md#e-3aaf832d71254c95c8cd0a5bbbe1f9a97708722457b99c71f67dd942592a23e0)
+  [Открыть кадр](../../../blobs/de/de95033d03794fbdffee2891025bd13e4f0b10f6569d8974c80d40fa3584f742)
+- [legacy\_source: 00:05:16.150](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-664092364484a79cd05dae3307df03422490d5c887d6f490d319835d94d89929)
+  [Открыть кадр](../../../blobs/35/350fe52816f868098ca7aff52e45a441b5d4f4b920eaef86a1a975c5d2db51e1)

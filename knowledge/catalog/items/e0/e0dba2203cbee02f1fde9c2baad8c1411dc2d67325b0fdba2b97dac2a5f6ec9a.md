@@ -1,0 +1,50 @@
+# MM\-061\-008
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Если паранормальные бары прочистили старый уровень, все уровни слева внутри пройденного диапазона временно теряют практический смысл\. Торговать их можно только после свежего события справа: подтверждения, защиты цены, реакции участника или попытки удержать уровень\. Без нового подтверждения нельзя сразу ловить ложный пробой или пробой от старой линии, потому что неизвестно, появился ли там снова продавец/покупатель\.
+
+## Цитата
+
+все что в пределах вот этого слева уже не будет иметь никакого значения\.\.\. пока\.\.\. не увидим справа события\.\.\. сразу его торговать нельзя
+
+## Интерпретация
+
+Черновое наблюдение из проверки крипто\-уровней; в общий справочник попадет после сопоставления с другими лекциями и кейсами\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:28:48.240](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-a0b1b93cd523ec48c57804aee131a1be8aaa46b477986efb458cff13d5cf5ebe)
+- [legacy\_source: 00:29:47.280](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-a752fb3c24819de2bbfb456e328e743905cb5b310fb06be90811a1f7e7efc8db)
+- [legacy\_source: 00:28:10.920](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-917f1fa0cde0f9a38ccd1a3585bf66621fd9c7d0c578db012b9c81c8e084864a)
+- [legacy\_source: 00:29:51.620](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-35e472986bc91583425be09509e49bcf07d1b7de09aae5985122a41628b147ed)
+- [legacy\_source: 00:27:22.170](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-df5a2778cba822adf490ecb703fd9a3e8d9c2ceb30bc67e195f93b01c5c0d86c)
+- [legacy\_source: 00:28:34.940](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-42b4fa4074b072421385e9527f13dac8d2303ed9cd0dc7f871cf974301a3457a)
+- [legacy\_source: 00:27:34.190](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-8ebcdcaf5ca5aee523b1a8fc7aff6992e8d0a8e53cb17ff40c891b496965211b)
+- [legacy\_source: 00:27:58.800](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-ffc05469d13e2eb63077fd975a2d9209644105fdb63431fcd779b18932492cc2)
+- [legacy\_source: 00:30:10.770](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-e50b0b06d51c17549a018e2304f36ba4b8dc0cda1cfe19774a905995b075fac0)
+- [legacy\_source: 00:28:24.760](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-13944cd33f2097397e7bf121e8ba4ce7f6168d71be2722ed5fce07a5a5e1ea4d)
+- [legacy\_source: 00:29:26.480](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-d287710b6de6abe5bf9c19066e105fbce523d64ed8d617c807e4e0f37ce01ad2)
+- [legacy\_source: 00:29:16.970](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-5079bff75e407d56ddff89e439d62d6db5af9505508aea8ec7beca3a9110cb78)
+- [legacy\_source: 00:28:03.820](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-24163dc84c0d6b1b0cb0d9cb2b933dfa6e86336a54f6e20d202c41fa43c328fe)
+- [legacy\_source: 00:29:00.870](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-f115ea24ad2730fc65e68325b78126df38fb303d8b2221aaa9c62b7558e08db2)
+- [legacy\_source: 00:28:16.900](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-77c5ecfcbc94a3e55006a8b1d94046fd5dd139662d3b9a8622a82350e067c2f5)
+- [legacy\_source: 00:29:11.070](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-93405b493f031a1069ceeb23b64497fff9f657c77777a2cdab6cd7db74c91a84)
+- [legacy\_source: 00:30:04.830](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-f58c73ae2d12aa3e35fbb863240572edc4c675f6397a8242b2a41744f04aa082)
+- [legacy\_source\_frame\_reference: 00:27:49.050](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/frame-0002.md#e-981247e7d816ef8b60cf335218a113153261dceb3e6b21923913b14fc897fc66)
+  [Открыть кадр](../../../blobs/49/497a918e85e45477ee3d5e9c4f8df5db25231f6896bbec2791d46f6776ffc2ac)
+- [legacy\_source: 00:27:01.990](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-06c5161c6878e08da89246d5ba33d87b2252faa59fc8ff9c7e3b00430cccb631)
+- [legacy\_source: 00:29:32.520](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-b6a3ef7b6f9e561a1f299495b05d54dd76495ac78781920ed4883c0e7fb801a8)
+- [legacy\_source: 00:27:42.250](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-aa40c4970bb47bc8c2cc750a5b1ea80640952af70c3e8839489bc5782878c49f)
+- [legacy\_source: 00:27:48.950](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-f9ca8172f283df5f8fd26cf77bfb50bb9087422dba286b8e1394425a8e1b72b6)
+  [Открыть кадр](../../../blobs/49/497a918e85e45477ee3d5e9c4f8df5db25231f6896bbec2791d46f6776ffc2ac)
+- [legacy\_source: 00:29:39.340](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-86ca47aebce112d7a8217aed9d97e818af023daf23ba12c1a67f07ba5e6328e7)
+- [legacy\_source: 00:28:55.140](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-caba0298c00b4b78f9dc17445014c06d8ccf6086f9e8209d90a3685bf36578c6)
+- [legacy\_source: 00:28:42.160](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-1760173319e06f16f36fbc23ac83833568e86d4e429b33e6b13014719696ad2f)
+- [legacy\_source: 00:27:12.490](../../lectures/ad42efcccf6bd8a5f9186c3460103d988b38e2704cb7776bf8f5341ea56015e7/source_unit-0002.md#e-0ca0b8c223017fd41046cdb50f75c4f8479db9751ac5cee25a743d5efa036957)

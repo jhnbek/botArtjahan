@@ -1,0 +1,30 @@
+# MM\-022\-039
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Если дневной уровень пробит, глобально это пробойная сделка, но вход внутри дня после возврата к уровню может классифицироваться как отбой после пробоя\.
+
+## Цитата
+
+Картинка глобальная на дневке \- это пробой\. Но внутри пробоя \- это отбой\. То есть отбой после пробоя\.
+
+## Интерпретация
+
+Для базы знаний важно хранить и старший сценарий, и младшую точку входа отдельно\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source\_frame\_reference: 01:19:45.000](../../lectures/83a8e3f4243c508cee12c083f8a7aa508c4d4938b520b97991a9b745f3cd9a37/frame-0004.md#e-2f10793a3c5a2f254823f88ea66551244cde797d486185b22cdc6ecd34a8021c)
+  [Открыть кадр](../../../blobs/6d/6d78102f158c6ee938a18ea72af600cc095eac8ddcb6f057b15f58d11ab82522)
+- [legacy\_source: 01:19:41.190](../../lectures/83a8e3f4243c508cee12c083f8a7aa508c4d4938b520b97991a9b745f3cd9a37/source_unit-0002.md#e-7d35d281cb02724f40529028d31ad95dfecbf8e31ded84310a626fa4a48cf52a)
+  [Открыть кадр](../../../blobs/6d/6d78102f158c6ee938a18ea72af600cc095eac8ddcb6f057b15f58d11ab82522)
+- [legacy\_source: 01:19:51.530](../../lectures/83a8e3f4243c508cee12c083f8a7aa508c4d4938b520b97991a9b745f3cd9a37/source_unit-0002.md#e-c6e267421742710a56be92be3a2472cd0df3d4a81c4e94a8111980b2cc62a75f)
+- [legacy\_source: 01:18:40.420](../../lectures/83a8e3f4243c508cee12c083f8a7aa508c4d4938b520b97991a9b745f3cd9a37/source_unit-0002.md#e-8acf24cfdd8d06379be947b2a945db58a7ad5ae246e617778ce2d7dcd35c84e8)
+- [legacy\_source: 01:20:18.940](../../lectures/83a8e3f4243c508cee12c083f8a7aa508c4d4938b520b97991a9b745f3cd9a37/source_unit-0002.md#e-51ae1cfeda603b06d9962f88dc18a64240f3c1b16827df28e6fcbfd03f09f751)
+- [legacy\_source: 01:19:10.510](../../lectures/83a8e3f4243c508cee12c083f8a7aa508c4d4938b520b97991a9b745f3cd9a37/source_unit-0002.md#e-6f5ff6cf84d64fb35426c5c8ea23f39f4fbd21cc8529786cf85861a56d4bf9e8)

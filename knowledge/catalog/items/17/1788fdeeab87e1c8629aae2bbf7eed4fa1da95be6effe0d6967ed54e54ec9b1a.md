@@ -1,0 +1,29 @@
+# MM\-004\-006
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Stop market вход нужен, чтобы не покупать в воздухе до подтверждения: если цена не пробивает выбранную точку, трейдер не хочет находиться в сделке, а после пробоя понятнее где портится картинка и где ставить стоп\.
+
+## Цитата
+
+Пока он не прошел эту точку, здесь покупать опасно\.\.\. если он пробил и вернулся, это уже плохо\.\.\. где портится картинка\.
+
+## Интерпретация
+
+Для алгоритма важен не только order type, но и причина: conditional entry отделяет подтвержденный пробой от ранней покупки без места для invalidation\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 00:32:44.450](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-ae5edc858cc13bcd5f4fa34a648908ef6da2b92ab04563c7c91c8572b4ed6c50)
+- [legacy\_source: 00:32:27.380](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-3058aaf8686299a14e1217ef9ab2ab8e36f245bed5360d62a2650a0d3b62a2f0)
+- [legacy\_source: 00:33:00.910](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-b08deb6878c800e0dc972dc97bd06ef631cde27a24071c33a1bf2711f42d43be)
+  [Открыть кадр](../../../blobs/55/55af7274baf092c08006861c17c4e4cd840b6f7f0631e5402988d7ceea165b8b)
+- [legacy\_source\_frame\_reference: 00:33:23.344](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/frame-0002.md#e-620a24e548b8bae25379959dc7cac3c206d48d44c393b3ee52e068c36abac1ac)
+  [Открыть кадр](../../../blobs/55/55af7274baf092c08006861c17c4e4cd840b6f7f0631e5402988d7ceea165b8b)
+- [legacy\_source: 00:33:31.180](../../lectures/93e33a9a6710cf2d4e472aad0a7fa2d90812f27f97774889ef9b291f5f76a4bd/source_unit-0001.md#e-9d02fb279c3ff0b05524afff4fb48d998c7502fbb0ffd54ec6ebeadc4f0df658)

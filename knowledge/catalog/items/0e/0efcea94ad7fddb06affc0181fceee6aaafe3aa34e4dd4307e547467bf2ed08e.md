@@ -1,0 +1,33 @@
+# MM\-010\-032
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Дополнительное касание любого уровня в ту же цену усиливает уровень; чем ближе и чаще касания в одну цену, тем сильнее уровень\.
+
+## Цитата
+
+Любое касание дополнительное в любой уровень\.\.\. усиливает уровень\. Чем больше касание в одну и ту же цену, тем сильнее уровень\.
+
+## Интерпретация
+
+Touch count and touch precision become general level\-quality features\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 01:39:26.100](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0003.md#e-d50cd49abcb73fbb731a178cd6c476128f7d7b6240c96e1c3813a5e98b37db2b)
+- [legacy\_source\_frame\_reference: 01:40:05.094](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/frame-0005.md#e-318cf9c284aee63541247a33dc4d2bdea15502c780f29c0dade1045517931d4a)
+  [Открыть кадр](../../../blobs/f1/f12609d9bf6c02ba0690d0c5849a01c922cb1823a339c0719f37b479982546eb)
+- [legacy\_source: 01:12:25.590](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0002.md#e-c54783e9af7743221922739bcbea4ac558d27191a0afd309ae58808c29817ac3)
+- [legacy\_source: 01:12:35.990](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0002.md#e-6e782bc99df8852f156fc05526df8974f162a2ecb8032ae24f000d458d32eca5)
+- [legacy\_source\_frame\_reference: 01:11:51.312](../../lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/frame-0004.md#e-e311a9327ed86c83cf3f36d15a6c20376c8186630902342a18ef645875e8ef4a)
+  [Открыть кадр](../../../blobs/68/68b733c554b745478089e1fa9dce68b7e2104a4ccb75a8783f1ad279a85f8ae1)
+
+## Сохранённые связи
+
+- derived\_from / observed\_multimodal\_claim: [MM\-010\-032](../ed/edbd5a64fd1e784b47352ce37af8da249a099ec371881b4648b017c3398b6ba6.md)

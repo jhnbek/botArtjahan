@@ -1,0 +1,39 @@
+# MM\-005\-019
+
+[Каталог](../../README.md)
+
+Материал импортирован. Статус `imported_unverified` не подтверждает содержательную достоверность.
+
+Статус: imported\_unverified
+
+## Формулировка
+
+Центральная формула урока: самое сильное падение делают лонговые продавцы, а самый сильный рост делают шортовые покупатели, закрывая short; сильные движения возникают там, где кто\-то теряет и выходит по рынку\.
+
+## Цитата
+
+Самое сильное падение делают лонговые продавцы\. А самый сильный рост делают шортовые покупатели, закрывая свой шорт\.\.\. сильное движение\.\.\. когда есть кто теряет\.
+
+## Интерпретация
+
+Pain\-point detection является самостоятельной аналитической осью для будущих сетапов и rulebook\.
+
+## Сохранённые свидетельства
+
+- [legacy\_source: 01:39:09.290](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/source_unit-0003.md#e-3e34d8f507d16fabbb809021ee134c7410ef522a29b6309a49f6743fc72bd15f)
+- [legacy\_source: 01:38:41.730](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/source_unit-0003.md#e-8e8ae9de1b05a121ed904cc392427498d44f09c5da5c8f6201635b7492d26313)
+- [legacy\_source: 01:35:24.890](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/source_unit-0003.md#e-535c616c02b94cf29292a63b54252d19351d0f598d3ba5e51ebc56c3b5c7981f)
+- [legacy\_source\_frame\_reference: 01:38:19.719](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/frame-0004.md#e-02dcec3bc8569bb99c218a1a087bf9fa09afe548c1a61d60df9dd6925085f32a)
+  [Открыть кадр](../../../blobs/c1/c1d574441865dd1a7da0dc0abd92480e3f19f221b16a45f712bfa86004e1da7e)
+- [legacy\_source: 01:34:57.760](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/source_unit-0003.md#e-bf5fa9c6ea27a00cf06a2e6764d42923fcfde31235877be72839229d67094463)
+  [Открыть кадр](../../../blobs/fc/fcc5649aa01ca16b8cb6ee9bf154af7a99e76199dc83d63285019939387074bc)
+- [legacy\_source: 01:33:59.080](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/source_unit-0003.md#e-ecadcc44a6801640a90d7cdd60f8aeb688909e97d1aa39b61484f4c1b6d7afbf)
+  [Открыть кадр](../../../blobs/d1/d1a6df5b8aa3defaa6d05fc985447d0554dbb323953a318c23ecf59afb6adfe2)
+- [legacy\_source: 01:35:50.890](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/source_unit-0003.md#e-217742f4f172e5eb3b996ccf836fa5720b1f7f29d9eaae0d2036d7a8d04f21aa)
+  [Открыть кадр](../../../blobs/61/61a0e7d3aa5881f3d9b592538f0ac65681f8284f71164a0222e94ebbef132b81)
+- [legacy\_source\_frame\_reference: 01:36:19.094](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/frame-0004.md#e-3dd690335e9d7d08da84a3b489d05e04bbf8bcb31f35e64ca1be9e1357485452)
+  [Открыть кадр](../../../blobs/61/61a0e7d3aa5881f3d9b592538f0ac65681f8284f71164a0222e94ebbef132b81)
+- [legacy\_source\_frame\_reference: 01:34:19.094](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/frame-0004.md#e-c460416edf64b79bce0f27b31c6fd03ee314ad520fec64447f377c732cb0dc24)
+  [Открыть кадр](../../../blobs/d1/d1a6df5b8aa3defaa6d05fc985447d0554dbb323953a318c23ecf59afb6adfe2)
+- [legacy\_source: 01:38:07.550](../../lectures/f6ee8f16129de80180ce0cb881f67aad12ae908505e23941a52533439f67e8d5/source_unit-0003.md#e-006f79192f36546604a5f4966e58a217da742ebc728343701330f1b41262aa37)
+  [Открыть кадр](../../../blobs/c1/c1d574441865dd1a7da0dc0abd92480e3f19f221b16a45f712bfa86004e1da7e)
