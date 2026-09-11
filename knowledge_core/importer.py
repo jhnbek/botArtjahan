@@ -27,6 +27,9 @@ def _output_boundary(source: Path, destination: Path) -> None:
 
 def plan_inputs(source: Path) -> dict:
     from .legacy_knowledge import input_paths as knowledge_inputs
+    from .validation import reject_linked_path
+    reject_linked_path(Path(source).absolute())
+    source = Path(source).resolve()
     paths = sorted(set(source_inputs(source)) | set(knowledge_inputs(source)))
     inventory = {}
     for path in paths:

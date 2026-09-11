@@ -18,7 +18,7 @@ class KnowledgeQueryTests(unittest.TestCase):
         # unit references them all, so tracing it must retain the whole graph.
         count = 160
         with tempfile.TemporaryDirectory(prefix="knowledge-core-query-test-") as temp:
-            parent = Path(temp)
+            parent = Path(temp).resolve()
             source = parent / "source"
             lecture = source_fixture(source)
             transcript = read_json(lecture / "transcript.json")

@@ -39,13 +39,17 @@ def source_fixture(root):
 class KnowledgeImporterTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="knowledge-core-integration-test-")
-        self.parent = Path(self.temp.name)
+        self.parent = Path(self.temp.name).resolve()
         self.source = self.parent / "source"
         self.lecture = source_fixture(self.source)
         self.output = self.parent / "dataset"
 
     def tearDown(self):
         self.temp.cleanup()
+
+    def test_input_inventory_accepts_equivalent_source_path(self):
+        equivalent = self.source / "_new_lecture_corpus" / ".."
+        self.assertEqual(plan_inputs(equivalent), plan_inputs(self.source))
 
     def test_complete_round_trip_query_source_preservation_and_noop(self):
         original = plan_inputs(self.source)

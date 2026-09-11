@@ -14,7 +14,7 @@ from knowledge_core.legacy_knowledge import JSON_INPUTS, JSONL_INPUTS, OPTIONAL_
 
 class FixtureContext:
     def __init__(self, root: Path):
-        self.source_root = root
+        self.source_root = root.resolve()
         self.conn = sqlite3.connect(":memory:")
         self.conn.row_factory = sqlite3.Row
         initialize(self.conn)
@@ -122,7 +122,7 @@ def fixture(root: Path):
 class LegacyKnowledgeTests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix="knowledge-core-legacy-test-")
-        self.root = Path(self.temp.name)
+        self.root = Path(self.temp.name).resolve()
         self.claim_path, self.values, self.documents = fixture(self.root)
         self.ctx = FixtureContext(self.root)
 
