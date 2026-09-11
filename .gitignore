@@ -1,54 +1,19 @@
-# Secrets and local configuration
-.env
-.env.*
-*.env
-!.env.example
-!env.example
-
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-htmlcov/
-.venv/
-venv/
-*.egg-info/
-
-# IDE and operating system
-.vscode/
-.idea/
-desktop.ini
-Thumbs.db
-.DS_Store
-
-# Builds and local databases
-build/
-dist/
-*.db
-*.sqlite
-*.sqlite3
-
-# Private or heavyweight project data
-_scenario_archive/
-_new_lecture_corpus/
-_knowledge_base/
-_historical_data/
-_exports/
-_smoke_input/
-_lecture_inputs/
-_pipeline_logs/
-
-# Runtime and experimental outputs
-_shadow_forward/
-knowledge_bot/_archive_oneoff/
-knowledge_bot/_blind_predictions*.json
-knowledge_bot/restore_telegram_charts.py
-knowledge_bot/portable_manifest.reference.json
-*.log
-_smoke_*.log
-_tmp_*
-*.tmp
+# Only reviewed source, documentation and synthetic tests belong in this repository.
+# Private datasets, exports, logs, credentials and generated files stay local.
+*
+!/.gitignore
+!/.gitattributes
+!/.editorconfig
+!/.python-version
+!/LICENSE
+!/README.md
+!/SECURITY.md
+!/knowledge_core/
+!/knowledge_core/*.py
+!/knowledge_core/schema.sql
+!/knowledge_core/README.md
+!/tests/
+!/tests/test_knowledge_core_*.py
+!/.github/
+!/.github/workflows/
+!/.github/workflows/ci.yml
