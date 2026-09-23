@@ -1,0 +1,6 @@
+{
+  "case_id": "non_crypto_spot_profile_rejected",
+  "manifest_file": "manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["instrument_type_not_crypto_spot", "inventory_profile_not_allowed"]
+}

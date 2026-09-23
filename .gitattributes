@@ -1,3 +1,6 @@
 * text=auto eol=lf
 /knowledge/blobs/** -text -diff
 /knowledge/knowledge.sqlite.gz -text
+# Preserve exact bytes referenced by manual-review snapshot manifests.
+/_knowledge_base/manual_reviews/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+/handoff_archive/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

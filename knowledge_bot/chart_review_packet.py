@@ -17,6 +17,12 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+# Support both the historical script entry point and package imports.
+_PROJECT_ROOT = Path(__file__).resolve().parents[1]
+if str(_PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(_PROJECT_ROOT))
+from knowledge_bot.knowledge_base import attach_knowledge_context
+
 from entry_context import EntryParams, build_entry_context
 from level_discovery import DiscoveryParams, Level, build_drawn_level_candidate, build_report as build_level_report, discover_levels
 from ohlc_situation_adapter import build_context as build_ohlc_context, load_bars as load_ohlc_bars
@@ -1317,19 +1323,22 @@ def load_manual_level_prices(exchange: str, symbol: str, interval: str) -> list[
         if action == "clear_manual_levels":
             manual.clear()
             continue
-        if action != "add_manual_level":
+        if action not in {"add_manual_level", "remove_manual_level"}:
             continue
         try:
             price = float(record["price"])
         except (KeyError, TypeError, ValueError):
             continue
-        if price not in manual:
+        if action == "remove_manual_level":
+            manual = [value for value in manual if value != price]
+        elif price not in manual:
             manual.append(price)
     return manual
 
 
 def build_live_kb_chart_review_packet(args: argparse.Namespace) -> dict[str, Any]:
     packet = build_light_chart_review_packet(args)
+    attach_knowledge_context(packet, getattr(args, "knowledge_query", None) or "уровень")
     packet["dataset_id"] = "live_kb_chart_review_packet_v1"
     root = ROOT
     ohlc_path = args.ohlc_file if args.ohlc_file.is_absolute() else root / args.ohlc_file

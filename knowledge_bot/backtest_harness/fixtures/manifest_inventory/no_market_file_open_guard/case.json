@@ -1,0 +1,6 @@
+{
+  "case_id": "no_market_file_open_guard",
+  "manifest_file": "manifest.json",
+  "expected_valid": true,
+  "expected_error_codes": []
+}

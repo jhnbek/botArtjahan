@@ -1,0 +1,6 @@
+{
+  "case_id": "SCN002-FIX-008",
+  "observation_file": "observation.json",
+  "expected_valid": false,
+  "expected_error_codes": ["forbidden_outcome_field"]
+}

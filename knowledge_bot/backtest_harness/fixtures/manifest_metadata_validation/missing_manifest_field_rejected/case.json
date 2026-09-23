@@ -1,0 +1,6 @@
+{
+  "case_id": "missing_manifest_field_rejected",
+  "manifest_file": "manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["manifest_missing_field:dataset_id"]
+}

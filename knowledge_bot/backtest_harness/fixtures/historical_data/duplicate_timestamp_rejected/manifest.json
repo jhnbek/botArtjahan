@@ -1,0 +1,15 @@
+{
+  "case_id": "duplicate_timestamp_rejected",
+  "expected_valid": false,
+  "expected_error_codes": ["duplicate_close_time"],
+  "instrument_type": "crypto_spot",
+  "timeframe": "M15",
+  "price_adjustment_policy": "raw_unadjusted_fixture",
+  "session_calendar_id": "crypto_24_7_utc",
+  "data_vendor": "synthetic_fixture",
+  "dataset_version": "fixture-v1",
+  "source_path": "bars.jsonl",
+  "row_count": 2,
+  "file_sha256": "6d930fec2cee838a1e3d38bba5be0b737f9335a5e85044fce703e93a76a12a46",
+  "decision_timestamp_utc": "2026-01-01T00:30:00+00:00"
+}

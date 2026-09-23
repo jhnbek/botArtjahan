@@ -1,0 +1,51 @@
+{
+  "old_count": 48,
+  "new_count": 6,
+  "reviewed_negative_count": 25,
+  "negative_matches_before": 24,
+  "negative_matches_after": 1,
+  "new_levels": [
+    {
+      "price": 108560.0,
+      "bsu": {
+        "index": 338,
+        "time": "2025-09-25T00:00:00+00:00"
+      }
+    },
+    {
+      "price": 111968.0,
+      "bsu": {
+        "index": 212,
+        "time": "2025-05-22T00:00:00+00:00"
+      }
+    },
+    {
+      "price": 82055.6,
+      "bsu": {
+        "index": 127,
+        "time": "2025-02-26T00:00:00+00:00"
+      }
+    },
+    {
+      "price": 100350.0,
+      "bsu": {
+        "index": 226,
+        "time": "2025-06-05T00:00:00+00:00"
+      }
+    },
+    {
+      "price": 123250.0,
+      "bsu": {
+        "index": 265,
+        "time": "2025-07-14T00:00:00+00:00"
+      }
+    },
+    {
+      "price": 123742.2,
+      "bsu": {
+        "index": 295,
+        "time": "2025-08-13T00:00:00+00:00"
+      }
+    }
+  ]
+}

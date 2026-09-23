@@ -1,0 +1,15 @@
+{
+  "case_id": "future_bar_rejected",
+  "expected_valid": false,
+  "expected_error_codes": ["future_bar_after_decision"],
+  "instrument_type": "crypto_spot",
+  "timeframe": "M15",
+  "price_adjustment_policy": "raw_unadjusted_fixture",
+  "session_calendar_id": "crypto_24_7_utc",
+  "data_vendor": "synthetic_fixture",
+  "dataset_version": "fixture-v1",
+  "source_path": "bars.jsonl",
+  "row_count": 1,
+  "file_sha256": "1a6635ce0c07d85e7f3d1ea1eecabcb2631af610d2143e8479f625555c1c441e",
+  "decision_timestamp_utc": "2026-01-01T00:30:00+00:00"
+}

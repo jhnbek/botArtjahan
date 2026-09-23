@@ -1,0 +1,26 @@
+{
+  "scenario_id": "SCN-002-false-breakout-reversal",
+  "observation_id": "SCN002-FIX-006-OBS",
+  "symbol": "SYNTHUSDT",
+  "decision_timestamp_utc": "2026-05-01T10:00:00+00:00",
+  "level_snapshot": {"level_price": 100.0, "snapshot_timestamp_utc": "2026-05-01T09:55:00+00:00", "source": "synthetic_fixture", "damage_state": "clean", "ambiguous": false},
+  "false_breakout_evidence": {"sweep_bar": {"close_time_utc": "2026-05-01T09:50:00+00:00"}, "return_bar": {"close_time_utc": "2026-05-01T09:55:00+00:00"}, "return_behind_level": true, "ambiguous": false},
+  "detector_results": [
+    {"sequence": 1, "contract_id": "FCD-001", "detector_key": "hard_gates_and_permission", "observation_status": "hard_reject", "source_rule_ids": ["CRD-001-core-trade-framework"], "source_candidate_ids": ["MM-001-001"]},
+    {"sequence": 2, "contract_id": "FCD-002", "detector_key": "level_selection_strength", "observation_status": "pass", "source_rule_ids": ["CRD-002A-level-construction"], "source_candidate_ids": ["MM-001-002"]},
+    {"sequence": 3, "contract_id": "FCD-003", "detector_key": "trend_timeframe_context", "observation_status": "pass", "source_rule_ids": ["CRD-007A-global-local-trend"], "source_candidate_ids": ["MM-001-003"]},
+    {"sequence": 4, "contract_id": "FCD-004", "detector_key": "market_mechanics_context", "observation_status": "pass", "source_rule_ids": ["CRD-012A-market-participants"], "source_candidate_ids": ["MM-001-004"]},
+    {"sequence": 5, "contract_id": "FCD-009", "detector_key": "retest_room_atr", "observation_status": "pass", "source_rule_ids": ["CRD-006-retest-room-atr"], "source_candidate_ids": ["MM-001-005"]},
+    {"sequence": 6, "contract_id": "FCD-013", "detector_key": "formations_momentum", "observation_status": "pass", "source_rule_ids": ["CRD-014-formations-momentum"], "source_candidate_ids": ["MM-001-006"]},
+    {"sequence": 7, "contract_id": "FCD-008", "detector_key": "false_breakout_reversal", "observation_status": "pass", "source_rule_ids": ["CRD-005-false-breakout"], "source_candidate_ids": ["MM-001-007"]},
+    {"sequence": 8, "contract_id": "FCD-007", "detector_key": "breakout_failure", "observation_status": "pass", "source_rule_ids": ["CRD-004C-breakout-failure"], "source_candidate_ids": ["MM-001-008"]},
+    {"sequence": 9, "contract_id": "FCD-011", "detector_key": "tbx_entry_models", "observation_status": "pass", "source_rule_ids": ["CRD-008-entry-models"], "source_candidate_ids": ["MM-001-009"]},
+    {"sequence": 10, "contract_id": "FCD-012", "detector_key": "risk_stop_take_management", "observation_status": "pass", "source_rule_ids": ["CRD-009A-stop-placement"], "source_candidate_ids": ["MM-001-010"]},
+    {"sequence": 11, "contract_id": "FCD-015", "detector_key": "workflow_review_data_quality", "observation_status": "pass", "source_rule_ids": ["CRD-011-workflow-homework-review"], "source_candidate_ids": ["MM-001-011"]}
+  ],
+  "hard_reject_reasons": [],
+  "manual_review_needed": false,
+  "source_rule_ids": ["CRD-005-false-breakout"],
+  "source_candidate_ids": ["MM-001-007"],
+  "artifact_versions": {"fixture_design": "scn002_false_breakout_fixture_only_implementation_design_v1"}
+}

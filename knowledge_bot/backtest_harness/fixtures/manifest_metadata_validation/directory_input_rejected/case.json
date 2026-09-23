@@ -1,0 +1,6 @@
+{
+  "case_id": "directory_input_rejected",
+  "manifest_file": "manifests/",
+  "expected_valid": false,
+  "expected_error_codes": ["manifest_input_directory"]
+}

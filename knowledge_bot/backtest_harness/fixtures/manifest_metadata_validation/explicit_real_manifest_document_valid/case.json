@@ -1,0 +1,6 @@
+{
+  "case_id": "explicit_real_manifest_document_valid",
+  "manifest_file": "manifest.json",
+  "expected_valid": true,
+  "expected_error_codes": []
+}

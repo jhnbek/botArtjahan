@@ -1,0 +1,32 @@
+{
+  "manifest_id": "mmv-no-listed-file-access",
+  "dataset_id": "synthetic-real-metadata-no-listed-file-access",
+  "inventory_profile": "crypto_spot_24_7_utc_manifest",
+  "instrument_type": "crypto_spot",
+  "symbols": ["ETHUSDT"],
+  "timeframes": ["H1"],
+  "data_vendor": "synthetic_fixture",
+  "dataset_version": "fixture-v1",
+  "exported_at_utc": "2026-05-30T00:00:00Z",
+  "source_format": "csv",
+  "price_adjustment_policy": "exchange_raw_unadjusted",
+  "session_calendar_id": "crypto_24_7_utc",
+  "timezone_policy": "UTC",
+  "volume_unit": "quote_asset",
+  "gap_policy": "report_and_quarantine",
+  "corporate_actions_policy": "null_not_applicable",
+  "futures_roll_policy": "null_not_applicable",
+  "license_or_source_notes": "synthetic fixture only; listed file must not be opened",
+  "expected_file_count": 1,
+  "files": [
+    {
+      "relative_path": "bars/DO_NOT_OPEN_ETHUSDT_H1.csv",
+      "symbol": "ETHUSDT",
+      "timeframe": "H1",
+      "file_role": "bars",
+      "expected_rows": 24,
+      "expected_sha256": "declared-only-not-verified",
+      "expected_size_bytes": 4096
+    }
+  ]
+}

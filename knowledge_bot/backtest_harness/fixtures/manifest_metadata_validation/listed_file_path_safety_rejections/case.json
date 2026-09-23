@@ -1,0 +1,6 @@
+{
+  "case_id": "listed_file_path_safety_rejections",
+  "manifest_file": "manifest.json",
+  "expected_valid": false,
+  "expected_error_codes": ["file_entry_path_absolute", "file_entry_path_parent_traversal", "file_entry_path_wildcard"]
+}

@@ -1,0 +1,203 @@
+{
+  "comparison_scope": "Explicit cases only, full cached history as of 2026-09-22; not a trading backtest or estimate of overall accuracy.",
+  "automatic_rule_update": false,
+  "price_tolerance_ratio": 0.001,
+  "same_bsu_date_required": true,
+  "checks": [
+    {
+      "case_id": "case_01",
+      "expected_inflection": false,
+      "bsu_date": "2026-03-29",
+      "price": 64935.7,
+      "detected_prices": [
+        64935.7
+      ],
+      "passed": false,
+      "status": "unexpected_inflection"
+    },
+    {
+      "case_id": "case_02",
+      "expected_inflection": true,
+      "bsu_date": "2026-06-25",
+      "price": 58042.6,
+      "detected_prices": [
+        58042.6
+      ],
+      "passed": true,
+      "status": "matched_expected_inflection"
+    },
+    {
+      "case_id": "case_03",
+      "expected_inflection": false,
+      "bsu_date": "2026-06-05",
+      "price": 59081.4,
+      "detected_prices": [
+        59081.4
+      ],
+      "passed": false,
+      "status": "unexpected_inflection"
+    },
+    {
+      "case_id": "case_04",
+      "expected_inflection": true,
+      "bsu_date": "2026-09-15",
+      "price": 74919.6,
+      "detected_prices": [
+        74919.6
+      ],
+      "passed": true,
+      "status": "matched_expected_inflection"
+    },
+    {
+      "case_id": "case_05",
+      "expected_inflection": false,
+      "bsu_date": "2025-12-09",
+      "price": 94550.0,
+      "detected_prices": [
+        94550.0
+      ],
+      "passed": false,
+      "status": "unexpected_inflection"
+    },
+    {
+      "case_id": "case_06",
+      "expected_inflection": false,
+      "bsu_date": "2025-08-29",
+      "price": 107432.6,
+      "detected_prices": [
+        107432.6
+      ],
+      "passed": false,
+      "status": "unexpected_inflection"
+    },
+    {
+      "case_id": "case_07",
+      "expected_inflection": false,
+      "bsu_date": "2025-08-02",
+      "price": 111950.0,
+      "detected_prices": [
+        111950.0
+      ],
+      "passed": false,
+      "status": "unexpected_inflection"
+    },
+    {
+      "case_id": "case_08",
+      "expected_inflection": false,
+      "bsu_date": "2025-09-17",
+      "price": 117239.5,
+      "detected_prices": [
+        117239.5
+      ],
+      "passed": false,
+      "status": "unexpected_inflection"
+    },
+    {
+      "case_id": "case_09",
+      "expected_inflection": true,
+      "bsu_date": "2025-08-13",
+      "price": 123742.2,
+      "detected_prices": [
+        123742.2
+      ],
+      "passed": true,
+      "status": "matched_expected_inflection"
+    }
+  ],
+  "ohlc_evidence": {
+    "2026-06-05": {
+      "open_time": "2026-06-05T00:00:00Z",
+      "open": 63849.1,
+      "high": 63954.5,
+      "low": 59081.4,
+      "close": 61026.6
+    },
+    "2026-06-24": {
+      "open_time": "2026-06-24T00:00:00Z",
+      "open": 62693.7,
+      "high": 63232.7,
+      "low": 59065.8,
+      "close": 61054.7
+    },
+    "2026-06-25": {
+      "open_time": "2026-06-25T00:00:00Z",
+      "open": 61054.7,
+      "high": 61942.3,
+      "low": 58042.6,
+      "close": 59767.3
+    },
+    "2026-06-30": {
+      "open_time": "2026-06-30T00:00:00Z",
+      "open": 60224.0,
+      "high": 60249.0,
+      "low": 58156.7,
+      "close": 58603.5
+    },
+    "2026-03-16": {
+      "open_time": "2026-03-16T00:00:00Z",
+      "open": 72777.5,
+      "high": 74900.0,
+      "low": 72226.3,
+      "close": 74854.7
+    },
+    "2026-04-29": {
+      "open_time": "2026-04-29T00:00:00Z",
+      "open": 76300.0,
+      "high": 77860.0,
+      "low": 74900.0,
+      "close": 75750.0
+    },
+    "2026-09-15": {
+      "open_time": "2026-09-15T00:00:00Z",
+      "open": 78158.1,
+      "high": 78226.1,
+      "low": 74919.6,
+      "close": 75608.0
+    },
+    "2025-05-22": {
+      "open_time": "2025-05-22T00:00:00Z",
+      "open": 109608.7,
+      "high": 111968.0,
+      "low": 109150.0,
+      "close": 111646.5
+    },
+    "2025-07-09": {
+      "open_time": "2025-07-09T00:00:00Z",
+      "open": 108881.9,
+      "high": 111999.0,
+      "low": 108263.4,
+      "close": 111209.7
+    },
+    "2025-08-02": {
+      "open_time": "2025-08-02T00:00:00Z",
+      "open": 113248.9,
+      "high": 114011.4,
+      "low": 111950.0,
+      "close": 112518.0
+    },
+    "2025-08-21": {
+      "open_time": "2025-08-21T00:00:00Z",
+      "open": 114217.4,
+      "high": 114783.7,
+      "low": 111945.2,
+      "close": 112462.7
+    },
+    "2026-03-29": {
+      "open_time": "2026-03-29T00:00:00Z",
+      "open": 66345.4,
+      "high": 67113.3,
+      "low": 64935.7,
+      "close": 65990.7
+    }
+  },
+  "verified_relations": {
+    "june30_close_below_june5_low": true,
+    "june30_close_above_june25_low": true,
+    "june30_near_touch_gap": 114.1,
+    "june24_vs_june5_low_delta": -15.6
+  },
+  "automatic_count": 17,
+  "reconstructed_visible_count": 6,
+  "unexpected_inflection_count": 6,
+  "missed_expected_inflection_count": 0
+}

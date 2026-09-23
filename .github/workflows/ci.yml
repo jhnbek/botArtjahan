@@ -39,7 +39,7 @@ jobs:
         run: python -m knowledge_core --help
 
       - name: Run synthetic tests
-        run: python -m unittest discover -s tests -p "test_knowledge_core_*.py" -v
+        run: python -m unittest discover -s tests -p "test_*.py" -v
 
       - name: Restore and validate the published knowledge snapshot
         if: runner.os == 'Linux'

@@ -1,0 +1,63 @@
+{
+  "scope": {
+    "exchange": "bybit",
+    "symbol": "BTCUSDT",
+    "interval": "1d"
+  },
+  "price_tolerance_ratio": 0.001,
+  "expected_inflections": [
+    {
+      "price": 97963.55158121476,
+      "note": "",
+      "detected_prices": [],
+      "status": "missing"
+    },
+    {
+      "price": 126157.87117229219,
+      "note": "",
+      "detected_prices": [],
+      "status": "missing"
+    },
+    {
+      "price": 58042.739897758634,
+      "note": "",
+      "detected_prices": [],
+      "status": "missing"
+    }
+  ],
+  "repeated_rejections": [
+    {
+      "price": 100350.0,
+      "note": "",
+      "detected_prices": [
+        100350.0
+      ]
+    },
+    {
+      "price": 108485.8,
+      "note": "должен быть  предыдущий бар, а не текущий",
+      "detected_prices": [
+        108560.0
+      ]
+    },
+    {
+      "price": 108560.0,
+      "note": "",
+      "detected_prices": [
+        108560.0
+      ]
+    },
+    {
+      "price": 123250.0,
+      "note": "Это уровень, обраованный длинным хвостом бара. Это не уровень излома тренда",
+      "detected_prices": [
+        123250.0
+      ]
+    }
+  ],
+  "unconfirmed_robot_levels": [
+    111950.0,
+    123742.2
+  ],
+  "automatic_rule_update": false
+}

@@ -1,0 +1,123 @@
+{
+  "schema": "contextual_level_review_v1",
+  "review_date": "2026-09-22",
+  "source": "user_message",
+  "scope": {"exchange": "bybit", "market": "linear", "symbol": "BTCUSDT", "interval": "1d", "candle_timezone": "UTC"},
+  "purpose": "Ручной проверочный набор для последующей корректировки определения уровней; не самообучение и не торговый сигнал.",
+  "automatic_rule_update": false,
+  "cases": [
+    {
+      "id": "case_01", "user_item": 1,
+      "robot_price": 64935.7, "bsu_date": "2026-03-29",
+      "decision": "reject_inflection", "expected_inflection": false,
+      "reason": "Боковое движение волнами, а не самостоятельный излом тренда.",
+      "channel": {"lower_approx": 65705, "upper_approx": 73768, "start_approx": "2026-02-07", "end_approx": "2026-04-12", "subsequent_exit": "long"},
+      "interpretation": "Контекст канала включает ложные выходы за границу; нельзя проверять только попадание цены БСУ между двумя числами.",
+      "journal_action": "hide_robot_level"
+    },
+    {
+      "id": "case_02", "user_item": 2,
+      "user_price_approx": 58042, "robot_price": 58042.6, "bsu_date": "2026-06-25",
+      "decision": "accept_inflection", "expected_inflection": true,
+      "expected_types": ["inflection", "limit_level"],
+      "confirmation_dates": ["2026-06-30"],
+      "reason": "Правильный излом. Бар 30 июня немного не дошёл до уровня и даёт лимитное подтверждение.",
+      "stronger_than_case": "case_03",
+      "bsu_date_source": "earlier_explicit_user_clarification",
+      "confirmation_is_not_bsu_replacement": true
+    },
+    {
+      "id": "case_03", "user_item": 3,
+      "user_price_approx": 59081, "robot_price": 59081.4, "bsu_date": "2026-06-05",
+      "decision": "keep_as_weaker_confirmed_level", "expected_inflection": false,
+      "expected_inflection_applies_after": "2026-06-30",
+      "earlier_inflection_status": "not_rejected_by_this_review",
+      "expected_types": ["limit_level"],
+      "confirmation_dates": ["2026-06-24"],
+      "close_beyond_bsu_date": "2026-06-30",
+      "weaker_than_case": "case_02",
+      "reason": "Уровень полезен и оставлен пользователем. 24 июня подтверждает его как лимитный; 30 июня закрывается ниже хвоста БСУ 5 июня. Окончательный разворот связан с более низкой областью 58 042.",
+      "keep_visible": true,
+      "do_not_use_as_positive_final_inflection": true
+    },
+    {
+      "id": "case_04", "user_item": 4,
+      "user_price_approx": 74900, "robot_price": 74919.6, "bsu_date": "2026-09-15",
+      "decision": "accept_inflection", "expected_inflection": true,
+      "expected_types": ["inflection", "channel_boundary"],
+      "historical_evidence": [{"date": "2026-03-16", "role": "inflection_and_channel_boundary", "price": 74900}, {"date": "2026-04-29", "role": "boundary_confirmation", "price": 74900}],
+      "reason": "Правильный уровень. 16 марта — излом и граница канала, 29 апреля подтверждает эту границу. Граница канала может одновременно быть изломом."
+    },
+    {
+      "id": "case_05", "user_item": 5,
+      "user_price_approx": 94550, "robot_price": 94550.0, "bsu_date": "2025-12-09",
+      "bsu_date_source": "deletion_journal",
+      "decision": "reject_inflection", "expected_inflection": false,
+      "reason": "Излом слишком локальный, существенного лонга перед ним нет; движение относится к боковику.",
+      "channel": {"lower_approx": 85280, "upper_approx": 94000, "start_approx": null, "end_approx": null},
+      "journal_action": "hide_robot_level"
+    },
+    {
+      "id": "case_06", "user_item": 6,
+      "user_price_approx": 107432, "robot_price": 107432.6, "bsu_date": "2025-08-29",
+      "bsu_date_source": "deletion_journal",
+      "decision": "reject_inflection", "expected_inflection": false,
+      "reason": "Откат с недоходом до существующего уровня, а не самостоятельный излом тренда.",
+      "reference_level_price": null,
+      "journal_action": "hide_robot_level"
+    },
+    {
+      "id": "case_07", "user_item": 7,
+      "user_price_approx": 111950, "robot_price": 111950.0, "bsu_date": "2025-08-02",
+      "bsu_date_source": "deletion_journal",
+      "decision": "reject_inflection", "expected_inflection": false,
+      "reason": "Движение в канале. Область около 111 986 полезна как зеркальный и лимитный уровень, но не как излом тренда этого БСУ.",
+      "channel": {"lower_approx": 111986, "upper_approx": 120114, "start_approx": null, "end_approx": null},
+      "related_level": {"user_price_approx": 111986, "expected_types": ["mirror_level", "limit_level"], "mirror_dates_before": ["2025-05-22", "2025-07-09"], "mirror_date_after": "2025-08-02", "limit_pairs": [["2025-05-22", "2025-07-09"], ["2025-08-02", "2025-08-21"]]},
+      "do_not_blacklist_price_for_other_types": true,
+      "journal_action": "hide_robot_level"
+    },
+    {
+      "id": "case_08", "user_item": 8,
+      "user_price_approx": 117242, "robot_price": 117239.5, "bsu_date": "2025-09-17",
+      "bsu_date_source": "deletion_journal",
+      "decision": "reject_inflection", "expected_inflection": false,
+      "reason": "Локальный излом внутри канала, не самостоятельный разворот тренда нужного масштаба.",
+      "channel": {"lower_approx": 111986, "upper_approx": 120114, "start_approx": null, "end_approx": null},
+      "journal_action": "hide_robot_level"
+    },
+    {
+      "id": "case_09", "user_item": 9,
+      "user_price_approx": 123742, "robot_price": 123742.2, "bsu_date": "2025-08-13",
+      "bsu_date_source": "recomputed_robot_output",
+      "decision": "accept_inflection", "expected_inflection": true,
+      "reason": "Пользователь явно подтвердил правильность уровня робота."
+    },
+    {
+      "id": "case_10", "user_item": 10,
+      "decision": "accept_remaining_reviewed_robot_levels",
+      "reason": "Пользователь подтвердил остальные уровни робота, которые не удалял.",
+      "scope_limit": "Только уже просмотренный набор; это не разрешение считать правильными будущие результаты алгоритма.",
+      "exact_display_snapshot_available": false,
+      "reconstructed_visible_levels_file": "reconstructed_visible_robot_levels.json",
+      "membership_status": "reconstructed_not_proven_ui_snapshot",
+      "specific_case_decisions_take_precedence": true
+    }
+  ],
+  "implementation_requirements": [
+    "Отделять разворот тренда от волн и локальных экстремумов в боковике; учитывать ложные выходы за канал.",
+    "Не исключать все границы каналов: они могут одновременно быть изломами, как около 74 900.",
+    "Разделять пригодность уровня, его тип и сравнительную силу. Оставленный 59 081 — не положительная метка окончательного излома после 30 июня.",
+    "Недоход может подтверждать уже существующий уровень; сам по себе он не доказывает новый излом.",
+    "Сохранять зеркальные и лимитные подтверждения, даже когда метка излома отвергнута.",
+    "Проверять закрытия относительно high/low БСУ, а не относительно его close.",
+    "Применять последующее подтверждение или смену статуса только после соответствующей даты; не использовать будущее при историческом тестировании.",
+    "Не кодировать конкретные цены и даты как универсальный фильтр; это проверочные примеры, а не параметры торгового алгоритма."
+  ],
+  "open_parameters": [
+    "Численный критерий существенного входящего тренда и масштаба излома.",
+    "Способ обнаружения начала, границ и окончания канала, включая проколы.",
+    "Допуск недохода для лимитного подтверждения: пример 114,1 не задаёт универсальный порог.",
+    "Опорный уровень для отката около 107 432 не указан пользователем."
+  ]
+}

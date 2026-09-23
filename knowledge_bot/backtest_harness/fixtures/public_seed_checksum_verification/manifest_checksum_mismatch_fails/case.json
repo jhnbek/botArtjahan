@@ -1,0 +1,17 @@
+{
+  "case_id": "manifest_checksum_mismatch_fails",
+  "expected_valid": false,
+  "expected_error_codes": [
+    "manifest_checksum_mismatch"
+  ],
+  "expected_archive_checked_count": 1,
+  "expected_checksum_file_checked_count": 1,
+  "entries": [
+    {
+      "archive_file": "archives/archive.zip",
+      "checksum_file": "checksums/archive.zip.CHECKSUM",
+      "manifest_expected_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "expected_size_bytes": 42
+    }
+  ]
+}

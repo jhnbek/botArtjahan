@@ -1,0 +1,45 @@
+{
+  "source": "C:\\Projects\\bot_treiding\\botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+  "sha256": "19d123bf19aa0f4bc4342b32629047e0cfab233005d76b13d4fd0d673a2729da",
+  "examples": [
+    {
+      "history_end": "2026-01-14",
+      "bsu": "2026-01-05",
+      "line": 94749.9,
+      "bsu_high_low": 94749.9,
+      "bsu_close": 93825.5,
+      "atr14": 1980.2071428571423,
+      "incoming_atr": 5.222584938805099,
+      "reversal_atr": 2.771376731871483,
+      "earliest_structural_confirmation": "2026-01-08",
+      "touches": 3,
+      "status": "pass",
+      "rejects": [],
+      "last_atr": 2327.378571428572,
+      "basis": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ]
+    },
+    {
+      "history_end": "2025-11-25",
+      "bsu": "2025-06-22",
+      "line": 98125.0,
+      "bsu_high_low": 98125.0,
+      "bsu_close": 100904.3,
+      "atr14": 2921.3428571428562,
+      "incoming_atr": 4.291108785587843,
+      "reversal_atr": 7.0943059454067114,
+      "earliest_structural_confirmation": "2025-06-25",
+      "touches": 2,
+      "status": "pass",
+      "rejects": [],
+      "last_atr": 4637.399999999997,
+      "basis": [
+        "inflection",
+        "paranormal_bar"
+      ]
+    }
+  ]
+}

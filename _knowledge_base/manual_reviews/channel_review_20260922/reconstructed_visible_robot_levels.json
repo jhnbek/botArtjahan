@@ -1,0 +1,486 @@
+[
+  {
+    "price": 74919.6,
+    "side": "support",
+    "source": "auto_discovery",
+    "decision": "reject",
+    "kb_status": "reject",
+    "kb_score": 9.75,
+    "scope": "local",
+    "distance_atr": 4.1497,
+    "touch_count": 9,
+    "false_breakout_count": 4,
+    "basis_tags": [
+      "inflection",
+      "mirror_level",
+      "paranormal_bar",
+      "long_false_breakout_tail",
+      "two_bar_limit"
+    ],
+    "inflection_check": {
+      "price": 74919.6,
+      "confirmation_index": 495,
+      "confirmation_time": "2026-09-18T00:00:00+00:00",
+      "incoming_atr": 2.815926397356022,
+      "efficiency": 0.5045907824993254,
+      "atr_at_bsu": 2239.0499999999997,
+      "mirror_confirmation": {
+        "index": 337,
+        "time": "2026-04-13T00:00:00+00:00",
+        "price": 74868.2,
+        "tolerance": 89.562
+      },
+      "efficiency_exception": true
+    },
+    "higher_timeframe_confirmed": false,
+    "higher_timeframe": "",
+    "flags": {
+      "inside_channel": false,
+      "local_noise": false,
+      "short_tail_without_confirmation": false,
+      "repeated_chop": false,
+      "post_chop_acceptance": false
+    },
+    "auto_quality": {
+      "automation_confidence": 0.65,
+      "touch_quality": "loose",
+      "exact_touch_count": 4,
+      "touch_error_atr": 0.7715,
+      "close_side_switches": 0,
+      "close_balance_ratio": 0.0,
+      "active_after_last_touch": true,
+      "last_reaction_atr": 4.9767
+    },
+    "evidence": [
+      {
+        "tag": "inflection",
+        "summary": "уровень излома: сильное движение остановили и цена сильно ушла обратно",
+        "source": "level_selection_strength: lec_010_de07310a_0034"
+      },
+      {
+        "tag": "mirror_level",
+        "summary": "зеркальный уровень: касания с двух сторон в одну цену с допустимым люфтом",
+        "source": "level_selection_strength: lec_010_de07310a_0033, lec_015_26f6fc9d_0012"
+      },
+      {
+        "tag": "paranormal_bar",
+        "summary": "уровень по паранормальному бару/длинному диапазону",
+        "source": "level_selection_strength: lec_013_fe508895_0020, lec_016_596d35da_0050"
+      },
+      {
+        "tag": "long_false_breakout_tail",
+        "summary": "уровень подтвержден значимым хвостом ложного пробоя",
+        "source": "level_selection_strength: lec_013_fe508895_0019, lec_024_c5818820_0024"
+      },
+      {
+        "tag": "two_bar_limit",
+        "summary": "два бара/экстремума бьют в одну цену, уровень подтвержден точностью касаний",
+        "source": "detector_casebook: level_pass_mirror_two_bar_limit_001"
+      },
+      {
+        "tag": "three_or_more_exact_touches",
+        "summary": "9 подтвержденных касаний в одну ценовую зону",
+        "source": "level_selection_strength_spec.md: Strength Factors"
+      },
+      {
+        "tag": "false_breakout_confirmation",
+        "summary": "4 значимых ложных пробоев усиливают уровень",
+        "source": "level_selection_strength: lec_015_26f6fc9d_0012"
+      },
+      {
+        "tag": "auto_active_after_last_touch",
+        "summary": "после последнего касания была реакция 4.98 ATR",
+        "source": "level_discovery.py: post-touch reaction audit"
+      }
+    ],
+    "reject_reasons": [
+      {
+        "tag": "not_nearest_working_level",
+        "summary": "не ближайший рабочий уровень для текущей цены/сценария"
+      }
+    ],
+    "manual_review": [
+      "касания широкие: визуально проверить, что это одна цена, а не рядом стоящий шум",
+      "локальный уровень: проверить, не зажат ли он между основными границами",
+      "нет подтверждения старшим таймфреймом в текущем прогоне"
+    ],
+    "bsu": {
+      "index": 492,
+      "time": "2026-09-15T00:00:00+00:00"
+    }
+  },
+  {
+    "price": 59081.4,
+    "side": "support",
+    "source": "auto_discovery",
+    "decision": "reject",
+    "kb_status": "reject",
+    "kb_score": 8.25,
+    "scope": "local",
+    "distance_atr": 10.4737,
+    "touch_count": 3,
+    "false_breakout_count": 2,
+    "basis_tags": [
+      "inflection",
+      "paranormal_bar",
+      "long_false_breakout_tail",
+      "two_bar_limit"
+    ],
+    "inflection_check": {
+      "price": 59081.4,
+      "confirmation_index": 399,
+      "confirmation_time": "2026-06-14T00:00:00+00:00",
+      "incoming_atr": 7.896385499306265,
+      "efficiency": 0.7419623890633765,
+      "atr_at_bsu": 2409.342857142859,
+      "mirror_confirmation": {},
+      "efficiency_exception": false
+    },
+    "higher_timeframe_confirmed": false,
+    "higher_timeframe": "",
+    "flags": {
+      "inside_channel": false,
+      "local_noise": false,
+      "short_tail_without_confirmation": false,
+      "repeated_chop": false,
+      "post_chop_acceptance": false
+    },
+    "auto_quality": {
+      "automation_confidence": 0.75,
+      "touch_quality": "acceptable",
+      "exact_touch_count": 2,
+      "touch_error_atr": 0.0884,
+      "close_side_switches": 2,
+      "close_balance_ratio": 0.0091,
+      "active_after_last_touch": true,
+      "last_reaction_atr": 1.7443
+    },
+    "evidence": [
+      {
+        "tag": "inflection",
+        "summary": "уровень излома: сильное движение остановили и цена сильно ушла обратно",
+        "source": "level_selection_strength: lec_010_de07310a_0034"
+      },
+      {
+        "tag": "paranormal_bar",
+        "summary": "уровень по паранормальному бару/длинному диапазону",
+        "source": "level_selection_strength: lec_013_fe508895_0020, lec_016_596d35da_0050"
+      },
+      {
+        "tag": "long_false_breakout_tail",
+        "summary": "уровень подтвержден значимым хвостом ложного пробоя",
+        "source": "level_selection_strength: lec_013_fe508895_0019, lec_024_c5818820_0024"
+      },
+      {
+        "tag": "two_bar_limit",
+        "summary": "два бара/экстремума бьют в одну цену, уровень подтвержден точностью касаний",
+        "source": "detector_casebook: level_pass_mirror_two_bar_limit_001"
+      },
+      {
+        "tag": "three_or_more_exact_touches",
+        "summary": "3 подтвержденных касаний в одну ценовую зону",
+        "source": "level_selection_strength_spec.md: Strength Factors"
+      },
+      {
+        "tag": "false_breakout_confirmation",
+        "summary": "2 значимых ложных пробоев усиливают уровень",
+        "source": "level_selection_strength: lec_015_26f6fc9d_0012"
+      },
+      {
+        "tag": "auto_touch_quality_acceptable",
+        "summary": "исторические касания сходятся в цену: exact=2, max_error=0.088 ATR",
+        "source": "level_discovery.py: OHLC historical touch audit"
+      },
+      {
+        "tag": "auto_active_after_last_touch",
+        "summary": "после последнего касания была реакция 1.74 ATR",
+        "source": "level_discovery.py: post-touch reaction audit"
+      }
+    ],
+    "reject_reasons": [
+      {
+        "tag": "not_nearest_working_level",
+        "summary": "не ближайший рабочий уровень для текущей цены/сценария"
+      }
+    ],
+    "manual_review": [
+      "касания допустимые, но не идеальные: нужна контрольная визуальная проверка",
+      "локальный уровень: проверить, не зажат ли он между основными границами",
+      "нет подтверждения старшим таймфреймом в текущем прогоне"
+    ],
+    "bsu": {
+      "index": 390,
+      "time": "2026-06-05T00:00:00+00:00"
+    }
+  },
+  {
+    "price": 123742.2,
+    "side": "resistance",
+    "source": "auto_discovery",
+    "decision": "reject",
+    "kb_status": "reject",
+    "kb_score": 6.75,
+    "scope": "local",
+    "distance_atr": 15.3446,
+    "touch_count": 3,
+    "false_breakout_count": 2,
+    "basis_tags": [
+      "inflection",
+      "paranormal_bar",
+      "long_false_breakout_tail"
+    ],
+    "inflection_check": {
+      "price": 123742.2,
+      "confirmation_index": 99,
+      "confirmation_time": "2025-08-18T00:00:00+00:00",
+      "incoming_atr": 4.163146572279389,
+      "efficiency": 0.6830480467222526,
+      "atr_at_bsu": 2696.085714285714,
+      "mirror_confirmation": {},
+      "efficiency_exception": false
+    },
+    "higher_timeframe_confirmed": false,
+    "higher_timeframe": "",
+    "flags": {
+      "inside_channel": false,
+      "local_noise": false,
+      "short_tail_without_confirmation": false,
+      "repeated_chop": false,
+      "post_chop_acceptance": false
+    },
+    "auto_quality": {
+      "automation_confidence": 0.5,
+      "touch_quality": "loose",
+      "exact_touch_count": 1,
+      "touch_error_atr": 0.6627,
+      "close_side_switches": 2,
+      "close_balance_ratio": 0.0025,
+      "active_after_last_touch": true,
+      "last_reaction_atr": 9.0624
+    },
+    "evidence": [
+      {
+        "tag": "inflection",
+        "summary": "уровень излома: сильное движение остановили и цена сильно ушла обратно",
+        "source": "level_selection_strength: lec_010_de07310a_0034"
+      },
+      {
+        "tag": "paranormal_bar",
+        "summary": "уровень по паранормальному бару/длинному диапазону",
+        "source": "level_selection_strength: lec_013_fe508895_0020, lec_016_596d35da_0050"
+      },
+      {
+        "tag": "long_false_breakout_tail",
+        "summary": "уровень подтвержден значимым хвостом ложного пробоя",
+        "source": "level_selection_strength: lec_013_fe508895_0019, lec_024_c5818820_0024"
+      },
+      {
+        "tag": "three_or_more_exact_touches",
+        "summary": "3 подтвержденных касаний в одну ценовую зону",
+        "source": "level_selection_strength_spec.md: Strength Factors"
+      },
+      {
+        "tag": "false_breakout_confirmation",
+        "summary": "2 значимых ложных пробоев усиливают уровень",
+        "source": "level_selection_strength: lec_015_26f6fc9d_0012"
+      },
+      {
+        "tag": "auto_active_after_last_touch",
+        "summary": "после последнего касания была реакция 9.06 ATR",
+        "source": "level_discovery.py: post-touch reaction audit"
+      }
+    ],
+    "reject_reasons": [
+      {
+        "tag": "not_nearest_working_level",
+        "summary": "не ближайший рабочий уровень для текущей цены/сценария"
+      }
+    ],
+    "manual_review": [
+      "касания широкие: визуально проверить, что это одна цена, а не рядом стоящий шум",
+      "локальный уровень: проверить, не зажат ли он между основными границами",
+      "нет подтверждения старшим таймфреймом в текущем прогоне"
+    ],
+    "bsu": {
+      "index": 94,
+      "time": "2025-08-13T00:00:00+00:00"
+    }
+  },
+  {
+    "price": 97963.2,
+    "side": "resistance",
+    "source": "human_confirmed_inflection",
+    "decision": "manual_review",
+    "kb_status": "warn",
+    "kb_score": 0.0,
+    "scope": "local",
+    "distance_atr": 0.0,
+    "touch_count": 0,
+    "false_breakout_count": 0,
+    "basis_tags": [
+      "inflection"
+    ],
+    "inflection_check": {
+      "origin": "human_confirmed",
+      "requested_price": 97963.55158121476,
+      "reviewed_at": "2026-09-22T06:12:05.287157+00:00",
+      "bsu_date": "2026-01-14",
+      "note": "",
+      "automatic_detection": false
+    },
+    "higher_timeframe_confirmed": false,
+    "higher_timeframe": "",
+    "flags": {
+      "inside_channel": false,
+      "local_noise": false,
+      "short_tail_without_confirmation": false,
+      "repeated_chop": false,
+      "post_chop_acceptance": false
+    },
+    "auto_quality": {
+      "automation_confidence": 0.0,
+      "touch_quality": "unknown",
+      "exact_touch_count": 0,
+      "touch_error_atr": 0.0,
+      "close_side_switches": 0,
+      "close_balance_ratio": 0.0,
+      "active_after_last_touch": false,
+      "last_reaction_atr": 0.0
+    },
+    "evidence": [
+      {
+        "tag": "inflection",
+        "summary": "уровень излома: сильное движение остановили и цена сильно ушла обратно",
+        "source": "level_selection_strength: lec_010_de07310a_0034"
+      }
+    ],
+    "reject_reasons": [],
+    "manual_review": [
+      "проверить, что уровень не потерял актуальность после последующей структуры",
+      "локальный уровень: проверить, не зажат ли он между основными границами",
+      "нет подтверждения старшим таймфреймом в текущем прогоне"
+    ],
+    "bsu": {
+      "index": 248,
+      "time": "2026-01-14T00:00:00+00:00"
+    }
+  },
+  {
+    "price": 58042.6,
+    "side": "support",
+    "source": "human_confirmed_inflection",
+    "decision": "manual_review",
+    "kb_status": "warn",
+    "kb_score": 0.0,
+    "scope": "local",
+    "distance_atr": 0.0,
+    "touch_count": 0,
+    "false_breakout_count": 0,
+    "basis_tags": [
+      "inflection"
+    ],
+    "inflection_check": {
+      "origin": "human_confirmed",
+      "requested_price": 58042.739897758634,
+      "reviewed_at": "2026-09-22T05:12:24.706434+00:00",
+      "bsu_date": "2026-06-25",
+      "note": "",
+      "automatic_detection": false
+    },
+    "higher_timeframe_confirmed": false,
+    "higher_timeframe": "",
+    "flags": {
+      "inside_channel": false,
+      "local_noise": false,
+      "short_tail_without_confirmation": false,
+      "repeated_chop": false,
+      "post_chop_acceptance": false
+    },
+    "auto_quality": {
+      "automation_confidence": 0.0,
+      "touch_quality": "unknown",
+      "exact_touch_count": 0,
+      "touch_error_atr": 0.0,
+      "close_side_switches": 0,
+      "close_balance_ratio": 0.0,
+      "active_after_last_touch": false,
+      "last_reaction_atr": 0.0
+    },
+    "evidence": [
+      {
+        "tag": "inflection",
+        "summary": "уровень излома: сильное движение остановили и цена сильно ушла обратно",
+        "source": "level_selection_strength: lec_010_de07310a_0034"
+      }
+    ],
+    "reject_reasons": [],
+    "manual_review": [
+      "проверить, что уровень не потерял актуальность после последующей структуры",
+      "локальный уровень: проверить, не зажат ли он между основными границами",
+      "нет подтверждения старшим таймфреймом в текущем прогоне"
+    ],
+    "bsu": {
+      "index": 410,
+      "time": "2026-06-25T00:00:00+00:00"
+    }
+  },
+  {
+    "price": 125849.7,
+    "side": "resistance",
+    "source": "human_confirmed_inflection",
+    "decision": "manual_review",
+    "kb_status": "warn",
+    "kb_score": 0.0,
+    "scope": "local",
+    "distance_atr": 0.0,
+    "touch_count": 0,
+    "false_breakout_count": 0,
+    "basis_tags": [
+      "inflection"
+    ],
+    "inflection_check": {
+      "origin": "human_confirmed",
+      "requested_price": 125849.82410923425,
+      "reviewed_at": "2026-09-22T05:15:22.364152+00:00",
+      "bsu_date": "2025-10-05",
+      "note": "",
+      "automatic_detection": false
+    },
+    "higher_timeframe_confirmed": false,
+    "higher_timeframe": "",
+    "flags": {
+      "inside_channel": false,
+      "local_noise": false,
+      "short_tail_without_confirmation": false,
+      "repeated_chop": false,
+      "post_chop_acceptance": false
+    },
+    "auto_quality": {
+      "automation_confidence": 0.0,
+      "touch_quality": "unknown",
+      "exact_touch_count": 0,
+      "touch_error_atr": 0.0,
+      "close_side_switches": 0,
+      "close_balance_ratio": 0.0,
+      "active_after_last_touch": false,
+      "last_reaction_atr": 0.0
+    },
+    "evidence": [
+      {
+        "tag": "inflection",
+        "summary": "уровень излома: сильное движение остановили и цена сильно ушла обратно",
+        "source": "level_selection_strength: lec_010_de07310a_0034"
+      }
+    ],
+    "reject_reasons": [],
+    "manual_review": [
+      "проверить, что уровень не потерял актуальность после последующей структуры",
+      "локальный уровень: проверить, не зажат ли он между основными границами",
+      "нет подтверждения старшим таймфреймом в текущем прогоне"
+    ],
+    "bsu": {
+      "index": 147,
+      "time": "2025-10-05T00:00:00+00:00"
+    }
+  }
+]

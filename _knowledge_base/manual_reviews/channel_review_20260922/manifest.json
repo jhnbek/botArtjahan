@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-09-22T10:45:06.779538+00:00",
+  "source_cache": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+  "source_feedback": "botArtjahan\\_knowledge_base\\user_level_feedback.jsonl",
+  "cache_fetched_at": "2026-09-22T06:29:34.239774Z",
+  "bar_count": 500,
+  "source_hashes": {
+    "candles_sha256": "9820ce7701c9c4e3f0ada8674827c3cdc3185dfef7c9b15483e36c115095d2d7",
+    "feedback_sha256": "327f75ffd1327e218a6914130555a165774db5234ddb86db6dc2bf9e35abb066"
+  },
+  "snapshot_sha256": {
+    "candles.json": "9820ce7701c9c4e3f0ada8674827c3cdc3185dfef7c9b15483e36c115095d2d7",
+    "feedback.jsonl": "327f75ffd1327e218a6914130555a165774db5234ddb86db6dc2bf9e35abb066",
+    "automatic_robot_levels.json": "6f79f8b7097a3237863779a0b6ec3dd882367d743045b8d22bb03324c13812fa",
+    "reconstructed_visible_robot_levels.json": "732fa3973b83a41cd0a6a564bda2836ea41e03be5c1a9cda5e74fe4037fe3417",
+    "review.json": "579af1158a76bd040d372157d1039a8f1c437b704872e595c19ff72b53362346",
+    "baseline.json": "3cde71a038d36d2b83e033fbf78aee6ef156a3b7af11f406a7b27ff459c6cb89",
+    "README.md": "db7bda4e66e77a83c4472c27277b2e1806d14dc0112e3624a02f8d3f221ac954"
+  },
+  "code_sha256": {
+    "knowledge_bot/level_discovery.py": "b20a7428160e0bddb4df21190a37cad9818b8271c9c982a885bcf1c4d689339e",
+    "knowledge_bot/desktop_app.py": "7721a7a82e8fae4c37f193d013aaf819e0027e7039a42390583fd5446a063060",
+    "knowledge_bot/build_level_feedback_statistics.py": "12fb7883a9a9d5c5643dc3a6970f3203bd0936a2f4f2ec7257a0bebfa003b51e"
+  }
+}

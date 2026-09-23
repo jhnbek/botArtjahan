@@ -1,0 +1,55 @@
+{
+  "scope": {
+    "exchange": "bybit",
+    "symbol": "BTCUSDT",
+    "interval": "1d"
+  },
+  "price_tolerance_ratio": 0.001,
+  "expected_inflections": [
+    {
+      "price": 97963.55158121476,
+      "note": "",
+      "detected_prices": [],
+      "status": "missing"
+    },
+    {
+      "price": 58042.739897758634,
+      "note": "",
+      "detected_prices": [
+        58042.6
+      ],
+      "status": "matched"
+    },
+    {
+      "price": 125849.82410923425,
+      "note": "",
+      "detected_prices": [
+        125849.7
+      ],
+      "status": "matched"
+    }
+  ],
+  "repeated_rejections": [
+    {
+      "price": 108485.8,
+      "note": "должен быть  предыдущий бар, а не текущий",
+      "detected_prices": [
+        108560.0
+      ]
+    },
+    {
+      "price": 108560.0,
+      "note": "",
+      "detected_prices": [
+        108560.0
+      ]
+    }
+  ],
+  "unconfirmed_robot_levels": [
+    80607.9,
+    59081.4,
+    101045.9,
+    117239.5
+  ],
+  "automatic_rule_update": false
+}
