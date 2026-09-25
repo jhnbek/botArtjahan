@@ -1,0 +1,113 @@
+{
+  "revision": "clean_reaction_selection_20260925",
+  "status": "implemented",
+  "recorded_at": "2026-09-25T07:05:03.672103+00:00",
+  "baseline_revision": "paranormal_body_1_6_20260925",
+  "baseline_mirror_limit_count": 31,
+  "baseline_source": "baseline_sources.json",
+  "baseline_chart": "../working_31_review_20260925/chart_snapshot.json",
+  "reviewed_feedback": "../working_31_feedback_20260925/review.json",
+  "algorithm_changes": [
+    "qualify_stop_or_clean_hold_before_departure",
+    "full_path_and_no_false_breakout_gain",
+    "interaction_based_historical_chop",
+    "channel_at_reaction_contact_times",
+    "reviewed_whole_level_constraints_before_spacing"
+  ],
+  "counts": {
+    "raw_candidates": 173,
+    "raw_mirror_limit": 95,
+    "general_selected_all_types": 28,
+    "general_selected_mirror_limit": 26,
+    "with_manual_rejections_all_types": 21,
+    "with_manual_rejections_mirror_limit": 19,
+    "explicit_58_still_found_by_general_rules": 9,
+    "explicit_58_still_found_with_manual_constraints": 0,
+    "reviewed_whole_level_constraints": 29,
+    "reviewed_whole_levels_still_found_by_general_rules": 10,
+    "reviewed_whole_levels_still_found_with_manual_constraints": 0,
+    "reference_price_matches": 12,
+    "reference_count": 18,
+    "selected_without_reference_match": 7
+  },
+  "latest20_removed_by_general_rules": [
+    64250.0,
+    68224.4,
+    70508.8,
+    73323.9,
+    77847.6,
+    87521.9,
+    90945.0,
+    103042.2,
+    104936.7,
+    109150.0,
+    113649.9
+  ],
+  "latest20_needing_explicit_constraints": [
+    60711.1,
+    62846.8,
+    76200.9,
+    84288.0,
+    89243.1,
+    93538.4,
+    95700.1,
+    107421.7,
+    115738.1
+  ],
+  "latest20_remaining_after_constraints": [],
+  "as_of": "2026-09-23T06:00:00Z",
+  "journal_sha256": "6eb61e50dffa0184411c0d5de245290a2bd09d4fb788b4267aac099a63dbad25",
+  "journal_rows": 244,
+  "validation": {
+    "unittest_passed": 280,
+    "unittest_failed": 0,
+    "gui_archive_remaining": 11,
+    "gui_corrected_mirror_limit": 19,
+    "gui_manual_lines": 19,
+    "gui_same_candles": true,
+    "gui_offline": true,
+    "gui_journal_unchanged": true
+  },
+  "heuristic_parameters": {
+    "working_selection": true,
+    "min_level_distance_fraction": 0.015,
+    "working_reaction_bars": 10,
+    "working_min_reaction_atr": 2.0,
+    "working_min_reaction_efficiency": 0.55,
+    "working_stop_lookback": 3,
+    "working_min_arrival_atr": 0.5,
+    "working_rejection_tail_atr": 0.2,
+    "working_hold_max_gap": 3,
+    "working_reaction_start_bars": 3,
+    "working_reaction_start_atr": 0.5,
+    "working_formation_chop_bars": 5,
+    "working_interaction_chop_penalty": 4.0
+  },
+  "source_sha256": {
+    "knowledge_bot/level_selection.py": "31f6b3ab6ef9ef1084bb6c8317d9f508801fa68b3685cab64de4be93b6c866ae",
+    "knowledge_bot/level_discovery.py": "e6e2b0133283a1960110ead1bc8922b125f1f73c455c25fb2a153ee6a91cd59a",
+    "knowledge_bot/level_structure.py": "3c1d15f9cc55ff1f4e3836562b6faaddcb56692b5bd4b25c58130d9df744d841",
+    "knowledge_bot/chart_level_modes.py": "5d1b842695a7e93fbd6bd5a9d4794dcbd47b3a436455f53173419e527388b931",
+    "knowledge_bot/desktop_app.py": "b57a7f205107cec8f0a0f7bff6950eef3b8a5229a033a5fec941f766ea5b5729",
+    "knowledge_bot/review_working_levels.py": "d18c4923a7aaa299ab25367a6eacc6c63afcfc0aeabf40e1bb9961d0fa7f113c",
+    "knowledge_bot/detector_prototype.py": "c6e1bb0af5aeed3c09e0b43b1fe0515ac2d4e7ef47390dc97f10c65c990766fc",
+    "tests/test_clean_reaction_review.py": "f4a2efcd4b9644e4750afbc4b40484046ef7c10bc437b76feafdbbb7af3c2d53",
+    "tests/test_review_constraint_integration.py": "7210ca7d40599c6538590d0403db77a67df5be15e8a271aedb707a0e48c9aa24"
+  },
+  "scenarios": {
+    "manifest": "../scenarios_dzhahan_20260925/manifest.json",
+    "scenario_count": 409,
+    "complete_pairs": 408,
+    "image_count": 817,
+    "missing_hourly": [
+      85
+    ],
+    "visual_pairs_reviewed": [
+      2,
+      205,
+      409
+    ],
+    "model_self_training": false,
+    "used_to_fit_rules": false
+  }
+}

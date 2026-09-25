@@ -334,7 +334,16 @@
 !/tests/fixtures/
 !/tests/fixtures/inflection_review_btc_1d.json
 !/knowledge_bot/chart_level_modes.py
+!/knowledge_bot/level_structure.py
+!/knowledge_bot/review_level_structure.py
 !/tests/test_chart_level_modes.py
+!/tests/test_level_structure.py
+!/tests/test_level_strength.py
+!/knowledge_bot/level_history.py
+!/tests/test_level_history.py
+!/tests/test_level_price_consensus.py
+!/tests/test_bsu_contact_distance.py
+!/knowledge_bot/review_bsu_distance.py
 
 # User-authorized handoff: chart annotations and reproducible manual reviews.
 !/SETUP_OTHER_PC.md
@@ -355,3 +364,35 @@
 !/handoff_archive/visuals/*.py
 !/handoff_archive/visuals/*.json
 !/handoff_archive/visuals/*.html
+
+!/knowledge_bot/level_selection.py
+!/tests/test_level_selection.py
+!/tests/test_manual_candidates.py
+!/tests/test_paranormal_body.py
+!/tests/test_working_level_quality.py
+!/tests/test_working_31_review.py
+!/knowledge_bot/review_working_levels.py
+
+# User-provided daily/hourly scenario pairs; only this collection's JPEGs.
+!/_knowledge_base/manual_reviews/scenarios_dzhahan_20260925/images/1D_[0-9]*.jpg
+!/_knowledge_base/manual_reviews/scenarios_dzhahan_20260925/images/1H_[0-9]*.jpg
+!/tests/test_review_constraint_integration.py
+!/tests/test_clean_reaction_review.py
+!/knowledge_bot/level_evidence_strength.py
+!/knowledge_bot/level_origin_context.py
+!/tests/test_origin_evidence.py
+!/tests/test_cross_level_origin.py
+!/tests/test_body_strength_scale.py
+!/_knowledge_base/manual_reviews/scenarios_dzhahan_20260925/visual_analysis/index.html
+!/_knowledge_base/manual_reviews/scenarios_dzhahan_20260925/visual_analysis/build_report.py
+!/_knowledge_base/manual_reviews/scenarios_dzhahan_20260925/visual_analysis/estimate_pixel_atr.py
+
+# Paused entry-model training and portable handoff (2026-09-25).
+!/knowledge_bot/scenario_image_features.py
+!/knowledge_bot/scenario_model.py
+!/knowledge_bot/scenario_training_rules.py
+!/knowledge_bot/train_scenario_entry_model.py
+!/tests/test_scenario_model.py
+!/tests/test_scenario_entry_training.py
+!/requirements-training.txt
+!/TRAINING_HANDOFF.md

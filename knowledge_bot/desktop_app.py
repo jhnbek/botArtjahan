@@ -40,7 +40,11 @@ from build_level_feedback_statistics import build as build_level_feedback_statis
 from build_level_feedback_statistics import compare_inflection_feedback, read_records, _active_labels
 from chart_review_packet import build_live_kb_chart_review_packet
 from level_discovery import Bar, DiscoveryParams, discover_levels, level_report, apply_confirmed_inflections
-from chart_level_modes import MODE_LABELS as REVIEW_MODE_LABELS, typed_review_levels, feedback_applies_to_mode
+from level_history import daily_level_history, rebase_bar_indices
+from chart_level_modes import (MODE_LABELS as REVIEW_MODE_LABELS, typed_review_levels,
+                               feedback_applies_to_mode, marker_tooltip, closed_candle_rows, matched_review_snapshot,
+                               active_bsu_rejections, rejected_contact_constraints, working_rejected_level_prices,
+                               active_manual_prices, manual_candidate_levels, working_31_review_snapshot)
 
 import pyqtgraph as pg
 from PySide6 import QtCore, QtGui, QtWidgets
@@ -158,16 +162,28 @@ class OHLCBarItem(pg.GraphicsObject):
 # --------------------------------------------------------------------------- #
 # Worker thread: fetch + analyze off the GUI thread
 # --------------------------------------------------------------------------- #
-def inflection_review_levels(rows: list[dict[str, Any]], confirmations=None) -> list[dict[str, Any]]:
+def inflection_review_levels(rows: list[dict[str, Any]], confirmations=None, *, as_of_ms=None,
+                             interval=None, excluded_contacts=(), excluded_level_prices=()) -> list[dict[str, Any]]:
     """Historical review on the displayed timeframe, including distant candidates."""
+    rows = closed_candle_rows(rows, as_of_ms=as_of_ms)
+    rows, history_window = daily_level_history(rows, interval=interval, as_of_ms=as_of_ms)
+    if not rows:
+        return []
     bars = [Bar(int(row["open_time_ms"]), *[
         float(row[key]) for key in ("open", "high", "low", "close", "volume")
     ]) for row in rows]
-    levels = discover_levels(bars, DiscoveryParams(nearest_window_atr=float("inf")))
+    levels = discover_levels(bars, DiscoveryParams(nearest_window_atr=float("inf"), excluded_contacts=excluded_contacts,
+                                                   excluded_level_prices=excluded_level_prices),
+                             as_of_ms=as_of_ms, interval=interval)
     levels = [level for level in levels if "inflection" in level.basis_tags
               or level.inflection_check.get("retained_secondary")]
     levels = apply_confirmed_inflections(bars, levels, confirmations or [])
-    return [level_report(level) for level in levels]
+    reports = []
+    for level in levels:
+        report = rebase_bar_indices(level_report(level), history_window['start_index'])
+        report['history_window'] = history_window
+        reports.append(report)
+    return reports
 
 
 class AnalyzeWorker(QtCore.QThread):
@@ -178,7 +194,9 @@ class AnalyzeWorker(QtCore.QThread):
 
     def __init__(self, symbol: str, interval: str, limit: int,
                  exchange: str = "bybit", market: str = "linear", inflection_only: bool = False,
-                 review_mode: str | None = None):
+                 review_mode: str | None = None, *,
+                 review_rows: list[dict[str, Any]] | None = None,
+                 analysis_as_of_ms: int | None = None):
         super().__init__()
         self._symbol = symbol
         self._interval = interval
@@ -187,28 +205,72 @@ class AnalyzeWorker(QtCore.QThread):
         self._market = market
         self._inflection_only = inflection_only
         self._review_mode = review_mode or ('inflection' if inflection_only else None)
+        self._review_rows = None if review_rows is None else [dict(row) for row in review_rows]
+        self._analysis_as_of_ms = analysis_as_of_ms
 
     def run(self) -> None:  # noqa: D401 - QThread entry point
         try:
+            if self._review_mode == 'working_31_review':
+                self.finished_ok.emit(working_31_review_snapshot())
+                return
+            if self._review_mode == 'matched_review':
+                exclusions = rejected_contact_constraints(read_records(USER_LEVEL_FEEDBACK_PATH), ('bybit','BTCUSDT','1d'))
+                self.finished_ok.emit(matched_review_snapshot(excluded_contacts=exclusions))
+                return
             feed = feed_module(self._exchange)
             symbol = feed.normalize_symbol(self._symbol)
-            payload = feed_get_ohlc(
-                self._exchange,
-                symbol,
-                interval=self._interval,
-                limit=self._limit,
-                market=self._market,
-            )
-            if self._review_mode in ('mirror_limit', 'paranormal'):
+            records = read_records(USER_LEVEL_FEEDBACK_PATH)
+            chart_key = (self._exchange,symbol,self._interval)
+            exclusions = rejected_contact_constraints(records, chart_key)
+            level_exclusions = working_rejected_level_prices(records, chart_key, self._review_mode or 'inflection')
+            if self._review_rows is not None:
+                if self._review_mode not in ('all_levels', 'mirror_limit', 'paranormal', 'inflection', 'manual_candidates'):
+                    raise ValueError('Offline reanalysis requires a live level review mode')
+                payload = {'bars': self._review_rows}
+            else:
+                payload = feed_get_ohlc(
+                    self._exchange,
+                    symbol,
+                    interval=self._interval,
+                    limit=self._limit,
+                    market=self._market,
+                )
+            analysis_as_of_ms = self._analysis_as_of_ms
+            if analysis_as_of_ms is None:
+                analysis_as_of_ms = int(datetime.now(timezone.utc).timestamp()*1000)
+            # Keep the forming daily bar visible, while both rendering and
+            # level discovery share the same eighteen-calendar-month window.
+            chart_rows, history_window = daily_level_history(
+                payload.get('bars') or [], interval=self._interval,
+                as_of_ms=analysis_as_of_ms)
+            payload = {**payload, 'bars': chart_rows}
+            if self._review_mode == 'manual_candidates':
+                manual_prices = active_manual_prices(records, chart_key)
+                self.finished_ok.emit({
+                    'symbol': symbol, 'exchange': self._exchange, 'market': self._market,
+                    'interval': self._interval, 'bars': chart_rows,
+                    'inflection_levels': manual_candidate_levels(
+                        chart_rows, manual_prices, as_of_ms=analysis_as_of_ms,
+                        interval=self._interval, excluded_contacts=exclusions,
+                        excluded_level_prices=level_exclusions),
+                    'manual_reference_prices': manual_prices,
+                    'analysis_as_of_ms': analysis_as_of_ms, 'history_window': history_window,
+                    'review_mode': self._review_mode, 'packet': {},
+                })
+                return
+            if self._review_mode in ('all_levels', 'mirror_limit', 'paranormal'):
                 self.finished_ok.emit({
                     'symbol': symbol, 'exchange': self._exchange, 'market': self._market,
                     'interval': self._interval, 'bars': payload.get('bars') or [],
-                    'inflection_levels': typed_review_levels(payload.get('bars') or [], self._review_mode),
+                    'inflection_levels': typed_review_levels(payload.get('bars') or [], self._review_mode,
+                                                            as_of_ms=analysis_as_of_ms, interval=self._interval, excluded_contacts=exclusions,
+                                                            excluded_level_prices=level_exclusions),
+                    'analysis_as_of_ms': analysis_as_of_ms,
+                    'history_window': history_window,
                     'review_mode': self._review_mode, 'packet': {},
                 })
                 return
             if self._review_mode == 'inflection':
-                records = read_records(USER_LEVEL_FEEDBACK_PATH)
                 inflection_records = [record for record in records
                     if record.get('action') not in ('hide_robot_level', 'restore_robot_level')
                     or feedback_applies_to_mode(record, 'inflection')]
@@ -217,14 +279,20 @@ class AnalyzeWorker(QtCore.QThread):
                     if key[:3] == (self._exchange, symbol, self._interval)
                     and record.get('label') == 'human_accepted'
                     and 'излом_тренда' in record.get('reason_codes', [])]
-                automatic = inflection_review_levels(payload.get("bars") or [])
-                levels = inflection_review_levels(payload.get("bars") or [], confirmations)
+                automatic = inflection_review_levels(payload.get("bars") or [], as_of_ms=analysis_as_of_ms,
+                                                     interval=self._interval, excluded_contacts=exclusions,
+                                                     excluded_level_prices=level_exclusions)
+                levels = inflection_review_levels(payload.get("bars") or [], confirmations,
+                                                 as_of_ms=analysis_as_of_ms, interval=self._interval, excluded_contacts=exclusions,
+                                                 excluded_level_prices=level_exclusions)
                 comparison = compare_inflection_feedback(
                     automatic, records, self._exchange, symbol, self._interval)
                 self.finished_ok.emit({
                     "symbol": symbol, "exchange": self._exchange, "market": self._market,
                     "interval": self._interval, "bars": payload.get("bars") or [],
                     "inflection_levels": levels,
+                    "analysis_as_of_ms": analysis_as_of_ms,
+                    "history_window": history_window,
                     "human_review_comparison": comparison,
                     "inflection_only": True, "packet": {},
                     "review_mode": "inflection",
@@ -274,7 +342,11 @@ class AnalyzeWorker(QtCore.QThread):
                 "context_interval": context_interval,
                 "higher_interval": higher_interval,
                 "bars": payload.get("bars") or [],
-                "inflection_levels": inflection_review_levels(payload.get("bars") or []),
+                "inflection_levels": inflection_review_levels(payload.get("bars") or [], as_of_ms=analysis_as_of_ms,
+                                                              interval=self._interval, excluded_contacts=exclusions,
+                                                              excluded_level_prices=level_exclusions),
+                "analysis_as_of_ms": analysis_as_of_ms,
+                "history_window": history_window,
                 "packet": packet,
             })
         except Exception as exc:  # noqa: BLE001 - surface error to UI
@@ -352,6 +424,10 @@ class MainWindow(QtWidgets.QMainWindow):
         self._visible_robot_levels: list[dict[str, Any]] = []
         self._hidden_robot_levels: dict[tuple[str, str], list[float]] = {}
         self._active_chart_key: tuple[str, str, str] | None = None
+        self._rejected_bsu_marks: set[tuple[float, int]] = set()
+        self._review_bars: list[dict] = []
+        self._analysis_as_of_ms: int | None = None
+        self._active_market = 'linear'
         self._last_chart_packet: dict[str, Any] | None = None
         self._inflection_levels: list[dict[str, Any]] = []
         self._review_mode = 'inflection'
@@ -389,7 +465,7 @@ class MainWindow(QtWidgets.QMainWindow):
         layout = QtWidgets.QVBoxLayout(tab)
         review_row = QtWidgets.QHBoxLayout()
         self.show_inflection_btn = QtWidgets.QPushButton("Показать уровень излома тренда")
-        self.show_inflection_btn.clicked.connect(self._on_fetch)
+        self.show_inflection_btn.clicked.connect(lambda: self._on_fetch('inflection'))
         review_row.addWidget(self.show_inflection_btn)
         self.show_mirror_limit_btn = QtWidgets.QPushButton("Показать зеркальные и лимитные уровни")
         self.show_mirror_limit_btn.clicked.connect(lambda: self._on_fetch('mirror_limit'))
@@ -454,7 +530,7 @@ class MainWindow(QtWidgets.QMainWindow):
         row.addWidget(self.limit_spin)
 
         self.fetch_btn = QtWidgets.QPushButton("Загрузить и проанализировать")
-        self.fetch_btn.clicked.connect(self._on_fetch)
+        self.fetch_btn.clicked.connect(lambda: self._on_fetch('all_levels'))
         row.addWidget(self.fetch_btn)
 
         self.add_manual_level_btn = QtWidgets.QPushButton("Добавить свой уровень")
@@ -471,14 +547,20 @@ class MainWindow(QtWidgets.QMainWindow):
         self.remove_selected_manual_level_btn.toggled.connect(self._on_remove_selected_manual_mode)
         row.addWidget(self.remove_selected_manual_level_btn)
 
-        self.clear_manual_levels_btn = QtWidgets.QPushButton("Очистить свои уровни")
-        self.clear_manual_levels_btn.clicked.connect(self._clear_manual_levels)
-        row.addWidget(self.clear_manual_levels_btn)
-
         self.remove_robot_level_btn = QtWidgets.QPushButton("Удалить уровень робота")
         self.remove_robot_level_btn.setCheckable(True)
         self.remove_robot_level_btn.toggled.connect(self._on_remove_robot_level_mode_changed)
         row.addWidget(self.remove_robot_level_btn)
+        self.remove_bsu_btn = QtWidgets.QPushButton("Удалить БСУ")
+        self.remove_bsu_btn.setCheckable(True)
+        self.remove_bsu_btn.toggled.connect(self._on_remove_bsu_mode_changed)
+        row.addWidget(self.remove_bsu_btn)
+        self.restore_bsu_btn = QtWidgets.QPushButton("Вернуть прошлый БСУ")
+        self.restore_bsu_btn.clicked.connect(self._restore_previous_bsu)
+        row.addWidget(self.restore_bsu_btn)
+        for button in (self.add_manual_level_btn, self.classify_manual_level_btn,
+                       self.remove_selected_manual_level_btn, self.remove_robot_level_btn):
+            button.toggled.connect(lambda enabled: self.remove_bsu_btn.setChecked(False) if enabled else None)
 
         self.restore_robot_levels_btn = QtWidgets.QPushButton("Вернуть последний уровень")
         self.restore_robot_levels_btn.clicked.connect(self._restore_last_robot_level)
@@ -664,15 +746,20 @@ class MainWindow(QtWidgets.QMainWindow):
         self.statusBar().showMessage(f"Не удалось загрузить инструменты: {message}")
 
     def _set_analysis_buttons_enabled(self, enabled: bool) -> None:
-        for button in (self.fetch_btn, self.show_inflection_btn, self.show_mirror_limit_btn, self.show_paranormal_btn):
+        for button in (self.fetch_btn, self.show_inflection_btn, self.show_mirror_limit_btn,
+                       self.show_paranormal_btn):
             button.setEnabled(enabled)
 
-    def _on_fetch(self, review_mode='inflection') -> None:
+    def _on_fetch(self, review_mode='all_levels') -> None:
         # QPushButton.clicked may pass a checked boolean.
         if not isinstance(review_mode, str):
-            review_mode = 'inflection'
+            review_mode = 'all_levels'
         if self._worker is not None and self._worker.isRunning():
             return
+        if review_mode in ('matched_review', 'working_31_review'):
+            self.exchange_combo.setCurrentIndex(self.exchange_combo.findData('bybit'))
+            self.symbol_combo.setCurrentText('BTCUSDT')
+            self.interval_combo.setCurrentText('1d')
         symbol = self.symbol_combo.currentText().strip().upper()
         if not symbol:
             self.statusBar().showMessage("Сначала укажите инструмент.")
@@ -681,22 +768,34 @@ class MainWindow(QtWidgets.QMainWindow):
         limit = self.limit_spin.value()
         exchange = str(self.exchange_combo.currentData())
         market = "linear" if exchange == "bybit" else "spot"
+        review_options = {}
+        if ((review_mode == 'manual_candidates'
+                or (review_mode == 'mirror_limit' and self._review_mode == 'working_31_review'))
+                and self._review_bars
+                and self._active_chart_key == (exchange, symbol, interval)):
+            review_options = {'review_rows': self._review_bars, 'analysis_as_of_ms': self._analysis_as_of_ms}
         self._set_analysis_buttons_enabled(False)
-        self.statusBar().showMessage(f"Загрузка {symbol} {interval} с {self.exchange_combo.currentText()}...")
+        self.statusBar().showMessage(
+            "Открываю сохранённый расчёт из 31 уровня BTCUSDT 1d..."
+            if review_mode == 'working_31_review' else
+            f"Загрузка {symbol} {interval} с {self.exchange_combo.currentText()}...")
         self._worker = AnalyzeWorker(symbol, interval, limit, exchange=exchange, market=market,
-                                     review_mode=review_mode)
+                                     review_mode=review_mode, **review_options)
         self._worker.finished_ok.connect(self._on_analysis_done)
         self._worker.failed.connect(self._on_analysis_failed)
         self._worker.start()
 
     def _on_analysis_done(self, result: dict[str, Any]) -> None:
         self._set_analysis_buttons_enabled(True)
+        self._analysis_as_of_ms = result.get('analysis_as_of_ms') or (result.get('history_window') or {}).get('as_of_ms')
+        self._active_market = result.get('market') or ('linear' if result['exchange'] == 'bybit' else 'spot')
+        self.remove_bsu_btn.setChecked(False)
         self._review_mode = result.get('review_mode', 'inflection')
-        for button in (self.add_manual_level_btn, self.classify_manual_level_btn,
-                       self.remove_selected_manual_level_btn, self.clear_manual_levels_btn):
-            if self._review_mode != 'inflection':
-                button.setChecked(False)
-            button.setEnabled(self._review_mode == 'inflection')
+        for button in (self.remove_robot_level_btn, self.restore_robot_levels_btn,
+                       self.add_manual_level_btn, self.classify_manual_level_btn,
+                       self.remove_selected_manual_level_btn):
+            button.setChecked(False)
+            button.setEnabled(True)
         self._active_chart_key = (
             str(result["exchange"]),
             str(result["symbol"]),
@@ -706,16 +805,98 @@ class MainWindow(QtWidgets.QMainWindow):
         self._inflection_levels = result.get("inflection_levels") or []
         self.show_inflection_btn.setEnabled(True)
         self._draw_candles(result.get("bars") or [])
-        if self._review_mode in ('mirror_limit', 'paranormal'):
+        history = result.get('history_window') or {}
+        history_note = (f"Окно дневного анализа: {history['months']} месяцев, "
+                        f"с {history['cutoff_date']} по {history['as_of_date']} (UTC).\n"
+                        if history.get('applied') else '')
+        if self._review_mode == 'working_31_review':
+            self._last_chart_packet = {}
+            self._draw_kb_levels({})
+            self._draw_manual_levels()
+            rows = [f"{lv['review_id']}: робот {lv['price']:g}; БСУ {lv['bsu']['time'][:10]}"
+                    for lv in self._inflection_levels]
+            self.analysis_view.setPlainText(
+                f"BTCUSDT · 1d · сохранённый набор из 31 уровня\n"
+                f"Свечи по {result['review_as_of']}. Порог тела паранормального бара: 1,6 ATR.\n"
+                + history_note
+                + "Все зеркальные и лимитные уровни после отбора силы и расстояния 1,5%, "
+                  "до применения удалений отдельных уровней. Отбора по близости к вашим линиям нет.\n"
+                  "Синие линии — ваши. Круг — БСУ/касание; красный крестик — ложный пробой для поиска входа.\n"
+                  "Удалить уровень или БСУ можно обычными кнопками с указанием причины. "
+                  "Удаления сохраняются для этого разбора и учитываются при новом рабочем расчёте.\n\n"
+                  "Для пересчёта по новой методике на этих же свечах нажмите "
+                  "«Показать зеркальные и лимитные уровни».\n\n"
+                + '\n'.join(rows))
+            self.statusBar().showMessage(
+                f"Показано {len(self._visible_robot_levels)} из 31 уровня робота; "
+                f"ваших линий: {len(self._manual_level_prices)}.")
+            return
+        if self._review_mode == 'matched_review':
+            self._last_chart_packet = {}
+            archived_count = result.get('archived_match_count', 15)
+            excluded = result.get('excluded_archived_levels') or []
+            excluded_note = ("За пределами 18 месяцев остались архивные БСУ: "
+                             + '; '.join(f"{lv['price']:g} ({lv['bsu_time'][:10]})" for lv in excluded)
+                             + '.\n' if excluded else '')
+            rows = [f"{lv['review_id']}: ваша {lv['matched_user_price']:g} → робот {lv['price']:g}; "
+                    f"разница {lv['match_error_percent']:.3f}%; БСУ {lv['bsu']['time'][:10]}"
+                    for lv in self._inflection_levels]
+            self.analysis_view.setPlainText(
+                f"BTCUSDT · 1d · {len(self._inflection_levels)} из {archived_count} архивных совпадений\n"
+                f"Снимок сравнения: {result['review_as_of']}. Допуск совпадения: 0,1%.\n"
+                "Это архивные цены робота из прежнего отчёта. Текущий алгоритм может выбрать другие цены.\n"
+                "Для нового расчёта нажмите «Показать зеркальные и лимитные уровни»; отметки баров в архиве построены по текущим правилам.\n"
+                + history_note + excluded_note
+                + "Круг — БСУ/касание; крестик — ЛП для поиска входа, не подтверждение уровня.\n"
+                "Совпадение по цене не означает совпадения типа уровня или всех касаний.\n\n"+'\n'.join(rows))
+            self._draw_kb_levels({})
+            self._draw_manual_levels()
+            self.statusBar().showMessage(
+                f"Показаны {len(self._inflection_levels)} из {result.get('archived_match_count', 15)} "
+                "уровней сохранённого разбора BTCUSDT 1d в пределах 18 месяцев.")
+            return
+        if self._review_mode == 'manual_candidates':
+            self._last_chart_packet = {}
+            self._draw_kb_levels({})
+            self._draw_manual_levels()
+            references = result.get('manual_reference_prices', [])
+            covered = {n['manual_price'] for lv in self._inflection_levels
+                       for n in lv.get('manual_neighbors', [])}
+            missing = [price for price in references if price not in covered]
+            comparisons = [f"Робот {lv['price']:g} → " + '; '.join(
+                f"ваша {n['manual_price']:g}, Δ {n['deviation_percent']:.3f}%"
+                for n in lv.get('manual_neighbors', [])) for lv in self._inflection_levels]
+            self.analysis_view.setPlainText(
+                f"{result['symbol']} · {result['interval']}\n{REVIEW_MODE_LABELS[self._review_mode]}\n"
+                + history_note
+                + f"Ваших линий: {len(references)}. Кандидатов: {len(self._visible_robot_levels)}.\n"
+                + ("Сначала добавьте ручной уровень на этом инструменте и таймфрейме.\n" if not references else '')
+                + "Расстояние: |цена робота − ваша цена| / ваша цена ≤ 1%.\n"
+                  "Отбор силы и расстояние 1,5% здесь не применяются. Показаны кандидаты для вашей проверки.\n"
+                  "Синие линии — ваши. Кружки — бары-кандидаты, БСУ и касания; крестики — ложные пробои.\n"
+                  "Тип кандидата указан в подписи. Кружок сам по себе не означает излом тренда.\n"
+                  "Удалить слабый: «Удалить уровень робота» → линия → причина. "
+                  "Удаления кандидатов учитываются при новом рабочем расчёте; причины сохраняются.\n"
+                + ("Без кандидата в пределах 1%: " + ', '.join(f'{p:g}' for p in missing) + '.\n' if missing else '')
+                + '\n' + '\n'.join(comparisons))
+            self.statusBar().showMessage(f"Показаны кандидаты ±1%: {len(self._visible_robot_levels)}; ваших линий: {len(references)}.")
+            return
+        if self._review_mode in ('all_levels', 'mirror_limit', 'paranormal'):
             self._last_chart_packet = {}
             self.analysis_view.setPlainText(
                 f"{result['symbol']} · {result['interval']}\n{REVIEW_MODE_LABELS[self._review_mode]}\n\n"
-                + ("Кружки отмечают БСУ и все касания хвостами в пределах допуска. "
-                   "Проход тела свечи через линию не считается касанием.\n"
-                   if self._review_mode == 'mirror_limit' else
+                + history_note
+                + ("Показаны рабочие уровни выбранных типов. "
+                   "Кружки — БСУ, касания и допустимые недоходы, в том числе соседние бары. "
+                   "Крестики красного цвета — ложные пробои; у двухбарного пробоя отмечены оба бара. "
+                   "Ложные пробои используются для поиска входа; уровень не подтверждают и не усиливают.\n"
+                   if self._review_mode in ('mirror_limit', 'all_levels') else
                    "Кружок отмечает экстремум паранормального бара, образовавшего уровень.\n")
-                + "Наведите курсор на кружок, чтобы увидеть дату UTC и цену.\n"
-                  "Удаление в этом режиме относится только к выбранному типу уровней.")
+                + "Наведите курсор на отметку, чтобы увидеть дату UTC, цену и подтверждения.\n"
+                  "Формирующийся бар виден на графике, но в подтверждении уровней не участвует.\n"
+                + ("Удаление в общем режиме применяется ко всем типам этого уровня."
+                   if self._review_mode == 'all_levels' else
+                   "Удаление в этом режиме относится только к выбранному типу уровней."))
             self._draw_kb_levels({})
             self._draw_manual_levels()
             self.statusBar().showMessage(f"{result['symbol']} {result['interval']}: {REVIEW_MODE_LABELS[self._review_mode]}.")
@@ -727,9 +908,11 @@ class MainWindow(QtWidgets.QMainWindow):
             missing = [r for r in expected if r["status"] == "missing"]
             self.analysis_view.setPlainText(
                 f"{result['symbol']} · {result['interval']}\n"
+                + history_note +
                 "Показаны изломы и подтверждённые лимитные уровни, уступившие более сильному излому.\n"
                 "Второстепенный лимитный уровень подписан отдельно и не считается изломом.\n"
                 "Круг отмечает БСУ. Для проверки используются последующие бары.\n"
+                "Формирующийся бар виден на графике, но в подтверждении уровней не участвует.\n"
                 "Удалите неверную линию и добавьте свой уровень с пояснением.\n\n"
                 f"Ваших явно отмеченных изломов: {len(expected)}. Не найдено: {len(missing)}.\n"
                 f"Пропущенные цены: {', '.join(str(r['price']) for r in missing) or 'нет'}.\n"
@@ -756,6 +939,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     # -- Rendering --------------------------------------------------------- #
     def _draw_candles(self, bars: list[dict[str, Any]]) -> None:
+        self._review_bars = bars
         self.chart.clear()
         self._manual_level_items.clear()
         self._robot_level_items.clear()
@@ -850,9 +1034,26 @@ class MainWindow(QtWidgets.QMainWindow):
             line = pg.InfiniteLine(pos=price, angle=0, pen=pen, movable=False)
             line.setZValue(10)
             self.chart.addItem(line)
+            caption = (f"{title}{LEVEL_SIDE_LABELS.get(side, 'уровень')} {price:g}; "
+                       f"{ru_value(status)}; оценка={level.get('kb_score', '-')}")
+            if self._review_mode in ('all_levels', 'mirror_limit', 'working_31_review'):
+                structure = level.get('structure', {})
+                caption = f"{title}{price:g}; сильных реакций: {structure.get('strong_reaction_count', 0)}"
+                if self._review_mode == 'working_31_review':
+                    caption = f"{level['review_id']}: робот " + caption
+                if structure.get('currently_chopped'):
+                    caption += '; сейчас распил'
+                if structure.get('channels'):
+                    caption += '; граница канала'
+            if self._review_mode == 'matched_review':
+                caption = (f"{level['review_id']}: робот {price:g} | ваша {level['matched_user_price']:g} "
+                           f"| Δ {level['match_error_percent']:.3f}%")
+            if self._review_mode == 'manual_candidates':
+                caption = f"{level.get('chart_title', 'Кандидат')} {price:g} | " + '; '.join(
+                    f"ваша {n['manual_price']:g}, Δ {n['deviation_percent']:.3f}%"
+                    for n in level.get('manual_neighbors', []))
             label = pg.TextItem(
-                f"{title}{LEVEL_SIDE_LABELS.get(side, 'уровень')} {price:g}; "
-                f"{ru_value(status)}; оценка={level.get('kb_score', '-')}",
+                caption,
                 color=color,
                 anchor=(0, 1),
             )
@@ -866,12 +1067,18 @@ class MainWindow(QtWidgets.QMainWindow):
                 if points is None:
                     points = [{'index': int(bsu['index']), 'price': price,
                                'time': bsu.get('time', ''), 'roles': ['БСУ']}]
+                points = [point for point in points if point.get('symbol','o') != 'o'
+                          or self._bsu_mark_key(price,point) not in self._rejected_bsu_marks]
                 marker = pg.ScatterPlotItem(
                     x=[point['index'] for point in points], y=[point['price'] for point in points],
-                    data=points, symbol="o", size=12, hoverable=True,
-                    tip=lambda x, y, data: f"{'; '.join(data['roles'])}\n{data['time']}\nЦена: {data['price']:g}",
-                    pen=pg.mkPen(color, width=2), brush=pg.mkBrush(0, 0, 0, 0))
+                    data=points, symbol=[point.get('symbol', 'o') for point in points], size=12, hoverSize=18, hoverable=True,
+                    tip=lambda x, y, data: marker_tooltip(data),
+                    pen=[pg.mkPen('#ff4444' if point.get('symbol') == 'x' else color,
+                                  width=3 if point.get('symbol') == 'x' else 2)
+                         for point in points], brush=pg.mkBrush(0, 0, 0, 0))
                 marker.setZValue(14)
+                marker.sigClicked.connect(lambda item, spots, event, level_price=price:
+                                          self._on_bsu_marker_clicked(level_price,spots,event))
                 self.chart.addItem(marker)
                 self._robot_level_items.append((price, marker))
             self._visible_robot_levels.append({
@@ -881,14 +1088,30 @@ class MainWindow(QtWidgets.QMainWindow):
                 "kb_score": level.get("kb_score"),
                 "basis_tags": level.get("basis_tags", []),
                 "inflection_check": level.get("inflection_check", {}),
+                "structure": level.get('structure', {}),
                 "bsu": level.get("bsu"),
                 "chart_markers": level.get('chart_markers', []),
                 "review_mode": self._review_mode,
+                "manual_neighbors": level.get('manual_neighbors', []),
             })
-        if self._review_mode != 'inflection':
+        if self._review_mode == 'working_31_review':
+            self.inflection_info.setText(
+                f"Уровней робота: {len(self._visible_robot_levels)} из 31 · BTCUSDT 1d по 23.09.2026. "
+                "Набор до удалений отдельных уровней. Синие линии — ваши; круг — БСУ/касание, крестик — ЛП.")
+        elif self._review_mode == 'matched_review':
+            self.inflection_info.setText(f"Совпавших уровней робота: {len(self._visible_robot_levels)} из 15. "
+                                        "Архивные цены BTCUSDT 1d · 18 месяцев; круг — БСУ/касание, крестик — ЛП.")
+        elif self._review_mode == 'manual_candidates':
+            self.inflection_info.setText(
+                f"Кандидатов рядом с вашими уровнями (±1%): {len(self._visible_robot_levels)}. "
+                "Синие линии — ваши; круг — бар-кандидат/БСУ/касание, крестик — ЛП. "
+                "Тип указан в подписи. Выберите слабую линию и укажите причину удаления.")
+        elif self._review_mode != 'inflection':
             self.inflection_info.setText(
                 f"{REVIEW_MODE_LABELS[self._review_mode]}: {len(self._visible_robot_levels)}. "
-                "Кружки отмечают бары-основания и касания; дата и цена — при наведении.")
+                + ("Сильные уровни. Круг — БСУ/касание; красный крестик — ложный пробой для поиска входа, не подтверждение уровня. "
+                   if self._review_mode in ('mirror_limit', 'all_levels') else "Круг — паранормальный бар. ")
+                + "Дата, цена и подтверждения — при наведении.")
         elif reviewing:
             inflections = sum('inflection' in level.get('basis_tags', []) for level in self._visible_robot_levels)
             secondary_count = sum(bool(level['inflection_check'].get('retained_secondary')) for level in self._visible_robot_levels)
@@ -925,6 +1148,9 @@ class MainWindow(QtWidgets.QMainWindow):
         if not view_box.sceneBoundingRect().contains(event.scenePos()):
             return
         price = float(view_box.mapSceneToView(event.scenePos()).y())
+        if self.remove_bsu_btn.isChecked():
+            self._select_bsu_near_click(event.scenePos())
+            return
         if self.remove_selected_manual_level_btn.isChecked():
             self._remove_selected_manual_level_at(price)
             return
@@ -967,6 +1193,145 @@ class MainWindow(QtWidgets.QMainWindow):
             self._draw_manual_levels()
             self.statusBar().showMessage(f"Добавлен ручной уровень: {price:g}.")
         self.add_manual_level_btn.setChecked(False)
+
+    def _bsu_mark_key(self, price: float, point: dict) -> tuple[float, int]:
+        return (float(price),int(self._review_bars[int(point['index'])]['open_time_ms']))
+
+    def _on_remove_bsu_mode_changed(self, enabled: bool) -> None:
+        if enabled:
+            for button in (self.add_manual_level_btn,self.classify_manual_level_btn,
+                           self.remove_selected_manual_level_btn,self.remove_robot_level_btn):
+                button.setChecked(False)
+            self.statusBar().showMessage('Нажмите на кружок или рядом с ним (до 24 пикселей). Затем укажите причину удаления БСУ.')
+        self.chart.setCursor(QtCore.Qt.CrossCursor if enabled else QtCore.Qt.ArrowCursor)
+        self.remove_bsu_btn.setText('Выберите БСУ на графике' if enabled else 'Удалить БСУ')
+
+    def _select_bsu_near_click(self, scene_pos) -> None:
+        view_box=self.chart.getViewBox()
+        x=float(view_box.mapSceneToView(scene_pos).x())
+        nearby=[]
+        same_bar=[]
+        for level_price,item in self._robot_level_items:
+            if not isinstance(item,pg.ScatterPlotItem):
+                continue
+            for spot in item.points():
+                point=spot.data()
+                if point.get('symbol','o') != 'o':
+                    continue
+                position=item.mapToScene(spot.pos())
+                distance=((position.x()-scene_pos.x())**2+(position.y()-scene_pos.y())**2)**.5
+                if distance<=24:
+                    nearby.append((distance,level_price,point))
+                if abs(point['index']-x)<=.5:
+                    same_bar.append((level_price,point))
+        if nearby:
+            nearest=min(v[0] for v in nearby)
+            choices=[(price,point) for distance,price,point in nearby if distance<=nearest+2]
+        else:
+            choices=same_bar
+        if not choices:
+            self.statusBar().showMessage('Рядом нет кружка БСУ. Нажмите ближе к кружку; режим удаления остаётся включён.')
+            return
+        if len(choices)>1:
+            labels=[f"{n+1}. Уровень {price:g}; {point.get('time','')}; {', '.join(point['roles'])}"
+                    for n,(price,point) in enumerate(choices)]
+            selected,ok=QtWidgets.QInputDialog.getItem(self,'Выберите отметку БСУ','Рядом несколько кружков:',labels,0,False)
+            if not ok:
+                self.remove_bsu_btn.setChecked(False)
+                return
+            choice=choices[labels.index(selected)]
+        else:
+            choice=choices[0]
+        self._reject_bsu_marker(*choice)
+
+    def _on_bsu_marker_clicked(self, price, spots, event) -> None:
+        if event.button() != QtCore.Qt.LeftButton:
+            return
+        if not self.remove_bsu_btn.isChecked():
+            self.statusBar().showMessage('Чтобы удалить кружок, сначала нажмите «Удалить БСУ».')
+            return
+        if hasattr(event,'scenePos'):
+            self._select_bsu_near_click(event.scenePos())
+            return
+        circles=[spot.data() for spot in spots if spot.data().get('symbol','o') == 'o']
+        if not circles:
+            self.statusBar().showMessage('Крестик обозначает ЛП. Для удаления БСУ выберите кружок.')
+            return
+        self._reject_bsu_marker(price,circles[0])
+
+    def _ask_bsu_removal_reason(self, price, point):
+        dialog=QtWidgets.QDialog(self)
+        dialog.setWindowTitle('Причина удаления БСУ')
+        layout=QtWidgets.QVBoxLayout(dialog)
+        layout.addWidget(QtWidgets.QLabel(f"Уровень {price:g}; бар {point.get('time','')}\nПочему этот бар не является БСУ?"))
+        comment=QtWidgets.QPlainTextEdit()
+        comment.setPlaceholderText('Обязательный комментарий')
+        layout.addWidget(comment)
+        buttons=QtWidgets.QDialogButtonBox(QtWidgets.QDialogButtonBox.Ok | QtWidgets.QDialogButtonBox.Cancel)
+        buttons.button(QtWidgets.QDialogButtonBox.Ok).setText('Удалить кружок')
+        buttons.button(QtWidgets.QDialogButtonBox.Ok).setEnabled(False)
+        comment.textChanged.connect(lambda: buttons.button(QtWidgets.QDialogButtonBox.Ok).setEnabled(bool(comment.toPlainText().strip())))
+        buttons.accepted.connect(dialog.accept)
+        buttons.rejected.connect(dialog.reject)
+        layout.addWidget(buttons)
+        dialog.resize(480,260)
+        if dialog.exec() != QtWidgets.QDialog.Accepted:
+            return None
+        return comment.toPlainText().strip() or None
+
+    def _reject_bsu_marker(self, price, point) -> None:
+        self.remove_bsu_btn.setChecked(False)
+        if not self._active_chart_key or point.get('symbol','o') != 'o':
+            return
+        key=self._bsu_mark_key(price,point)
+        if key in self._rejected_bsu_marks:
+            return
+        reason=self._ask_bsu_removal_reason(price,point)
+        if not reason or not reason.strip():
+            return
+        bar=self._review_bars[int(point['index'])]
+        level=next((lv for lv in self._visible_robot_levels if float(lv['price'])==float(price)),{})
+        try:
+            self._append_level_feedback({'action':'reject_robot_bsu',
+                'exchange':self._active_chart_key[0],'symbol':self._active_chart_key[1],
+                'interval':self._active_chart_key[2],'price':float(price),
+                'bar_open_time_ms':key[1],'bar':dict(bar),'marker':dict(point),
+                'review_mode':self._review_mode,'comment':reason.strip(),
+                'reason_codes':['incorrect_bsu'],'basis_tags':level.get('basis_tags',[]),
+                'bsu':level.get('bsu'),'scope':'bar_marker_only'})
+        except OSError as exc:
+            QtWidgets.QMessageBox.warning(self,'БСУ не удалён',f'Не удалось сохранить причину: {exc}')
+            return
+        self._rejected_bsu_marks.add(key)
+        self._draw_kb_levels(self._last_chart_packet or {})
+        self.statusBar().showMessage('Кружок БСУ удалён. Причина сохранена; линия уровня остаётся.')
+
+    def _restore_previous_bsu(self) -> None:
+        self.remove_bsu_btn.setChecked(False)
+        if not self._active_chart_key:
+            self.statusBar().showMessage('Сначала откройте график.')
+            return
+        records=read_records(USER_LEVEL_FEEDBACK_PATH)
+        active=active_bsu_rejections(records,self._active_chart_key)
+        if not active:
+            self._load_persisted_level_state(self._active_chart_key)
+            self._draw_kb_levels(self._last_chart_packet or {})
+            self.statusBar().showMessage('На этом инструменте и таймфрейме нет удалённых БСУ.')
+            return
+        previous=next(reversed(active.values()))
+        try:
+            self._append_level_feedback({'action':'restore_robot_bsu',
+                'exchange':previous['exchange'],'symbol':previous['symbol'],'interval':previous['interval'],
+                'price':previous['price'],'bar_open_time_ms':previous['bar_open_time_ms'],
+                'rejected_recorded_at':previous.get('recorded_at'),
+                'review_mode':self._review_mode,'scope':'bar_marker_only',
+                'comment':'Пользователь отменил последнее удаление БСУ.'})
+        except OSError as exc:
+            QtWidgets.QMessageBox.warning(self,'БСУ не восстановлен',f'Не удалось сохранить отмену: {exc}')
+            return
+        self._load_persisted_level_state(self._active_chart_key)
+        self._draw_kb_levels(self._last_chart_packet or {})
+        self.statusBar().showMessage(f"Возвращён прошлый БСУ у уровня {previous['price']:g}.")
 
     def _on_remove_robot_level_mode_changed(self, enabled: bool) -> None:
         if enabled:
@@ -1113,8 +1478,6 @@ class MainWindow(QtWidgets.QMainWindow):
             ("излом_тренда", "Уровень излома тренда"),
             ("паранормальный_бар", "Уровень паранормального бара"),
             ("лимитный", "Лимитный уровень"),
-            ("проторговка", "Уровень проторговки"),
-            ("ложный_пробой", "Уровень, образованный ложным пробоем"),
             ("ранее_встречавшийся", "Ранее встречавшийся уровень"),
             ("несколько_касаний", "Есть несколько касаний"),
             ("подтверждён_старшим_тф", "Подтверждён старшим таймфреймом"),
@@ -1175,6 +1538,8 @@ class MainWindow(QtWidgets.QMainWindow):
             pass
 
     def _load_persisted_level_state(self, chart_key: tuple[str, str, str]) -> None:
+        self._rejected_bsu_marks = set()
+        bsu_records=[]
         hidden: list[float] = []
         manual: list[float] = []
         details: dict[float, dict[str, Any]] = {}
@@ -1196,6 +1561,9 @@ class MainWindow(QtWidgets.QMainWindow):
                 if record_key != chart_key:
                     continue
                 action = record.get("action")
+                if action in ('reject_robot_bsu','restore_robot_bsu'):
+                    bsu_records.append(record)
+                    continue
                 if action in ('hide_robot_level', 'restore_robot_level') and not feedback_applies_to_mode(record, self._review_mode):
                     continue
                 if action == "clear_manual_levels":
@@ -1218,6 +1586,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 elif action == "remove_manual_level":
                     manual = [value for value in manual if value != price]
                     details.pop(price, None)
+        self._rejected_bsu_marks={(key[3],key[4]) for key in active_bsu_rejections(bsu_records,chart_key)}
         if hidden:
             self._hidden_robot_levels[chart_key] = hidden
         else:
@@ -1226,6 +1595,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self._manual_level_details = details
 
     def _restore_last_robot_level(self) -> None:
+        if self._worker is not None and self._worker.isRunning():
+            self.statusBar().showMessage("Дождитесь завершения текущего расчёта уровней.")
+            return
         if self._active_chart_key is None or not self._hidden_robot_levels.get(self._active_chart_key):
             self.statusBar().showMessage("Нет удалённого уровня, который можно вернуть.")
             return
@@ -1245,6 +1617,22 @@ class MainWindow(QtWidgets.QMainWindow):
         self._hidden_robot_levels[self._active_chart_key].pop()
         if not self._hidden_robot_levels[self._active_chart_key]:
             self._hidden_robot_levels.pop(self._active_chart_key)
+        if self._review_mode in ('all_levels', 'mirror_limit', 'paranormal', 'inflection', 'manual_candidates'):
+            # Hidden candidates are excluded before strength and spacing selection.
+            # Redrawing the old packet cannot restore them after a recalculation;
+            # rerun selection on the same candles and closed-bar cutoff instead.
+            exchange, symbol, interval = self._active_chart_key
+            self._set_analysis_buttons_enabled(False)
+            self.statusBar().showMessage(
+                f"Удаление уровня {restored_price:g} отменено. Пересчёт на загруженных свечах...")
+            self._worker = AnalyzeWorker(
+                symbol, interval, len(self._review_bars), exchange=exchange,
+                market=self._active_market, review_mode=self._review_mode,
+                review_rows=self._review_bars, analysis_as_of_ms=self._analysis_as_of_ms)
+            self._worker.finished_ok.connect(self._on_analysis_done)
+            self._worker.failed.connect(self._on_analysis_failed)
+            self._worker.start()
+            return
         if self._last_chart_packet is not None:
             self._draw_kb_levels(self._last_chart_packet)
             self._draw_manual_levels()
@@ -1254,8 +1642,6 @@ class MainWindow(QtWidgets.QMainWindow):
         for item in self._manual_level_items:
             self.chart.removeItem(item)
         self._manual_level_items.clear()
-        if self._review_mode != 'inflection':
-            return
         for price in self._manual_level_prices:
             line = pg.InfiniteLine(pos=price, angle=0, pen=pg.mkPen("#42a5f5", width=2.0), movable=False)
             line.setZValue(12)
@@ -1300,23 +1686,6 @@ class MainWindow(QtWidgets.QMainWindow):
         self._draw_manual_levels()
         self.remove_selected_manual_level_btn.setChecked(False)
         self.statusBar().showMessage(f"Удалён выбранный ручной уровень: {price:g}.")
-
-    def _clear_manual_levels(self) -> None:
-        if self._active_chart_key and self._manual_level_prices:
-            try:
-                self._append_level_feedback({
-                    "action": "clear_manual_levels",
-                    "exchange": self._active_chart_key[0],
-                    "symbol": self._active_chart_key[1],
-                    "interval": self._active_chart_key[2],
-                })
-            except OSError as exc:
-                self.statusBar().showMessage(f"Не удалось сохранить очистку уровней: {exc}")
-                return
-        self._manual_level_prices.clear()
-        self._manual_level_details.clear()
-        self._draw_manual_levels()
-        self.statusBar().showMessage("Все ручные уровни очищены.")
 
     def _render_analysis(self, symbol: str, interval: str, packet: dict[str, Any]) -> None:
         self._last_chart_packet = packet

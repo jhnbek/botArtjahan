@@ -1,0 +1,140 @@
+{
+  "recorded_at": "2026-09-24T11:13:38.991378+00:00",
+  "scope": [
+    "bybit",
+    "BTCUSDT",
+    "1d"
+  ],
+  "spacing_decision": {
+    "removed_reference_id": "L06",
+    "removed_price_approx": 73768,
+    "removed_manual_price": 73767.74198594979,
+    "preferred_reference_id": "L07",
+    "preferred_price_approx": 74900,
+    "preferred_manual_price": 74900.1854123812,
+    "distance": 1132,
+    "gap_percent_relative_to_lower_price": 1.5345407222643965,
+    "explanation": "Близость уровней около 1,5% оставляет мало пространства для входа: один бар может пересечь оба. Пользователь предпочитает более сильный 74 900.",
+    "meaning": "selection_for_trade_space_not_denial_of_historical_level",
+    "universal_percent_cutoff": null
+  },
+  "new_reference_id": "L19",
+  "appended_records": [
+    {
+      "recorded_at": "2026-09-24T11:13:38.991378+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 74900.1854123812,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Зеркальный уровень",
+      "note": "Уровень 74 900 предпочтительнее близкого 73 768: расстояние около 1,5%, один бар может пересечь оба уровня; 73 768 удалён из активной разметки.",
+      "review_id": "spacing_and_rejections_20260924",
+      "review_case_id": "L07",
+      "review_reference": "_knowledge_base\\manual_reviews\\spacing_and_rejections_20260924\\review.json",
+      "human_explanation": "Уровень 74 900 предпочтительнее близкого 73 768: расстояние около 1,5%, один бар может пересечь оба уровня; 73 768 удалён из активной разметки.",
+      "human_price_approx": 74900,
+      "selection_preference": {
+        "removed_reference_id": "L06",
+        "removed_price_approx": 73768,
+        "removed_manual_price": 73767.74198594979,
+        "preferred_reference_id": "L07",
+        "preferred_price_approx": 74900,
+        "preferred_manual_price": 74900.1854123812,
+        "distance": 1132,
+        "gap_percent_relative_to_lower_price": 1.5345407222643965,
+        "explanation": "Близость уровней около 1,5% оставляет мало пространства для входа: один бар может пересечь оба. Пользователь предпочитает более сильный 74 900.",
+        "meaning": "selection_for_trade_space_not_denial_of_historical_level",
+        "universal_percent_cutoff": null
+      }
+    },
+    {
+      "recorded_at": "2026-09-24T11:13:38.991378+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 71816.07473885626,
+      "reason_codes": [
+        "сильная_реакция",
+        "паранормальный_бар",
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень паранормального бара",
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень паранормального бара; Лимитный уровень; Зеркальный уровень",
+      "note": "Одобрен уровень робота около 71 805: лимитные и зеркальные касания и хорошая реакция. Ручная линия подтверждает его значимость; точная координата рисунка сохранена.",
+      "review_id": "spacing_and_rejections_20260924",
+      "review_case_id": "L19",
+      "review_reference": "_knowledge_base\\manual_reviews\\spacing_and_rejections_20260924\\review.json",
+      "human_explanation": "Одобрен уровень робота около 71 805: лимитные и зеркальные касания и хорошая реакция. Ручная линия подтверждает его значимость; точная координата рисунка сохранена.",
+      "human_price_approx": 71805,
+      "confirms_robot_level_approx": 71805
+    }
+  ],
+  "original_manual_state": [
+    {
+      "recorded_at": "2026-09-23T11:02:14.289280+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 74900.1854123812,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Зеркальный уровень",
+      "note": ""
+    },
+    {
+      "recorded_at": "2026-09-24T10:44:56.740171+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 71816.07473885626,
+      "reason_codes": [
+        "сильная_реакция",
+        "паранормальный_бар",
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень паранормального бара",
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень паранормального бара; Лимитный уровень; Зеркальный уровень",
+      "note": ""
+    }
+  ],
+  "manual_count_before": 18,
+  "algorithm_changed": false
+}

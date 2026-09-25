@@ -41,6 +41,7 @@ import zipfile
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from detector_prototype import PARANORMAL_BODY_ATR, is_paranormal_body
 
 BASE_URL = "https://data.binance.vision/data/spot/monthly/klines"
 
@@ -199,7 +200,7 @@ class Params:
     pivot_k: int = 3
     atr_period: int = 14
     far_retest_days: int = 30
-    paranormal_atr_mult: float = 1.5
+    paranormal_atr_mult: float = PARANORMAL_BODY_ATR  # real body, excluding wicks
     require_paranormal: bool = True
     close_atr_reject: float = 0.5  # close beyond level by >50% ATR => continuation, reject
     level_tol_atr: float = 0.25
@@ -223,8 +224,7 @@ def backtest_symbol(symbol: str, bars: list[Bar], p: Params) -> list[Trade]:
 
         res, sup = confirmed_pivots(bars, i, p.pivot_k)
         bar = bars[i]
-        bar_range = bar.high - bar.low
-        paranormal = bar_range >= p.paranormal_atr_mult * atr
+        paranormal = is_paranormal_body(bar.open, bar.close, atr, p.paranormal_atr_mult)
 
         trade = _try_short(symbol, bars, i, res, atr, paranormal, p, used_levels)
         if trade is None:
@@ -416,7 +416,8 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     ap.add_argument("--start", default="2024-01", help="first month YYYY-MM")
     ap.add_argument("--end", default="2024-12", help="last month YYYY-MM")
     ap.add_argument("--far-retest-days", type=int, default=30)
-    ap.add_argument("--paranormal-atr-mult", type=float, default=1.5)
+    ap.add_argument("--paranormal-atr-mult", type=float, default=PARANORMAL_BODY_ATR,
+                    help=f"Minimum candle body / ATR (at least {PARANORMAL_BODY_ATR:g}; wicks excluded)")
     ap.add_argument("--no-require-paranormal", action="store_true")
     ap.add_argument("--tp-r", type=float, default=3.0)
     ap.add_argument("--fee-rate", type=float, default=0.001)

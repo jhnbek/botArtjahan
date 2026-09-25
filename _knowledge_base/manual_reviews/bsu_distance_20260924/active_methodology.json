@@ -1,0 +1,129 @@
+{
+  "revision": "bsu_distance_20260924",
+  "recorded_on": "2026-09-24",
+  "status": "superseded",
+  "purpose": "Reference implementation for subsequent manual methodology corrections",
+  "runtime_configuration": false,
+  "source_review": "_knowledge_base\\manual_reviews\\price_consensus_20260923\\review.json",
+  "source_amendments": "_knowledge_base\\manual_reviews\\price_consensus_20260923\\changes.json",
+  "rules": {
+    "scan_order": "oldest_to_newest",
+    "price_source": "actual_wick_price_no_averaging_or_round_grid_snapping",
+    "structural_candidate_priority": [
+      "distinct_exact_contact_count",
+      "structural_strength",
+      "earliest_valid_bsu"
+    ],
+    "tie_breaker": "implementation_assumption_subject_to_further_manual_review",
+    "near_touches": "may_confirm_with_existing_luft_but_do_not_vote_for_exact_price",
+    "false_breakouts": "one_and_two_bar_entry_context_only_no_level_confirmation_or_strength",
+    "round_prices": "strengthen_existing_structure_only",
+    "daily_history_months": 18,
+    "daily_history_calendar_months": true,
+    "daily_history_reference": "explicit_analysis_date_or_last_supplied_candle_not_frozen_cutoff",
+    "older_bars_used_for_atr": false,
+    "forming_candle_confirms_level": false,
+    "self_training": false,
+    "hardcoded_manual_target_prices": false,
+    "ordinary_contact": "within both 0.08 local ATR and 0.15 percent of price",
+    "extended_contact": "within both 0.06 local ATR and 0.20 percent of price; tail >=0.20 ATR and confirmed ordinary close reaction >=1.5 ATR",
+    "distant_long_tail_confirms_level": false,
+    "manual_bsu_exclusions": "active journal associations scoped by exchange/symbol/interval/wick side; enforce before calculation across merge_atr price zone",
+    "manual_bsu_constraints_count": 20
+  },
+  "parameters": {
+    "structure": {
+      "atr_period": 14,
+      "touch_atr": 0.08,
+      "touch_price_fraction": 0.0015,
+      "penetration_atr": 0.01,
+      "confirmed_near_touch_atr": 0.06,
+      "confirmed_near_price_fraction": 0.002,
+      "confirmed_near_tail_min_atr": 0.2,
+      "reaction_bars": 15,
+      "strong_reaction_atr": 1.5,
+      "precision_atr": 0.02,
+      "merge_atr": 0.15,
+      "chop_window": 40,
+      "chop_side_atr": 0.08,
+      "chop_switches": 4,
+      "channel_windows": [
+        30,
+        60,
+        90
+      ],
+      "channel_min_inside": 0.6,
+      "excluded_contacts": []
+    },
+    "discovery_defaults": {
+      "pivot_wing": 3,
+      "atr_period": 14,
+      "cluster_luft_atr": 0.08,
+      "contact_tol_atr": 0.06,
+      "mirror_luft_atr": 0.04,
+      "two_bar_luft_atr": 0.04,
+      "false_breakout_luft_atr": 0.02,
+      "min_false_breakout_tail_atr": 0.08,
+      "min_false_breakout_tail_ratio": 0.35,
+      "min_touches": 2,
+      "strong_move_atr": 1.5,
+      "inflection_move_atr": 2.5,
+      "inflection_min_efficiency": 0.55,
+      "inflection_context_lookback": 60,
+      "inflection_replacement_window": 40,
+      "inflection_replacement_distance_atr": 1.0,
+      "reversal_lookahead": 20,
+      "paranormal_lookback": 20,
+      "chop_window": 40,
+      "chop_cross_ratio": 0.3,
+      "post_chop_reaction_atr": 0.25,
+      "mtf_luft_atr": 0.15,
+      "nearest_window_atr": 3.0,
+      "round_step": 0.0,
+      "excluded_contacts": []
+    }
+  },
+  "implementation_sha256": {
+    "knowledge_bot\\level_structure.py": "ef26903ffcd1c0e192de1281a5c10fb1691920210ab19941efc70aa57257ac7c",
+    "knowledge_bot\\level_discovery.py": "f31c9cecea69a9cf88c23c01d9f0ca4519cd191eb67ec503fec004b80711e455",
+    "knowledge_bot\\level_history.py": "07f9ecef9e53cd00f0a7ee5c6417cbc13e5493ef8832198c3af8cf98d8bf46ca",
+    "knowledge_bot\\chart_level_modes.py": "73ff00078e7a33e326be1e358a9c65a4af76c7ff40aecbf39f16bb57ad3a599b",
+    "knowledge_bot\\desktop_app.py": "0e6427bd49b13cb3e10cad94ae01662b0842db4bff0f8e554ef1a8d006684d8a",
+    "knowledge_bot\\review_bsu_distance.py": "a478466e6062b46917a2b27e70d8c35836724fa44fa1272d75d7abbfe457b3c3",
+    "knowledge_bot\\review_level_structure.py": "e310dbc59c13e7238e3f2c1a02c66819495fa7fc9ad7c13425b61d025ce2c607"
+  },
+  "baseline_comparison": {
+    "path": "_knowledge_base\\manual_reviews\\bsu_distance_20260924\\comparison.json",
+    "sha256": "ceb1636e4be066d51c034b07ea03c7cef690886a8cc0927e7e934faf6f440b08",
+    "as_of": "2026-09-23T06:00:00Z",
+    "price_references": 18,
+    "mean_absolute_price_deviation_percent": 0.05783933968566814,
+    "matches_within_0_1_percent": 15,
+    "manual_bsu_constraints_used": true,
+    "interpretation": "Price distance only, not accuracy of BSUs, types, confirmations or all detected levels"
+  },
+  "verification": {
+    "full_suite_tests_passed": 206,
+    "rejected_associations_excluded": 20,
+    "absent_after_rebuild": 20,
+    "audit": "_knowledge_base\\manual_reviews\\bsu_distance_20260924\\rejected_bsu_audit.json"
+  },
+  "future_changes": "Update general rules and regression cases; compare against this baseline; preserve manual references separately",
+  "supersedes": "_knowledge_base\\manual_reviews\\price_consensus_20260923\\active_methodology.json",
+  "previous_baseline_comparison": {
+    "path": "_knowledge_base\\manual_reviews\\price_consensus_20260923\\comparison.json",
+    "sha256": "a8461d8d9de29d736fb20ee9f8b0505b9f6d8f1e7808055d9c3d44fa14899309",
+    "as_of": "2026-09-23T06:00:00Z",
+    "price_references": 18,
+    "mean_absolute_price_deviation_percent": 0.03972447657829777,
+    "exact_price_matches": 4,
+    "matches_within_0_1_percent": 15,
+    "interpretation": "Price distance only, not accuracy of BSUs, types, confirmations or all detected levels"
+  },
+  "feedback_journal": {
+    "path": "_knowledge_base/user_level_feedback.jsonl",
+    "sha256": "1ad7b478bc6b286a359c5a76fa4be55cb60f53f1c5b25054eb4a47c495f78e6c",
+    "rewritten_by_this_change": false
+  },
+  "superseded_by": "early_mirror_20260924"
+}

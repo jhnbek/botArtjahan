@@ -1,0 +1,195 @@
+{
+  "version": "dzhahan-409-knowledge-contract-2026-09-25-v1",
+  "source_precedence": [
+    "latest_explicit_user_corrections",
+    "current_project_methodology",
+    "imported_knowledge"
+  ],
+  "sources": [
+    {
+      "key": "daily_context_before_entry",
+      "path": "botArtjahan-main/knowledge/catalog/items/03/037ad026d8fd06b9aaf0529d01429fd3c863de6787b2c3b1e5a0ced98181bc32.md",
+      "kind": "imported_knowledge",
+      "rule": "Understand D1, the level and direction first; entry then locates a technical stop and reward/risk.",
+      "sha256": "881db3d0325d3942907e6e5f0b923bce76a6df3a90d9fc9ed2cf8fe0fe5d0f46",
+      "bytes": 4488
+    },
+    {
+      "key": "hourly_context",
+      "path": "botArtjahan-main/knowledge/catalog/items/05/05afb040e9f6b2f0cbed178b13fd8d847f780495b7cff015c5a5108e0a67d29e.md",
+      "kind": "imported_knowledge",
+      "rule": "H1 checks direction, level behavior and accumulation before finer entry timing.",
+      "sha256": "2f14b6c321efdd8b20e666a851be5c0d665ddfbee2b2cbfa6c657fde91d9f6c0",
+      "bytes": 8924
+    },
+    {
+      "key": "compression_precondition",
+      "path": "botArtjahan-main/knowledge/catalog/items/2b/2b225cbe667369dd5bef31540b38c9e967f8c91844ea5e93466ab2a1a3eecf18.md",
+      "kind": "imported_knowledge",
+      "rule": "Compression describes lows/closes progressing toward a level, not merely a triangle name.",
+      "sha256": "eeec2362285a029124a539d9b18fda2342edc85464a015c73fb7e6a10383676e",
+      "bytes": 4464
+    },
+    {
+      "key": "breakout_in_trend",
+      "path": "botArtjahan-main/knowledge/catalog/items/26/26e989fe49e85959dfd86565d015c80fba43161c2026480541d379ff2f366c9e.md",
+      "kind": "imported_knowledge",
+      "rule": "A close retest alone does not justify a breakout against the broader directional context.",
+      "sha256": "2b44cbd9000e812e7e00859b4c4997797eecb3f41a12956ccb2ff3da32f7cc67",
+      "bytes": 2978
+    },
+    {
+      "key": "full_bar_confirmation",
+      "path": "botArtjahan-main/knowledge/catalog/items/22/22b20cc5cb230bf8f99e362fdb15610d34939e95312500b77f86f3727771c3e0.md",
+      "kind": "imported_knowledge",
+      "rule": "The confirmation-entry example waits for pressure to break and a full bar beyond the level, with a structural stop.",
+      "sha256": "a385295948cfc3ffc7e84daf254152cf1d656858ca40d3d261f1413f431128f6",
+      "bytes": 4128
+    },
+    {
+      "key": "return_before_false_breakout_entry",
+      "path": "botArtjahan-main/knowledge/catalog/items/4d/4d062d983af4b6a1ec5b9efc591c9d200f061e18ae52cb02c6ca0f6435a88ac5.md",
+      "kind": "imported_knowledge",
+      "rule": "Wait for the penetration and return; the extreme provides a technical stop reference.",
+      "sha256": "1a6048a884b25917e24bf37cb633a20b73860c41c1f3838cf9cb94eab58112ad",
+      "bytes": 10741
+    },
+    {
+      "key": "technical_stop_not_fixed_atr",
+      "path": "botArtjahan-main/knowledge/catalog/items/da/da3ff5944a62fe8b444c90914620bd8b494cfbb389a067b034c28a56f384c7ca.md",
+      "kind": "imported_knowledge",
+      "rule": "For LP place the stop beyond its wick; 10% ATR is a reference, not a mandatory stop distance.",
+      "sha256": "5605d039e79077281381ba4574c972c6e8f06c1f20060302e2073f70c606954b",
+      "bytes": 13407
+    },
+    {
+      "key": "stop_and_position_geometry",
+      "path": "botArtjahan-main/knowledge/catalog/items/1f/1f5dab9eb37bf772adee712f5685afe4b49895fbf6ff8a9faf60d843bd35c6ff.md",
+      "kind": "imported_knowledge",
+      "rule": "A technical stop is structural; position size depends on specified money risk divided by stop distance.",
+      "sha256": "11cc599110321f5b9d118e30f08d46dea4c2e0cb679bca1c4b1791acacfdfabb",
+      "bytes": 2100
+    },
+    {
+      "key": "target_as_reward_risk",
+      "path": "botArtjahan-main/knowledge/catalog/items/20/20dd84d9d616d4e3ef8bb32233b99dae524e12defb223fd74ed90975004dab41.md",
+      "kind": "imported_knowledge",
+      "rule": "The worked example computes 3R from entry and stop; it is not an observed target label for another chart.",
+      "sha256": "d6941bc5a5730660af68925544cf39a6b904584e59412f6f5f27e6c9c0a25c44",
+      "bytes": 4690
+    },
+    {
+      "key": "channel_room_for_risk",
+      "path": "botArtjahan-main/knowledge/catalog/items/22/22e220cec1a111eef8c30e4f28d7209abfba796094ebf63b67d8108758f2a986.md",
+      "kind": "imported_knowledge",
+      "rule": "A channel entry needs room to its next boundary; the example requires 4 stops to preserve about 3R after execution.",
+      "sha256": "22b7f8aee0bd883c321bbf872397842350cad7bc50fa4e19562ad56a8f308bda",
+      "bytes": 5483
+    },
+    {
+      "key": "lp_two_bar_vs_chop_reference",
+      "path": "botArtjahan-main/knowledge/catalog/items/8c/8c222c9ef83c1ec4a8608146b06f5cbdb3080130fef3451b6d7ebc9cdc030b04.md",
+      "kind": "imported_knowledge",
+      "rule": "Distinguish a close beyond then return from repeated ineffective crossings and wick contacts.",
+      "sha256": "46482e5bc7e7911c62b5acf27ee0d1e4bd6490d48114b713e44c608ea2aa6bdf",
+      "bytes": 6916
+    },
+    {
+      "key": "current_level_methodology",
+      "path": "botArtjahan/_knowledge_base/manual_reviews/confirmed_methodology_20260925/README.md",
+      "kind": "project_methodology",
+      "rule": "Use density, reaction, anchor quality, confluence, progressive body strength and 1.5% spacing.",
+      "sha256": "946c67c02383507efcbe460002193b107f6b0c4cb91abee59e6f2e94837fddcb",
+      "bytes": 7784
+    },
+    {
+      "key": "paranormal_user_override",
+      "path": "botArtjahan/_knowledge_base/manual_reviews/paranormal_body_1_6_20260925/README.md",
+      "kind": "user_override",
+      "rule": "Paranormal requires real body >=1.6 prior ATR, not total high-low and not the historical 2.5 threshold.",
+      "sha256": "655158166ff33e4fd2c0a0c5bb2b2cbf0261558ea2cce309ec157754a71e8dbc",
+      "bytes": 2256
+    },
+    {
+      "key": "excluded_level_origins",
+      "path": "botArtjahan/_knowledge_base/manual_reviews/bar_rules_20260925/README.md",
+      "kind": "user_override",
+      "rule": "Gap, consolidation and false-breakout origins are not working level types; LP is entry context only.",
+      "sha256": "ba9ab8122f24aa427329a48e8fd16557563da25cbcf3f9e0ee88c922f65de7d8",
+      "bytes": 9133
+    },
+    {
+      "key": "current_lp_and_contact_code",
+      "path": "botArtjahan/knowledge_bot/level_structure.py",
+      "kind": "current_code",
+      "rule": "A repeated same-side wick return on adjacent bars is chop. LP1/LP2 do not vote for level price/strength.",
+      "sha256": "7bcd5d41b3bbe08b5e4d47d5912ffd190b4e5f2fad46452e273771d87cabacf1",
+      "bytes": 33103
+    },
+    {
+      "key": "progressive_strength_code",
+      "path": "botArtjahan/knowledge_bot/level_evidence_strength.py",
+      "kind": "current_code",
+      "rule": "The continuous body score is 2.5*r/(r+1.5), separately from the >=1.6 paranormal classification.",
+      "sha256": "6544b0bfe5d0b8e620be1b64d7471dc6f07a45e1b5a863b2cd62491473246695",
+      "bytes": 8634
+    },
+    {
+      "key": "causal_origin_code",
+      "path": "botArtjahan/knowledge_bot/level_origin_context.py",
+      "kind": "current_code",
+      "rule": "A wick sweeping an earlier level does not become a new origin merely by being a further extreme.",
+      "sha256": "445c7f141a312a48c28ebc522bb2b2dd84156c2832f142d304359e5743085cd7",
+      "bytes": 10086
+    }
+  ],
+  "allowed_level_types": [
+    "limit",
+    "mirror",
+    "paranormal",
+    "inflection"
+  ],
+  "excluded_level_types": [
+    "gap",
+    "consolidation",
+    "false_breakout"
+  ],
+  "level_confluence": "One price is one level; independent allowed types strengthen it without duplicating the line.",
+  "atr": {
+    "period": 14,
+    "signal_bar_included": false,
+    "paranormal_min_body_atr": 1.6
+  },
+  "daily_history_months": 18,
+  "minimum_level_spacing_percent": 1.5,
+  "false_breakouts": {
+    "one_bar": "Open and close on the original side; wick penetrates beyond the permitted micro-luft.",
+    "two_bar": "First bar closes beyond the level, next bar returns and closes on the original side.",
+    "chop": "Adjacent repeated same-side wick-return bars are chop, not multiple LP1 entries.",
+    "confirms_level": false
+  },
+  "label_source": "visual_interpretation_of_user_annotations_not_verified_market_outcome",
+  "training_target": "Rank the user-annotated H1 entry state above earlier unselected states of the same scenario.",
+  "direction_role": "Known D1/H1 scenario context supplied to the entry model; not the prediction target.",
+  "daily_close_required": true,
+  "daily_close_rule_source": "Latest user clarification: a daily false breakout is not confirmed until the D1 bar closes; all TVH candidates must wait for D1 close.",
+  "comparison_label_meaning": "Earlier unselected states are not labelled losing trades and do not prove a later entry was profitable.",
+  "unavailable_numeric_targets": [
+    "level_price",
+    "entry_price",
+    "stop_price",
+    "take_profit_price",
+    "realized_return"
+  ],
+  "unknown_numeric_target_policy": "Keep null; do not derive targets from profitable outcome pixels or assume fixed ATR multiples.",
+  "feature_cutoff": "Only observations available before the annotated decision; result descriptions and future chart pixels are forbidden live predictive features.",
+  "split_policy": "Keep both timeframes, repeated dates/instruments and duplicate scenarios together; chronological validation needs verified dates.",
+  "known_duplicate_groups": [
+    [
+      281,
+      284
+    ]
+  ],
+  "outcome_validation_available": false,
+  "automatic_order_execution_allowed": false
+}

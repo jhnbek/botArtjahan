@@ -1,0 +1,561 @@
+{
+  "audit_kind": "read_only_factual_candle_check",
+  "source_snapshot": "_knowledge_base\\manual_reviews\\clean_reaction_selection_20260925\\historical\\snapshot.json",
+  "snapshot_sha256": "93a3205ca33754c421b1a9913f1fff542b9b8d204d46a863d2375334554d6a45",
+  "scope": {
+    "exchange": "bybit",
+    "market": "linear",
+    "symbol": "BTCUSDT",
+    "interval": "1d",
+    "candle_timezone": "UTC"
+  },
+  "atr_definition": "mean of previous 14 true ranges; candidate candle excluded",
+  "paranormal_definition": "abs(close-open) >= 1.6 * previous_14_ATR; range is reported separately and does not qualify a paranormal body",
+  "candles": [
+    {
+      "date_utc": "2025-04-22",
+      "snapshot_index": 182,
+      "open": 87471.1,
+      "high": 94000.0,
+      "low": 87013.6,
+      "close": 93400.0,
+      "prior_14_atr": 3270.635714285715,
+      "body_atr": 1.8127668496076539,
+      "range_atr": 2.1360984867511537,
+      "paranormal_body_1_6": true
+    },
+    {
+      "date_utc": "2025-04-27",
+      "snapshot_index": 187,
+      "open": 94578.3,
+      "high": 95279.4,
+      "low": 93538.4,
+      "close": 93700.0,
+      "prior_14_atr": 2555.807142857141,
+      "body_atr": 0.34364877743402417,
+      "range_atr": 0.6811938079387841,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-05-18",
+      "snapshot_index": 208,
+      "open": 103081.2,
+      "high": 106650.0,
+      "low": 103050.0,
+      "close": 106428.1,
+      "prior_14_atr": 2769.342857142857,
+      "body_atr": 1.208553860121538,
+      "range_atr": 1.2999473830821133,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-05-22",
+      "snapshot_index": 212,
+      "open": 109608.7,
+      "high": 111968.0,
+      "low": 109150.0,
+      "close": 111646.5,
+      "prior_14_atr": 3292.971428571428,
+      "body_atr": 0.6188331858330306,
+      "range_atr": 0.8557620559807037,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-05-23",
+      "snapshot_index": 213,
+      "open": 111646.5,
+      "high": 111758.4,
+      "low": 106755.0,
+      "close": 107275.9,
+      "prior_14_atr": 2964.1357142857137,
+      "body_atr": 1.47449389005227,
+      "range_atr": 1.6879793917282546,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-05-24",
+      "snapshot_index": 214,
+      "open": 107275.9,
+      "high": 109454.5,
+      "low": 106832.3,
+      "close": 107716.0,
+      "prior_14_atr": 3173.9499999999994,
+      "body_atr": 0.13866002930103055,
+      "range_atr": 0.8261629830337585,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-06-20",
+      "snapshot_index": 241,
+      "open": 104604.2,
+      "high": 106499.9,
+      "low": 102260.0,
+      "close": 103243.9,
+      "prior_14_atr": 2845.5928571428562,
+      "body_atr": 0.47803746645815826,
+      "range_atr": 1.489988277612246,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-08-02",
+      "snapshot_index": 284,
+      "open": 113248.9,
+      "high": 114011.4,
+      "low": 111950.0,
+      "close": 112518.0,
+      "prior_14_atr": 2720.5142857142814,
+      "body_atr": 0.26866243777436866,
+      "range_atr": 0.7577243798441462,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-08-05",
+      "snapshot_index": 287,
+      "open": 115006.0,
+      "high": 115084.2,
+      "low": 112577.7,
+      "close": 114079.6,
+      "prior_14_atr": 2695.0714285714243,
+      "body_atr": 0.3437385704062956,
+      "range_atr": 0.930031008984656,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-08-13",
+      "snapshot_index": 295,
+      "open": 120090.5,
+      "high": 123742.2,
+      "low": 118900.5,
+      "close": 123348.0,
+      "prior_14_atr": 2696.085714285714,
+      "body_atr": 1.2082330998378603,
+      "range_atr": 1.7958256943929285,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-08-29",
+      "snapshot_index": 311,
+      "open": 112511.4,
+      "high": 112616.4,
+      "low": 107432.6,
+      "close": 108355.3,
+      "prior_14_atr": 3086.078571428569,
+      "body_atr": 1.3467252708592254,
+      "range_atr": 1.6797368829142831,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-11-24",
+      "snapshot_index": 398,
+      "open": 86802.8,
+      "high": 89172.2,
+      "low": 85211.1,
+      "close": 88240.1,
+      "prior_14_atr": 4527.549999999997,
+      "body_atr": 0.31745646099987934,
+      "range_atr": 0.8748881845589763,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-12-16",
+      "snapshot_index": 420,
+      "open": 86391.7,
+      "high": 88149.6,
+      "low": 85222.0,
+      "close": 87821.3,
+      "prior_14_atr": 3564.4214285714293,
+      "body_atr": 0.40107490897140347,
+      "range_atr": 0.8213394680362887,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-12-17",
+      "snapshot_index": 421,
+      "open": 87821.3,
+      "high": 90341.0,
+      "low": 85259.2,
+      "close": 86197.3,
+      "prior_14_atr": 3334.2142857142867,
+      "body_atr": 0.4870712740204373,
+      "range_atr": 1.5241371923134603,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-02-04",
+      "snapshot_index": 470,
+      "open": 75723.2,
+      "high": 76991.2,
+      "low": 71805.2,
+      "close": 73130.3,
+      "prior_14_atr": 3675.464285714285,
+      "body_atr": 0.7054618949986868,
+      "range_atr": 1.4109782048915107,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-02-05",
+      "snapshot_index": 471,
+      "open": 73130.3,
+      "high": 73312.1,
+      "low": 62250.0,
+      "close": 62872.7,
+      "prior_14_atr": 3808.021428571428,
+      "body_atr": 2.693682320965333,
+      "range_atr": 2.9049468884291265,
+      "paranormal_body_1_6": true
+    },
+    {
+      "date_utc": "2026-02-06",
+      "snapshot_index": 472,
+      "open": 62872.7,
+      "high": 71719.9,
+      "low": 59888.0,
+      "close": 70532.3,
+      "prior_14_atr": 4464.2,
+      "body_atr": 1.7157833430401876,
+      "range_atr": 2.6503964876125607,
+      "paranormal_body_1_6": true
+    },
+    {
+      "date_utc": "2026-02-07",
+      "snapshot_index": 473,
+      "open": 70532.3,
+      "high": 71653.2,
+      "low": 67307.3,
+      "close": 69248.2,
+      "prior_14_atr": 5117.907142857142,
+      "body_atr": 0.2509033407908099,
+      "range_atr": 0.8491556956177668,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-02-26",
+      "snapshot_index": 492,
+      "open": 67958.3,
+      "high": 68841.7,
+      "low": 66451.1,
+      "close": 67447.5,
+      "prior_14_atr": 2729.5714285714266,
+      "body_atr": 0.18713560475218627,
+      "range_atr": 0.875815146281465,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-03-04",
+      "snapshot_index": 498,
+      "open": 68299.5,
+      "high": 74021.8,
+      "low": 67348.4,
+      "close": 72640.4,
+      "prior_14_atr": 3044.2071428571403,
+      "body_atr": 1.4259542128023006,
+      "range_atr": 2.1921635706224283,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-03-10",
+      "snapshot_index": 504,
+      "open": 68390.7,
+      "high": 71762.8,
+      "low": 68355.0,
+      "close": 69907.5,
+      "prior_14_atr": 3680.907142857143,
+      "body_atr": 0.41207233465353144,
+      "range_atr": 0.925804392162647,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-03-22",
+      "snapshot_index": 516,
+      "open": 68870.5,
+      "high": 69557.3,
+      "low": 67300.1,
+      "close": 67828.1,
+      "prior_14_atr": 2689.1928571428557,
+      "body_atr": 0.3876256019464132,
+      "range_atr": 0.8393596591648577,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-03-23",
+      "snapshot_index": 517,
+      "open": 67828.1,
+      "high": 71788.0,
+      "low": 67412.7,
+      "close": 70865.0,
+      "prior_14_atr": 2665.585714285713,
+      "body_atr": 1.1392993231184767,
+      "range_atr": 1.6414028543713273,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-06-10",
+      "snapshot_index": 596,
+      "open": 61699.9,
+      "high": 62846.8,
+      "low": 60614.5,
+      "close": 61476.4,
+      "prior_14_atr": 2733.9214285714297,
+      "body_atr": 0.08175070346362756,
+      "range_atr": 0.8165194422454409,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2026-06-27",
+      "snapshot_index": 613,
+      "open": 60073.4,
+      "high": 60918.3,
+      "low": 59807.5,
+      "close": 59995.3,
+      "prior_14_atr": 2242.3499999999995,
+      "body_atr": 0.0348295315182726,
+      "range_atr": 0.49537315762481465,
+      "paranormal_body_1_6": false
+    }
+  ],
+  "inflection_detector_results_before_new_changes": {
+    "2026-02-05": [],
+    "2026-02-06": [],
+    "2025-08-02": [],
+    "2025-08-29": [],
+    "2025-08-13": [
+      {
+        "kind": "H",
+        "price": 123742.2,
+        "confirmation_index": 300,
+        "confirmation_time": "2025-08-18T00:00:00+00:00",
+        "incoming_atr": 4.163146572279389,
+        "efficiency": 0.6830480467222526,
+        "atr_at_bsu": 2696.085714285714,
+        "mirror_confirmation": {},
+        "efficiency_exception": false,
+        "efficiency_exception_reason": "",
+        "held_retests": [],
+        "two_bar_false_breakouts": [],
+        "context": {
+          "eligible": true,
+          "reason": "broader_range_extreme",
+          "range_low": 98125.0,
+          "range_high": 123250.0,
+          "lookback_bars": 60,
+          "start_time": "2025-06-14T00:00:00+00:00",
+          "end_time": "2025-08-12T00:00:00+00:00",
+          "boundary_confirmation": {}
+        },
+        "status": "confirmed",
+        "limit_confirmations": [
+          {
+            "index": 352,
+            "time": "2025-10-09T00:00:00+00:00",
+            "price": 123733.9,
+            "gap": 8.30000000000291,
+            "gap_atr": 0.0026514909502478247,
+            "known_index": 352,
+            "known_time": "2025-10-09T00:00:00+00:00",
+            "contact_rule": "close_wick"
+          }
+        ],
+        "later_two_bar_false_breakouts": [
+          {
+            "kind": "two_bar_false_breakout",
+            "breakout_index": 349,
+            "breakout_time": "2025-10-06T00:00:00+00:00",
+            "breakout_close": 124606.1,
+            "return_index": 350,
+            "return_time": "2025-10-07T00:00:00+00:00",
+            "return_close": 121299.4,
+            "level_price": 123742.2
+          }
+        ]
+      }
+    ],
+    "2025-05-22": [
+      {
+        "kind": "H",
+        "price": 111968.0,
+        "confirmation_index": 226,
+        "confirmation_time": "2025-06-05T00:00:00+00:00",
+        "incoming_atr": 5.388416020268276,
+        "efficiency": 0.6598994000363604,
+        "atr_at_bsu": 3292.971428571428,
+        "mirror_confirmation": {},
+        "efficiency_exception": false,
+        "efficiency_exception_reason": "",
+        "held_retests": [],
+        "two_bar_false_breakouts": [],
+        "context": {
+          "eligible": true,
+          "reason": "broader_range_extreme",
+          "range_low": 74456.2,
+          "range_high": 110800.0,
+          "lookback_bars": 60,
+          "start_time": "2025-03-23T00:00:00+00:00",
+          "end_time": "2025-05-21T00:00:00+00:00",
+          "boundary_confirmation": {}
+        },
+        "status": "confirmed",
+        "limit_confirmations": [],
+        "later_two_bar_false_breakouts": []
+      }
+    ]
+  },
+  "february_6_events_at_february_5_low_62250": [
+    {
+      "index": 472,
+      "time": "2026-02-06T00:00:00+00:00",
+      "kind": "L",
+      "price": 59888.0,
+      "role": "false_breakout",
+      "indices": [
+        472
+      ],
+      "known_index": 472,
+      "contact_rule": null,
+      "distance_limit_atr": null,
+      "distance_limit_price_fraction": null,
+      "confirms_level": false,
+      "entry_context_only": true,
+      "known_time": "2026-02-06T00:00:00+00:00",
+      "gap_atr": 0.5290981586846467,
+      "atr": 4464.2,
+      "reaction_atr": 0.0,
+      "reaction_confirmed_index": null,
+      "reaction_confirmed_time": null
+    }
+  ],
+  "april_body_crossings_84288": [
+    {
+      "date_utc": "2025-04-01",
+      "open": 82504.4,
+      "high": 85555.0,
+      "low": 82375.6,
+      "close": 85130.5,
+      "body_atr": 0.9768886574270917,
+      "range_atr": 1.1827119292577142,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-04-02",
+      "open": 85130.5,
+      "high": 88560.1,
+      "low": 82281.9,
+      "close": 82468.1,
+      "body_atr": 0.9826141285579065,
+      "range_atr": 2.317100368807194,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-04-12",
+      "open": 83382.8,
+      "high": 85888.0,
+      "low": 82753.3,
+      "close": 85238.4,
+      "body_atr": 0.4216731945091435,
+      "range_atr": 0.7123404628302528,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-04-13",
+      "open": 85238.4,
+      "high": 86099.0,
+      "low": 82953.1,
+      "close": 83716.8,
+      "body_atr": 0.34485694905595715,
+      "range_atr": 0.7129899290451761,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-04-14",
+      "open": 83716.8,
+      "high": 85771.1,
+      "low": 83637.5,
+      "close": 84547.4,
+      "body_atr": 0.18478074329263056,
+      "range_atr": 0.47465470008326727,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-04-15",
+      "open": 84547.4,
+      "high": 86444.0,
+      "low": 83518.5,
+      "close": 83603.7,
+      "body_atr": 0.21179205206713506,
+      "range_atr": 0.6565620942274086,
+      "paranormal_body_1_6": false
+    },
+    {
+      "date_utc": "2025-04-17",
+      "open": 83986.0,
+      "high": 85455.8,
+      "low": 83677.4,
+      "close": 84906.5,
+      "body_atr": 0.2209833906640647,
+      "range_atr": 0.4269384703497823,
+      "paranormal_body_1_6": false
+    }
+  ],
+  "journal_record_count": 246,
+  "journal_sha256": "cf126cb5830f5ba14ff5d857b9414d093ab620b70a747eaecb3e1c792fc85ba7",
+  "latest_manual_replacement": [
+    {
+      "recorded_at": "2026-09-25T09:12:19.078845+00:00",
+      "action": "remove_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 106655.4495030607
+    },
+    {
+      "recorded_at": "2026-09-25T09:15:33.525962+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 107433.76267693672,
+      "reason_codes": [
+        "сильная_реакция",
+        "излом_тренда",
+        "паранормальный_бар",
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень излома тренда",
+        "Уровень паранормального бара",
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень излома тренда; Уровень паранормального бара; Лимитный уровень; Зеркальный уровень",
+      "note": "взять БСУ 29 августа 2025 - это уровень излома тренда и уровень паранормального бара."
+    }
+  ],
+  "unresolved_user_reference": {
+    "comment_context_robot_level": 84288,
+    "previous_manual_counterpart": 85211.738329556,
+    "mentioned_wicks": [
+      {
+        "date": "2026-02-04",
+        "kind": "L",
+        "price": 71805.2
+      },
+      {
+        "date": "2026-03-10",
+        "kind": "H",
+        "price": 71762.8
+      },
+      {
+        "date": "2026-03-23",
+        "kind": "H",
+        "price": 71788.0
+      }
+    ],
+    "status": "mentioned dates support region around 71800, not 85211; do not reinterpret silently"
+  },
+  "user_claim_not_verified": {
+    "august_29_paranormal": false,
+    "april_paranormal_body_crossings_84288": false
+  }
+}

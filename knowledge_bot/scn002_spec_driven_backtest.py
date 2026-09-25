@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Any
 
 from scn002_strict_kb_backtest import Bar, atr_at, load_history
+from detector_prototype import PARANORMAL_BODY_ATR, is_paranormal_body
 
 SOURCE_CARDS = [
     "_knowledge_base/detector_specs/level_selection_strength_spec.md",
@@ -53,8 +54,7 @@ class SpecParams:
     no_consolidation_min_near_closes: int = 3
     compression_lookback: int = 5
     range_compression_ratio: float = 0.70
-    paranormal_avg_range_mult: float = 1.50
-    paranormal_atr_mult: float = 0.80
+    paranormal_atr_mult: float = PARANORMAL_BODY_ATR  # real body, excluding wicks
     atr_consumed_strong: float = 1.0
     atr_consumed_warning: float = 0.5
     luft_atr: float = 0.02
@@ -261,9 +261,7 @@ def validate_level(level: PivotLevel, bars: list[Bar], i: int) -> dict[str, Any]
 
 
 def approach_features(bars: list[Bar], i: int, level: float, atr: float, side: str, p: SpecParams) -> dict[str, Any]:
-    prev_avg = avg_range(bars, i - 10, i)
-    current_range = bars[i].high - bars[i].low
-    paranormal = bool(prev_avg and current_range >= p.paranormal_avg_range_mult * prev_avg) or current_range >= p.paranormal_atr_mult * atr
+    paranormal = is_paranormal_body(bars[i].open, bars[i].close, atr, p.paranormal_atr_mult)
     start_i = i
     for j in range(i - 1, max(-1, i - 12), -1):
         moving_toward = bars[j].close <= bars[j + 1].close if side == "short" else bars[j].close >= bars[j + 1].close

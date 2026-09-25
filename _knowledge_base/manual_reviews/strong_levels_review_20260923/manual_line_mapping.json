@@ -1,0 +1,143 @@
+{
+  "tolerance_ratio": 0.001,
+  "used_for": "Link explanation to existing line only, not a trading tolerance",
+  "levels": [
+    {
+      "id": "L01",
+      "price_approx": 58042,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 58042.739897758634,
+      "price_delta": 0.7398977586344699,
+      "line_moved": false
+    },
+    {
+      "id": "L02",
+      "price_approx": 59081,
+      "status": "no_active_manual_line",
+      "candidate_prices": []
+    },
+    {
+      "id": "L03",
+      "price_approx": 62205,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 62255.11659187918,
+      "price_delta": 50.116591879181215,
+      "line_moved": false
+    },
+    {
+      "id": "L04",
+      "price_approx": 65705,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 65704.8395530447,
+      "price_delta": -0.16044695529853925,
+      "line_moved": false
+    },
+    {
+      "id": "L05",
+      "price_approx": 67293,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 67276.00066598372,
+      "price_delta": -16.999334016276407,
+      "line_moved": false
+    },
+    {
+      "id": "L06",
+      "price_approx": 73768,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 73767.74198594979,
+      "price_delta": -0.25801405021047685,
+      "line_moved": false
+    },
+    {
+      "id": "L07",
+      "price_approx": 74900,
+      "status": "no_active_manual_line",
+      "candidate_prices": []
+    },
+    {
+      "id": "L08",
+      "price_approx": 79388,
+      "status": "no_active_manual_line",
+      "candidate_prices": []
+    },
+    {
+      "id": "L09",
+      "price_approx": 81787,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 81787.83988184528,
+      "price_delta": 0.8398818452842534,
+      "line_moved": false
+    },
+    {
+      "id": "L10",
+      "price_approx": 85211,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 85211.738329556,
+      "price_delta": 0.7383295559993712,
+      "line_moved": false
+    },
+    {
+      "id": "L11",
+      "price_approx": 90081,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 90068.6821300187,
+      "price_delta": -12.317869981299737,
+      "line_moved": false
+    },
+    {
+      "id": "L12",
+      "price_approx": 94000,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 94000.00132259545,
+      "price_delta": 0.0013225954462541267,
+      "line_moved": false
+    },
+    {
+      "id": "L13",
+      "price_approx": 97963,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 97963.55158121476,
+      "price_delta": 0.5515812147641554,
+      "line_moved": false
+    },
+    {
+      "id": "L14",
+      "price_approx": 106714,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 106655.4495030607,
+      "price_delta": -58.550496939293225,
+      "line_moved": false
+    },
+    {
+      "id": "L15",
+      "price_approx": 111968,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 112000.84521756294,
+      "price_delta": 32.84521756293543,
+      "line_moved": false
+    },
+    {
+      "id": "L16",
+      "price_approx": 120114,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 120115.90665037748,
+      "price_delta": 1.906650377481128,
+      "line_moved": false
+    },
+    {
+      "id": "L17",
+      "price_approx": 123742,
+      "status": "no_active_manual_line",
+      "candidate_prices": []
+    },
+    {
+      "id": "L18",
+      "price_approx": 125849,
+      "status": "matched_within_reporting_tolerance",
+      "manual_price": 125849.82410923425,
+      "price_delta": 0.8241092342504999,
+      "line_moved": false
+    }
+  ],
+  "appended_manual_updates": 14
+}

@@ -1,0 +1,60 @@
+{
+  "verified_at": "2026-09-25T10:19:44.714936+00:00",
+  "active_revision": "type_confluence_20260925",
+  "requested_components": [
+    "progressive_body_strength",
+    "anchor_size_review_corrections"
+  ],
+  "already_implemented": true,
+  "production_code_changed_in_this_verification": false,
+  "code_and_test_hash_matches": {
+    "knowledge_bot/level_discovery.py": true,
+    "knowledge_bot/level_structure.py": true,
+    "knowledge_bot/level_selection.py": true,
+    "knowledge_bot/level_evidence_strength.py": true,
+    "knowledge_bot/level_origin_context.py": true,
+    "knowledge_bot/chart_level_modes.py": true,
+    "knowledge_bot/review_working_levels.py": true,
+    "tests/test_cross_level_origin.py": true,
+    "tests/test_origin_evidence.py": true,
+    "tests/test_working_level_quality.py": true,
+    "tests/test_manual_candidates.py": true,
+    "tests/test_chart_level_modes.py": true,
+    "tests/test_body_strength_scale.py": true,
+    "tests/test_level_selection.py": true
+  },
+  "existing_validation": {
+    "command": ".\\.venv\\Scripts\\python.exe -X utf8 -B -m unittest discover -s tests",
+    "environment": {
+      "QT_QPA_PLATFORM": "offscreen"
+    },
+    "tests": 322,
+    "seconds": 116.521,
+    "exit_code": 0
+  },
+  "full_suite_rerun": false,
+  "reason": "Code and tests unchanged since successful 322-test suite",
+  "chart_paths": [
+    "desktop_app -> typed_review_levels -> discover_levels -> select_working_levels",
+    "desktop_app -> inflection_review_levels -> discover_levels -> select_working_levels"
+  ],
+  "historical_as_of": "2026-09-23T06:00:00Z",
+  "last_verified_counts": {
+    "raw_candidates": 159,
+    "raw_mirror_limit": 90,
+    "general_selected_all_types": 27,
+    "general_selected_mirror_limit": 24,
+    "with_manual_rejections_all_types": 20,
+    "with_manual_rejections_mirror_limit": 17,
+    "explicit_58_still_found_by_general_rules": 5,
+    "explicit_58_still_found_with_manual_constraints": 0,
+    "reviewed_whole_level_constraints": 29,
+    "reviewed_whole_levels_still_found_by_general_rules": 6,
+    "reviewed_whole_levels_still_found_with_manual_constraints": 0,
+    "reference_price_matches": 13,
+    "reference_count": 19,
+    "selected_without_reference_match": 4
+  },
+  "journal_unchanged": true,
+  "journal_sha256": "cf126cb5830f5ba14ff5d857b9414d093ab620b70a747eaecb3e1c792fc85ba7"
+}

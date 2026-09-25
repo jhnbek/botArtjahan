@@ -1,0 +1,2122 @@
+{
+  "source_journal": "_knowledge_base\\user_level_feedback.jsonl",
+  "journal_sha256": "1ad7b478bc6b286a359c5a76fa4be55cb60f53f1c5b25054eb4a47c495f78e6c",
+  "journal_modified_by_this_review": false,
+  "automatic_detector_uses_manual_prices": false,
+  "price_amendments": [
+    {
+      "old": 62205,
+      "new": 62240
+    },
+    {
+      "old": 65705,
+      "new": 65770
+    },
+    {
+      "old": 79388,
+      "new": 79423
+    }
+  ],
+  "corrected_robot_price": {
+    "rejected": 74919.6,
+    "accepted": 74900,
+    "exact_touches": [
+      "2026-03-16",
+      "2026-04-29"
+    ],
+    "later_near_touch": "2026-09-15"
+  },
+  "source_price_precision": {
+    "requested_approximate_price": 79423,
+    "saved_candle_2026_04_22_high": 79423.5
+  },
+  "active_bsu_rejections": [
+    {
+      "recorded_at": "2026-09-23T10:15:06.058272+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 58042.6,
+      "bar_open_time_ms": 1782432000000,
+      "bar": {
+        "close": 60073.4,
+        "close_time_ms": 1782432000000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 60731.3,
+        "low": 58289.5,
+        "open": 59767.3,
+        "open_time": "2026-06-26T00:00:00Z",
+        "open_time_ms": 1782432000000,
+        "volume": 121158.15
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2179.492857142857,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.11328323430418023,
+            "index": 612,
+            "indices": [
+              612
+            ],
+            "kind": "L",
+            "known_index": 618,
+            "known_time": "2026-07-02T00:00:00+00:00",
+            "price": 58289.5,
+            "reaction_atr": 2.7981280048766264,
+            "reaction_confirmed_index": 618,
+            "reaction_confirmed_time": "2026-07-02T00:00:00+00:00",
+            "role": "long_tail_rejection",
+            "time": "2026-06-26T00:00:00+00:00"
+          }
+        ],
+        "index": 612,
+        "kind": "L",
+        "price": 58289.5,
+        "roles": [
+          "Отбой длинным хвостом"
+        ],
+        "symbol": "o",
+        "time": "2026-06-26T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня, это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "inflection",
+        "limit_level",
+        "paranormal_bar"
+      ],
+      "bsu": {
+        "index": 611,
+        "time": "2026-06-25T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:15:22.881570+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 59081.4,
+      "bar_open_time_ms": 1780704000000,
+      "bar": {
+        "close": 60855.6,
+        "close_time_ms": 1780704000000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 61496.4,
+        "low": 59428.7,
+        "open": 61026.6,
+        "open_time": "2026-06-06T00:00:00Z",
+        "open_time_ms": 1780704000000,
+        "volume": 84151.294
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2574.9928571428586,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.13487416053858503,
+            "index": 592,
+            "indices": [
+              592
+            ],
+            "kind": "L",
+            "known_index": 593,
+            "known_time": "2026-06-07T00:00:00+00:00",
+            "price": 59428.7,
+            "reaction_atr": 2.798376694526195,
+            "reaction_confirmed_index": 593,
+            "reaction_confirmed_time": "2026-06-07T00:00:00+00:00",
+            "role": "long_tail_rejection",
+            "time": "2026-06-06T00:00:00+00:00"
+          }
+        ],
+        "index": 592,
+        "kind": "L",
+        "price": 59428.7,
+        "roles": [
+          "Отбой длинным хвостом"
+        ],
+        "symbol": "o",
+        "time": "2026-06-06T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня, это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "paranormal_bar",
+        "strong_movement_stop"
+      ],
+      "bsu": {
+        "index": 591,
+        "time": "2026-06-05T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:23:47.040341+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62240.0,
+      "bar_open_time_ms": 1784246400000,
+      "bar": {
+        "close": 63911.1,
+        "close_time_ms": 1784246400000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 64360.0,
+        "low": 62502.0,
+        "open": 63795.3,
+        "open_time": "2026-07-17T00:00:00Z",
+        "open_time_ms": 1784246400000,
+        "volume": 79236.771
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 1765.2214285714274,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.14842330585802682,
+            "index": 633,
+            "indices": [
+              633
+            ],
+            "kind": "L",
+            "known_index": 636,
+            "known_time": "2026-07-20T00:00:00+00:00",
+            "price": 62502.0,
+            "reaction_atr": 2.4268910011289577,
+            "reaction_confirmed_index": 636,
+            "reaction_confirmed_time": "2026-07-20T00:00:00+00:00",
+            "role": "long_tail_rejection",
+            "time": "2026-07-17T00:00:00+00:00"
+          }
+        ],
+        "index": 633,
+        "kind": "L",
+        "price": 62502.0,
+        "roles": [
+          "Отбой длинным хвостом"
+        ],
+        "symbol": "o",
+        "time": "2026-07-17T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня. Это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 648,
+        "time": "2026-08-01T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:25:24.591958+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62240.0,
+      "bar_open_time_ms": 1783209600000,
+      "bar": {
+        "close": 63614.4,
+        "close_time_ms": 1783209600000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 63987.1,
+        "low": 62389.4,
+        "open": 63112.2,
+        "open_time": "2026-07-05T00:00:00Z",
+        "open_time_ms": 1783209600000,
+        "volume": 45211.111
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2317.485714285714,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.0644664168063918,
+            "index": 621,
+            "indices": [
+              621
+            ],
+            "kind": "L",
+            "known_index": 621,
+            "known_time": "2026-07-05T00:00:00+00:00",
+            "price": 62389.4,
+            "reaction_atr": 1.2863509714962023,
+            "reaction_confirmed_index": null,
+            "reaction_confirmed_time": null,
+            "role": "near_touch",
+            "time": "2026-07-05T00:00:00+00:00"
+          }
+        ],
+        "index": 621,
+        "kind": "L",
+        "price": 62389.4,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-07-05T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня. Это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 648,
+        "time": "2026-08-01T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:25:49.559756+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62240.0,
+      "bar_open_time_ms": 1780876800000,
+      "bar": {
+        "close": 63056.4,
+        "close_time_ms": 1780876800000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 64220.9,
+        "low": 62374.0,
+        "open": 63306.5,
+        "open_time": "2026-06-08T00:00:00Z",
+        "open_time_ms": 1780876800000,
+        "volume": 84262.562
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2648.442857142859,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.05059576786359637,
+            "index": 594,
+            "indices": [
+              594
+            ],
+            "kind": "L",
+            "known_index": 594,
+            "known_time": "2026-06-08T00:00:00+00:00",
+            "price": 62374.0,
+            "reaction_atr": 0.30825660361074736,
+            "reaction_confirmed_index": null,
+            "reaction_confirmed_time": null,
+            "role": "near_touch",
+            "time": "2026-06-08T00:00:00+00:00"
+          }
+        ],
+        "index": 594,
+        "kind": "L",
+        "price": 62374.0,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-06-08T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня. Это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 648,
+        "time": "2026-08-01T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:26:10.992467+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62240.0,
+      "bar_open_time_ms": 1771891200000,
+      "bar": {
+        "close": 64032.5,
+        "close_time_ms": 1771891200000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 64979.7,
+        "low": 62422.3,
+        "open": 64615.3,
+        "open_time": "2026-02-24T00:00:00Z",
+        "open_time_ms": 1771891200000,
+        "volume": 107197.219
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2552.6357142857128,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.07141637914872422,
+            "index": 490,
+            "indices": [
+              490
+            ],
+            "kind": "L",
+            "known_index": 490,
+            "known_time": "2026-02-24T00:00:00+00:00",
+            "price": 62422.3,
+            "reaction_atr": 4.074376904544043,
+            "reaction_confirmed_index": 491,
+            "reaction_confirmed_time": "2026-02-25T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2026-02-24T00:00:00+00:00"
+          }
+        ],
+        "index": 490,
+        "kind": "L",
+        "price": 62422.3,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-02-24T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня. Это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 648,
+        "time": "2026-08-01T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:45:33.891403+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 65770.0,
+      "bar_open_time_ms": 1772496000000,
+      "bar": {
+        "close": 68299.5,
+        "close_time_ms": 1772496000000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 69222.0,
+        "low": 66054.3,
+        "open": 68799.9,
+        "open_time": "2026-03-03T00:00:00Z",
+        "open_time_ms": 1772496000000,
+        "volume": 112639.401
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 3008.7928571428542,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.09448972179160708,
+            "index": 497,
+            "indices": [
+              497
+            ],
+            "kind": "L",
+            "known_index": 498,
+            "known_time": "2026-03-04T00:00:00+00:00",
+            "price": 66054.3,
+            "reaction_atr": 3.0193836635955114,
+            "reaction_confirmed_index": 498,
+            "reaction_confirmed_time": "2026-03-04T00:00:00+00:00",
+            "role": "long_tail_rejection",
+            "time": "2026-03-03T00:00:00+00:00"
+          }
+        ],
+        "index": 497,
+        "kind": "L",
+        "price": 66054.3,
+        "roles": [
+          "Отбой длинным хвостом"
+        ],
+        "symbol": "o",
+        "time": "2026-03-03T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня. Это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 600,
+        "time": "2026-06-14T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:50:09.369058+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 73754.5,
+      "bar_open_time_ms": 1772668800000,
+      "bar": {
+        "close": 70847.6,
+        "close_time_ms": 1772668800000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 73537.9,
+        "low": 70610.0,
+        "open": 72640.4,
+        "open_time": "2026-03-05T00:00:00Z",
+        "open_time_ms": 1772668800000,
+        "volume": 104007.762
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 3333.3499999999985,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.06497967510162626,
+            "index": 499,
+            "indices": [
+              499
+            ],
+            "kind": "H",
+            "known_index": 499,
+            "known_time": "2026-03-05T00:00:00+00:00",
+            "price": 73537.9,
+            "reaction_atr": 2.3431982840085803,
+            "reaction_confirmed_index": 500,
+            "reaction_confirmed_time": "2026-03-06T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2026-03-05T00:00:00+00:00"
+          }
+        ],
+        "index": 499,
+        "kind": "H",
+        "price": 73537.9,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-03-05T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня. Это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 539,
+        "time": "2026-04-14T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T10:50:36.455985+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 67287.8,
+      "bar_open_time_ms": 1774742400000,
+      "bar": {
+        "close": 65990.7,
+        "close_time_ms": 1774742400000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 67113.3,
+        "low": 64935.7,
+        "open": 66345.4,
+        "open_time": "2026-03-29T00:00:00Z",
+        "open_time_ms": 1774742400000,
+        "volume": 47878.851
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2754.621428571428,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.06334808775901278,
+            "index": 523,
+            "indices": [
+              523
+            ],
+            "kind": "H",
+            "known_index": 523,
+            "known_time": "2026-03-29T00:00:00+00:00",
+            "price": 67113.3,
+            "reaction_atr": 0.4708814019038158,
+            "reaction_confirmed_index": null,
+            "reaction_confirmed_time": null,
+            "role": "near_touch",
+            "time": "2026-03-29T00:00:00+00:00"
+          }
+        ],
+        "index": 523,
+        "kind": "H",
+        "price": 67113.3,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-03-29T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Далеко до уровня. Это не лимитный бар, это просто бар, который не дошел до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 522,
+        "time": "2026-03-28T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:10:19.848223+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 79421.0,
+      "bar_open_time_ms": 1787702400000,
+      "bar": {
+        "close": 78989.8,
+        "close_time_ms": 1787702400000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 79220.0,
+        "low": 77553.4,
+        "open": 78498.1,
+        "open_time": "2026-08-26T00:00:00Z",
+        "open_time_ms": 1787702400000,
+        "volume": 53498.04
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2582.9571428571426,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.07781778360351094,
+            "index": 673,
+            "indices": [
+              673
+            ],
+            "kind": "H",
+            "known_index": 673,
+            "known_time": "2026-08-26T00:00:00+00:00",
+            "price": 79220.0,
+            "reaction_atr": 0.8218874269248404,
+            "reaction_confirmed_index": null,
+            "reaction_confirmed_time": null,
+            "role": "near_touch",
+            "time": "2026-08-26T00:00:00+00:00"
+          }
+        ],
+        "index": 673,
+        "kind": "H",
+        "price": 79220.0,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-08-26T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 558,
+        "time": "2026-05-03T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:11:38.631740+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 79421.0,
+      "bar_open_time_ms": 1770076800000,
+      "bar": {
+        "close": 75723.2,
+        "close_time_ms": 1770076800000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 79177.7,
+        "low": 72889.7,
+        "open": 78693.9,
+        "open_time": "2026-02-03T00:00:00Z",
+        "open_time_ms": 1770076800000,
+        "volume": 135937.152
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 3588.749999999999,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.06779519331243553,
+            "index": 469,
+            "indices": [
+              469
+            ],
+            "kind": "H",
+            "known_index": 469,
+            "known_time": "2026-02-03T00:00:00+00:00",
+            "price": 79177.7,
+            "reaction_atr": 4.611159874608153,
+            "reaction_confirmed_index": 470,
+            "reaction_confirmed_time": "2026-02-04T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2026-02-03T00:00:00+00:00"
+          }
+        ],
+        "index": 469,
+        "kind": "H",
+        "price": 79177.7,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-02-03T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 558,
+        "time": "2026-05-03T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:14:58.191096+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 81787.0,
+      "bar_open_time_ms": 1778803200000,
+      "bar": {
+        "close": 79069.5,
+        "close_time_ms": 1778803200000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 81639.1,
+        "low": 78610.0,
+        "open": 81052.6,
+        "open_time": "2026-05-15T00:00:00Z",
+        "open_time_ms": 1778803200000,
+        "volume": 71934.59
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2028.4285714285713,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.07291358546376218,
+            "index": 570,
+            "indices": [
+              570
+            ],
+            "kind": "H",
+            "known_index": 570,
+            "known_time": "2026-05-15T00:00:00+00:00",
+            "price": 81639.1,
+            "reaction_atr": 4.116339178815409,
+            "reaction_confirmed_index": 571,
+            "reaction_confirmed_time": "2026-05-16T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2026-05-15T00:00:00+00:00"
+          }
+        ],
+        "index": 570,
+        "kind": "H",
+        "price": 81639.1,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-05-15T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "inflection",
+        "limit_level",
+        "mirror_level",
+        "paranormal_bar"
+      ],
+      "bsu": {
+        "index": 560,
+        "time": "2026-05-05T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:17:43.437186+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 67287.8,
+      "bar_open_time_ms": 1774224000000,
+      "bar": {
+        "close": 70865.0,
+        "close_time_ms": 1774224000000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 71788.0,
+        "low": 67412.7,
+        "open": 67828.1,
+        "open_time": "2026-03-23T00:00:00Z",
+        "open_time_ms": 1774224000000,
+        "volume": 134039.109
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2665.585714285713,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.04685649361437367,
+            "index": 517,
+            "indices": [
+              517
+            ],
+            "kind": "L",
+            "known_index": 517,
+            "known_time": "2026-03-23T00:00:00+00:00",
+            "price": 67412.7,
+            "reaction_atr": 1.506798291450285,
+            "reaction_confirmed_index": 519,
+            "reaction_confirmed_time": "2026-03-25T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2026-03-23T00:00:00+00:00"
+          }
+        ],
+        "index": 517,
+        "kind": "L",
+        "price": 67412.7,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-03-23T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена отскочила от предыдущего лимитного бара",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 522,
+        "time": "2026-03-28T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:18:10.294341+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 67287.8,
+      "bar_open_time_ms": 1771632000000,
+      "bar": {
+        "close": 67934.5,
+        "close_time_ms": 1771632000000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 68687.1,
+        "low": 67511.0,
+        "open": 67989.2,
+        "open_time": "2026-02-21T00:00:00Z",
+        "open_time_ms": 1771632000000,
+        "volume": 32305.152
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2902.3499999999985,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.07690319913173711,
+            "index": 487,
+            "indices": [
+              487
+            ],
+            "kind": "L",
+            "known_index": 487,
+            "known_time": "2026-02-21T00:00:00+00:00",
+            "price": 67511.0,
+            "reaction_atr": 0.22281943941977964,
+            "reaction_confirmed_index": null,
+            "reaction_confirmed_time": null,
+            "role": "near_touch",
+            "time": "2026-02-21T00:00:00+00:00"
+          }
+        ],
+        "index": 487,
+        "kind": "L",
+        "price": 67511.0,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-02-21T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 522,
+        "time": "2026-03-28T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:19:55.654734+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90077.0,
+      "bar_open_time_ms": 1769212800000,
+      "bar": {
+        "close": 89177.1,
+        "close_time_ms": 1769212800000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 89883.4,
+        "low": 89105.7,
+        "open": 89551.7,
+        "open_time": "2026-01-24T00:00:00Z",
+        "open_time_ms": 1769212800000,
+        "volume": 12523.344
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2442.1500000000005,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.07927440984378756,
+            "index": 459,
+            "indices": [
+              459
+            ],
+            "kind": "H",
+            "known_index": 459,
+            "known_time": "2026-01-24T00:00:00+00:00",
+            "price": 89883.4,
+            "reaction_atr": 11.13948774645292,
+            "reaction_confirmed_index": 464,
+            "reaction_confirmed_time": "2026-01-29T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2026-01-24T00:00:00+00:00"
+          }
+        ],
+        "index": 459,
+        "kind": "H",
+        "price": 89883.4,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2026-01-24T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 21,
+        "time": "2024-11-12T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:20:42.022638+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90077.0,
+      "bar_open_time_ms": 1764460800000,
+      "bar": {
+        "close": 90308.6,
+        "close_time_ms": 1764460800000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 91963.7,
+        "low": 90285.5,
+        "open": 90766.9,
+        "open_time": "2025-11-30T00:00:00Z",
+        "open_time_ms": 1764460800000,
+        "volume": 33467.119
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 3830.9928571428536,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.05442453373705814,
+            "index": 404,
+            "indices": [
+              404
+            ],
+            "kind": "L",
+            "known_index": 404,
+            "known_time": "2025-11-30T00:00:00+00:00",
+            "price": 90285.5,
+            "reaction_atr": 0.8648149770947129,
+            "reaction_confirmed_index": null,
+            "reaction_confirmed_time": null,
+            "role": "near_touch",
+            "time": "2025-11-30T00:00:00+00:00"
+          }
+        ],
+        "index": 404,
+        "kind": "L",
+        "price": 90285.5,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2025-11-30T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 21,
+        "time": "2024-11-12T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:21:14.998244+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 94032.0,
+      "bar_open_time_ms": 1763424000000,
+      "bar": {
+        "close": 92925.0,
+        "close_time_ms": 1763424000000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 93800.0,
+        "low": 89243.1,
+        "open": 92171.4,
+        "open_time": "2025-11-18T00:00:00Z",
+        "open_time_ms": 1763424000000,
+        "volume": 125238.423
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 4560.842857142854,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.05086779072790434,
+            "index": 392,
+            "indices": [
+              392
+            ],
+            "kind": "H",
+            "known_index": 392,
+            "known_time": "2025-11-18T00:00:00+00:00",
+            "price": 93800.0,
+            "reaction_atr": 2.045784143908239,
+            "reaction_confirmed_index": 394,
+            "reaction_confirmed_time": "2025-11-20T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2025-11-18T00:00:00+00:00"
+          }
+        ],
+        "index": 392,
+        "kind": "H",
+        "price": 93800.0,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2025-11-18T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": {
+        "index": 30,
+        "time": "2024-11-21T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:30:00.421477+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 123742.2,
+      "bar_open_time_ms": 1752451200000,
+      "bar": {
+        "close": 119841.6,
+        "close_time_ms": 1752451200000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json",
+        "high": 123250.0,
+        "low": 118859.2,
+        "open": 119050.2,
+        "open_time": "2025-07-14T00:00:00Z",
+        "open_time_ms": 1752451200000,
+        "volume": 118965.787
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2770.535714285711,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.17765517241379225,
+            "index": 265,
+            "indices": [
+              265
+            ],
+            "kind": "H",
+            "known_index": 266,
+            "known_time": "2025-07-15T00:00:00+00:00",
+            "price": 123250.0,
+            "reaction_atr": 2.328719303899456,
+            "reaction_confirmed_index": 266,
+            "reaction_confirmed_time": "2025-07-15T00:00:00+00:00",
+            "role": "long_tail_rejection",
+            "time": "2025-07-14T00:00:00+00:00"
+          }
+        ],
+        "index": 265,
+        "kind": "H",
+        "price": 123250.0,
+        "roles": [
+          "Отбой длинным хвостом"
+        ],
+        "symbol": "o",
+        "time": "2025-07-14T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "inflection",
+        "limit_level",
+        "paranormal_bar"
+      ],
+      "bsu": {
+        "index": 295,
+        "time": "2025-08-13T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:30:44.676654+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 111968.0,
+      "bar_open_time_ms": 1756771200000,
+      "bar": {
+        "close": 111217.7,
+        "close_time_ms": 1756771200000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+        "high": 111730.0,
+        "low": 108320.7,
+        "open": 109191.8,
+        "open_time": "2025-09-02T00:00:00Z",
+        "open_time_ms": 1756771200000,
+        "volume": 88135.331
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 3314.6285714285686,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.071802916939627,
+            "index": 315,
+            "indices": [
+              315
+            ],
+            "kind": "H",
+            "known_index": 315,
+            "known_time": "2025-09-02T00:00:00+00:00",
+            "price": 111730.0,
+            "reaction_atr": 0.5540590628555672,
+            "reaction_confirmed_index": null,
+            "reaction_confirmed_time": null,
+            "role": "near_touch",
+            "time": "2025-09-02T00:00:00+00:00"
+          }
+        ],
+        "index": 315,
+        "kind": "H",
+        "price": 111730.0,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2025-09-02T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена просто не дошла до уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "inflection",
+        "limit_level",
+        "mirror_level",
+        "paranormal_bar"
+      ],
+      "bsu": {
+        "index": 212,
+        "time": "2025-05-22T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    },
+    {
+      "recorded_at": "2026-09-23T11:31:15.981166+00:00",
+      "action": "reject_robot_bsu",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 111968.0,
+      "bar_open_time_ms": 1747958400000,
+      "bar": {
+        "close": 107275.9,
+        "close_time_ms": 1747958400000,
+        "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json",
+        "high": 111758.4,
+        "low": 106755.0,
+        "open": 111646.5,
+        "open_time": "2025-05-23T00:00:00Z",
+        "open_time_ms": 1747958400000,
+        "volume": 148189.685
+      },
+      "marker": {
+        "evidence": [
+          {
+            "atr": 2964.1357142857137,
+            "confirms_level": true,
+            "entry_context_only": false,
+            "gap_atr": 0.07071201193313595,
+            "index": 213,
+            "indices": [
+              213
+            ],
+            "kind": "H",
+            "known_index": 213,
+            "known_time": "2025-05-23T00:00:00+00:00",
+            "price": 111758.4,
+            "reaction_atr": 3.5466662168447094,
+            "reaction_confirmed_index": 213,
+            "reaction_confirmed_time": "2025-05-23T00:00:00+00:00",
+            "role": "near_touch",
+            "time": "2025-05-23T00:00:00+00:00"
+          }
+        ],
+        "index": 213,
+        "kind": "H",
+        "price": 111758.4,
+        "roles": [
+          "Подход с допустимым недоходом"
+        ],
+        "symbol": "o",
+        "time": "2025-05-23T00:00:00+00:00"
+      },
+      "review_mode": "matched_review",
+      "comment": "Это не лимитный уровень, здесь цена откатилась от уровня",
+      "reason_codes": [
+        "incorrect_bsu"
+      ],
+      "basis_tags": [
+        "inflection",
+        "limit_level",
+        "mirror_level",
+        "paranormal_bar"
+      ],
+      "bsu": {
+        "index": 212,
+        "time": "2025-05-22T00:00:00+00:00"
+      },
+      "scope": "bar_marker_only"
+    }
+  ],
+  "active_manual_levels": [
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 81787.83988184528,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала",
+        "излом_тренда"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона",
+        "Излом тренда"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Граница канала или диапазона; Излом тренда",
+      "note": "Лимитный уровень и излом с БСУ 5 мая. Более высокие бары 10–11 мая — ложный пробой двумя барами, а не основание переносить БСУ.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L09",
+      "human_price_approx": 81787,
+      "human_confirmation_bars": [
+        {
+          "date": "2026-05-05",
+          "role": "inflection_bsu"
+        },
+        {
+          "date": "2026-05-07",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-05-12",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [
+        {
+          "dates": [
+            "2026-05-10",
+            "2026-05-11"
+          ],
+          "type": "two_bar_false_breakout",
+          "user_keeps_original_bsu": true
+        }
+      ],
+      "human_explanation": "Лимитный уровень и излом с БСУ 5 мая. Более высокие бары 10–11 мая — ложный пробой двумя барами, а не основание переносить БСУ.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json",
+      "human_bsu_date": {
+        "year": 2026,
+        "month": 5,
+        "day": 5
+      }
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 85211.738329556,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Граница канала или диапазона",
+      "note": "Подтверждения: 24 ноября 2025, 16 и 17 декабря 2025.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L10",
+      "human_price_approx": 85211,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-24",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-17",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 24 ноября 2025, 16 и 17 декабря 2025.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 73767.74198594979,
+      "reason_codes": [
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "лимитный",
+      "reason_label": "Лимитный уровень; Есть несколько касаний; Зеркальный уровень",
+      "note": "13 марта очень большой люфт, но бар учитывается из-за большого хвоста. Также учитываются 11 и 14 апреля. Исключение не означает общий широкий допуск для любых свечей.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L06",
+      "human_price_approx": 73768,
+      "human_confirmation_bars": [
+        {
+          "date": "2026-03-13",
+          "role": "large_tail_luft_exception"
+        },
+        {
+          "date": "2026-04-11",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-04-14",
+          "role": "limit_or_mirror_touch"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "13 марта очень большой люфт, но бар учитывается из-за большого хвоста. Также учитываются 11 и 14 апреля. Исключение не означает общий широкий допуск для любых свечей.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 67276.00066598372,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "Лимитные и зеркальные касания: 15 июня, 4, 22, 28 марта, 7 и 16 февраля 2026. Конкретная роль каждого касания отдельно не задана.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L05",
+      "human_price_approx": 67293,
+      "human_confirmation_bars": [
+        {
+          "date": "2026-06-15",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-03-04",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-03-22",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-03-28",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-02-07",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-02-16",
+          "role": "limit_or_mirror_touch"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Лимитные и зеркальные касания: 15 июня, 4, 22, 28 марта, 7 и 16 февраля 2026. Конкретная роль каждого касания отдельно не задана.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 94000.00132259545,
+      "reason_codes": [
+        "сильная_реакция",
+        "паранормальный_бар",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень паранормального бара",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень паранормального бара; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "Подтверждения: 14 ноября и 4 декабря 2025.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L12",
+      "human_price_approx": 94000,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-14",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-04",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 14 ноября и 4 декабря 2025.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 97963.55158121476,
+      "reason_codes": [
+        "сильная_реакция",
+        "излом_тренда",
+        "несколько_касаний",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень излома тренда",
+        "Есть несколько касаний",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень излома тренда; Есть несколько касаний; Зеркальный уровень",
+      "note": "Подтверждения 13 ноября 2025 и 14 января 2026. Январский бар одновременно зеркальный и излом тренда.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "human_bsu_date": {
+        "year": 2026,
+        "month": 1,
+        "day": 14
+      },
+      "date_note": "Полная дата БСУ подтверждена пользователем.",
+      "human_mirror_date": {
+        "day": 13,
+        "month": 11,
+        "year": 2025
+      },
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L13",
+      "human_price_approx": 97963,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-13",
+          "role": "mirror_confirmation"
+        },
+        {
+          "date": "2026-01-14",
+          "role": "mirror_and_inflection_bsu"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения 13 ноября 2025 и 14 января 2026. Январский бар одновременно зеркальный и излом тренда.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 106655.4495030607,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "Бар 3 июня близко коснулся и слегка пробил уровень. Его не считать подтверждением; использовать отдельно как ложный пробой по материалам базы знаний.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L14",
+      "human_price_approx": 106714,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-05-18",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-05-23",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-05-24",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-05-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-06-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-10",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [
+        {
+          "dates": [
+            "2025-06-03"
+          ],
+          "type": "false_breakout",
+          "excluded_from_confirmation_touches": true
+        }
+      ],
+      "human_explanation": "Бар 3 июня близко коснулся и слегка пробил уровень. Его не считать подтверждением; использовать отдельно как ложный пробой по материалам базы знаний.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 112000.84521756294,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "Подтверждения: 22 мая, 9 июля, 2 и 21 августа, 16, 25 и 28 октября 2025.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L15",
+      "human_price_approx": 111968,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-05-22",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-09",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-08-02",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-08-21",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-10-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-10-25",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-10-28",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 22 мая, 9 июля, 2 и 21 августа, 16, 25 и 28 октября 2025.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 120115.90665037748,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Граница канала или диапазона",
+      "note": "Подтверждения: 15, 16 и 23 июля 2025.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L16",
+      "human_price_approx": 120114,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-07-15",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-23",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 15, 16 и 23 июля 2025.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 58042.739897758634,
+      "reason_codes": [
+        "сильная_реакция",
+        "излом_тренда",
+        "лимитный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень излома тренда",
+        "Лимитный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень излома тренда; Лимитный уровень; Граница канала или диапазона",
+      "note": "БСУ 25 июня 2026 — излом тренда. Бар 30 июня практически коснулся уровня, недоход микроскопический. Уровень одновременно излом и лимитный.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "human_bsu_date": {
+        "year": 2026,
+        "month": 6,
+        "day": 25
+      },
+      "date_note": "Полная дата БСУ подтверждена пользователем.",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L01",
+      "human_price_approx": 58042,
+      "human_confirmation_bars": [
+        {
+          "date": "2026-06-25",
+          "role": "inflection_bsu"
+        },
+        {
+          "date": "2026-06-30",
+          "role": "limit_near_touch"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "БСУ 25 июня 2026 — излом тренда. Бар 30 июня практически коснулся уровня, недоход микроскопический. Уровень одновременно излом и лимитный.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 125849.82410923425,
+      "reason_codes": [
+        "излом_тренда"
+      ],
+      "reason_labels": [
+        "Уровень излома тренда"
+      ],
+      "reason_code": "излом_тренда",
+      "reason_label": "Уровень излома тренда",
+      "note": "5 октября 2025 — излом тренда.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "human_bsu_date": {
+        "year": 2025,
+        "month": 10,
+        "day": 5
+      },
+      "date_note": "Дата БСУ подтверждена пользователем.",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L18",
+      "human_price_approx": 125849,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-10-05",
+          "role": "inflection_bsu"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "5 октября 2025 — излом тренда.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90068.6821300187,
+      "reason_codes": [
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "лимитный",
+      "reason_label": "Лимитный уровень; Зеркальный уровень",
+      "note": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L11",
+      "human_price_approx": 90081,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-27",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-29",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-30",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-11",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-12",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    {
+      "recorded_at": "2026-09-23T10:14:05.427118+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 59081.47772478861,
+      "reason_codes": [
+        "сильная_реакция",
+        "излом_тренда",
+        "лимитный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень излома тренда",
+        "Лимитный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень излома тренда; Лимитный уровень",
+      "note": "",
+      "label": "human_accepted",
+      "training_signal": "positive"
+    },
+    {
+      "recorded_at": "2026-09-23T10:30:46.432661+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 65769.82618300765,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "",
+      "label": "human_accepted",
+      "training_signal": "positive"
+    },
+    {
+      "recorded_at": "2026-09-23T10:32:26.884027+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62240.39734250159,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "",
+      "label": "human_accepted",
+      "training_signal": "positive"
+    },
+    {
+      "recorded_at": "2026-09-23T11:02:14.289280+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 74900.1854123812,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Зеркальный уровень",
+      "note": "",
+      "label": "human_accepted",
+      "training_signal": "positive"
+    },
+    {
+      "recorded_at": "2026-09-23T11:06:49.862197+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 79423.95853741403,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Зеркальный уровень; Граница канала или диапазона",
+      "note": "",
+      "label": "human_accepted",
+      "training_signal": "positive"
+    },
+    {
+      "recorded_at": "2026-09-23T11:29:29.293596+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 123742.14369371976,
+      "reason_codes": [
+        "сильная_реакция",
+        "излом_тренда",
+        "лимитный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень излома тренда",
+        "Лимитный уровень"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень излома тренда; Лимитный уровень",
+      "note": "",
+      "label": "human_accepted",
+      "training_signal": "positive"
+    }
+  ],
+  "knowledge_sources": [
+    "14/1493da636f56b63a1175406e4210f7e5a7f772048edafeba23e7b5df0b25923c.md",
+    "d4/d495872ff763e411f1c85942499bfef2f2d48b0f57c0561e293fd99c8477a32f.md",
+    "18/182799df5dc85a50e663f75d098790e4f91828e5ec0b1c184394cac9b4791ebb.md",
+    "27/27982861aa1e587934cc145075f15ec57abbd76b7e2d0597fe9b189f141b2917.md"
+  ],
+  "equal_exact_vote_rule": {
+    "order": [
+      "structural_strength",
+      "earliest_valid_contact"
+    ],
+    "status": "provisional_user_preference_requested",
+    "basis": "prior_user_requirement_for_strong_reactions"
+  }
+}

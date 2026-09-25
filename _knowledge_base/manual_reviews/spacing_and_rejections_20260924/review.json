@@ -1,0 +1,779 @@
+{
+  "schema": "strong_level_and_channel_review_v1",
+  "review_date": "2026-09-23",
+  "source": "explicit_user_explanations",
+  "scope": {
+    "exchange": "bybit",
+    "market": "linear",
+    "symbol": "BTCUSDT",
+    "interval": "1d",
+    "candle_timezone": "UTC"
+  },
+  "automatic_rule_update": false,
+  "price_semantics": "Цены пользователя приблизительные. Не заменять автоматически ими точные координаты ручных линий или high/low БСУ.",
+  "type_semantics": "Раздел пользователя — лимитные и зеркальные уровни. Пустой список explicit_types означает, что конкретный тип не назван в соответствующем пункте; это не отрицательная метка.",
+  "unmentioned_levels": "Не считать автоматически ни одобренными, ни отклонёнными. Пользователь сообщил о множестве слабых/распиленных уровней, но не перечислил все их цены.",
+  "levels": [
+    {
+      "id": "L01",
+      "user_item": 1,
+      "price_approx": 58042,
+      "explicit_types": [
+        "inflection",
+        "limit_level"
+      ],
+      "bsu_date": "2026-06-25",
+      "touches": [
+        {
+          "date": "2026-06-25",
+          "role": "inflection_bsu"
+        },
+        {
+          "date": "2026-06-30",
+          "role": "limit_near_touch"
+        }
+      ],
+      "statement": "БСУ 25 июня 2026 — излом тренда. Бар 30 июня практически коснулся уровня, недоход микроскопический. Уровень одновременно излом и лимитный."
+    },
+    {
+      "id": "L02",
+      "user_item": 2,
+      "price_approx": 59081,
+      "explicit_types": [
+        "limit_level"
+      ],
+      "bsu_date": "2026-06-05",
+      "incoming_move_start": "2026-06-01",
+      "touches": [
+        {
+          "date": "2026-06-05",
+          "role": "strong_short_stop_bsu"
+        },
+        {
+          "date": "2026-06-24",
+          "role": "limit_touch"
+        }
+      ],
+      "statement": "БСУ 5 июня остановил сильный шорт от 1 июня. Повторное касание 24 июня — лимитное.",
+      "prior_review_constraint": "Сохраняется прежнее уточнение: полезный уровень слабее 58 042; этот пункт не отменяет его последующее понижение как окончательного излома."
+    },
+    {
+      "id": "L03",
+      "user_item": 3,
+      "price_approx": 62240,
+      "explicit_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "touches": [
+        {
+          "date": "2026-06-18",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-06-19",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-07-14",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-08-01",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-08-03",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-07-02",
+          "role": "mirror_touch"
+        }
+      ],
+      "statement": "Лимитные касания 18 и 19 июня, 14 июля, 1 и 3 августа 2026; зеркальное касание 2 июля.",
+      "superseded_price_approx": 62205,
+      "amendment_source": "user_20260923_price_consensus"
+    },
+    {
+      "id": "L04",
+      "user_item": 4,
+      "price_approx": 65770,
+      "explicit_types": [
+        "limit_level"
+      ],
+      "touches": [
+        {
+          "date": "2026-02-11",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-02-13",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-02-18",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-03-09",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-03-30",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-04-02",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2026-06-14",
+          "role": "later_rejection_with_luft"
+        },
+        {
+          "date": "2026-06-22",
+          "role": "later_rejection_with_luft"
+        }
+      ],
+      "statement": "После лимитных касаний в феврале–апреле уровень подтверждается с небольшим люфтом 14 и 22 июня: не хватило силы пробить уровень, произошёл откат.",
+      "superseded_price_approx": 65705,
+      "amendment_source": "user_20260923_price_consensus"
+    },
+    {
+      "id": "L05",
+      "user_item": 5,
+      "price_approx": 67293,
+      "explicit_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "touches": [
+        {
+          "date": "2026-06-15",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-03-04",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-03-22",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-03-28",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-02-07",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-02-16",
+          "role": "limit_or_mirror_touch"
+        }
+      ],
+      "statement": "Лимитные и зеркальные касания: 15 июня, 4, 22, 28 марта, 7 и 16 февраля 2026. Конкретная роль каждого касания отдельно не задана."
+    },
+    {
+      "id": "L07",
+      "user_item": 7,
+      "price_approx": 74900,
+      "explicit_types": [
+        "inflection"
+      ],
+      "inflection_bsu_date": "2026-03-16",
+      "touches": [
+        {
+          "date": "2026-09-15",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-09-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-04-29",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-03-16",
+          "role": "inflection_bsu"
+        }
+      ],
+      "statement": "Подтверждения 15 и 16 сентября, 29 апреля и 16 марта. Бар 16 марта также является изломом тренда.",
+      "prior_review_constraint": "Не отменяет ранее одобренный БСУ робота 15 сентября в той же ценовой области; мартовский излом хранится как отдельное историческое событие.",
+      "selection_preference": {
+        "removed_reference_id": "L06",
+        "removed_price_approx": 73768,
+        "removed_manual_price": 73767.74198594979,
+        "preferred_reference_id": "L07",
+        "preferred_price_approx": 74900,
+        "preferred_manual_price": 74900.1854123812,
+        "distance": 1132,
+        "gap_percent_relative_to_lower_price": 1.5345407222643965,
+        "explanation": "Близость уровней около 1,5% оставляет мало пространства для входа: один бар может пересечь оба. Пользователь предпочитает более сильный 74 900.",
+        "meaning": "selection_for_trade_space_not_denial_of_historical_level",
+        "universal_percent_cutoff": null
+      }
+    },
+    {
+      "id": "L08",
+      "user_item": 8,
+      "price_approx": 79423,
+      "explicit_types": [],
+      "touches": [
+        {
+          "date": "2026-08-30",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-08-31",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-09-01",
+          "role": "near_touch_with_reversal"
+        },
+        {
+          "date": "2026-05-07",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-04-22",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-02-01",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-02-02",
+          "role": "confirmation"
+        }
+      ],
+      "statement": "1 сентября не доходит, но остаётся очень близко и усиливает уровень разворотом около него. Остальные подтверждения: 30–31 августа, 7 мая, 22 апреля, 1–2 февраля 2026.",
+      "superseded_price_approx": 79388,
+      "amendment_source": "user_20260923_price_consensus"
+    },
+    {
+      "id": "L09",
+      "user_item": 9,
+      "price_approx": 81787,
+      "explicit_types": [
+        "limit_level",
+        "inflection"
+      ],
+      "bsu_date": "2026-05-05",
+      "touches": [
+        {
+          "date": "2026-05-05",
+          "role": "inflection_bsu"
+        },
+        {
+          "date": "2026-05-07",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-05-12",
+          "role": "confirmation"
+        }
+      ],
+      "false_breakouts": [
+        {
+          "dates": [
+            "2026-05-10",
+            "2026-05-11"
+          ],
+          "type": "two_bar_false_breakout",
+          "user_keeps_original_bsu": true
+        }
+      ],
+      "statement": "Лимитный уровень и излом с БСУ 5 мая. Более высокие бары 10–11 мая — ложный пробой двумя барами, а не основание переносить БСУ."
+    },
+    {
+      "id": "L10",
+      "user_item": 10,
+      "price_approx": 85211,
+      "explicit_types": [],
+      "touches": [
+        {
+          "date": "2025-11-24",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-17",
+          "role": "confirmation"
+        }
+      ],
+      "statement": "Три близких нижних хвоста: 24 ноября 2025, 16 и 17 декабря 2025. Бары 16 и 17 декабря образуют чёткий лимитный уровень: не пилят цену, касаются без сильного люфта.",
+      "previous_statement": "Подтверждения: 24 ноября 2025, 16 и 17 декабря 2025."
+    },
+    {
+      "id": "L11",
+      "user_item": 11,
+      "price_approx": 90025,
+      "explicit_types": [],
+      "touches": [
+        {
+          "date": "2025-11-27",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-29",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-30",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-11",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-12",
+          "role": "confirmation"
+        }
+      ],
+      "statement": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения.",
+      "previous_price_approx": 90081
+    },
+    {
+      "id": "L12",
+      "user_item": 12,
+      "price_approx": 94000,
+      "explicit_types": [
+        "paranormal_bar",
+        "limit_level",
+        "mirror_level",
+        "round_number"
+      ],
+      "touches": [
+        {
+          "date": "2025-04-22",
+          "role": "paranormal_bsu"
+        },
+        {
+          "date": "2025-04-24",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2025-05-01",
+          "role": "mirror_touch_strong_reaction"
+        },
+        {
+          "date": "2025-05-04",
+          "role": "confirmation"
+        }
+      ],
+      "statement": "БСУ 22 апреля 2025: круглая цена 94 000 и паранормальный бар. 24 апреля — лимитное подтверждение; 1 мая — зеркальное подтверждение с сильной реакцией вверх; 4 мая — последующее подтверждение.",
+      "previous_statement": "Подтверждения: 14 ноября и 4 декабря 2025.",
+      "previous_touches": [
+        {
+          "date": "2025-11-14",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-04",
+          "role": "confirmation"
+        }
+      ]
+    },
+    {
+      "id": "L13",
+      "user_item": 13,
+      "price_approx": 97963,
+      "explicit_types": [
+        "mirror_level",
+        "inflection"
+      ],
+      "bsu_date": "2026-01-14",
+      "touches": [
+        {
+          "date": "2025-11-13",
+          "role": "mirror_confirmation"
+        },
+        {
+          "date": "2026-01-14",
+          "role": "mirror_and_inflection_bsu"
+        }
+      ],
+      "statement": "Подтверждения 13 ноября 2025 и 14 января 2026. Январский бар одновременно зеркальный и излом тренда."
+    },
+    {
+      "id": "L14",
+      "user_item": 14,
+      "price_approx": 106714,
+      "explicit_types": [],
+      "touches": [
+        {
+          "date": "2025-05-18",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-05-23",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-05-24",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-05-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-06-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-10",
+          "role": "confirmation"
+        }
+      ],
+      "false_breakouts": [
+        {
+          "dates": [
+            "2025-06-03"
+          ],
+          "type": "false_breakout",
+          "excluded_from_confirmation_touches": true
+        }
+      ],
+      "statement": "Бар 3 июня близко коснулся и слегка пробил уровень. Его не считать подтверждением; использовать отдельно как ложный пробой по материалам базы знаний."
+    },
+    {
+      "id": "L15",
+      "user_item": 15,
+      "price_approx": 111968,
+      "explicit_types": [],
+      "touches": [
+        {
+          "date": "2025-05-22",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-09",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-08-02",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-08-21",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-10-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-10-25",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-10-28",
+          "role": "confirmation"
+        }
+      ],
+      "statement": "Подтверждения: 22 мая, 9 июля, 2 и 21 августа, 16, 25 и 28 октября 2025."
+    },
+    {
+      "id": "L16",
+      "user_item": 16,
+      "price_approx": 120321,
+      "explicit_types": [],
+      "touches": [
+        {
+          "date": "2025-07-15",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-23",
+          "role": "confirmation"
+        }
+      ],
+      "statement": "Подтверждения: 15, 16 и 23 июля 2025.",
+      "previous_price_approx": 120114
+    },
+    {
+      "id": "L17",
+      "user_item": 17,
+      "price_approx": 123742,
+      "explicit_types": [
+        "inflection"
+      ],
+      "bsu_date": "2025-08-13",
+      "touches": [
+        {
+          "date": "2025-08-13",
+          "role": "inflection_bsu"
+        }
+      ],
+      "statement": "13 августа 2025 — излом тренда."
+    },
+    {
+      "id": "L18",
+      "user_item": 18,
+      "price_approx": 125849,
+      "explicit_types": [
+        "inflection"
+      ],
+      "bsu_date": "2025-10-05",
+      "touches": [
+        {
+          "date": "2025-10-05",
+          "role": "inflection_bsu"
+        }
+      ],
+      "statement": "5 октября 2025 — излом тренда."
+    },
+    {
+      "id": "L19",
+      "price_approx": 71805,
+      "manual_price": 71816.07473885626,
+      "explicit_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "additional_chart_reason_codes": [
+        "сильная_реакция",
+        "паранормальный_бар",
+        "лимитный",
+        "зеркальный"
+      ],
+      "touches": [],
+      "bsu_date": null,
+      "statement": "Пользователь одобряет уровень робота около 71 805: лимитные и зеркальные бары, хорошая реакция. Добавленная ручная линия подтверждает выбор робота.",
+      "bar_dates_status": "not_supplied_by_user"
+    }
+  ],
+  "channels": [
+    {
+      "id": "C01",
+      "user_number": "1 (первый, перед повторным 1)",
+      "start": "2025-07-10",
+      "end": "2025-10-02",
+      "lower": 111968,
+      "upper": 120321,
+      "boundary_levels": [
+        "L15",
+        "L16"
+      ],
+      "status": "user_annotated",
+      "previous_upper": 120114
+    },
+    {
+      "id": "C02",
+      "user_number": "1 (повторный)",
+      "start": "2025-02-26",
+      "end": "2025-04-20",
+      "lower": 81787,
+      "upper": 85211,
+      "boundary_levels": [
+        "L09",
+        "L10"
+      ],
+      "status": "user_annotated"
+    },
+    {
+      "id": "C03",
+      "user_number": "2",
+      "start": "2025-05-08",
+      "end": "2025-06-25",
+      "lower": 97963,
+      "upper": 106714,
+      "boundary_levels": [
+        "L13",
+        "L14"
+      ],
+      "status": "user_annotated"
+    },
+    {
+      "id": "C04",
+      "user_number": "3",
+      "start": "2025-10-10",
+      "end": "2025-11-03",
+      "end_as_written": "2025-10-03",
+      "lower": 106714,
+      "upper": 111968,
+      "boundary_levels": [
+        "L14",
+        "L15"
+      ],
+      "status": "user_date_clarified",
+      "clarification": "Пользователь явно уточнил конец: 3 ноября 2025."
+    },
+    {
+      "id": "C05",
+      "user_number": "4",
+      "start": "2025-11-17",
+      "end": "2026-01-20",
+      "lower": 90025,
+      "upper": 94000,
+      "boundary_levels": [
+        "L11",
+        "L12"
+      ],
+      "status": "user_annotated",
+      "previous_lower": 90081
+    },
+    {
+      "id": "C06",
+      "user_number": "5",
+      "start": "2025-11-20",
+      "end": "2026-01-02",
+      "lower": 85211,
+      "upper": 90025,
+      "boundary_levels": [
+        "L10",
+        "L11"
+      ],
+      "status": "user_annotated",
+      "previous_upper": 90081
+    },
+    {
+      "id": "C07",
+      "user_number": "6",
+      "start": "2026-02-05",
+      "end": "2026-04-13",
+      "lower": 65770,
+      "upper": 73768,
+      "boundary_levels": [
+        "L04",
+        "L06"
+      ],
+      "status": "user_annotated",
+      "note": "Есть внутренние уровни, но именно эти две границы названы основными.",
+      "superseded_lower": 65705,
+      "boundary_selection_note": "73 768 исключён из активного набора для входов; исторические границы канала не изменены."
+    },
+    {
+      "id": "C08",
+      "user_number": "7",
+      "start": "2026-04-17",
+      "end": "2026-05-27",
+      "lower": 74900,
+      "upper": 79423,
+      "boundary_levels": [
+        "L07",
+        "L08"
+      ],
+      "status": "user_annotated",
+      "superseded_upper": 79388
+    },
+    {
+      "id": "C09",
+      "user_number": "8",
+      "start": "2026-06-03",
+      "end": "2026-08-19",
+      "lower": 62240,
+      "upper": 65770,
+      "boundary_levels": [
+        "L03",
+        "L04"
+      ],
+      "status": "user_annotated",
+      "superseded_lower": 62205,
+      "superseded_upper": 65705
+    },
+    {
+      "id": "C10",
+      "user_number": "9",
+      "start": "2026-08-21",
+      "end": "2026-09-18",
+      "lower": 74900,
+      "upper": 79423,
+      "boundary_levels": [
+        "L07",
+        "L08"
+      ],
+      "status": "user_annotated",
+      "superseded_upper": 79388
+    }
+  ],
+  "method_requirements": [
+    "Выбирать сильные уровни с выраженной реакцией, а не все совпадения экстремумов.",
+    "Частый распил и отсутствие сильной реакции ослабляют уровень. Пользователь связывает такие уровни с более частыми стоп-лоссами; это мотивация отбора, а не доказанная статистика сделок.",
+    "Учитывать волнообразное боковое движение и основные границы канала; не приравнивать любой внутренний уровень к основной границе.",
+    "Близкий недоход с разворотом способен подтвердить уровень; не распространять исключение для большого хвоста на все свечи.",
+    "Разделять обычное подтверждающее касание, недоход и ложный пробой. Для 3 июня 2025 у 106 714 явно исключён статус подтверждения.",
+    "Соседние свечи, перечисленные пользователем, хранить отдельно; их не терять при объединении подходов в одну группу.",
+    "Для излома 5 мая 2026 отдельно проверять двухбарный ложный пробой 10–11 мая, сохраняя заявленный пользователем исходный БСУ.",
+    "Один уровень может иметь несколько типов. Историческое подтверждение не переносит автоматически дату первоначального БСУ.",
+    "Допуск и силу реакции необходимо нормировать с учётом волатильности и контекста; приведённые цены и даты служат проверочными примерами, а не списком исключений для кода.",
+    "Не использовать будущие касания или позднейшую силу уровня при оценке решения на более раннюю дату."
+  ],
+  "channel_relation_note": "Пользователь описал возможные переходы из одного канала в другой через общую зеркальную/лимитную границу. Ссылки «каналы 7 и 8, 5 и 6» сохранены как исходный текст; из-за повторной нумерации не сопоставлены автоматически с ID.",
+  "pending_questions": [],
+  "revision": "spacing_and_rejections_20260924",
+  "parent_review": "strong_levels_review_20260923/review.json",
+  "daily_lifetime_months": 18,
+  "amendment_rules": [
+    "chronological_oldest_to_newest",
+    "most_exact_contacts_not_averaged_price",
+    "near_touches_do_not_vote_for_exact_price",
+    "round_number_strengthens_existing_structure",
+    "false_breakouts_entry_only"
+  ],
+  "amends": "user_corrections_20260924",
+  "recorded_at": "2026-09-24T11:13:38.991378+00:00",
+  "retired_levels": [
+    {
+      "id": "L06",
+      "user_item": 6,
+      "price_approx": 73768,
+      "explicit_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "touches": [
+        {
+          "date": "2026-03-13",
+          "role": "large_tail_luft_exception"
+        },
+        {
+          "date": "2026-04-11",
+          "role": "limit_or_mirror_touch"
+        },
+        {
+          "date": "2026-04-14",
+          "role": "limit_or_mirror_touch"
+        }
+      ],
+      "statement": "13 марта очень большой люфт, но бар учитывается из-за большого хвоста. Также учитываются 11 и 14 апреля. Исключение не означает общий широкий допуск для любых свечей.",
+      "status": "retired_by_user",
+      "reason": {
+        "removed_reference_id": "L06",
+        "removed_price_approx": 73768,
+        "removed_manual_price": 73767.74198594979,
+        "preferred_reference_id": "L07",
+        "preferred_price_approx": 74900,
+        "preferred_manual_price": 74900.1854123812,
+        "distance": 1132,
+        "gap_percent_relative_to_lower_price": 1.5345407222643965,
+        "explanation": "Близость уровней около 1,5% оставляет мало пространства для входа: один бар может пересечь оба. Пользователь предпочитает более сильный 74 900.",
+        "meaning": "selection_for_trade_space_not_denial_of_historical_level",
+        "universal_percent_cutoff": null
+      },
+      "recorded_at": "2026-09-24T11:13:38.991378+00:00"
+    }
+  ],
+  "robot_rejections_reference": "rejected_robot_levels.json",
+  "evaluation_requirement": "Compare full detector output with explicit reviewed positives/negatives; do not present nearest-price deviation as overall accuracy; unreviewed candidates remain unreviewed."
+}

@@ -7,7 +7,9 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'knowledge_bot'))
 from level_discovery import (Bar, DiscoveryParams, inflection_anchors, discover_levels,
                              apply_confirmed_inflections, historical_mirror_confirmation,
-                             inflection_context, bar_time, atr_at, annotate_inflection_lifecycle)
+                             inflection_context, bar_time, atr_at, annotate_inflection_lifecycle,
+                             Level, build_drawn_level_candidate, automation_confidence_for_level,
+                             ordered_basis, level_evidence, level_report)
 
 
 def fixture(mirror=False):
@@ -17,7 +19,48 @@ def fixture(mirror=False):
     return [Bar(i*86400000, c-.1, c+.2, c-.2, c, 10) for i,c in enumerate(closes)]
 
 
+def two_bar_breakout_fixture(mirror=False):
+    bars = fixture()[:31]
+    closes = [129.5, 129.0, 129.4, 131.2, 129.2, 126.0, 124.0, 122.0]
+    for i, close in enumerate(closes, 31):
+        opening = bars[-1].close
+        bars.append(Bar(i*86400000, opening, max(opening, close)+.1,
+                        min(opening, close)-.1, close, 10))
+    if mirror:
+        bars = [Bar(b.open_time, 250-b.open, 250-b.low, 250-b.high,
+                    250-b.close, b.volume) for b in bars]
+    return bars
+
+
 class InflectionTests(unittest.TestCase):
+    def test_one_and_two_bar_patterns_are_available_for_future_entry_analysis(self):
+        bars=[Bar(i*86400000,1030,1040,1020,1030,1) for i in range(25)]
+        bars[20]=Bar(20*86400000,1050,1060,950,1020,1)
+        bars[23]=Bar(23*86400000,1050,1060,940,950,1)
+        bars[24]=Bar(24*86400000,950,1070,940,1060,1)
+        level=build_drawn_level_candidate(bars,1000,DiscoveryParams(),nearest_level=True)
+        observations=level_report(level)['entry_observations']
+        self.assertFalse(observations['affects_level_strength'])
+        single=next(e for e in observations['events'] if e['pattern']=='false_breakout')
+        double=next(e for e in observations['events'] if e['pattern']=='false_breakout_two_bar')
+        self.assertEqual(single['bar_count'],1)
+        self.assertEqual(single['bars'][0]['close'],1020)
+        self.assertEqual(double['bar_count'],2)
+        self.assertEqual([b['close'] for b in double['bars']],[950,1060])
+        self.assertEqual(double['direction'],'long')
+        self.assertEqual(double['level_price'],1000)
+        self.assertEqual(double['known_time'],bar_time(bars[24]))
+        self.assertFalse(double['confirms_level'])
+
+    def test_two_bar_return_does_not_itself_confirm_inflection_strength(self):
+        bars=two_bar_breakout_fixture()
+        # Large return through the original BSU is still the second LP bar.
+        bars[35]=Bar(bars[35].open_time,bars[34].close,bars[34].close+.1,123.9,124,10)
+        self.assertNotIn((30,'H'),inflection_anchors(bars[:36],DiscoveryParams()))
+        anchors=inflection_anchors(bars[:37],DiscoveryParams())
+        self.assertIn((30,'H'),anchors)
+        self.assertEqual(anchors[(30,'H')]['confirmation_index'],36)
+
     def test_mirror_requires_opposite_touch_and_intervening_cross(self):
         bars = [Bar(i*86400000,90,95,85,90,1) for i in range(40)]
         bars[5] = Bar(5*86400000,102,105,100,103,1)
@@ -82,6 +125,38 @@ class InflectionTests(unittest.TestCase):
                 bars[31].high=bars[30].high+2; bars[31].close=bars[30].high+1
             self.assertNotIn((30,kind),inflection_anchors(bars,DiscoveryParams()))
 
+    def test_two_bar_false_breakout_keeps_previously_held_bsu(self):
+        for mirror,kind in [(False,'H'),(True,'L')]:
+            with self.subTest(kind=kind):
+                bars = two_bar_breakout_fixture(mirror)
+                anchors = inflection_anchors(bars, DiscoveryParams())
+                anchor = anchors[(30,kind)]
+                event = anchor['two_bar_false_breakouts'][0]
+                self.assertEqual(event['breakout_index'],34)
+                self.assertEqual(event['return_index'],35)
+                self.assertGreaterEqual(anchor['confirmation_index'],35)
+                self.assertNotIn((34,kind), anchors)
+                self.assertFalse({34,35} & {t['index'] for t in anchor['limit_confirmations']})
+
+    def test_two_outside_closes_are_continuation_not_two_bar_false_breakout(self):
+        for mirror,kind in [(False,'H'),(True,'L')]:
+            bars = two_bar_breakout_fixture(mirror)
+            if mirror:
+                bars[35].close = bars[30].low-1
+                bars[35].low = bars[30].low-2
+            else:
+                bars[35].close = bars[30].high+1
+                bars[35].high = bars[30].high+2
+            self.assertNotIn((30,kind), inflection_anchors(bars, DiscoveryParams()))
+
+    def test_two_bar_return_and_reversal_must_exist_in_available_prefix(self):
+        bars = two_bar_breakout_fixture()
+        # Outside close only, then returned but without a strong reversal yet.
+        for end in [35,36]:
+            self.assertNotIn((30,'H'), inflection_anchors(bars[:end], DiscoveryParams()))
+        self.assertIn((30,'H'), inflection_anchors(bars[:37], DiscoveryParams()))
+        self.assertNotIn((30,'H'), inflection_anchors(bars, DiscoveryParams(reversal_lookahead=4)))
+
     def test_wick_only_reversal_is_not_confirmation(self):
         bars=fixture()[:31]
         bars += [Bar(i*86400000,129,130,110,129,10) for i in range(31,39)]
@@ -101,7 +176,9 @@ class ReviewedContextTests(unittest.TestCase):
     def setUpClass(cls):
         payload = json.loads((Path(__file__).parent/'fixtures/inflection_review_btc_1d.json').read_text(encoding='utf-8'))
         cls.bars = [Bar(*row) for row in payload['bars']]
-        cls.params = DiscoveryParams(nearest_window_atr=float('inf'))
+        # Inspect discovery/lifecycle candidates, including secondary levels
+        # that the separate working-level selector may legitimately remove.
+        cls.params = DiscoveryParams(nearest_window_atr=float('inf'), working_selection=False)
         cls.anchors = inflection_anchors(cls.bars, cls.params)
         cls.levels = discover_levels(cls.bars, cls.params)
         cls.indices = {bar_time(b)[:10]: i for i,b in enumerate(cls.bars)}
@@ -118,13 +195,53 @@ class ReviewedContextTests(unittest.TestCase):
         self.assertNotIn((self.indices['2025-09-01'],'L'),self.anchors)
 
     def test_approved_bsUs_survive_context_and_price_clustering(self):
-        expected={'2026-06-25':58042.6, '2026-09-15':74919.6, '2025-08-13':123742.2,
-                  '2026-01-14':97963.2, '2025-10-05':125849.7}
+        expected={'2026-06-25':58042.6, '2026-03-16':74900.0, '2025-08-13':123742.2,
+                  '2026-01-14':97963.2, '2025-10-05':125849.7, '2026-05-05':81787.0}
         actual={l.bsu_time[:10]:l for l in self.levels if 'inflection' in l.basis_tags}
         for date,price in expected.items():
             with self.subTest(date=date):
                 self.assertIn(date,actual)
                 self.assertAlmostEqual(actual[date].price,price)
+
+    def test_may5_retests_and_two_bar_breakout_are_separate_evidence(self):
+        key = (self.indices['2026-05-05'],'H')
+        anchor = self.anchors[key]
+        self.assertEqual(anchor['confirmation_time'][:10],'2026-05-22')
+        self.assertEqual(anchor['efficiency_exception_reason'],'repeated_held_retests')
+        self.assertEqual([e['time'][:10] for e in anchor['held_retests']],
+                         ['2026-05-07','2026-05-12'])
+        event = anchor['two_bar_false_breakouts'][0]
+        self.assertEqual(event['breakout_time'][:10],'2026-05-10')
+        self.assertEqual(event['return_time'][:10],'2026-05-11')
+        touches = {t['time'][:10] for t in anchor['limit_confirmations']}
+        self.assertTrue({'2026-05-07','2026-05-12'} <= touches)
+        self.assertFalse({'2026-05-10','2026-05-11'} & touches)
+        before = inflection_anchors(self.bars[:self.indices['2026-05-21']+1],self.params)
+        self.assertNotIn(key,before)
+        after = inflection_anchors(self.bars[:self.indices['2026-05-22']+1],self.params)
+        self.assertIn(key,after)
+
+    def test_real_false_breakouts_are_not_level_strength_factors(self):
+        self.assertTrue(any(level.false_breakout_count for level in self.levels))
+        for level in self.levels:
+            self.assertNotIn('long_false_breakout_tail',level.basis_tags)
+            self.assertNotIn('false_breakout_confirmation',level.kb_strength)
+            self.assertNotIn('basis_long_false_breakout_tail',level.kb_strength)
+
+    def test_inefficient_incoming_move_requires_both_held_retests(self):
+        from dataclasses import replace
+        bars = list(self.bars)
+        i = self.indices['2026-05-12']
+        bars[i] = replace(bars[i],high=81000.0,open=80500.0)
+        self.assertNotIn((self.indices['2026-05-05'],'H'),inflection_anchors(bars,self.params))
+
+    def test_false_breakout_cannot_replace_held_retest_for_efficiency_exception(self):
+        from dataclasses import replace
+        bars = list(self.bars)
+        i = self.indices['2026-05-12']
+        price = self.anchors[(self.indices['2026-05-05'],'H')]['price']
+        bars[i] = replace(bars[i],high=price+0.02*atr_at(bars,i,14))
+        self.assertNotIn((self.indices['2026-05-05'],'H'),inflection_anchors(bars,self.params))
 
     def test_boundary_exception_requires_prior_reversal_and_opposite_confirmation(self):
         anchor=self.anchors[(self.indices['2026-09-15'],'L')]
@@ -193,3 +310,55 @@ class ReviewedContextTests(unittest.TestCase):
                  (5,'H'):{'price':103,'atr_at_bsu':5,'confirmation_index':8,'status':'confirmed'}}
         annotate_inflection_lifecycle(bars,anchors,DiscoveryParams())
         self.assertEqual(anchors[(1,'H')]['status'],'confirmed')
+
+
+class FalseBreakoutPolicyTests(unittest.TestCase):
+    @staticmethod
+    def bars():
+        return [Bar(i*86400000,96,97,95,96,1) for i in range(40)]
+
+    def test_legacy_false_breakout_tag_cannot_raise_automation_confidence(self):
+        empty = Level(100,0,'1970-01-01','resistance')
+        legacy = Level(100,0,'1970-01-01','resistance',basis_tags=['long_false_breakout_tail'],
+                       false_breakout_count=5)
+        self.assertEqual(automation_confidence_for_level(legacy),automation_confidence_for_level(empty))
+        self.assertEqual(ordered_basis(legacy.basis_tags),[])
+        self.assertEqual(level_evidence(legacy),[])
+
+    def test_false_breakouts_alone_do_not_create_or_strengthen_drawn_level(self):
+        plain = self.bars()
+        sweep = list(plain)
+        for i in [18,22,26]:
+            sweep[i] = Bar(i*86400000,99,102,95,96,1)
+        base = build_drawn_level_candidate(plain,100,DiscoveryParams(),nearest_level=True)
+        actual = build_drawn_level_candidate(sweep,100,DiscoveryParams(),nearest_level=True)
+        self.assertEqual(actual.false_breakout_count,3)
+        self.assertEqual(actual.touch_count,0)
+        self.assertEqual(actual.kb_score,base.kb_score)
+        self.assertEqual(actual.automation_confidence,base.automation_confidence)
+        self.assertIn('no_structural_level_basis',actual.kb_hard_rejects)
+        self.assertNotIn('long_false_breakout_tail',actual.basis_tags)
+        self.assertFalse(level_report(actual)['entry_observations']['affects_level_strength'])
+
+    def test_two_bar_false_breakout_is_not_a_mirror_or_extra_touch(self):
+        bars = self.bars()
+        bars[18] = Bar(18*86400000,99,100,98,99,1)
+        bars[19] = Bar(19*86400000,99,100,98,99,1)
+        before = build_drawn_level_candidate(bars,100,DiscoveryParams(),nearest_level=True)
+        bars[25] = Bar(25*86400000,99,102,98,101,1)
+        bars[26] = Bar(26*86400000,101,102,95,96,1)
+        after = build_drawn_level_candidate(bars,100,DiscoveryParams(),nearest_level=True)
+        self.assertEqual(after.false_breakout_count,1)
+        self.assertEqual(after.touch_indices,[18,19])
+        self.assertNotIn('mirror_level',after.basis_tags)
+        self.assertEqual(after.kb_score,before.kb_score)
+
+    def test_inflection_limit_confirmations_exclude_sweeps_but_keep_rounding_noise(self):
+        bars = [Bar(i*86400000,98,100,97,98,1) for i in range(28)]
+        bars[17].high = 100.015  # 0.005 ATR, within rounding noise.
+        bars[18].high = 100.06   # 0.02 ATR: real sweep despite close inside.
+        anchors = {(16,'H'):{'price':100,'atr_at_bsu':10,'confirmation_index':20,'status':'confirmed'}}
+        annotate_inflection_lifecycle(bars,anchors,DiscoveryParams())
+        indices = {touch['index'] for touch in anchors[(16,'H')]['limit_confirmations']}
+        self.assertIn(17,indices)
+        self.assertNotIn(18,indices)

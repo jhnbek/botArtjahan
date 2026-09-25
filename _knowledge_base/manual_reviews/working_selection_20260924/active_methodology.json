@@ -1,0 +1,151 @@
+{
+  "revision": "working_selection_20260924",
+  "status": "current_implemented_methodology",
+  "runtime_configuration": false,
+  "recorded_at": "2026-09-24T11:44:43.194754+00:00",
+  "previous_revision": "round_origin_20260924",
+  "current_user_review": "_knowledge_base\\manual_reviews\\spacing_and_rejections_20260924\\review.json",
+  "rules_document": "README.md",
+  "structure_parameters": {
+    "atr_period": 14,
+    "paranormal_lookback": 20,
+    "touch_atr": 0.08,
+    "touch_price_fraction": 0.0015,
+    "penetration_atr": 0.01,
+    "confirmed_near_touch_atr": 0.06,
+    "confirmed_near_price_fraction": 0.002,
+    "confirmed_near_tail_min_atr": 0.2,
+    "reaction_bars": 15,
+    "strong_reaction_atr": 1.5,
+    "precision_atr": 0.02,
+    "mirror_pair_precision_atr": 0.02,
+    "mirror_overlap_range_fraction": 0.025,
+    "clean_limit_precision_atr": 0.02,
+    "clean_limit_price_fraction": 0.001,
+    "merge_atr": 0.15,
+    "chop_window": 40,
+    "chop_side_atr": 0.08,
+    "chop_min_bars": 2,
+    "channel_windows": [
+      30,
+      60,
+      90
+    ],
+    "channel_min_inside": 0.6,
+    "excluded_contacts": []
+  },
+  "selection_parameters": {
+    "working_selection": true,
+    "min_level_distance_fraction": 0.015,
+    "working_reaction_bars": 10,
+    "working_min_reaction_atr": 2.0,
+    "working_min_reaction_efficiency": 0.55
+  },
+  "spacing_formula": "(upper-lower)/lower; equality at 0.015 permitted",
+  "manual_rejections": {
+    "scope": [
+      "exchange",
+      "symbol",
+      "interval",
+      "review_mode"
+    ],
+    "active_mirror_limit_price_count": 80,
+    "before_working_selection": true,
+    "restored_approved_price": 74900,
+    "new_reviewed_rejections": 58
+  },
+  "verification": {
+    "tests_passed": 245,
+    "command": ".\\.venv\\Scripts\\python.exe -X utf8 -B -m unittest discover -s tests",
+    "bsu_exclusions_preserved": 20,
+    "manual_lines_preserved": 18,
+    "snapshots": {
+      "live": {
+        "as_of": "2026-09-24T09:55:23.535512Z",
+        "history_window": {
+          "applied": true,
+          "is_daily": true,
+          "months": 18,
+          "reference_source": "explicit_as_of",
+          "as_of_ms": 1790243723535,
+          "as_of_date": "2026-09-24",
+          "cutoff_ms": 1742774400000,
+          "cutoff_date": "2025-03-24",
+          "start_index": 0,
+          "end_index": 399,
+          "input_count": 399,
+          "retained_count": 399,
+          "excluded_before": 0,
+          "excluded_after": 0,
+          "older_bars_used_for_atr": false
+        },
+        "counts": {
+          "raw_candidates": 129,
+          "raw_mirror_limit": 73,
+          "general_selected_all_types": 30,
+          "general_selected_mirror_limit": 26,
+          "with_manual_rejections_all_types": 17,
+          "with_manual_rejections_mirror_limit": 13,
+          "explicit_58_still_found_by_general_rules": 18,
+          "explicit_58_still_found_with_manual_constraints": 0,
+          "reference_price_matches": 12,
+          "reference_count": 18,
+          "selected_without_reference_match": 1
+        },
+        "minimum_gap_percent": 1.6075589422131293
+      },
+      "historical": {
+        "as_of": "2026-09-23T06:00:00Z",
+        "history_window": {
+          "applied": true,
+          "is_daily": true,
+          "months": 18,
+          "reference_source": "explicit_as_of",
+          "as_of_ms": 1790143200000,
+          "as_of_date": "2026-09-23",
+          "cutoff_ms": 1742688000000,
+          "cutoff_date": "2025-03-23",
+          "start_index": 152,
+          "end_index": 701,
+          "input_count": 701,
+          "retained_count": 549,
+          "excluded_before": 152,
+          "excluded_after": 0,
+          "older_bars_used_for_atr": false
+        },
+        "counts": {
+          "raw_candidates": 173,
+          "raw_mirror_limit": 95,
+          "general_selected_all_types": 34,
+          "general_selected_mirror_limit": 31,
+          "with_manual_rejections_all_types": 27,
+          "with_manual_rejections_mirror_limit": 24,
+          "explicit_58_still_found_by_general_rules": 10,
+          "explicit_58_still_found_with_manual_constraints": 0,
+          "reference_price_matches": 13,
+          "reference_count": 18,
+          "selected_without_reference_match": 11
+        },
+        "minimum_gap_percent": 1.502125607316371
+      }
+    }
+  },
+  "limitations": [
+    "Общие правила не отсекают все 58 удалений; оставшиеся исключаются по явной разметке этого графика.",
+    "Таблицы всей выдачи включают пропуски и уровни без соответствия ручной разметке.",
+    "Текущий кеш короче прежнего среза; сравнение до/после делается на одинаковых свечах."
+  ],
+  "sha256": {
+    "knowledge_bot/level_selection.py": "1afe51d98ec3648fd6c48cfe96f0752a011b2f3a2a3e60c99a9b553863e8d69a",
+    "knowledge_bot/level_discovery.py": "74ccf2a6b7a3ba3ce760f3abff467f4b692bcd9a14ebfe9d48c8db7144c6a317",
+    "knowledge_bot/level_structure.py": "f32170269217e994a65bebd10d66e1dfe8093859b7593cb5a2d904d6e65ffccb",
+    "knowledge_bot/level_history.py": "1d233c0fea8a6b66e02a03a9a5410fbe01681232ae1d76dbf08fda91c5d0045d",
+    "knowledge_bot/chart_level_modes.py": "687ee864cec6dcb0ef9551b00ac3d9a13764fb9cb908e4e1ef7cbf5738f5c57a",
+    "knowledge_bot/desktop_app.py": "a8923157679b5135727eb152cb4e272d428b3cb25e61d7c46785dbc47377d1fc",
+    "knowledge_bot/review_working_levels.py": "edf0d2b7d5cd01cc2faea1e907617a9363bfc490e5766bcb1fdd2488bfeeff33",
+    "tests/test_level_selection.py": "3b244907e12ebb2f30d1df11ae9581a6f692c20280b076f783d1ee4533675156",
+    "tests/test_working_level_quality.py": "293df5b1620db8fe51085562495fc0811b1d4ccd0fce439df680050f0192aca0",
+    "tests/test_chart_level_modes.py": "77b064317432fd39f74ec01b15019a0fe3821884950a39961e7636bb43fc318e",
+    "_knowledge_base/user_level_feedback.jsonl": "47966ef430eb55b57f42ce080d9646abdc2e20115d9d9c9ed6b8a8ccdcd9cc65"
+  }
+}

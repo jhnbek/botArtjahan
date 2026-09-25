@@ -1,0 +1,72 @@
+{
+  "revision": "weighted_density_20260924",
+  "status": "rolled_back",
+  "runtime_configuration": false,
+  "previous_revision": "dense_prices_20260924",
+  "rules_document": "README.md",
+  "rules": {
+    "age_weights": {
+      "less_than_16_calendar_months": 1,
+      "17th_month": 0.8,
+      "18th_month": 0.7
+    },
+    "age_reference": "last_closed_supplied_bar",
+    "history_months": 18,
+    "density_scope": "full_retained_history",
+    "price_priority": [
+      "weighted_exact_votes",
+      "weighted_compact_group",
+      "existing_round_price",
+      "earliest_valid_bsu"
+    ],
+    "self_training": false
+  },
+  "structure_parameters": {
+    "atr_period": 14,
+    "touch_atr": 0.08,
+    "touch_price_fraction": 0.0015,
+    "penetration_atr": 0.01,
+    "confirmed_near_touch_atr": 0.06,
+    "confirmed_near_price_fraction": 0.002,
+    "confirmed_near_tail_min_atr": 0.2,
+    "reaction_bars": 15,
+    "strong_reaction_atr": 1.5,
+    "precision_atr": 0.02,
+    "mirror_pair_precision_atr": 0.02,
+    "mirror_overlap_range_fraction": 0.025,
+    "merge_atr": 0.15,
+    "chop_window": 40,
+    "chop_side_atr": 0.08,
+    "chop_min_bars": 2,
+    "formation_chop_lookback": 7,
+    "density_atr": 0.02,
+    "density_price_fraction": 0.001,
+    "channel_windows": [
+      30,
+      60,
+      90
+    ],
+    "channel_min_inside": 0.6,
+    "excluded_contacts": []
+  },
+  "sha256": {
+    "_knowledge_base\\manual_reviews\\price_consensus_20260923\\review.json": "411b366c1ff62bf1796c25569363a1200ee2b9d09cd6b95765af674e6b9c7c53",
+    "_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\candles.json": "93a3205ca33754c421b1a9913f1fff542b9b8d204d46a863d2375334554d6a45",
+    "_knowledge_base\\manual_reviews\\strong_levels_algorithm_20260923\\rule_clarification.json": "1c4aaa4ca35f43ed34d19a14592871d5bf734e0e7fb4174f9339a6c0f27e0a4c",
+    "knowledge_bot\\level_structure.py": "711318b9d591c08ac6f351e1aaefeba3bdca94c2256608f51b5ca94208bab947",
+    "knowledge_bot\\level_discovery.py": "2471601dec4c6f5e986959fa320e786543aa10286589bf9cc317a1c6ebf4cb1a",
+    "knowledge_bot\\level_history.py": "1d233c0fea8a6b66e02a03a9a5410fbe01681232ae1d76dbf08fda91c5d0045d",
+    "knowledge_bot\\detector_prototype.py": "798b20c54af4fd262cbf039c5814fe58be401eceb2b5bf0cb2647d7f2206a582",
+    "knowledge_bot\\chart_level_modes.py": "73ff00078e7a33e326be1e358a9c65a4af76c7ff40aecbf39f16bb57ad3a599b",
+    "knowledge_bot\\review_level_structure.py": "e310dbc59c13e7238e3f2c1a02c66819495fa7fc9ad7c13425b61d025ce2c607",
+    "_knowledge_base\\user_level_feedback.jsonl": "1ad7b478bc6b286a359c5a76fa4be55cb60f53f1c5b25054eb4a47c495f78e6c"
+  },
+  "verification": {
+    "tests_passed": 215,
+    "note": "Full suite: 214 passed; updated obsolete ranking assertion and reran all 32 structural tests successfully.",
+    "bsu_exclusions_preserved": 20,
+    "mean_absolute_price_deviation_percent": 0.07664262915443942,
+    "matched_within_0_1_percent": 14
+  },
+  "superseded_by": "early_mirror_20260924"
+}

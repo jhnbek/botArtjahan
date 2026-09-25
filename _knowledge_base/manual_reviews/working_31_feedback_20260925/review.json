@@ -1,0 +1,760 @@
+{
+  "status": "reviewed_feedback_algorithm_not_changed",
+  "reviewed_at": "2026-09-25T06:40:14.616589+00:00",
+  "mode": "working_31_review",
+  "source_snapshot": "_knowledge_base\\manual_reviews\\working_31_review_20260925\\chart_snapshot.json",
+  "source_snapshot_sha256": "6a3bdf600f868bec1bfdbb03091a9744335921852d09bd9d73a90a357696e701",
+  "source_journal": "_knowledge_base\\user_level_feedback.jsonl",
+  "source_journal_sha256": "6eb61e50dffa0184411c0d5de245290a2bd09d4fb788b4267aac099a63dbad25",
+  "source_journal_rows": 244,
+  "counts": {
+    "new_actions": 21,
+    "deleted_levels": 20,
+    "initial_robot_levels": 31,
+    "remaining_robot_levels": 11,
+    "current_manual_levels": 19,
+    "active_bsu_rejections": 20,
+    "new_bsu_rejections": 0
+  },
+  "reason_counts": {
+    "Нет сильной реакции от уровня": 17,
+    "Уровень запилен ценой": 12,
+    "Внутри канала или рыночного шума": 12,
+    "Другая причина": 4
+  },
+  "changes": [
+    {
+      "journal_row": 224,
+      "recorded_at": "2026-09-25T06:09:08.482223+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 60711.1,
+      "reason_codes": [
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "это слабый уровень, от него нету сильной реакци.\n\nсильная реакция - это когда хвост останавливается около бара, или же когда несколько баров находятся возле уровня без распила и после пробоя видно сильное движение",
+      "bsu": {
+        "index": 441,
+        "time": "2026-06-07T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 225,
+      "recorded_at": "2026-09-25T06:09:31.345160+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62846.8,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "это слабый уровень, от него нету сильной реакци. И он находится внутри канала\n\nсильная реакция - это когда хвост останавливается около бара, или же когда несколько баров находятся возле уровня без распила и после пробоя видно сильное движение",
+      "bsu": {
+        "index": 444,
+        "time": "2026-06-10T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 226,
+      "recorded_at": "2026-09-25T06:09:57.889520+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 64250.0,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "это слабый уровень, от него нету сильной реакци.\n\nсильная реакция - это когда хвост останавливается около бара, или же когда несколько баров находятся возле уровня без распила и после пробоя видно сильное движение. Этот уровень очень часто пилится.",
+      "bsu": {
+        "index": 441,
+        "time": "2026-06-07T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 227,
+      "recorded_at": "2026-09-25T06:10:17.018311+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 68224.4,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "это слабый уровень, от него нету сильной реакци.\n\nсильная реакция - это когда хвост останавливается около бара, или же когда несколько баров находятся возле уровня без распила и после пробоя видно сильное движение",
+      "bsu": {
+        "index": 336,
+        "time": "2026-02-22T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 228,
+      "recorded_at": "2026-09-25T06:11:18.425496+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 70508.8,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "это слабый уровень, от него нету сильной реакци.\n\nсильная реакция - это когда хвост останавливается около бара, или же когда несколько баров находятся возле уровня без распила и после пробоя видно сильное движение",
+      "bsu": {
+        "index": 324,
+        "time": "2026-02-10T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 229,
+      "recorded_at": "2026-09-25T06:12:06.785128+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 73323.9,
+      "reason_codes": [
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "это локальный уровень, на дневке он слабый",
+      "bsu": {
+        "index": 359,
+        "time": "2026-03-17T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 230,
+      "recorded_at": "2026-09-25T06:12:57.097487+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 76200.9,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "note": "выбор сделан в пользу более сильнего 74 900",
+      "bsu": {
+        "index": 16,
+        "time": "2025-04-08T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 231,
+      "recorded_at": "2026-09-25T06:13:54.937857+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 77847.6,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "note": "уровень 79 423 более сильный, он выступает четкой границой канала и останавливает более сильные движение",
+      "bsu": {
+        "index": 398,
+        "time": "2026-04-25T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 232,
+      "recorded_at": "2026-09-25T06:16:19.072847+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 84288.0,
+      "reason_codes": [
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "нету реакции от уровня. бары зеркальные, но они никак не регируют на уровень, нету ни остановки двидения , ни сильного движения",
+      "bsu": {
+        "index": 19,
+        "time": "2025-04-11T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 233,
+      "recorded_at": "2026-09-25T06:27:26.622273+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 87521.9,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "уровень слабый, плиится ценой и не дает точек входа (очень мало или нету вовсе)",
+      "bsu": {
+        "index": 266,
+        "time": "2025-12-14T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 234,
+      "recorded_at": "2026-09-25T06:28:00.853841+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 89243.1,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "слабый уровень, нету сильной реакции и быстро пилится",
+      "bsu": {
+        "index": 240,
+        "time": "2025-11-18T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 235,
+      "recorded_at": "2026-09-25T06:28:21.526764+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90945.0,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "слабый уровень, внутри канала",
+      "bsu": {
+        "index": 255,
+        "time": "2025-12-03T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 236,
+      "recorded_at": "2026-09-25T06:29:20.110168+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 93538.4,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "note": "рядом соседний уровень более сильный, темболее там круглая цифра усиливает уровень и другие факторы тоже есть",
+      "bsu": {
+        "index": 35,
+        "time": "2025-04-27T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 237,
+      "recorded_at": "2026-09-25T06:29:55.373440+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 95700.1,
+      "reason_codes": [
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "нету сильной реакции от уровня",
+      "bsu": {
+        "index": 41,
+        "time": "2025-05-03T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 238,
+      "recorded_at": "2026-09-25T06:30:08.989982+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 103042.2,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "",
+      "bsu": {
+        "index": 54,
+        "time": "2025-05-16T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 239,
+      "recorded_at": "2026-09-25T06:34:31.291931+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 104936.7,
+      "reason_codes": [
+        "нет_реакции",
+        "другое"
+      ],
+      "reason_labels": [
+        "Нет сильной реакции от уровня",
+        "Другая причина"
+      ],
+      "note": "уровень слабый, лабая реакция",
+      "bsu": {
+        "index": 49,
+        "time": "2025-05-11T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 240,
+      "recorded_at": "2026-09-25T06:34:46.756976+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 107421.7,
+      "reason_codes": [
+        "запиленный",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "",
+      "bsu": {
+        "index": 65,
+        "time": "2025-05-27T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 241,
+      "recorded_at": "2026-09-25T06:35:01.124308+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 109150.0,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "",
+      "bsu": {
+        "index": 60,
+        "time": "2025-05-22T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 242,
+      "recorded_at": "2026-09-25T06:35:12.357348+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 115738.1,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "",
+      "bsu": {
+        "index": 129,
+        "time": "2025-07-30T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 243,
+      "recorded_at": "2026-09-25T06:35:23.741241+00:00",
+      "action": "hide_robot_level",
+      "review_mode": "working_31_review",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 113649.9,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "note": "",
+      "bsu": {
+        "index": 155,
+        "time": "2025-08-25T00:00:00+00:00"
+      }
+    },
+    {
+      "journal_row": 244,
+      "recorded_at": "2026-09-25T06:36:48.331483+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 117896.72048957765,
+      "reason_codes": [
+        "паранормальный_бар",
+        "лимитный"
+      ],
+      "reason_labels": [
+        "Уровень паранормального бара",
+        "Лимитный уровень"
+      ],
+      "note": ""
+    }
+  ],
+  "remaining_robot_levels": [
+    {
+      "id": "R01",
+      "price": 58042.6,
+      "bsu": {
+        "index": 459,
+        "time": "2026-06-25T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R02",
+      "price": 59081.4,
+      "bsu": {
+        "index": 439,
+        "time": "2026-06-05T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R06",
+      "price": 65747.8,
+      "bsu": {
+        "index": 372,
+        "time": "2026-03-30T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R09",
+      "price": 71805.2,
+      "bsu": {
+        "index": 318,
+        "time": "2026-02-04T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R11",
+      "price": 74900.0,
+      "bsu": {
+        "index": 358,
+        "time": "2026-03-16T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R14",
+      "price": 79388.5,
+      "bsu": {
+        "index": 315,
+        "time": "2026-02-01T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R15",
+      "price": 81787.0,
+      "bsu": {
+        "index": 408,
+        "time": "2026-05-05T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R22",
+      "price": 97963.2,
+      "bsu": {
+        "index": 297,
+        "time": "2026-01-14T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R27",
+      "price": 111968.0,
+      "bsu": {
+        "index": 60,
+        "time": "2025-05-22T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R30",
+      "price": 117896.7,
+      "bsu": {
+        "index": 109,
+        "time": "2025-07-10T00:00:00+00:00"
+      }
+    },
+    {
+      "id": "R31",
+      "price": 120321.0,
+      "bsu": {
+        "index": 121,
+        "time": "2025-07-22T00:00:00+00:00"
+      }
+    }
+  ],
+  "manual_prices": [
+    58042.739897758634,
+    59081.47772478861,
+    62240.39734250159,
+    65769.82618300765,
+    67276.00066598372,
+    71816.07473885626,
+    74900.1854123812,
+    79423.95853741403,
+    81787.83988184528,
+    85211.738329556,
+    90025.0,
+    94000.00132259545,
+    97963.55158121476,
+    106655.4495030607,
+    112000.84521756294,
+    117896.72048957765,
+    120321.0,
+    123742.14369371976,
+    125849.82410923425
+  ],
+  "manual_comparison": [
+    {
+      "manual_price": 58042.739897758634,
+      "nearest_remaining_robot_price": 58042.6,
+      "error_percent": 0.0002410254217536126,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 59081.47772478861,
+      "nearest_remaining_robot_price": 59081.4,
+      "error_percent": 0.00013155525487905265,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 62240.39734250159,
+      "nearest_remaining_robot_price": 59081.4,
+      "error_percent": 5.075477467018718,
+      "within_0_2_percent": false
+    },
+    {
+      "manual_price": 65769.82618300765,
+      "nearest_remaining_robot_price": 65747.8,
+      "error_percent": 0.03348979963298048,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 67276.00066598372,
+      "nearest_remaining_robot_price": 65747.8,
+      "error_percent": 2.271539108828765,
+      "within_0_2_percent": false
+    },
+    {
+      "manual_price": 71816.07473885626,
+      "nearest_remaining_robot_price": 71805.2,
+      "error_percent": 0.015142485712016514,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 74900.1854123812,
+      "nearest_remaining_robot_price": 74900.0,
+      "error_percent": 0.00024754595756040873,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 79423.95853741403,
+      "nearest_remaining_robot_price": 79388.5,
+      "error_percent": 0.0446446362873318,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 81787.83988184528,
+      "nearest_remaining_robot_price": 81787.0,
+      "error_percent": 0.0010269030781318931,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 85211.738329556,
+      "nearest_remaining_robot_price": 81787.0,
+      "error_percent": 4.019092201019113,
+      "within_0_2_percent": false
+    },
+    {
+      "manual_price": 90025.0,
+      "nearest_remaining_robot_price": 97963.2,
+      "error_percent": 8.81777284087753,
+      "within_0_2_percent": false
+    },
+    {
+      "manual_price": 94000.00132259545,
+      "nearest_remaining_robot_price": 97963.2,
+      "error_percent": 4.216168746427336,
+      "within_0_2_percent": false
+    },
+    {
+      "manual_price": 97963.55158121476,
+      "nearest_remaining_robot_price": 97963.2,
+      "error_percent": 0.0003588898208489249,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 106655.4495030607,
+      "nearest_remaining_robot_price": 111968.0,
+      "error_percent": 4.981039901563434,
+      "within_0_2_percent": false
+    },
+    {
+      "manual_price": 112000.84521756294,
+      "nearest_remaining_robot_price": 111968.0,
+      "error_percent": 0.02932586579961358,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 117896.72048957765,
+      "nearest_remaining_robot_price": 117896.7,
+      "error_percent": 1.737926005915468e-05,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 120321.0,
+      "nearest_remaining_robot_price": 120321.0,
+      "error_percent": 0.0,
+      "within_0_2_percent": true
+    },
+    {
+      "manual_price": 123742.14369371976,
+      "nearest_remaining_robot_price": 120321.0,
+      "error_percent": 2.7647360806901795,
+      "within_0_2_percent": false
+    },
+    {
+      "manual_price": 125849.82410923425,
+      "nearest_remaining_robot_price": 120321.0,
+      "error_percent": 4.3931917651592265,
+      "within_0_2_percent": false
+    }
+  ],
+  "diagnostic": {
+    "user_chopped_count": 12,
+    "automatic_currently_chopped_count": 0,
+    "user_channel_interior_count": 12,
+    "automatic_channel_penalty_count": 4,
+    "reaction_example": {
+      "price": 60711.1,
+      "contact_date": "2026-06-09",
+      "departure_date": "2026-06-15",
+      "distance_atr": 2.0597730870712385
+    }
+  },
+  "interpretation": {
+    "remaining_levels_are_not_explicitly_approved": true,
+    "whole_level_deletions_are_mode_scoped": true,
+    "new_algorithm_count_not_computed": true,
+    "false_breakouts_remain_entry_context_only": true
+  }
+}

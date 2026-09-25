@@ -36,6 +36,7 @@ from detector_prototype import (
 )
 from level_discovery import DiscoveryParams, Level, discover_levels
 from scn002_strict_kb_backtest import Bar, load_history
+from scenario_model import MODEL_PATH as SCENARIO_MODEL_PATH, daily_gate_for_context, entry_timing_advice
 from trend_direction import nearest_working_level
 
 
@@ -519,6 +520,12 @@ def build_entry_context(symbol: str, context_timeframe: str, execution_timeframe
         }
 
     scenario = scenario_from_approach(approach)
+    # User rule: neither an entry nor a model timing opinion may use an
+    # unfinished D1 signal (including a possible false breakout).
+    daily_gate = daily_gate_for_context(context_bars, execution_bars,
+                                       context_timeframe, execution_timeframe)
+    scenario = {**scenario, "daily_confirmation": daily_gate,
+                "valid": bool(scenario["valid"]) and daily_gate["confirmed"]}
     direction = str(scenario["direction"])
     atr = float(approach["atr"])
     trimmed_execution = trim_execution_bars(execution_bars, params)
@@ -541,12 +548,28 @@ def build_entry_context(symbol: str, context_timeframe: str, execution_timeframe
             ))
 
     best = best_candidate(candidates)
+    if not daily_gate["confirmed"]:
+        # Keep prices/structure available for inspection, while preventing any
+        # candidate from being exposed as an actionable trigger before D1 close.
+        candidates = [{**candidate, "status": "waiting_for_daily_close",
+                       "daily_confirmation": daily_gate} for candidate in candidates]
+        best = best_candidate(candidates)
+    # A fitted screenshot model is diagnostic only: it cannot change candidates,
+    # the selected entry, stops, targets, status or any knowledge-base gate.
+    model_advice = ({"scenario_model": entry_timing_advice(
+        execution_bars, level.price, direction, interval=execution_timeframe,
+        daily_signal_open_time=daily_gate.get("daily_signal_open_time"),
+        as_of=daily_gate.get("as_of"),
+        model_path=SCENARIO_MODEL_PATH,
+    )} if SCENARIO_MODEL_PATH.is_file() else {})
     return {
         "symbol": symbol,
         "context_timeframe": context_timeframe,
         "execution_timeframe": execution_timeframe,
         "source_specs": SOURCE_SPECS,
-        "status": "trigger" if best and best["status"] == "trigger" else "setup" if best and best["status"] == "setup" else "candidate",
+        "status": ("waiting_for_daily_close" if not daily_gate["confirmed"] else
+                   "trigger" if best and best["status"] == "trigger" else "setup" if best and best["status"] == "setup" else "candidate"),
+        "daily_confirmation": daily_gate,
         "scenario": scenario,
         "nearest_level": approach["nearest_level"],
         "atr": atr,
@@ -563,6 +586,7 @@ def build_entry_context(symbol: str, context_timeframe: str, execution_timeframe
         "entry_candidates": candidates,
         "best_entry": best,
         "manual_review": sorted(set().union(*(set(item.get("manual_review", [])) for item in candidates))) if candidates else [],
+        **model_advice,
     }
 
 

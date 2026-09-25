@@ -1,0 +1,2621 @@
+{
+  "schema": "level_feedback_statistics_v1",
+  "raw_record_count": 114,
+  "active_example_count": 74,
+  "active_positive_count": 14,
+  "active_negative_count": 60,
+  "restored_or_removed_count": 0,
+  "reason_counts": {
+    "rejected": {
+      "внутри_канала": 40,
+      "нет_реакции": 30,
+      "запиленный": 26,
+      "мало_касаний": 22,
+      "другое": 13,
+      "не_подтверждён_старшим_тф": 1
+    },
+    "accepted": {
+      "лимитный": 11,
+      "несколько_касаний": 11,
+      "сильная_реакция": 10,
+      "граница_канала": 10,
+      "зеркальный": 9,
+      "излом_тренда": 4,
+      "паранормальный_бар": 1
+    }
+  },
+  "rejected_robot_status_counts": {
+    "reject": 57,
+    "pass": 3
+  },
+  "rejected_robot_score_counts": {
+    "8.25": 24,
+    "6.75": 20,
+    "9.75": 13,
+    "5.25": 1,
+    "4.5": 1,
+    "3.5": 1
+  },
+  "by_context": {
+    "bybit:BTCUSDT:1d": {
+      "accepted": 14,
+      "rejected": 56
+    },
+    "unknown:BTCUSDT:1d": {
+      "accepted": 0,
+      "rejected": 4
+    }
+  },
+  "calibration_examples": [
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": null,
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 78140.0,
+      "side": "resistance",
+      "kb_status": "pass",
+      "kb_score": 5.25,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T09:12:47.935031+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": null,
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 78333.0,
+      "side": "resistance",
+      "kb_status": "pass",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T09:14:04.175450+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": null,
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 79181.48,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T09:15:00.679619+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": null,
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 80600.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T09:22:44.742439+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 79120.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T10:55:15.885636+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 78332.6,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T10:55:45.757502+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 76824.3,
+      "side": "support",
+      "kb_status": "pass",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "мало_касаний",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T11:11:46.363997+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 76199.1,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T11:12:38.780144+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 76026.9,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-10T11:17:56.891248+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 80607.9,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T05:12:25.184207+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 81499.9,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "нет_реакции",
+        "не_подтверждён_старшим_тф"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Нет сильной реакции от уровня",
+        "Не подтверждён старшим таймфреймом"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T05:13:44.650497+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 81787.83988184528,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала",
+        "излом_тренда"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона",
+        "Излом тренда"
+      ],
+      "expected_level_types": [
+        "limit_level",
+        "inflection"
+      ],
+      "bsu": null,
+      "human_bsu_date": {
+        "year": 2026,
+        "month": 5,
+        "day": 5
+      },
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Лимитный уровень и излом с БСУ 5 мая. Более высокие бары 10–11 мая — ложный пробой двумя барами, а не основание переносить БСУ.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 82363.3,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T05:22:28.320956+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 82811.0,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 4.5,
+      "reason_codes": [
+        "мало_касаний"
+      ],
+      "reason_labels": [
+        "Мало касаний"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T05:22:44.121121+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 83755.3,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T05:25:12.145536+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 85211.738329556,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "expected_level_types": [
+        "limit_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Подтверждения: 24 ноября 2025, 16 и 17 декабря 2025.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 76545.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:11:12.031309+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 78144.16666667,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:11:58.572469+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 81093.6,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:12:45.609587+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 81456.8,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:14:36.292335+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 73767.74198594979,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень"
+      ],
+      "expected_level_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "13 марта очень большой люфт, но бар учитывается из-за большого хвоста. Также учитываются 11 и 14 апреля. Исключение не означает общий широкий допуск для любых свечей.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 74900.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:22:27.197816+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 74456.2,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:22:50.020768+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 74221.4,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:23:18.219220+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 74021.8,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:23:39.043000+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 73667.7,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:23:45.442688+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 72854.5,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "мало_касаний",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:37:29.370097+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 72071.83333333,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:37:58.032697+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 70937.0,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T06:38:34.647077+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 70737.9,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "мало_касаний",
+        "запиленный",
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Мало касаний",
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "",
+      "recorded_at": "2026-09-11T10:14:04.213010+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 67276.00066598372,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "expected_level_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Лимитные и зеркальные касания: 15 июня, 4, 22, 28 марта, 7 и 16 февраля 2026. Конкретная роль каждого касания отдельно не задана.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 65704.8395530447,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала",
+        "лимитный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона",
+        "Лимитный уровень"
+      ],
+      "expected_level_types": [
+        "mirror_level",
+        "limit_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "После лимитных касаний в феврале–апреле уровень подтверждается с небольшим люфтом 14 и 22 июня: не хватило силы пробить уровень, произошёл откат.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 94000.00132259545,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "паранормальный_бар",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень паранормального бара",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "expected_level_types": [
+        "paranormal_bar",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Подтверждения: 14 ноября и 4 декабря 2025.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 97963.55158121476,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "излом_тренда",
+        "несколько_касаний",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень излома тренда",
+        "Есть несколько касаний",
+        "Зеркальный уровень"
+      ],
+      "expected_level_types": [
+        "inflection",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": {
+        "year": 2026,
+        "month": 1,
+        "day": 14
+      },
+      "human_mirror_date": {
+        "day": 13,
+        "month": 11,
+        "year": 2025
+      },
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Подтверждения 13 ноября 2025 и 14 января 2026. Январский бар одновременно зеркальный и излом тренда.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 106655.4495030607,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "expected_level_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Бар 3 июня близко коснулся и слегка пробил уровень. Его не считать подтверждением; использовать отдельно как ложный пробой по материалам базы знаний.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 112000.84521756294,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "expected_level_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Подтверждения: 22 мая, 9 июля, 2 и 21 августа, 16, 25 и 28 октября 2025.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 120115.90665037748,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "expected_level_types": [
+        "limit_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Подтверждения: 15, 16 и 23 июля 2025.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 57755.8,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 3.5,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 282,
+        "time": "2026-07-01T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "Этот бар не обновил минимум цены. Он должен закрыть ниже хвоста предыдущих баров",
+      "recorded_at": "2026-09-21T09:18:31.111184+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 66937.7,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала",
+        "другое"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума",
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 302,
+        "time": "2026-07-21T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "до этого я выделил свой уровень.Ему не хвтило чуть чуть чтобы коснуться моего уровня. Это движение внутри канала",
+      "recorded_at": "2026-09-21T09:20:13.875141+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62463.7,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 490,
+        "time": "2026-02-24T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T09:21:30.323140+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 69989.8,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 491,
+        "time": "2026-02-25T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit",
+        "post_chop_acceptance",
+        "round_number"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T09:21:46.874838+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62972.3,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 494,
+        "time": "2026-02-28T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T09:22:04.203294+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 94749.9,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 440,
+        "time": "2026-01-05T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:09:11.547871+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 114710.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 276,
+        "time": "2025-07-25T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit",
+        "post_chop_acceptance"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:09:52.539355+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 119844.9,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 279,
+        "time": "2025-07-28T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:10:01.587291+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 120321.0,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 273,
+        "time": "2025-07-22T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:10:12.531200+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 98125.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 243,
+        "time": "2025-06-22T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "там проходит другой уровень, который  я указал. Произощло недобитие до уровня",
+      "recorded_at": "2026-09-21T10:11:17.939320+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 108955.5,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 237,
+        "time": "2025-06-16T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:11:38.819054+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 110680.4,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 217,
+        "time": "2025-05-27T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:46:18.326293+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 100350.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 226,
+        "time": "2025-06-05T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:47:01.573333+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 88560.1,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 162,
+        "time": "2025-04-02T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:47:23.349163+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 87400.0,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 149,
+        "time": "2025-03-20T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:47:36.789597+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 95058.7,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 131,
+        "time": "2025-03-02T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit",
+        "post_chop_acceptance"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:47:59.125781+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 106479.75,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 100,
+        "time": "2025-01-30T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:48:26.165392+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 91158.8,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 79,
+        "time": "2025-01-09T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:49:12.445339+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 102664.5,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 77,
+        "time": "2025-01-07T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "должен быть предыдущий бар, а не текущий",
+      "recorded_at": "2026-09-21T10:49:56.341149+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 91463.7,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 69,
+        "time": "2024-12-30T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:50:10.516960+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 108485.8,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 56,
+        "time": "2024-12-17T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "должен быть  предыдущий бар, а не текущий",
+      "recorded_at": "2026-09-21T10:50:55.293142+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 104698.8,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 44,
+        "time": "2024-12-05T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "это не уровень излома тренда, это другой уровень",
+      "recorded_at": "2026-09-21T10:51:32.836863+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 93944.6,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала",
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума",
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 48,
+        "time": "2024-12-09T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-21T10:51:58.948773+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90513.6,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 44,
+        "time": "2024-12-05T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "это не уровень излома тренда",
+      "recorded_at": "2026-09-21T10:52:43.852987+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 66872.85,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 13,
+        "time": "2024-11-04T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {},
+      "review_mode": "inflection",
+      "note": "это не уровень излоа тренда",
+      "recorded_at": "2026-09-21T10:54:14.540731+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 58042.739897758634,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "сильная_реакция",
+        "излом_тренда",
+        "лимитный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень излома тренда",
+        "Лимитный уровень",
+        "Граница канала или диапазона"
+      ],
+      "expected_level_types": [
+        "inflection",
+        "limit_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": {
+        "year": 2026,
+        "month": 6,
+        "day": 25
+      },
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "БСУ 25 июня 2026 — излом тренда. Бар 30 июня практически коснулся уровня, недоход микроскопический. Уровень одновременно излом и лимитный.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 108560.0,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 137,
+        "time": "2025-09-25T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 2003.8142857142873,
+        "confirmation_index": 141,
+        "confirmation_time": "2025-09-29T00:00:00+00:00",
+        "efficiency": 0.7464991420822493,
+        "incoming_atr": 4.03839819772291,
+        "price": 108560.0
+      },
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-22T04:51:35.875066+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 123250.0,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 64,
+        "time": "2025-07-14T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 2770.535714285711,
+        "confirmation_index": 83,
+        "confirmation_time": "2025-08-02T00:00:00+00:00",
+        "efficiency": 0.7251771239561416,
+        "incoming_atr": 5.127816951337422,
+        "price": 123250.0
+      },
+      "review_mode": "inflection",
+      "note": "Это уровень, обраованный длинным хвостом бара. Это не уровень излома тренда",
+      "recorded_at": "2026-09-22T04:53:24.721998+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 62255.11659187918,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона",
+        "Зеркальный уровень"
+      ],
+      "expected_level_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Лимитные касания 18 и 19 июня, 14 июля, 1 и 3 августа 2026; зеркальное касание 2 июля.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 125849.82410923425,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "излом_тренда"
+      ],
+      "reason_labels": [
+        "Уровень излома тренда"
+      ],
+      "expected_level_types": [
+        "inflection"
+      ],
+      "bsu": null,
+      "human_bsu_date": {
+        "year": 2025,
+        "month": 10,
+        "day": 5
+      },
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "5 октября 2025 — излом тренда.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 64935.7,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "внутри_канала",
+        "другое"
+      ],
+      "reason_labels": [
+        "Внутри канала или рыночного шума",
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 322,
+        "time": "2026-03-29T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 2754.621428571428,
+        "confirmation_index": 331,
+        "confirmation_time": "2026-04-07T00:00:00+00:00",
+        "efficiency": 0.500836233783845,
+        "efficiency_exception": true,
+        "incoming_atr": 3.6008577792644574,
+        "mirror_confirmation": {
+          "index": 289,
+          "price": 64979.7,
+          "time": "2026-02-24T00:00:00+00:00",
+          "tolerance": 110.18485714285713
+        },
+        "price": 64935.7
+      },
+      "review_mode": "inflection",
+      "note": "Это ложный побой уровня",
+      "recorded_at": "2026-09-22T06:35:34.678945+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 94550.0,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 212,
+        "time": "2025-12-09T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 3316.3714285714263,
+        "confirmation_index": 220,
+        "confirmation_time": "2025-12-17T00:00:00+00:00",
+        "efficiency": 0.28063833850898723,
+        "efficiency_exception": true,
+        "incoming_atr": 2.9696613338157904,
+        "mirror_confirmation": {
+          "index": 188,
+          "price": 94511.7,
+          "time": "2025-11-15T00:00:00+00:00",
+          "tolerance": 132.65485714285705
+        },
+        "price": 94550.0
+      },
+      "review_mode": "inflection",
+      "note": "очень локальный уровень внутри канала",
+      "recorded_at": "2026-09-22T10:17:50.174016+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 101045.9,
+      "side": "support",
+      "kb_status": "reject",
+      "kb_score": 6.75,
+      "reason_codes": [
+        "нет_реакции"
+      ],
+      "reason_labels": [
+        "Нет сильной реакции от уровня"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 152,
+        "time": "2025-10-10T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 3077.642857142856,
+        "confirmation_index": 155,
+        "confirmation_time": "2025-10-13T00:00:00+00:00",
+        "efficiency": 0.7531429586309252,
+        "efficiency_exception": false,
+        "incoming_atr": 7.65527421263955,
+        "mirror_confirmation": {},
+        "price": 101045.9
+      },
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-22T10:18:32.293486+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 107432.6,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 9.75,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 110,
+        "time": "2025-08-29T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "paranormal_bar",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 3086.078571428569,
+        "confirmation_index": 123,
+        "confirmation_time": "2025-09-11T00:00:00+00:00",
+        "efficiency": 0.4576400526237067,
+        "efficiency_exception": true,
+        "incoming_atr": 5.157159687166564,
+        "mirror_confirmation": {
+          "index": 51,
+          "price": 107484.8,
+          "time": "2025-07-01T00:00:00+00:00",
+          "tolerance": 123.44314285714276
+        },
+        "price": 107432.6
+      },
+      "review_mode": "inflection",
+      "note": "это откат от уровня (не хватило силы коснуться уровня и откатились в лонг)",
+      "recorded_at": "2026-09-22T10:21:17.533501+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 111950.0,
+      "side": "mirror",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "другое"
+      ],
+      "reason_labels": [
+        "Другая причина"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 83,
+        "time": "2025-08-02T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "long_false_breakout_tail",
+        "two_bar_limit"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 2720.5142857142814,
+        "confirmation_index": 91,
+        "confirmation_time": "2025-08-10T00:00:00+00:00",
+        "efficiency": 0.674772254501113,
+        "efficiency_exception": false,
+        "incoming_atr": 2.9750257304291274,
+        "mirror_confirmation": {
+          "index": 59,
+          "price": 111999.0,
+          "time": "2025-07-09T00:00:00+00:00",
+          "tolerance": 108.82057142857126
+        },
+        "price": 111950.0
+      },
+      "review_mode": "inflection",
+      "note": "Это другой уровень, это лимитный и зеркальный уровень",
+      "recorded_at": "2026-09-22T10:27:01.684697+00:00"
+    },
+    {
+      "label": "human_rejected",
+      "training_signal": "negative",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 117239.5,
+      "side": "resistance",
+      "kb_status": "reject",
+      "kb_score": 8.25,
+      "reason_codes": [
+        "запиленный",
+        "внутри_канала"
+      ],
+      "reason_labels": [
+        "Уровень запилен ценой",
+        "Внутри канала или рыночного шума"
+      ],
+      "expected_level_types": [],
+      "bsu": {
+        "index": 129,
+        "time": "2025-09-17T00:00:00+00:00"
+      },
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [
+        "inflection",
+        "mirror_level",
+        "paranormal_bar",
+        "long_false_breakout_tail"
+      ],
+      "inflection_check": {
+        "atr_at_bsu": 2164.7642857142864,
+        "confirmation_index": 137,
+        "confirmation_time": "2025-09-25T00:00:00+00:00",
+        "efficiency": 0.5656870860927145,
+        "efficiency_exception": false,
+        "incoming_atr": 4.175743317484251,
+        "mirror_confirmation": {
+          "index": 73,
+          "price": 117300.0,
+          "time": "2025-07-23T00:00:00+00:00",
+          "tolerance": 86.59057142857147
+        },
+        "price": 117239.5
+      },
+      "review_mode": "inflection",
+      "note": "",
+      "recorded_at": "2026-09-22T10:28:57.060573+00:00"
+    },
+    {
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90068.6821300187,
+      "side": null,
+      "kb_status": null,
+      "kb_score": null,
+      "reason_codes": [
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "expected_level_types": [
+        "limit_level",
+        "mirror_level"
+      ],
+      "bsu": null,
+      "human_bsu_date": null,
+      "human_mirror_date": null,
+      "basis_tags": [],
+      "inflection_check": {},
+      "review_mode": null,
+      "note": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения.",
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00"
+    }
+  ],
+  "policy": {
+    "automatic_rule_update": false,
+    "recommended_minimum_examples_before_threshold_change": 30,
+    "purpose": "review human labels before changing level discovery rules"
+  }
+}

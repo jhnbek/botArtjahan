@@ -1,0 +1,144 @@
+{
+  "rebuilt_at_utc": "2026-09-24T03:49:28.199057+00:00",
+  "comparison_as_of": "2026-09-23T06:00:00Z",
+  "same_historical_candles": true,
+  "analyzed_closed_bars": 549,
+  "daily_history_cutoff": "2025-03-23",
+  "manual_overlays_used": false,
+  "reference_count": 18,
+  "mean_absolute_deviation_percent": 0.03972447657829777,
+  "maximum_absolute_deviation_percent": 0.2127659574468085,
+  "exact_price_matches": 4,
+  "matches_within_0_1_percent": 15,
+  "robot_prices_changed_from_prior_run": 0,
+  "comparison_sha256": "a8461d8d9de29d736fb20ee9f8b0505b9f6d8f1e7808055d9c3d44fa14899309",
+  "levels": [
+    {
+      "id": "L01",
+      "user_price": 58042,
+      "robot_price": 58042.6,
+      "signed_deviation_percent": 0.0010337341924787995,
+      "absolute_deviation_percent": 0.0010337341924787995
+    },
+    {
+      "id": "L02",
+      "user_price": 59081,
+      "robot_price": 59081.4,
+      "signed_deviation_percent": 0.0006770366107571896,
+      "absolute_deviation_percent": 0.0006770366107571896
+    },
+    {
+      "id": "L03",
+      "user_price": 62240,
+      "robot_price": 62235.4,
+      "signed_deviation_percent": -0.007390745501283009,
+      "absolute_deviation_percent": 0.007390745501283009
+    },
+    {
+      "id": "L04",
+      "user_price": 65770,
+      "robot_price": 65770.0,
+      "signed_deviation_percent": 0.0,
+      "absolute_deviation_percent": 0.0
+    },
+    {
+      "id": "L05",
+      "user_price": 67293,
+      "robot_price": 67287.8,
+      "signed_deviation_percent": -0.007727401066971437,
+      "absolute_deviation_percent": 0.007727401066971437
+    },
+    {
+      "id": "L06",
+      "user_price": 73768,
+      "robot_price": 73754.5,
+      "signed_deviation_percent": -0.01830061815421321,
+      "absolute_deviation_percent": 0.01830061815421321
+    },
+    {
+      "id": "L07",
+      "user_price": 74900,
+      "robot_price": 74900.0,
+      "signed_deviation_percent": 0.0,
+      "absolute_deviation_percent": 0.0
+    },
+    {
+      "id": "L08",
+      "user_price": 79423,
+      "robot_price": 79457.4,
+      "signed_deviation_percent": 0.043312390617320146,
+      "absolute_deviation_percent": 0.043312390617320146
+    },
+    {
+      "id": "L09",
+      "user_price": 81787,
+      "robot_price": 81787.0,
+      "signed_deviation_percent": 0.0,
+      "absolute_deviation_percent": 0.0
+    },
+    {
+      "id": "L10",
+      "user_price": 85211,
+      "robot_price": 85080.0,
+      "signed_deviation_percent": -0.15373601999741818,
+      "absolute_deviation_percent": 0.15373601999741818
+    },
+    {
+      "id": "L11",
+      "user_price": 90081,
+      "robot_price": 90025.0,
+      "signed_deviation_percent": -0.062166272576903006,
+      "absolute_deviation_percent": 0.062166272576903006
+    },
+    {
+      "id": "L12",
+      "user_price": 94000,
+      "robot_price": 93800.0,
+      "signed_deviation_percent": -0.2127659574468085,
+      "absolute_deviation_percent": 0.2127659574468085
+    },
+    {
+      "id": "L13",
+      "user_price": 97963,
+      "robot_price": 97963.2,
+      "signed_deviation_percent": 0.00020415871298050246,
+      "absolute_deviation_percent": 0.00020415871298050246
+    },
+    {
+      "id": "L14",
+      "user_price": 106714,
+      "robot_price": 106677.0,
+      "signed_deviation_percent": -0.034672114249301875,
+      "absolute_deviation_percent": 0.034672114249301875
+    },
+    {
+      "id": "L15",
+      "user_price": 111968,
+      "robot_price": 111968.0,
+      "signed_deviation_percent": 0.0,
+      "absolute_deviation_percent": 0.0
+    },
+    {
+      "id": "L16",
+      "user_price": 120114,
+      "robot_price": 120321.0,
+      "signed_deviation_percent": 0.17233628053349317,
+      "absolute_deviation_percent": 0.17233628053349317
+    },
+    {
+      "id": "L17",
+      "user_price": 123742,
+      "robot_price": 123742.2,
+      "signed_deviation_percent": 0.0001616266102027522,
+      "absolute_deviation_percent": 0.0001616266102027522
+    },
+    {
+      "id": "L18",
+      "user_price": 125849,
+      "robot_price": 125849.7,
+      "signed_deviation_percent": 0.0005562221392280349,
+      "absolute_deviation_percent": 0.0005562221392280349
+    }
+  ],
+  "metric_scope": "Nearest automatic candidate price for each of 18 user references; not precision of all candidates or BSU accuracy"
+}

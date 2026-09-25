@@ -1,0 +1,93 @@
+{
+  "revision": "bar_rules_20260925",
+  "status": "superseded_by_paranormal_body_1_6_20260925",
+  "runtime_configuration": false,
+  "previous_revision": "working_selection_20260924",
+  "rules_document": "README.md",
+  "current_user_review": "_knowledge_base/manual_reviews/bar_rules_20260925/review.json",
+  "paranormal_rule": {
+    "measure": "abs(close-open)",
+    "minimum_atr": 2.5,
+    "atr_period": 14,
+    "current_bar_in_atr": false,
+    "range_average_alternative": false
+  },
+  "excluded_level_bases": [
+    "consolidation",
+    "consolidation_base",
+    "consolidation_level",
+    "false_breakout_level",
+    "gap",
+    "gap_boundary",
+    "gap_level",
+    "long_false_breakout_tail"
+  ],
+  "false_breakouts": "entry_context_only",
+  "selection_parameters": {
+    "working_selection": true,
+    "min_level_distance_fraction": 0.015,
+    "working_reaction_bars": 10,
+    "working_min_reaction_atr": 2.0,
+    "working_min_reaction_efficiency": 0.55
+  },
+  "structure_parameters": {
+    "atr_period": 14,
+    "paranormal_lookback": 20,
+    "touch_atr": 0.08,
+    "touch_price_fraction": 0.0015,
+    "penetration_atr": 0.01,
+    "confirmed_near_touch_atr": 0.06,
+    "confirmed_near_price_fraction": 0.002,
+    "confirmed_near_tail_min_atr": 0.2,
+    "reaction_bars": 15,
+    "strong_reaction_atr": 1.5,
+    "precision_atr": 0.02,
+    "mirror_pair_precision_atr": 0.02,
+    "mirror_overlap_range_fraction": 0.025,
+    "clean_limit_precision_atr": 0.02,
+    "clean_limit_price_fraction": 0.001,
+    "merge_atr": 0.15,
+    "chop_window": 40,
+    "chop_side_atr": 0.08,
+    "chop_min_bars": 2,
+    "channel_windows": [
+      30,
+      60,
+      90
+    ],
+    "channel_min_inside": 0.6,
+    "excluded_contacts": []
+  },
+  "verification": {
+    "tests_passed": 257,
+    "new_review_records": 10,
+    "manual_lines_preserved": 18,
+    "bsu_exclusions_preserved": 20,
+    "july_first_body_atr": 0.6290358387305387,
+    "july_first_is_paranormal": false,
+    "july_first_replaces_june_25_bsu": false,
+    "mean_price_deviation_percent": null,
+    "historical_accuracy_requires_recalculation": true
+  },
+  "review_focus": {
+    "priority_below": 67000,
+    "remaining_levels_above_67000": "not_yet_reviewed_by_user",
+    "unmarked_levels_are_not_approval": true,
+    "explicit_earlier_rejections_preserved": true
+  },
+  "sha256": {
+    "knowledge_bot/detector_prototype.py": "611db0eba9f5af492a780e065ba4005d783681132bd6a16363bc2f226b507ad7",
+    "knowledge_bot/level_structure.py": "3c1d15f9cc55ff1f4e3836562b6faaddcb56692b5bd4b25c58130d9df744d841",
+    "knowledge_bot/level_discovery.py": "c837bc00023254f78ab498208cdac302ebe45f9d339b359d8c7cc5191a56e25f",
+    "knowledge_bot/approach_context.py": "0f4feb94895b866732931d064cd20539d5e98f43ea9d684922a61bae18f67d90",
+    "knowledge_bot/scn002_spec_driven_backtest.py": "5640346cc66bb4717eae1215de98255ee408286fdc7441f1e761cdcd6ad26a41",
+    "knowledge_bot/scn002_strict_kb_backtest.py": "9be2537205b3acddae251a752d7a97046ba39f5273cee5a23f45bde3fca9ca81",
+    "knowledge_bot/chart_level_modes.py": "50a11bbd55374a10222e3e7d48dfe97d561c91e27dabc60a977977110122e3e9",
+    "knowledge_bot/desktop_app.py": "92cdd2e6b789dc1e5cb08ba2907befea53818781662e5c5bd4b99caa9318d078",
+    "knowledge_bot/build_level_feedback_statistics.py": "867b2891b2e81e1e80899d660b12f9cfb0dfb24ee4401a3a91eb0dcae28e008c",
+    "tests/test_paranormal_body.py": "2baff26bc6be54687c52eb5b671066f253fa5ee6a9b4cc6b4d5c84664224d3cd",
+    "tests/test_manual_candidates.py": "c7a653b9b940c715e2055b8468bdfb2c6e06425f4e0dc42e11169e446c7b01ab",
+    "tests/test_level_structure.py": "7451b8e34481bb4ee41de1efae1b51210bb4fea0edc07901aa99cfe9f2720655"
+  },
+  "superseded_by": "_knowledge_base\\manual_reviews\\paranormal_body_1_6_20260925\\active_methodology.json"
+}

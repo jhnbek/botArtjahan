@@ -21,8 +21,7 @@ DEFAULT_REPORT = ROOT / "_knowledge_base" / "level_feedback_statistics.md"
 
 LEVEL_TYPES = {
     "излом_тренда": "inflection", "паранормальный_бар": "paranormal_bar",
-    "лимитный": "limit_level", "проторговка": "consolidation_level",
-    "ложный_пробой": "false_breakout_level", "ранее_встречавшийся": "historical_level",
+    "лимитный": "limit_level", "ранее_встречавшийся": "historical_level",
     "зеркальный": "mirror_level",
 }
 

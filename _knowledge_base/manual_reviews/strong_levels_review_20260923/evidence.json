@@ -1,0 +1,1459 @@
+{
+  "sources": [
+    {
+      "path": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json",
+      "sha256": "287f08115ee75d459609b0ced0b49893031b018ecd78c0fd5c89b5fe95f6a257",
+      "fetched_at": "2026-09-21T09:20:46.593455Z",
+      "bar_count": 700,
+      "first": "2024-10-22T00:00:00Z",
+      "last": "2026-09-21T00:00:00Z"
+    },
+    {
+      "path": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+      "sha256": "0a280d8f2d47903804a871c73254b20f83913937c06be7c593d413dd00fa23f5",
+      "fetched_at": "2026-09-23T04:25:49.136044Z",
+      "bar_count": 400,
+      "first": "2025-08-20T00:00:00Z",
+      "last": "2026-09-23T00:00:00Z"
+    }
+  ],
+  "overlap_policy": "Newer live snapshot takes precedence; no network refresh.",
+  "all_reviewed_dates_present": true,
+  "levels": [
+    {
+      "id": "L01",
+      "price_approx": 58042,
+      "observations": [
+        {
+          "date": "2026-06-25",
+          "role": "inflection_bsu",
+          "candle": {
+            "open_time": "2026-06-25T00:00:00Z",
+            "open": 61054.7,
+            "high": 61942.3,
+            "low": 58042.6,
+            "close": 59767.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 0.6,
+          "atr_before_bar": 2074.057142857142,
+          "gap_atr": 0.0002892880758203256
+        },
+        {
+          "date": "2026-06-30",
+          "role": "limit_near_touch",
+          "candle": {
+            "open_time": "2026-06-30T00:00:00Z",
+            "open": 60224.0,
+            "high": 60249.0,
+            "low": 58156.7,
+            "close": 58603.5,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 114.7,
+          "atr_before_bar": 2187.942857142857,
+          "gap_atr": 0.05242367259526102
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L02",
+      "price_approx": 59081,
+      "observations": [
+        {
+          "date": "2026-06-05",
+          "role": "strong_short_stop_bsu",
+          "candle": {
+            "open_time": "2026-06-05T00:00:00Z",
+            "open": 63849.1,
+            "high": 63954.5,
+            "low": 59081.4,
+            "close": 61026.6,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 0.4,
+          "atr_before_bar": 2409.342857142859,
+          "gap_atr": 0.00016602037307209935
+        },
+        {
+          "date": "2026-06-24",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-06-24T00:00:00Z",
+            "open": 62693.7,
+            "high": 63232.7,
+            "low": 59065.8,
+            "close": 61054.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 15.2,
+          "atr_before_bar": 1935.8714285714284,
+          "gap_atr": 0.00785176111164257
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L03",
+      "price_approx": 62205,
+      "observations": [
+        {
+          "date": "2026-06-18",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-06-18T00:00:00Z",
+            "open": 64476.6,
+            "high": 64781.8,
+            "low": 62216.4,
+            "close": 62920.1,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 11.4,
+          "atr_before_bar": 2458.485714285715,
+          "gap_atr": 0.004637000708915486
+        },
+        {
+          "date": "2026-06-19",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-06-19T00:00:00Z",
+            "open": 62920.1,
+            "high": 63641.1,
+            "low": 62271.6,
+            "close": 63508.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 66.6,
+          "atr_before_bar": 2398.771428571429,
+          "gap_atr": 0.02776421263265658
+        },
+        {
+          "date": "2026-07-14",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-07-14T00:00:00Z",
+            "open": 62311.4,
+            "high": 65084.1,
+            "low": 62235.4,
+            "close": 65013.4,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 30.4,
+          "atr_before_bar": 1983.457142857142,
+          "gap_atr": 0.015326774319010838
+        },
+        {
+          "date": "2026-08-01",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-08-01T00:00:00Z",
+            "open": 62857.8,
+            "high": 63118.3,
+            "low": 62240.0,
+            "close": 62790.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 35.0,
+          "atr_before_bar": 1594.4928571428557,
+          "gap_atr": 0.02195055301954497
+        },
+        {
+          "date": "2026-08-03",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-08-03T00:00:00Z",
+            "open": 63545.9,
+            "high": 64067.8,
+            "low": 62266.6,
+            "close": 63504.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 61.6,
+          "atr_before_bar": 1605.4999999999989,
+          "gap_atr": 0.03836810962316947
+        },
+        {
+          "date": "2026-07-02",
+          "role": "mirror_touch",
+          "candle": {
+            "open_time": "2026-07-02T00:00:00Z",
+            "open": 60000.0,
+            "high": 62188.7,
+            "low": 59556.1,
+            "close": 61532.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 16.3,
+          "atr_before_bar": 2291.092857142857,
+          "gap_atr": 0.007114508671782984
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L04",
+      "price_approx": 65705,
+      "observations": [
+        {
+          "date": "2026-02-11",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-02-11T00:00:00Z",
+            "open": 68804.3,
+            "high": 69265.8,
+            "low": 65705.0,
+            "close": 67044.5,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 0.0,
+          "atr_before_bar": 5470.121428571429,
+          "gap_atr": 0.0
+        },
+        {
+          "date": "2026-02-13",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-02-13T00:00:00Z",
+            "open": 66244.8,
+            "high": 69450.0,
+            "low": 65824.7,
+            "close": 68819.2,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 119.7,
+          "atr_before_bar": 5405.342857142858,
+          "gap_atr": 0.022144756246464597
+        },
+        {
+          "date": "2026-02-18",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-02-18T00:00:00Z",
+            "open": 67474.9,
+            "high": 68440.0,
+            "low": 65814.6,
+            "close": 66426.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 109.6,
+          "atr_before_bar": 4462.907142857142,
+          "gap_atr": 0.024557983505307746
+        },
+        {
+          "date": "2026-03-09",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-03-09T00:00:00Z",
+            "open": 65943.8,
+            "high": 69500.0,
+            "low": 65782.7,
+            "close": 68390.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 77.7,
+          "atr_before_bar": 3688.185714285714,
+          "gap_atr": 0.021067268846857716
+        },
+        {
+          "date": "2026-03-30",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-03-30T00:00:00Z",
+            "open": 65990.7,
+            "high": 68199.9,
+            "low": 65747.8,
+            "close": 66767.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 42.8,
+          "atr_before_bar": 2738.3571428571427,
+          "gap_atr": 0.0156298093225876
+        },
+        {
+          "date": "2026-04-02",
+          "role": "limit_touch",
+          "candle": {
+            "open_time": "2026-04-02T00:00:00Z",
+            "open": 68086.0,
+            "high": 68645.7,
+            "low": 65666.0,
+            "close": 66870.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 39.0,
+          "atr_before_bar": 2543.1642857142847,
+          "gap_atr": 0.015335226363107832
+        },
+        {
+          "date": "2026-06-14",
+          "role": "later_rejection_with_luft",
+          "candle": {
+            "open_time": "2026-06-14T00:00:00Z",
+            "open": 64416.6,
+            "high": 65770.0,
+            "low": 63643.7,
+            "close": 65710.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 65.0,
+          "atr_before_bar": 2794.1928571428584,
+          "gap_atr": 0.023262531730348902
+        },
+        {
+          "date": "2026-06-22",
+          "role": "later_rejection_with_luft",
+          "candle": {
+            "open_time": "2026-06-22T00:00:00Z",
+            "open": 63283.4,
+            "high": 65596.0,
+            "low": 63279.8,
+            "close": 63989.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 109.0,
+          "atr_before_bar": 1932.4642857142858,
+          "gap_atr": 0.05640466465837476
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L05",
+      "price_approx": 67293,
+      "observations": [
+        {
+          "date": "2026-06-15",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-06-15T00:00:00Z",
+            "open": 65710.0,
+            "high": 67276.0,
+            "low": 65317.0,
+            "close": 66287.2,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 17.0,
+          "atr_before_bar": 2882.1357142857155,
+          "gap_atr": 0.005898403713516016
+        },
+        {
+          "date": "2026-03-04",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-03-04T00:00:00Z",
+            "open": 68299.5,
+            "high": 74021.8,
+            "low": 67348.4,
+            "close": 72640.4,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 55.4,
+          "atr_before_bar": 3044.2071428571403,
+          "gap_atr": 0.018198498788094465
+        },
+        {
+          "date": "2026-03-22",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-03-22T00:00:00Z",
+            "open": 68870.5,
+            "high": 69557.3,
+            "low": 67300.1,
+            "close": 67828.1,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 7.1,
+          "atr_before_bar": 2689.1928571428557,
+          "gap_atr": 0.0026401974038965897
+        },
+        {
+          "date": "2026-03-28",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-03-28T00:00:00Z",
+            "open": 66374.7,
+            "high": 67287.8,
+            "low": 65880.7,
+            "close": 66345.4,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 5.2,
+          "atr_before_bar": 2725.6714285714284,
+          "gap_atr": 0.0019077868100640801
+        },
+        {
+          "date": "2026-02-07",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-02-07T00:00:00Z",
+            "open": 70532.3,
+            "high": 71653.2,
+            "low": 67307.3,
+            "close": 69248.2,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 14.3,
+          "atr_before_bar": 5117.907142857142,
+          "gap_atr": 0.002794110874004591
+        },
+        {
+          "date": "2026-02-16",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-02-16T00:00:00Z",
+            "open": 68800.0,
+            "high": 70099.1,
+            "low": 67243.6,
+            "close": 68863.8,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 49.4,
+          "atr_before_bar": 4861.571428571428,
+          "gap_atr": 0.010161323499161332
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L06",
+      "price_approx": 73768,
+      "observations": [
+        {
+          "date": "2026-03-13",
+          "role": "large_tail_luft_exception",
+          "candle": {
+            "open_time": "2026-03-13T00:00:00Z",
+            "open": 70482.0,
+            "high": 73869.8,
+            "low": 70345.6,
+            "close": 70884.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 101.8,
+          "atr_before_bar": 3419.4857142857145,
+          "gap_atr": 0.029770558647082283
+        },
+        {
+          "date": "2026-04-11",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-04-11T00:00:00Z",
+            "open": 72920.0,
+            "high": 73800.0,
+            "low": 72481.3,
+            "close": 73011.6,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 32.0,
+          "atr_before_bar": 2288.271428571427,
+          "gap_atr": 0.013984355002840582
+        },
+        {
+          "date": "2026-04-14",
+          "role": "limit_or_mirror_touch",
+          "candle": {
+            "open_time": "2026-04-14T00:00:00Z",
+            "open": 74383.7,
+            "high": 76010.3,
+            "low": 73754.5,
+            "close": 74092.2,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 13.5,
+          "atr_before_bar": 2451.1785714285693,
+          "gap_atr": 0.005507554674864866
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L07",
+      "price_approx": 74900,
+      "observations": [
+        {
+          "date": "2026-09-15",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-09-15T00:00:00Z",
+            "open": 78158.1,
+            "high": 78226.1,
+            "low": 74919.6,
+            "close": 75608.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 19.6,
+          "atr_before_bar": 2239.0499999999997,
+          "gap_atr": 0.00875371251200546
+        },
+        {
+          "date": "2026-09-16",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-09-16T00:00:00Z",
+            "open": 75608.0,
+            "high": 76529.1,
+            "low": 75000.5,
+            "close": 76169.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 100.5,
+          "atr_before_bar": 2272.657142857143,
+          "gap_atr": 0.0442213645449631
+        },
+        {
+          "date": "2026-04-29",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-04-29T00:00:00Z",
+            "open": 76300.0,
+            "high": 77860.0,
+            "low": 74900.0,
+            "close": 75750.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 0.0,
+          "atr_before_bar": 2235.0999999999995,
+          "gap_atr": 0.0
+        },
+        {
+          "date": "2026-03-16",
+          "role": "inflection_bsu",
+          "candle": {
+            "open_time": "2026-03-16T00:00:00Z",
+            "open": 72777.5,
+            "high": 74900.0,
+            "low": 72226.3,
+            "close": 74854.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.0,
+          "atr_before_bar": 3111.221428571429,
+          "gap_atr": 0.0
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L08",
+      "price_approx": 79388,
+      "observations": [
+        {
+          "date": "2026-08-30",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-08-30T00:00:00Z",
+            "open": 78196.6,
+            "high": 79367.5,
+            "low": 76900.0,
+            "close": 77639.1,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 20.5,
+          "atr_before_bar": 3002.7,
+          "gap_atr": 0.006827188863356313
+        },
+        {
+          "date": "2026-08-31",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-08-31T00:00:00Z",
+            "open": 77639.1,
+            "high": 79280.8,
+            "low": 77336.8,
+            "close": 78541.8,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 107.2,
+          "atr_before_bar": 3129.692857142857,
+          "gap_atr": 0.03425256243766411
+        },
+        {
+          "date": "2026-09-01",
+          "role": "near_touch_with_reversal",
+          "candle": {
+            "open_time": "2026-09-01T00:00:00Z",
+            "open": 78541.8,
+            "high": 79200.0,
+            "low": 76364.0,
+            "close": 77392.6,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 188.0,
+          "atr_before_bar": 3129.078571428571,
+          "gap_atr": 0.06008158494855857
+        },
+        {
+          "date": "2026-05-07",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-05-07T00:00:00Z",
+            "open": 81394.2,
+            "high": 81671.0,
+            "low": 79461.7,
+            "close": 79975.4,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 73.7,
+          "atr_before_bar": 1905.7857142857154,
+          "gap_atr": 0.03867171395374831
+        },
+        {
+          "date": "2026-04-22",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-04-22T00:00:00Z",
+            "open": 76294.8,
+            "high": 79423.5,
+            "low": 76100.0,
+            "close": 78139.5,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 35.5,
+          "atr_before_bar": 2512.3285714285707,
+          "gap_atr": 0.01413031734930031
+        },
+        {
+          "date": "2026-02-01",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-02-01T00:00:00Z",
+            "open": 78704.4,
+            "high": 79388.5,
+            "low": 75663.2,
+            "close": 76938.5,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.5,
+          "atr_before_bar": 3247.5999999999995,
+          "gap_atr": 0.00015395984727183153
+        },
+        {
+          "date": "2026-02-02",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-02-02T00:00:00Z",
+            "open": 76938.5,
+            "high": 79388.0,
+            "low": 74567.3,
+            "close": 78693.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.0,
+          "atr_before_bar": 3374.7285714285713,
+          "gap_atr": 0.0
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L09",
+      "price_approx": 81787,
+      "observations": [
+        {
+          "date": "2026-05-05",
+          "role": "inflection_bsu",
+          "candle": {
+            "open_time": "2026-05-05T00:00:00Z",
+            "open": 79818.9,
+            "high": 81787.0,
+            "low": 79752.5,
+            "close": 80851.6,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.0,
+          "atr_before_bar": 1997.2500000000011,
+          "gap_atr": 0.0
+        },
+        {
+          "date": "2026-05-07",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-05-07T00:00:00Z",
+            "open": 81394.2,
+            "high": 81671.0,
+            "low": 79461.7,
+            "close": 79975.4,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 116.0,
+          "atr_before_bar": 1905.7857142857154,
+          "gap_atr": 0.06086728383493869
+        },
+        {
+          "date": "2026-05-12",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-05-12T00:00:00Z",
+            "open": 81699.8,
+            "high": 81768.1,
+            "low": 79800.1,
+            "close": 80459.8,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 18.9,
+          "atr_before_bar": 1919.4214285714293,
+          "gap_atr": 0.009846717202725465
+        }
+      ],
+      "false_breakouts": [
+        {
+          "dates": [
+            "2026-05-10",
+            "2026-05-11"
+          ],
+          "type": "two_bar_false_breakout",
+          "user_keeps_original_bsu": true,
+          "candles": [
+            {
+              "open_time": "2026-05-10T00:00:00Z",
+              "open": 80628.0,
+              "high": 82450.0,
+              "low": 80206.3,
+              "close": 82181.9,
+              "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+            },
+            {
+              "open_time": "2026-05-11T00:00:00Z",
+              "open": 82181.9,
+              "high": 82350.0,
+              "low": 80410.0,
+              "close": 81699.8,
+              "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L10",
+      "price_approx": 85211,
+      "observations": [
+        {
+          "date": "2025-11-24",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-11-24T00:00:00Z",
+            "open": 86802.8,
+            "high": 89172.2,
+            "low": 85211.1,
+            "close": 88240.1,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 0.1,
+          "atr_before_bar": 4527.549999999997,
+          "gap_atr": 2.2087000697026167e-05
+        },
+        {
+          "date": "2025-12-16",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-12-16T00:00:00Z",
+            "open": 86391.7,
+            "high": 88149.6,
+            "low": 85222.0,
+            "close": 87821.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 11.0,
+          "atr_before_bar": 3564.4214285714293,
+          "gap_atr": 0.003086054839595285
+        },
+        {
+          "date": "2025-12-17",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-12-17T00:00:00Z",
+            "open": 87821.3,
+            "high": 90341.0,
+            "low": 85259.2,
+            "close": 86197.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 48.2,
+          "atr_before_bar": 3334.2142857142867,
+          "gap_atr": 0.014456179438290431
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L11",
+      "price_approx": 90081,
+      "observations": [
+        {
+          "date": "2025-11-27",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-11-27T00:00:00Z",
+            "open": 90427.0,
+            "high": 91902.7,
+            "low": 90025.0,
+            "close": 91284.2,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 56.0,
+          "atr_before_bar": 4437.949999999997,
+          "gap_atr": 0.012618438693540944
+        },
+        {
+          "date": "2025-11-28",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-11-28T00:00:00Z",
+            "open": 91284.2,
+            "high": 93081.0,
+            "low": 90151.9,
+            "close": 90845.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 70.9,
+          "atr_before_bar": 4136.292857142855,
+          "gap_atr": 0.017140952647382992
+        },
+        {
+          "date": "2025-11-29",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-11-29T00:00:00Z",
+            "open": 90845.7,
+            "high": 91128.9,
+            "low": 90071.3,
+            "close": 90766.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 9.7,
+          "atr_before_bar": 3917.25714285714,
+          "gap_atr": 0.0024762224296876706
+        },
+        {
+          "date": "2025-11-30",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-11-30T00:00:00Z",
+            "open": 90766.9,
+            "high": 91963.7,
+            "low": 90285.5,
+            "close": 90308.6,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 204.5,
+          "atr_before_bar": 3830.9928571428536,
+          "gap_atr": 0.05338041798191075
+        },
+        {
+          "date": "2026-01-11",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-01-11T00:00:00Z",
+            "open": 90479.6,
+            "high": 91254.5,
+            "low": 90176.4,
+            "close": 90962.6,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 95.4,
+          "atr_before_bar": 2170.2285714285713,
+          "gap_atr": 0.04395850338344607
+        },
+        {
+          "date": "2026-01-12",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2026-01-12T00:00:00Z",
+            "open": 90962.6,
+            "high": 92500.0,
+            "low": 90068.0,
+            "close": 91248.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 13.0,
+          "atr_before_bar": 2197.3642857142863,
+          "gap_atr": 0.005916178798625624
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L12",
+      "price_approx": 94000,
+      "observations": [
+        {
+          "date": "2025-11-14",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-11-14T00:00:00Z",
+            "open": 99629.0,
+            "high": 99901.5,
+            "low": 93905.9,
+            "close": 94533.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 94.1,
+          "atr_before_bar": 4181.135714285711,
+          "gap_atr": 0.022505846839291483
+        },
+        {
+          "date": "2025-12-04",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-12-04T00:00:00Z",
+            "open": 93390.1,
+            "high": 94058.1,
+            "low": 90800.0,
+            "close": 92031.8,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 58.1,
+          "atr_before_bar": 3849.8214285714253,
+          "gap_atr": 0.015091609072778555
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L13",
+      "price_approx": 97963,
+      "observations": [
+        {
+          "date": "2025-11-13",
+          "role": "mirror_confirmation",
+          "candle": {
+            "open_time": "2025-11-13T00:00:00Z",
+            "open": 101595.6,
+            "high": 104031.9,
+            "low": 97931.0,
+            "close": 99629.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 32.0,
+          "atr_before_bar": 4127.278571428569,
+          "gap_atr": 0.007753292986211949
+        },
+        {
+          "date": "2026-01-14",
+          "role": "mirror_and_inflection_bsu",
+          "candle": {
+            "open_time": "2026-01-14T00:00:00Z",
+            "open": 95389.5,
+            "high": 97963.2,
+            "low": 94509.0,
+            "close": 96900.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.2,
+          "atr_before_bar": 2327.378571428572,
+          "gap_atr": 8.593359174666944e-05
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L14",
+      "price_approx": 106714,
+      "observations": [
+        {
+          "date": "2025-05-18",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-05-18T00:00:00Z",
+            "open": 103081.2,
+            "high": 106650.0,
+            "low": 103050.0,
+            "close": 106428.1,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 64.0,
+          "atr_before_bar": 2769.342857142857,
+          "gap_atr": 0.02311017569923757
+        },
+        {
+          "date": "2025-05-23",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-05-23T00:00:00Z",
+            "open": 111646.5,
+            "high": 111758.4,
+            "low": 106755.0,
+            "close": 107275.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 41.0,
+          "atr_before_bar": 2964.1357142857137,
+          "gap_atr": 0.013832025235011895
+        },
+        {
+          "date": "2025-05-24",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-05-24T00:00:00Z",
+            "open": 107275.9,
+            "high": 109454.5,
+            "low": 106832.3,
+            "close": 107716.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 118.3,
+          "atr_before_bar": 3173.9499999999994,
+          "gap_atr": 0.037272168748720975
+        },
+        {
+          "date": "2025-05-28",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-05-28T00:00:00Z",
+            "open": 108864.0,
+            "high": 109217.8,
+            "low": 106718.0,
+            "close": 107738.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 4.0,
+          "atr_before_bar": 3020.25,
+          "gap_atr": 0.001324393676020197
+        },
+        {
+          "date": "2025-06-28",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-06-28T00:00:00Z",
+            "open": 106999.6,
+            "high": 107499.9,
+            "low": 106761.0,
+            "close": 107241.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 47.0,
+          "atr_before_bar": 2983.2642857142855,
+          "gap_atr": 0.015754554574686885
+        },
+        {
+          "date": "2025-11-10",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-11-10T00:00:00Z",
+            "open": 104665.0,
+            "high": 106634.8,
+            "low": 104211.6,
+            "close": 105969.5,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 79.2,
+          "atr_before_bar": 4057.8142857142843,
+          "gap_atr": 0.019517896686111095
+        }
+      ],
+      "false_breakouts": [
+        {
+          "dates": [
+            "2025-06-03"
+          ],
+          "type": "false_breakout",
+          "excluded_from_confirmation_touches": true,
+          "candles": [
+            {
+              "open_time": "2025-06-03T00:00:00Z",
+              "open": 105827.2,
+              "high": 106773.7,
+              "low": 104813.9,
+              "close": 105324.7,
+              "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "L15",
+      "price_approx": 111968,
+      "observations": [
+        {
+          "date": "2025-05-22",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-05-22T00:00:00Z",
+            "open": 109608.7,
+            "high": 111968.0,
+            "low": 109150.0,
+            "close": 111646.5,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.0,
+          "atr_before_bar": 3292.971428571428,
+          "gap_atr": 0.0
+        },
+        {
+          "date": "2025-07-09",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-07-09T00:00:00Z",
+            "open": 108881.9,
+            "high": 111999.0,
+            "low": 108263.4,
+            "close": 111209.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 31.0,
+          "atr_before_bar": 2002.835714285712,
+          "gap_atr": 0.015478054330110541
+        },
+        {
+          "date": "2025-08-02",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-08-02T00:00:00Z",
+            "open": 113248.9,
+            "high": 114011.4,
+            "low": 111950.0,
+            "close": 112518.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 18.0,
+          "atr_before_bar": 2720.5142857142814,
+          "gap_atr": 0.006616396059568579
+        },
+        {
+          "date": "2025-08-21",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-08-21T00:00:00Z",
+            "open": 114217.4,
+            "high": 114783.7,
+            "low": 111945.2,
+            "close": 112462.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 22.8,
+          "atr_before_bar": 3048.2714285714287,
+          "gap_atr": 0.00747964888766094
+        },
+        {
+          "date": "2025-10-16",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-10-16T00:00:00Z",
+            "open": 110705.3,
+            "high": 111962.3,
+            "low": 107362.1,
+            "close": 108137.8,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 5.7,
+          "atr_before_bar": 5045.192857142858,
+          "gap_atr": 0.0011297883275021236
+        },
+        {
+          "date": "2025-10-25",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-10-25T00:00:00Z",
+            "open": 110964.7,
+            "high": 111935.8,
+            "low": 110618.8,
+            "close": 111587.5,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 32.2,
+          "atr_before_bar": 4035.9928571428586,
+          "gap_atr": 0.007978210353620884
+        },
+        {
+          "date": "2025-10-28",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-10-28T00:00:00Z",
+            "open": 114061.3,
+            "high": 116060.5,
+            "low": 112112.0,
+            "close": 112836.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "low",
+          "absolute_gap_to_user_price": 144.0,
+          "atr_before_bar": 3736.835714285714,
+          "gap_atr": 0.03853527717300925
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L16",
+      "price_approx": 120114,
+      "observations": [
+        {
+          "date": "2025-07-15",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-07-15T00:00:00Z",
+            "open": 119841.6,
+            "high": 119946.6,
+            "low": 115750.0,
+            "close": 117745.7,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 167.4,
+          "atr_before_bar": 2934.921428571426,
+          "gap_atr": 0.057037302045075934
+        },
+        {
+          "date": "2025-07-16",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-07-16T00:00:00Z",
+            "open": 117745.7,
+            "high": 120114.6,
+            "low": 117031.0,
+            "close": 118626.3,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.6,
+          "atr_before_bar": 3070.0714285714266,
+          "gap_atr": 0.00019543519229616566
+        },
+        {
+          "date": "2025-07-23",
+          "role": "confirmation",
+          "candle": {
+            "open_time": "2025-07-23T00:00:00Z",
+            "open": 120043.6,
+            "high": 120194.7,
+            "low": 117300.0,
+            "close": 118743.4,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 80.7,
+          "atr_before_bar": 3497.085714285714,
+          "gap_atr": 0.02307635745682036
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L17",
+      "price_approx": 123742,
+      "observations": [
+        {
+          "date": "2025-08-13",
+          "role": "inflection_bsu",
+          "candle": {
+            "open_time": "2025-08-13T00:00:00Z",
+            "open": 120090.5,
+            "high": 123742.2,
+            "low": 118900.5,
+            "close": 123348.0,
+            "evidence_source": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.2,
+          "atr_before_bar": 2696.085714285714,
+          "gap_atr": 7.41816177940309e-05
+        }
+      ],
+      "false_breakouts": []
+    },
+    {
+      "id": "L18",
+      "price_approx": 125849,
+      "observations": [
+        {
+          "date": "2025-10-05",
+          "role": "inflection_bsu",
+          "candle": {
+            "open_time": "2025-10-05T00:00:00Z",
+            "open": 122359.3,
+            "high": 125849.7,
+            "low": 122082.6,
+            "close": 123447.9,
+            "evidence_source": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json"
+          },
+          "nearest_tail": "high",
+          "absolute_gap_to_user_price": 0.7,
+          "atr_before_bar": 2754.2428571428586,
+          "gap_atr": 0.00025415333226033726
+        }
+      ],
+      "false_breakouts": []
+    }
+  ],
+  "channels": [
+    {
+      "id": "C01",
+      "start": "2025-07-10",
+      "end": "2025-10-02",
+      "observed_bars": 85,
+      "expected_calendar_days_inclusive": 85,
+      "closes_inside": 65,
+      "min_close": 108200.0,
+      "max_close": 123348.0,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C02",
+      "start": "2025-02-26",
+      "end": "2025-04-20",
+      "observed_bars": 54,
+      "expected_calendar_days_inclusive": 54,
+      "closes_inside": 32,
+      "min_close": 76286.9,
+      "max_close": 94259.7,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C03",
+      "start": "2025-05-08",
+      "end": "2025-06-25",
+      "observed_bars": 49,
+      "expected_calendar_days_inclusive": 49,
+      "closes_inside": 35,
+      "min_close": 100904.3,
+      "max_close": 111646.5,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C04",
+      "start": "2025-10-10",
+      "end": "2025-11-03",
+      "observed_bars": 25,
+      "expected_calendar_days_inclusive": 25,
+      "closes_inside": 16,
+      "min_close": 106364.6,
+      "max_close": 115116.7,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C05",
+      "start": "2025-11-17",
+      "end": "2026-01-20",
+      "observed_bars": 65,
+      "expected_calendar_days_inclusive": 65,
+      "closes_inside": 30,
+      "min_close": 84701.5,
+      "max_close": 96900.0,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C06",
+      "start": "2025-11-20",
+      "end": "2026-01-02",
+      "observed_bars": 44,
+      "expected_calendar_days_inclusive": 44,
+      "closes_inside": 27,
+      "min_close": 84701.5,
+      "max_close": 93390.1,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C07",
+      "start": "2026-02-05",
+      "end": "2026-04-13",
+      "observed_bars": 68,
+      "expected_calendar_days_inclusive": 68,
+      "closes_inside": 62,
+      "min_close": 62872.7,
+      "max_close": 74854.7,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C08",
+      "start": "2026-04-17",
+      "end": "2026-05-27",
+      "observed_bars": 41,
+      "expected_calendar_days_inclusive": 41,
+      "closes_inside": 29,
+      "min_close": 73765.8,
+      "max_close": 82181.9,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C09",
+      "start": "2026-06-03",
+      "end": "2026-08-19",
+      "observed_bars": 78,
+      "expected_calendar_days_inclusive": 78,
+      "closes_inside": 60,
+      "min_close": 58603.5,
+      "max_close": 69305.0,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    },
+    {
+      "id": "C10",
+      "start": "2026-08-21",
+      "end": "2026-09-18",
+      "observed_bars": 29,
+      "expected_calendar_days_inclusive": 29,
+      "closes_inside": 23,
+      "min_close": 75608.0,
+      "max_close": 81224.6,
+      "interpretation": "Counts describe local candles; channel is user visual context, not strict containment or automatic exclusion of every bar in interval."
+    }
+  ]
+}

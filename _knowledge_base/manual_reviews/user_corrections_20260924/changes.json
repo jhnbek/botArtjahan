@@ -1,0 +1,413 @@
+{
+  "recorded_at": "2026-09-24T09:06:06.081060+00:00",
+  "previous_records": {
+    "L10": {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 85211.738329556,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Граница канала или диапазона",
+      "note": "Подтверждения: 24 ноября 2025, 16 и 17 декабря 2025.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L10",
+      "human_price_approx": 85211,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-24",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-17",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 24 ноября 2025, 16 и 17 декабря 2025.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    "L12": {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 94000.00132259545,
+      "reason_codes": [
+        "сильная_реакция",
+        "паранормальный_бар",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень паранормального бара",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень паранормального бара; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "Подтверждения: 14 ноября и 4 декабря 2025.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L12",
+      "human_price_approx": 94000,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-14",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-04",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 14 ноября и 4 декабря 2025.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    "L16": {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 120115.90665037748,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Граница канала или диапазона",
+      "note": "Подтверждения: 15, 16 и 23 июля 2025.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L16",
+      "human_price_approx": 120114,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-07-15",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-23",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 15, 16 и 23 июля 2025.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    },
+    "L11": {
+      "recorded_at": "2026-09-23T05:26:53.897633+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90068.6821300187,
+      "reason_codes": [
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "лимитный",
+      "reason_label": "Лимитный уровень; Зеркальный уровень",
+      "note": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения.",
+      "label": "human_accepted",
+      "training_signal": "positive",
+      "review_id": "strong_levels_review_20260923",
+      "review_case_id": "L11",
+      "human_price_approx": 90081,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-27",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-29",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-30",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-11",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-12",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения.",
+      "review_reference": "botArtjahan\\_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\review.json"
+    }
+  },
+  "appended_records": [
+    {
+      "recorded_at": "2026-09-24T09:06:06.081060+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 85211.738329556,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Граница канала или диапазона",
+      "note": "Три близких нижних хвоста: 24 ноября 2025, 16 и 17 декабря 2025. Бары 16 и 17 декабря образуют чёткий лимитный уровень: не пилят цену, касаются без сильного люфта.",
+      "review_id": "user_corrections_20260924",
+      "review_case_id": "L10",
+      "human_price_approx": 85211,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-24",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-12-17",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Три близких нижних хвоста: 24 ноября 2025, 16 и 17 декабря 2025. Бары 16 и 17 декабря образуют чёткий лимитный уровень: не пилят цену, касаются без сильного люфта.",
+      "review_reference": "_knowledge_base\\manual_reviews\\user_corrections_20260924\\review.json",
+      "amendment_source": "explicit_user_correction"
+    },
+    {
+      "recorded_at": "2026-09-24T09:06:06.081060+00:00",
+      "action": "update_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 94000.00132259545,
+      "reason_codes": [
+        "сильная_реакция",
+        "паранормальный_бар",
+        "несколько_касаний",
+        "зеркальный",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Уровень паранормального бара",
+        "Есть несколько касаний",
+        "Зеркальный уровень",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Уровень паранормального бара; Есть несколько касаний; Зеркальный уровень; Граница канала или диапазона",
+      "note": "БСУ 22 апреля 2025: круглая цена 94 000 и паранормальный бар. 24 апреля — лимитное подтверждение; 1 мая — зеркальное подтверждение с сильной реакцией вверх; 4 мая — последующее подтверждение.",
+      "review_id": "user_corrections_20260924",
+      "review_case_id": "L12",
+      "human_price_approx": 94000,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-04-22",
+          "role": "paranormal_bsu"
+        },
+        {
+          "date": "2025-04-24",
+          "role": "limit_touch"
+        },
+        {
+          "date": "2025-05-01",
+          "role": "mirror_touch_strong_reaction"
+        },
+        {
+          "date": "2025-05-04",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "БСУ 22 апреля 2025: круглая цена 94 000 и паранормальный бар. 24 апреля — лимитное подтверждение; 1 мая — зеркальное подтверждение с сильной реакцией вверх; 4 мая — последующее подтверждение.",
+      "review_reference": "_knowledge_base\\manual_reviews\\user_corrections_20260924\\review.json",
+      "amendment_source": "explicit_user_correction",
+      "human_bsu_date": {
+        "year": 2025,
+        "month": 4,
+        "day": 22
+      }
+    },
+    {
+      "recorded_at": "2026-09-24T09:06:06.081060+00:00",
+      "action": "remove_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 120115.90665037748,
+      "replacement_price": 120321,
+      "review_case_id": "L16",
+      "note": "Пользователь исправил свою цену на цену робота."
+    },
+    {
+      "recorded_at": "2026-09-24T09:06:06.081060+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 120321,
+      "reason_codes": [
+        "сильная_реакция",
+        "лимитный",
+        "несколько_касаний",
+        "граница_канала"
+      ],
+      "reason_labels": [
+        "Есть сильная реакция от уровня",
+        "Лимитный уровень",
+        "Есть несколько касаний",
+        "Граница канала или диапазона"
+      ],
+      "reason_code": "сильная_реакция",
+      "reason_label": "Есть сильная реакция от уровня; Лимитный уровень; Есть несколько касаний; Граница канала или диапазона",
+      "note": "Подтверждения: 15, 16 и 23 июля 2025. Пользователь исправил цену на 120321.",
+      "review_id": "user_corrections_20260924",
+      "review_case_id": "L16",
+      "human_price_approx": 120321,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-07-15",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-16",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-07-23",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 15, 16 и 23 июля 2025.",
+      "review_reference": "_knowledge_base\\manual_reviews\\user_corrections_20260924\\review.json",
+      "amendment_source": "explicit_user_correction",
+      "previous_manual_price": 120115.90665037748
+    },
+    {
+      "recorded_at": "2026-09-24T09:06:06.081060+00:00",
+      "action": "remove_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90068.6821300187,
+      "replacement_price": 90025,
+      "review_case_id": "L11",
+      "note": "Пользователь исправил свою цену на цену робота."
+    },
+    {
+      "recorded_at": "2026-09-24T09:06:06.081060+00:00",
+      "action": "add_manual_level",
+      "exchange": "bybit",
+      "symbol": "BTCUSDT",
+      "interval": "1d",
+      "price": 90025,
+      "reason_codes": [
+        "лимитный",
+        "зеркальный"
+      ],
+      "reason_labels": [
+        "Лимитный уровень",
+        "Зеркальный уровень"
+      ],
+      "reason_code": "лимитный",
+      "reason_label": "Лимитный уровень; Зеркальный уровень",
+      "note": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения. Пользователь исправил цену на 90025.",
+      "review_id": "user_corrections_20260924",
+      "review_case_id": "L11",
+      "human_price_approx": 90025,
+      "human_confirmation_bars": [
+        {
+          "date": "2025-11-27",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-28",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-29",
+          "role": "confirmation"
+        },
+        {
+          "date": "2025-11-30",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-11",
+          "role": "confirmation"
+        },
+        {
+          "date": "2026-01-12",
+          "role": "confirmation"
+        }
+      ],
+      "human_false_breakouts": [],
+      "human_explanation": "Подтверждения: 27, 28, 29, 30 ноября 2025, 11 и 12 января 2026. Соседние бары также перечислены как подтверждения.",
+      "review_reference": "_knowledge_base\\manual_reviews\\user_corrections_20260924\\review.json",
+      "amendment_source": "explicit_user_correction",
+      "previous_manual_price": 90068.6821300187
+    }
+  ],
+  "algorithm_changed": false
+}

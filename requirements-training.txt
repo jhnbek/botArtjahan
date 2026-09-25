@@ -1,0 +1,4 @@
+# Local numerical entry-model training; no external API required.
+numpy>=2.0,<3
+Pillow>=11,<13
+scipy>=1.13,<2

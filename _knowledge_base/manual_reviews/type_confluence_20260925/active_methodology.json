@@ -1,0 +1,63 @@
+{
+  "revision": "type_confluence_20260925",
+  "recorded_at": "2026-09-25T10:16:22.422719+00:00",
+  "supersedes": "progressive_body_strength_20260925",
+  "rule": "One price = one level; different confirmed types strengthen that level",
+  "bonus_per_additional_confirmed_type": 0.5,
+  "coefficient_source": "initial implementation setting, not user-specified",
+  "canonical_types": [
+    "limit_level",
+    "mirror_level",
+    "paranormal_bar",
+    "inflection"
+  ],
+  "limit_aliases": [
+    "limit_level",
+    "two_bar_limit"
+  ],
+  "false_breakouts_supply_types": false,
+  "as_of": "2026-09-23T06:00:00Z",
+  "counts": {
+    "raw_candidates": 159,
+    "raw_mirror_limit": 90,
+    "general_selected_all_types": 27,
+    "general_selected_mirror_limit": 24,
+    "with_manual_rejections_all_types": 20,
+    "with_manual_rejections_mirror_limit": 17,
+    "explicit_58_still_found_by_general_rules": 5,
+    "explicit_58_still_found_with_manual_constraints": 0,
+    "reviewed_whole_level_constraints": 29,
+    "reviewed_whole_levels_still_found_by_general_rules": 6,
+    "reviewed_whole_levels_still_found_with_manual_constraints": 0,
+    "reference_price_matches": 13,
+    "reference_count": 19,
+    "selected_without_reference_match": 4
+  },
+  "sources_sha256": {
+    "knowledge_bot/level_discovery.py": "0ed2c491c1dfbe924008c3ddc4aaf87f1373576075bd977537e6a16f84031712",
+    "knowledge_bot/level_structure.py": "646f301bdf15b25bdac159a68546ed473ffd3dcd901c43b35e19fea8dd2d629a",
+    "knowledge_bot/level_selection.py": "f1463ab448f73620f857264eec8839ca921458c310405eaf47ae148b3df51ce3",
+    "knowledge_bot/level_evidence_strength.py": "6544b0bfe5d0b8e620be1b64d7471dc6f07a45e1b5a863b2cd62491473246695",
+    "knowledge_bot/level_origin_context.py": "168c5c6a2461626bf298e5da966982642ed3b06d4593d9d43fa30b1a00aa46dc",
+    "knowledge_bot/chart_level_modes.py": "038377b1b35312a2777914278925d9238040d3197ab19ba2ea21475aab6e1bd6",
+    "knowledge_bot/review_working_levels.py": "31f2131d9fd518a8fd4779912b2294c269cbb377e8cb15f0db3f436334370a0e",
+    "tests/test_cross_level_origin.py": "77c2067bc2fe1d8cfd81cd7b1f714b10069c1f58e76e1f011a250903c2d99da0",
+    "tests/test_origin_evidence.py": "62c6260b46e8ebd6c38fd19ed2d2fced66dd5ef575ccfbf96a2b7b788f4db47c",
+    "tests/test_working_level_quality.py": "1be912a865fdb117ddadc67d985cfba9b9ab813fca0021e21e1d2a929fe9b248",
+    "tests/test_manual_candidates.py": "a65d00fb9a289cc152ec4c0d2f94b0bf8c0e22f81f926b892ae462e57739906e",
+    "tests/test_chart_level_modes.py": "975f42f9f26a7d99921989dc80299bb0d564f5874633a50b963e3ed6ff3b13a8",
+    "tests/test_body_strength_scale.py": "70c61824306fa667c2b12dda6f3a73220351535d36fa3a5bfce51e99eff9942a",
+    "tests/test_level_selection.py": "f927e2688416819b58365755060d6d6e689de0f54c8da495eaf57f78fdb2114d"
+  },
+  "journal_sha256": "cf126cb5830f5ba14ff5d857b9414d093ab620b70a747eaecb3e1c792fc85ba7",
+  "journal_mutated_by_this_change": false,
+  "validation": {
+    "command": ".\\.venv\\Scripts\\python.exe -X utf8 -B -m unittest discover -s tests",
+    "environment": {
+      "QT_QPA_PLATFORM": "offscreen"
+    },
+    "tests": 322,
+    "seconds": 116.521,
+    "exit_code": 0
+  }
+}

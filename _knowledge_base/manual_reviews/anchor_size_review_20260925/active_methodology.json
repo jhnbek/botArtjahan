@@ -1,0 +1,59 @@
+{
+  "revision": "anchor_size_review_20260925",
+  "recorded_at": "2026-09-25T09:48:15.842352+00:00",
+  "purpose": "manual corrections to deterministic level detection; no training or trade execution",
+  "as_of": "2026-09-23T06:00:00Z",
+  "counts": {
+    "raw_candidates": 159,
+    "raw_mirror_limit": 90,
+    "general_selected_all_types": 27,
+    "general_selected_mirror_limit": 24,
+    "with_manual_rejections_all_types": 20,
+    "with_manual_rejections_mirror_limit": 17,
+    "explicit_58_still_found_by_general_rules": 5,
+    "explicit_58_still_found_with_manual_constraints": 0,
+    "reviewed_whole_level_constraints": 29,
+    "reviewed_whole_levels_still_found_by_general_rules": 7,
+    "reviewed_whole_levels_still_found_with_manual_constraints": 0,
+    "reference_price_matches": 13,
+    "reference_count": 19,
+    "selected_without_reference_match": 4
+  },
+  "manual_bsu_exclusions": 20,
+  "whole_level_constraints": 96,
+  "sources_sha256": {
+    "knowledge_bot/level_discovery.py": "0ed2c491c1dfbe924008c3ddc4aaf87f1373576075bd977537e6a16f84031712",
+    "knowledge_bot/level_structure.py": "646f301bdf15b25bdac159a68546ed473ffd3dcd901c43b35e19fea8dd2d629a",
+    "knowledge_bot/level_selection.py": "0bf1d9c317c95f3ee8038a16d3fca09d294ab3035e5b4f80320d9115efd4e3bd",
+    "knowledge_bot/level_evidence_strength.py": "8a11537857db171751adeb72e0b4eb8bd2bea8f70a28885e559373bc4d71805b",
+    "knowledge_bot/level_origin_context.py": "168c5c6a2461626bf298e5da966982642ed3b06d4593d9d43fa30b1a00aa46dc",
+    "knowledge_bot/chart_level_modes.py": "038377b1b35312a2777914278925d9238040d3197ab19ba2ea21475aab6e1bd6",
+    "knowledge_bot/review_working_levels.py": "31f2131d9fd518a8fd4779912b2294c269cbb377e8cb15f0db3f436334370a0e",
+    "tests/test_cross_level_origin.py": "77c2067bc2fe1d8cfd81cd7b1f714b10069c1f58e76e1f011a250903c2d99da0",
+    "tests/test_origin_evidence.py": "62c6260b46e8ebd6c38fd19ed2d2fced66dd5ef575ccfbf96a2b7b788f4db47c",
+    "tests/test_working_level_quality.py": "1be912a865fdb117ddadc67d985cfba9b9ab813fca0021e21e1d2a929fe9b248",
+    "tests/test_manual_candidates.py": "a65d00fb9a289cc152ec4c0d2f94b0bf8c0e22f81f926b892ae462e57739906e",
+    "tests/test_chart_level_modes.py": "975f42f9f26a7d99921989dc80299bb0d564f5874633a50b963e3ed6ff3b13a8"
+  },
+  "journal_sha256": "cf126cb5830f5ba14ff5d857b9414d093ab620b70a747eaecb3e1c792fc85ba7",
+  "journal_mutated_by_this_change": false,
+  "validation": {
+    "command": ".\\.venv\\Scripts\\python.exe -X utf8 -B -m unittest discover -s tests",
+    "environment": {
+      "QT_QPA_PLATFORM": "offscreen"
+    },
+    "tests": 306,
+    "seconds": 120.933,
+    "exit_code": 0
+  },
+  "pending": {
+    "date_mapping_for_84288": "04Feb,10Mar,23Mar2026 touch about71800; user clarification pending",
+    "manual_aug29_paranormal_label": "body1.3467ATR is below1.6ATR; no silent override",
+    "general_selection_disagreements": [
+      84288.0,
+      107421.7,
+      112577.7
+    ],
+    "dense_limit_without_fast_reaction": 85211.1
+  }
+}

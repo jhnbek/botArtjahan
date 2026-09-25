@@ -1,0 +1,66 @@
+{
+  "revision": "early_mirror_20260924",
+  "status": "superseded",
+  "runtime_configuration": false,
+  "previous_revision": "bsu_distance_20260924",
+  "rules_document": "README.md",
+  "rules": {
+    "chopping": "two_or_more_consecutive_body_crossings_beyond_noise_band",
+    "price_priority": [
+      "distinct_exact_contact_count",
+      "earliest_precise_mirror_confirmation",
+      "chop_adjusted_strength",
+      "earliest_valid_bsu"
+    ],
+    "false_breakouts": "entry_context_only_no_confirmation",
+    "daily_history_months": 18,
+    "self_training": false
+  },
+  "structure_parameters": {
+    "atr_period": 14,
+    "touch_atr": 0.08,
+    "touch_price_fraction": 0.0015,
+    "penetration_atr": 0.01,
+    "confirmed_near_touch_atr": 0.06,
+    "confirmed_near_price_fraction": 0.002,
+    "confirmed_near_tail_min_atr": 0.2,
+    "reaction_bars": 15,
+    "strong_reaction_atr": 1.5,
+    "precision_atr": 0.02,
+    "mirror_pair_precision_atr": 0.02,
+    "mirror_overlap_range_fraction": 0.025,
+    "merge_atr": 0.15,
+    "chop_window": 40,
+    "chop_side_atr": 0.08,
+    "chop_min_bars": 2,
+    "channel_windows": [
+      30,
+      60,
+      90
+    ],
+    "channel_min_inside": 0.6,
+    "excluded_contacts": []
+  },
+  "sha256": {
+    "_knowledge_base\\manual_reviews\\price_consensus_20260923\\review.json": "411b366c1ff62bf1796c25569363a1200ee2b9d09cd6b95765af674e6b9c7c53",
+    "_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\candles.json": "93a3205ca33754c421b1a9913f1fff542b9b8d204d46a863d2375334554d6a45",
+    "_knowledge_base\\manual_reviews\\strong_levels_algorithm_20260923\\rule_clarification.json": "1c4aaa4ca35f43ed34d19a14592871d5bf734e0e7fb4174f9339a6c0f27e0a4c",
+    "knowledge_bot\\level_structure.py": "6a1bb24ba91cfba1a762f56267eef4a9084d425d394e52ffda8f9815bb6fa88b",
+    "knowledge_bot\\level_discovery.py": "2471601dec4c6f5e986959fa320e786543aa10286589bf9cc317a1c6ebf4cb1a",
+    "knowledge_bot\\level_history.py": "1d233c0fea8a6b66e02a03a9a5410fbe01681232ae1d76dbf08fda91c5d0045d",
+    "knowledge_bot\\detector_prototype.py": "798b20c54af4fd262cbf039c5814fe58be401eceb2b5bf0cb2647d7f2206a582",
+    "knowledge_bot\\chart_level_modes.py": "73ff00078e7a33e326be1e358a9c65a4af76c7ff40aecbf39f16bb57ad3a599b",
+    "knowledge_bot\\review_level_structure.py": "e310dbc59c13e7238e3f2c1a02c66819495fa7fc9ad7c13425b61d025ce2c607",
+    "_knowledge_base\\user_level_feedback.jsonl": "1ad7b478bc6b286a359c5a76fa4be55cb60f53f1c5b25054eb4a47c495f78e6c"
+  },
+  "verification": {
+    "tests_passed": 210,
+    "bsu_exclusions_preserved": 20,
+    "mean_absolute_price_deviation_percent": 0.03417781613342363,
+    "matched_within_0_1_percent": 16
+  },
+  "restoration_verification": "../restored_early_mirror_20260924/comparison.json",
+  "current_user_review": "_knowledge_base\\manual_reviews\\user_corrections_20260924\\review.json",
+  "current_feedback_note": "User prices and explanations updated; algorithm and all 20 BSU exclusions unchanged.",
+  "superseded_by": "clean_limit_group_20260924"
+}

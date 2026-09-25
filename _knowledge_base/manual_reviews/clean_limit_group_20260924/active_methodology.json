@@ -1,0 +1,54 @@
+{
+  "revision": "clean_limit_group_20260924",
+  "status": "superseded",
+  "runtime_configuration": false,
+  "previous_revision": "early_mirror_20260924",
+  "current_user_review": "_knowledge_base\\manual_reviews\\user_corrections_20260924\\review.json",
+  "rules_document": "README.md",
+  "structure_parameters": {
+    "atr_period": 14,
+    "touch_atr": 0.08,
+    "touch_price_fraction": 0.0015,
+    "penetration_atr": 0.01,
+    "confirmed_near_touch_atr": 0.06,
+    "confirmed_near_price_fraction": 0.002,
+    "confirmed_near_tail_min_atr": 0.2,
+    "reaction_bars": 15,
+    "strong_reaction_atr": 1.5,
+    "precision_atr": 0.02,
+    "mirror_pair_precision_atr": 0.02,
+    "mirror_overlap_range_fraction": 0.025,
+    "clean_limit_precision_atr": 0.02,
+    "clean_limit_price_fraction": 0.001,
+    "merge_atr": 0.15,
+    "chop_window": 40,
+    "chop_side_atr": 0.08,
+    "chop_min_bars": 2,
+    "channel_windows": [
+      30,
+      60,
+      90
+    ],
+    "channel_min_inside": 0.6,
+    "excluded_contacts": []
+  },
+  "sha256": {
+    "_knowledge_base\\manual_reviews\\user_corrections_20260924\\review.json": "45f2ccddd0f72f9cd3e5e7d7ef7a583b9364bb879de57c93e908a5aaf659050c",
+    "_knowledge_base\\manual_reviews\\strong_levels_review_20260923\\candles.json": "93a3205ca33754c421b1a9913f1fff542b9b8d204d46a863d2375334554d6a45",
+    "_knowledge_base\\manual_reviews\\strong_levels_algorithm_20260923\\rule_clarification.json": "1c4aaa4ca35f43ed34d19a14592871d5bf734e0e7fb4174f9339a6c0f27e0a4c",
+    "knowledge_bot\\level_structure.py": "93944e285f7eb4fa39b8643c25877916dc2f48dc99f4857056475c343ff7d748",
+    "knowledge_bot\\level_discovery.py": "2471601dec4c6f5e986959fa320e786543aa10286589bf9cc317a1c6ebf4cb1a",
+    "knowledge_bot\\level_history.py": "1d233c0fea8a6b66e02a03a9a5410fbe01681232ae1d76dbf08fda91c5d0045d",
+    "knowledge_bot\\detector_prototype.py": "798b20c54af4fd262cbf039c5814fe58be401eceb2b5bf0cb2647d7f2206a582",
+    "knowledge_bot\\chart_level_modes.py": "73ff00078e7a33e326be1e358a9c65a4af76c7ff40aecbf39f16bb57ad3a599b",
+    "knowledge_bot\\review_level_structure.py": "e310dbc59c13e7238e3f2c1a02c66819495fa7fc9ad7c13425b61d025ce2c607",
+    "_knowledge_base\\user_level_feedback.jsonl": "d9409bb7fbba2e4f35157a2f36e242ec402bdf275f09d4b37521b120b0082ee0"
+  },
+  "verification": {
+    "tests_passed": 212,
+    "bsu_exclusions_preserved": 20,
+    "mean_absolute_price_deviation_percent": 0.014232902724398915,
+    "matched_within_0_1_percent": 18
+  },
+  "superseded_by": "round_origin_20260924"
+}

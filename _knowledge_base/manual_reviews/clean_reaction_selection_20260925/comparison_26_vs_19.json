@@ -1,0 +1,1170 @@
+{
+  "as_of": "2026-09-23T06:00:00Z",
+  "tolerance_percent": 0.2,
+  "manual_count": 19,
+  "robot_count": 26,
+  "matched_manual_count": 8,
+  "matched_robot_count": 8,
+  "unmatched_manual_count": 11,
+  "extra_robot_count": 18,
+  "general_robot_prices": [
+    58042.6,
+    59807.5,
+    60711.1,
+    62846.8,
+    64979.7,
+    66451.1,
+    67679.0,
+    71805.2,
+    74900.0,
+    76200.9,
+    78170.4,
+    79388.5,
+    81787.0,
+    84288.0,
+    86753.0,
+    89243.1,
+    93538.4,
+    95700.1,
+    97963.2,
+    104203.9,
+    107421.7,
+    110485.7,
+    112577.7,
+    115738.1,
+    117896.7,
+    120321.0
+  ],
+  "rows": [
+    {
+      "manual_price": 58042.739897758634,
+      "robot_price": 58042.6,
+      "error_percent": 0.0002410254217536126,
+      "matched": true,
+      "robot_bsu": {
+        "index": 611,
+        "time": "2026-06-25T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 58042.6,
+        "ohlc": {
+          "open": 61054.7,
+          "high": 61942.3,
+          "low": 58042.6,
+          "close": 59767.3
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-06-25",
+          "kind": "L",
+          "wick_price": 58042.6,
+          "role": "touch"
+        },
+        {
+          "date": "2026-06-30",
+          "kind": "L",
+          "wick_price": 58156.7,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-06-30",
+          "known_date": "2026-07-06",
+          "kind": "L",
+          "distance_atr": 2.093701846483325,
+          "quality": 1.604550270779179
+        }
+      ]
+    },
+    {
+      "manual_price": 59081.47772478861,
+      "robot_price": 59807.5,
+      "error_percent": 1.2288492149660244,
+      "matched": false,
+      "robot_bsu": {
+        "index": 613,
+        "time": "2026-06-27T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 59807.5,
+        "ohlc": {
+          "open": 60073.4,
+          "high": 60918.3,
+          "low": 59807.5,
+          "close": 59995.3
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-02-06",
+          "kind": "L",
+          "wick_price": 59888.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-06-27",
+          "kind": "L",
+          "wick_price": 59807.5,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-02-06",
+          "known_date": "2026-02-06",
+          "kind": "L",
+          "distance_atr": 2.402401326105462,
+          "quality": 2.402401326105462
+        }
+      ]
+    },
+    {
+      "manual_price": 62240.39734250159,
+      "robot_price": 62846.8,
+      "error_percent": 0.9742911089745361,
+      "matched": false,
+      "robot_bsu": {
+        "index": 596,
+        "time": "2026-06-10T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 62846.8,
+        "ohlc": {
+          "open": 61699.9,
+          "high": 62846.8,
+          "low": 60614.5,
+          "close": 61476.4
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-02-28",
+          "kind": "L",
+          "wick_price": 62972.3,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-06-10",
+          "kind": "H",
+          "wick_price": 62846.8,
+          "role": "touch"
+        },
+        {
+          "date": "2026-06-12",
+          "kind": "L",
+          "wick_price": 62810.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-07-10",
+          "kind": "L",
+          "wick_price": 62890.6,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-08-15",
+          "kind": "L",
+          "wick_price": 62883.3,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-02-28",
+          "known_date": "2026-03-04",
+          "kind": "L",
+          "distance_atr": 3.711112735107279,
+          "quality": 2.7576407595370647
+        }
+      ]
+    },
+    {
+      "manual_price": 65769.82618300765,
+      "robot_price": 66451.1,
+      "error_percent": 1.0358455488337122,
+      "matched": false,
+      "robot_bsu": {
+        "index": 492,
+        "time": "2026-02-26T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 66451.1,
+        "ohlc": {
+          "open": 67958.3,
+          "high": 68841.7,
+          "low": 66451.1,
+          "close": 67447.5
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-02-20",
+          "kind": "L",
+          "wick_price": 66427.5,
+          "role": "touch"
+        },
+        {
+          "date": "2026-02-26",
+          "kind": "L",
+          "wick_price": 66451.1,
+          "role": "touch"
+        },
+        {
+          "date": "2026-04-05",
+          "kind": "L",
+          "wick_price": 66567.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-06-17",
+          "kind": "H",
+          "wick_price": 66444.7,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-04-05",
+          "known_date": "2026-04-07",
+          "kind": "L",
+          "distance_atr": 2.3035837353549287,
+          "quality": 2.1496508088739783
+        },
+        {
+          "contact_date": "2026-06-17",
+          "known_date": "2026-06-25",
+          "kind": "H",
+          "distance_atr": 2.6503558895255472,
+          "quality": 1.6423252576821163
+        }
+      ]
+    },
+    {
+      "manual_price": 67276.00066598372,
+      "robot_price": 67679.0,
+      "error_percent": 0.5990239164440136,
+      "matched": false,
+      "robot_bsu": {
+        "index": 532,
+        "time": "2026-04-07T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 67679.0,
+        "ohlc": {
+          "open": 68807.5,
+          "high": 72766.4,
+          "low": 67679.0,
+          "close": 71894.6
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-02-23",
+          "kind": "H",
+          "wick_price": 67652.2,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-03-06",
+          "kind": "L",
+          "wick_price": 67720.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-04-07",
+          "kind": "L",
+          "wick_price": 67679.0,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-04-07",
+          "known_date": "2026-04-17",
+          "kind": "L",
+          "distance_atr": 4.207130883010663,
+          "quality": 2.3005819503032874
+        }
+      ]
+    },
+    {
+      "manual_price": 71816.07473885626,
+      "robot_price": 71805.2,
+      "error_percent": 0.015142485712016514,
+      "matched": true,
+      "robot_bsu": {
+        "index": 470,
+        "time": "2026-02-04T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 71805.2,
+        "ohlc": {
+          "open": 75723.2,
+          "high": 76991.2,
+          "low": 71805.2,
+          "close": 73130.3
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-02-04",
+          "kind": "L",
+          "wick_price": 71805.2,
+          "role": "touch"
+        },
+        {
+          "date": "2026-02-06",
+          "kind": "H",
+          "wick_price": 71719.9,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-03-10",
+          "kind": "H",
+          "wick_price": 71762.8,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-03-23",
+          "kind": "H",
+          "wick_price": 71788.0,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-03-23",
+          "known_date": "2026-03-29",
+          "kind": "H",
+          "distance_atr": 2.1813217143377774,
+          "quality": 1.7170913298608281
+        }
+      ]
+    },
+    {
+      "manual_price": 74900.1854123812,
+      "robot_price": 74900.0,
+      "error_percent": 0.00024754595756040873,
+      "matched": true,
+      "robot_bsu": {
+        "index": 510,
+        "time": "2026-03-16T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 74900.0,
+        "ohlc": {
+          "open": 72777.5,
+          "high": 74900.0,
+          "low": 72226.3,
+          "close": 74854.7
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-03-16",
+          "kind": "H",
+          "wick_price": 74900.0,
+          "role": "touch"
+        },
+        {
+          "date": "2026-04-13",
+          "kind": "H",
+          "wick_price": 74868.2,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-04-29",
+          "kind": "L",
+          "wick_price": 74900.0,
+          "role": "touch"
+        },
+        {
+          "date": "2026-09-15",
+          "kind": "L",
+          "wick_price": 74919.6,
+          "role": "touch"
+        },
+        {
+          "date": "2026-09-16",
+          "kind": "L",
+          "wick_price": 75000.5,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-04-29",
+          "known_date": "2026-05-06",
+          "kind": "L",
+          "distance_atr": 2.905552324280792,
+          "quality": 2.7976807971331517
+        },
+        {
+          "contact_date": "2026-09-15",
+          "known_date": "2026-09-21",
+          "kind": "L",
+          "distance_atr": 5.216408744780154,
+          "quality": 3.9367679525422665
+        }
+      ]
+    },
+    {
+      "manual_price": 79423.95853741403,
+      "robot_price": 79388.5,
+      "error_percent": 0.0446446362873318,
+      "matched": true,
+      "robot_bsu": {
+        "index": 467,
+        "time": "2026-02-01T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 79388.5,
+        "ohlc": {
+          "open": 78704.4,
+          "high": 79388.5,
+          "low": 75663.2,
+          "close": 76938.5
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-02-01",
+          "kind": "H",
+          "wick_price": 79388.5,
+          "role": "touch"
+        },
+        {
+          "date": "2026-02-02",
+          "kind": "H",
+          "wick_price": 79388.0,
+          "role": "touch"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "L",
+          "wick_price": 79461.7,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-08-30",
+          "kind": "H",
+          "wick_price": 79367.5,
+          "role": "touch"
+        },
+        {
+          "date": "2026-08-31",
+          "kind": "H",
+          "wick_price": 79280.8,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-09-05",
+          "kind": "L",
+          "wick_price": 79394.1,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-02-02",
+          "known_date": "2026-02-05",
+          "kind": "H",
+          "distance_atr": 4.893963959006228,
+          "quality": 4.0
+        }
+      ]
+    },
+    {
+      "manual_price": 81787.83988184528,
+      "robot_price": 81787.0,
+      "error_percent": 0.0010269030781318931,
+      "matched": true,
+      "robot_bsu": {
+        "index": 560,
+        "time": "2026-05-05T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 81787.0,
+        "ohlc": {
+          "open": 79818.9,
+          "high": 81787.0,
+          "low": 79752.5,
+          "close": 80851.6
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2026-05-05",
+          "kind": "H",
+          "wick_price": 81787.0,
+          "role": "touch"
+        },
+        {
+          "date": "2026-05-07",
+          "kind": "H",
+          "wick_price": 81671.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-05-12",
+          "kind": "H",
+          "wick_price": 81768.1,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-05-12",
+          "known_date": "2026-05-22",
+          "kind": "H",
+          "distance_atr": 3.2704646861591433,
+          "quality": 1.8047412902084663
+        }
+      ]
+    },
+    {
+      "manual_price": 85211.738329556,
+      "robot_price": 84288.0,
+      "error_percent": 1.0840505635308668,
+      "matched": false,
+      "robot_bsu": {
+        "index": 171,
+        "time": "2025-04-11T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 84288.0,
+        "ohlc": {
+          "open": 79557.5,
+          "high": 84288.0,
+          "low": 78928.2,
+          "close": 83382.8
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-04-11",
+          "kind": "H",
+          "wick_price": 84288.0,
+          "role": "touch"
+        },
+        {
+          "date": "2025-04-18",
+          "kind": "L",
+          "wick_price": 84250.0,
+          "role": "touch"
+        },
+        {
+          "date": "2025-04-19",
+          "kind": "L",
+          "wick_price": 84324.1,
+          "role": "touch"
+        },
+        {
+          "date": "2025-12-18",
+          "kind": "L",
+          "wick_price": 84408.1,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-01-31",
+          "kind": "H",
+          "wick_price": 84254.3,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-04-19",
+          "known_date": "2025-04-25",
+          "kind": "L",
+          "distance_atr": 2.595594870426149,
+          "quality": 2.5711703634868837
+        }
+      ]
+    },
+    {
+      "manual_price": 90025.0,
+      "robot_price": 89243.1,
+      "error_percent": 0.8685365176339841,
+      "matched": false,
+      "robot_bsu": {
+        "index": 392,
+        "time": "2025-11-18T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 89243.1,
+        "ohlc": {
+          "open": 92171.4,
+          "high": 93800.0,
+          "low": 89243.1,
+          "close": 92925.0
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-11-18",
+          "kind": "L",
+          "wick_price": 89243.1,
+          "role": "touch"
+        },
+        {
+          "date": "2025-11-24",
+          "kind": "H",
+          "wick_price": 89172.2,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-12-31",
+          "kind": "H",
+          "wick_price": 89194.3,
+          "role": "near_touch"
+        },
+        {
+          "date": "2026-01-03",
+          "kind": "L",
+          "wick_price": 89255.1,
+          "role": "touch"
+        },
+        {
+          "date": "2026-01-08",
+          "kind": "L",
+          "wick_price": 89262.0,
+          "role": "touch"
+        },
+        {
+          "date": "2026-01-25",
+          "kind": "H",
+          "wick_price": 89271.8,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2026-01-03",
+          "known_date": "2026-01-05",
+          "kind": "L",
+          "distance_atr": 2.3406461499169935,
+          "quality": 2.3406461499169935
+        },
+        {
+          "contact_date": "2026-01-08",
+          "known_date": "2026-01-14",
+          "kind": "L",
+          "distance_atr": 3.5129610088285594,
+          "quality": 3.049185642861131
+        }
+      ]
+    },
+    {
+      "manual_price": 94000.00132259545,
+      "robot_price": 93538.4,
+      "error_percent": 0.49106522989430396,
+      "matched": false,
+      "robot_bsu": {
+        "index": 187,
+        "time": "2025-04-27T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 93538.4,
+        "ohlc": {
+          "open": 94578.3,
+          "high": 95279.4,
+          "low": 93538.4,
+          "close": 93700.0
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-04-27",
+          "kind": "L",
+          "wick_price": 93538.4,
+          "role": "touch"
+        },
+        {
+          "date": "2025-04-29",
+          "kind": "L",
+          "wick_price": 93682.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-12-11",
+          "kind": "H",
+          "wick_price": 93544.9,
+          "role": "touch"
+        },
+        {
+          "date": "2026-01-18",
+          "kind": "L",
+          "wick_price": 93545.0,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-12-11",
+          "known_date": "2025-12-15",
+          "kind": "H",
+          "distance_atr": 2.0974584088012342,
+          "quality": 2.0974584088012342
+        }
+      ]
+    },
+    {
+      "manual_price": 97963.55158121476,
+      "robot_price": 97963.2,
+      "error_percent": 0.0003588898208489249,
+      "matched": true,
+      "robot_bsu": {
+        "index": 449,
+        "time": "2026-01-14T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 97963.2,
+        "ohlc": {
+          "open": 95389.5,
+          "high": 97963.2,
+          "low": 94509.0,
+          "close": 96900.0
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-05-02",
+          "kind": "H",
+          "wick_price": 97868.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-06-22",
+          "kind": "L",
+          "wick_price": 98125.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-11-13",
+          "kind": "L",
+          "wick_price": 97931.0,
+          "role": "touch"
+        },
+        {
+          "date": "2026-01-14",
+          "kind": "H",
+          "wick_price": 97963.2,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-06-22",
+          "known_date": "2025-06-29",
+          "kind": "L",
+          "distance_atr": 3.5434389273034936,
+          "quality": 3.313782853001614
+        },
+        {
+          "contact_date": "2026-01-14",
+          "known_date": "2026-01-20",
+          "kind": "H",
+          "distance_atr": 4.117636948989206,
+          "quality": 4.0
+        }
+      ]
+    },
+    {
+      "manual_price": 106655.4495030607,
+      "robot_price": 107421.7,
+      "error_percent": 0.7184353921993467,
+      "matched": false,
+      "robot_bsu": {
+        "index": 217,
+        "time": "2025-05-27T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 107421.7,
+        "ohlc": {
+          "open": 109382.3,
+          "high": 110700.0,
+          "low": 107421.7,
+          "close": 108864.0
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-05-20",
+          "kind": "H",
+          "wick_price": 107292.4,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-05-27",
+          "kind": "L",
+          "wick_price": 107421.7,
+          "role": "touch"
+        },
+        {
+          "date": "2025-07-07",
+          "kind": "L",
+          "wick_price": 107449.6,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-08-29",
+          "kind": "L",
+          "wick_price": 107432.6,
+          "role": "touch"
+        },
+        {
+          "date": "2025-10-20",
+          "kind": "L",
+          "wick_price": 107373.7,
+          "role": "touch"
+        },
+        {
+          "date": "2025-10-21",
+          "kind": "L",
+          "wick_price": 107412.1,
+          "role": "touch"
+        },
+        {
+          "date": "2025-10-23",
+          "kind": "L",
+          "wick_price": 107456.7,
+          "role": "touch"
+        },
+        {
+          "date": "2025-11-04",
+          "kind": "H",
+          "wick_price": 107266.7,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-11-11",
+          "kind": "H",
+          "wick_price": 107481.0,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-07-07",
+          "known_date": "2025-07-11",
+          "kind": "L",
+          "distance_atr": 4.097322964995979,
+          "quality": 3.7295952255851557
+        },
+        {
+          "contact_date": "2025-11-04",
+          "known_date": "2025-11-04",
+          "kind": "H",
+          "distance_atr": 1.700470021408928,
+          "quality": 1.700470021408928
+        },
+        {
+          "contact_date": "2025-11-11",
+          "known_date": "2025-11-21",
+          "kind": "H",
+          "distance_atr": 5.518417419124736,
+          "quality": 3.450025885316455
+        }
+      ]
+    },
+    {
+      "manual_price": 112000.84521756294,
+      "robot_price": 112577.7,
+      "error_percent": 0.5150450260589682,
+      "matched": false,
+      "robot_bsu": {
+        "index": 287,
+        "time": "2025-08-05T00:00:00+00:00",
+        "kind": "L",
+        "wick_price": 112577.7,
+        "ohlc": {
+          "open": 115006.0,
+          "high": 115084.2,
+          "low": 112577.7,
+          "close": 114079.6
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-08-01",
+          "kind": "L",
+          "wick_price": 112692.8,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-08-05",
+          "kind": "L",
+          "wick_price": 112577.7,
+          "role": "touch"
+        },
+        {
+          "date": "2025-08-19",
+          "kind": "L",
+          "wick_price": 112673.0,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-08-27",
+          "kind": "H",
+          "wick_price": 112589.9,
+          "role": "touch"
+        },
+        {
+          "date": "2025-08-29",
+          "kind": "H",
+          "wick_price": 112616.4,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-09-03",
+          "kind": "H",
+          "wick_price": 112557.0,
+          "role": "touch"
+        },
+        {
+          "date": "2025-09-30",
+          "kind": "L",
+          "wick_price": 112603.9,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-08-05",
+          "known_date": "2025-08-13",
+          "kind": "L",
+          "distance_atr": 3.9962948238848766,
+          "quality": 3.086968574807771
+        },
+        {
+          "contact_date": "2025-09-30",
+          "known_date": "2025-10-03",
+          "kind": "L",
+          "distance_atr": 4.119804850542725,
+          "quality": 4.0
+        }
+      ]
+    },
+    {
+      "manual_price": 117896.72048957765,
+      "robot_price": 117896.7,
+      "error_percent": 1.737926005915468e-05,
+      "matched": true,
+      "robot_bsu": {
+        "index": 261,
+        "time": "2025-07-10T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 117896.7,
+        "ohlc": {
+          "open": 111209.7,
+          "high": 117896.7,
+          "low": 110450.9,
+          "close": 115990.1
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-07-10",
+          "kind": "H",
+          "wick_price": 117896.7,
+          "role": "touch"
+        },
+        {
+          "date": "2025-08-09",
+          "kind": "H",
+          "wick_price": 117900.0,
+          "role": "touch"
+        },
+        {
+          "date": "2025-08-11",
+          "kind": "L",
+          "wick_price": 117855.3,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-08-16",
+          "kind": "H",
+          "wick_price": 117857.2,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-09-18",
+          "kind": "H",
+          "wick_price": 117884.0,
+          "role": "touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-08-11",
+          "known_date": "2025-08-13",
+          "kind": "L",
+          "distance_atr": 2.1270223493114626,
+          "quality": 2.1270223493114626
+        },
+        {
+          "contact_date": "2025-09-18",
+          "known_date": "2025-09-25",
+          "kind": "H",
+          "distance_atr": 4.081011835089083,
+          "quality": 3.0615875834514314
+        }
+      ]
+    },
+    {
+      "manual_price": 120321.0,
+      "robot_price": 120321.0,
+      "error_percent": 0.0,
+      "matched": true,
+      "robot_bsu": {
+        "index": 273,
+        "time": "2025-07-22T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 120321.0,
+        "ohlc": {
+          "open": 117393.0,
+          "high": 120321.0,
+          "low": 116123.0,
+          "close": 120043.6
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-07-22",
+          "kind": "H",
+          "wick_price": 120321.0,
+          "role": "touch"
+        },
+        {
+          "date": "2025-07-23",
+          "kind": "H",
+          "wick_price": 120194.7,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-08-12",
+          "kind": "H",
+          "wick_price": 120280.0,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-07-23",
+          "known_date": "2025-08-02",
+          "kind": "H",
+          "distance_atr": 2.2312864589290675,
+          "quality": 1.5232216618277492
+        }
+      ]
+    },
+    {
+      "manual_price": 123742.14369371976,
+      "robot_price": 120321.0,
+      "error_percent": 2.7647360806901795,
+      "matched": false,
+      "robot_bsu": {
+        "index": 273,
+        "time": "2025-07-22T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 120321.0,
+        "ohlc": {
+          "open": 117393.0,
+          "high": 120321.0,
+          "low": 116123.0,
+          "close": 120043.6
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-07-22",
+          "kind": "H",
+          "wick_price": 120321.0,
+          "role": "touch"
+        },
+        {
+          "date": "2025-07-23",
+          "kind": "H",
+          "wick_price": 120194.7,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-08-12",
+          "kind": "H",
+          "wick_price": 120280.0,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-07-23",
+          "known_date": "2025-08-02",
+          "kind": "H",
+          "distance_atr": 2.2312864589290675,
+          "quality": 1.5232216618277492
+        }
+      ]
+    },
+    {
+      "manual_price": 125849.82410923425,
+      "robot_price": 120321.0,
+      "error_percent": 4.3931917651592265,
+      "matched": false,
+      "robot_bsu": {
+        "index": 273,
+        "time": "2025-07-22T00:00:00+00:00",
+        "kind": "H",
+        "wick_price": 120321.0,
+        "ohlc": {
+          "open": 117393.0,
+          "high": 120321.0,
+          "low": 116123.0,
+          "close": 120043.6
+        }
+      },
+      "robot_confirming_contacts": [
+        {
+          "date": "2025-07-22",
+          "kind": "H",
+          "wick_price": 120321.0,
+          "role": "touch"
+        },
+        {
+          "date": "2025-07-23",
+          "kind": "H",
+          "wick_price": 120194.7,
+          "role": "near_touch"
+        },
+        {
+          "date": "2025-08-12",
+          "kind": "H",
+          "wick_price": 120280.0,
+          "role": "near_touch"
+        }
+      ],
+      "robot_ordinary_reactions": [
+        {
+          "contact_date": "2025-07-23",
+          "known_date": "2025-08-02",
+          "kind": "H",
+          "distance_atr": 2.2312864589290675,
+          "quality": 1.5232216618277492
+        }
+      ]
+    }
+  ],
+  "extra_robot_prices": [
+    59807.5,
+    60711.1,
+    62846.8,
+    64979.7,
+    66451.1,
+    67679.0,
+    76200.9,
+    78170.4,
+    84288.0,
+    86753.0,
+    89243.1,
+    93538.4,
+    95700.1,
+    104203.9,
+    107421.7,
+    110485.7,
+    112577.7,
+    115738.1
+  ],
+  "separate_constrained_result": {
+    "robot_count": 19,
+    "matched_manual_count": 13
+  },
+  "journal_sha256": "6eb61e50dffa0184411c0d5de245290a2bd09d4fb788b4267aac099a63dbad25"
+}

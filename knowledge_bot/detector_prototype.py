@@ -6,6 +6,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+from math import isfinite, isclose
 
 
 NEAR_RETEST_BARS = 10
@@ -33,16 +34,36 @@ BREAKOUT_CLOSE_VERY_NEAR_LEVEL_ATR = 0.10
 CLOSE_AT_EXTREME_FRACTION = 0.20
 CONSOLIDATION_LOOKBACK = 5
 FALSE_BREAKOUT_LUFT_ATR = 0.02
-PARANORMAL_RANGE_MULTIPLIER = 1.50
-PARANORMAL_RANGE_ATR = 0.80
+PARANORMAL_BODY_ATR = 1.6
+
+
+def is_paranormal_body(opening: float, closing: float, atr: float,
+                       minimum: float = PARANORMAL_BODY_ATR) -> bool:
+    """User rule: real body >= 1.6 prior ATR; wicks/gaps cannot substitute.
+
+    Backtests may require a larger body, but cannot relax the shared minimum.
+    """
+    if not isfinite(minimum) or minimum < PARANORMAL_BODY_ATR:
+        raise ValueError(f'Paranormal body threshold must be at least {PARANORMAL_BODY_ATR:g} ATR')
+    if not all(isfinite(v) for v in (opening, closing, atr)) or atr <= 0:
+        return False
+    body = abs(closing-opening)
+    threshold = minimum*atr
+    return body >= threshold or isclose(body, threshold, rel_tol=1e-12, abs_tol=0)
+
+
 STRUCTURAL_LEVEL_BASIS = {
     "inflection",
     "mirror_level",
     "paranormal_bar",
-    "long_false_breakout_tail",
     "two_bar_limit",
+    "limit_level",
     "post_chop_acceptance",
     "strong_movement_stop",
+}
+DISABLED_LEVEL_BASIS = {
+    'gap', 'gap_level', 'gap_boundary', 'consolidation', 'consolidation_level',
+    'consolidation_base', 'false_breakout_level', 'long_false_breakout_tail',
 }
 TBX_ENTRY_MODELS = {
     "primary_impulse",
@@ -488,6 +509,8 @@ def validate_level_strength(raw_config: dict[str, Any], symbol: str | None) -> d
     level_price = as_float(raw_config.get("level_price"), "levels[].level_price")
     current_price = optional_float(raw_config.get("current_price"), "levels[].current_price")
     basis_tags = string_list(raw_config.get("basis_tags"), "levels[].basis_tags")
+    excluded_basis_tags = sorted(set(basis_tags).intersection(DISABLED_LEVEL_BASIS))
+    basis_tags = [tag for tag in basis_tags if tag not in DISABLED_LEVEL_BASIS]
     touch_count = optional_int(raw_config.get("touch_count"), "levels[].touch_count") or 0
     false_breakout_count = optional_int(raw_config.get("false_breakout_count"), "levels[].false_breakout_count") or 0
     stop_anchor = raw_config.get("stop_anchor")
@@ -526,9 +549,8 @@ def validate_level_strength(raw_config: dict[str, Any], symbol: str | None) -> d
     elif touch_count >= 2:
         score += 0.5
         strength_factors.append("two_exact_touches")
-    if false_breakout_count > 0:
-        score += 0.75
-        strength_factors.append("false_breakout_confirmation")
+    # Manual methodology: false breakouts describe possible entries at a level.
+    # Keep their count as evidence, without adding level structure or strength.
     if bool(raw_config.get("impulse_confirmed_after_break")):
         score += 0.5
         strength_factors.append("impulse_confirmed_after_break")
@@ -569,6 +591,7 @@ def validate_level_strength(raw_config: dict[str, Any], symbol: str | None) -> d
             "current_price": current_price,
             "distance_to_current": distance_to_current,
             "basis_tags": basis_tags,
+            "excluded_basis_tags": excluded_basis_tags,
             "structural_basis_count": len(structural_basis),
             "touch_count": touch_count,
             "false_breakout_count": false_breakout_count,
@@ -1113,11 +1136,11 @@ def false_breakout_luft(atr: float, tick_size: float | None) -> float:
 
 def detect_sweep(candle: Candle, direction: str, level_price: float, luft: float) -> tuple[bool, bool, float]:
     if direction == "short":
-        sweep_detected = candle.high > level_price + luft
+        sweep_detected = candle.open < level_price and candle.high > level_price + luft
         returned_beyond_level = sweep_detected and candle.close < level_price
         tail_abs = candle.high - max(candle.open, candle.close)
     else:
-        sweep_detected = candle.low < level_price - luft
+        sweep_detected = candle.open > level_price and candle.low < level_price - luft
         returned_beyond_level = sweep_detected and candle.close > level_price
         tail_abs = min(candle.open, candle.close) - candle.low
     return sweep_detected, returned_beyond_level, max(0.0, tail_abs)
@@ -1145,11 +1168,10 @@ def detect_false_breakout_reversal(raw_config: dict[str, Any], symbol: str | Non
     approach_bars_count = optional_int(raw_config.get("approach_bars_count"), "false_breakouts[].approach_bars_count")
 
     latest = candles[-1]
-    previous_ranges = [candle_range(candle) for candle in candles[-11:-1]]
-    average_previous_range = average(previous_ranges)
     approach_range = candle_range(latest)
     approach_range_atr = approach_range / atr
-    paranormal_bar_to_level = bool(raw_config.get("paranormal_bar_to_level")) or approach_range_atr >= PARANORMAL_RANGE_ATR or (average_previous_range > 0 and approach_range >= PARANORMAL_RANGE_MULTIPLIER * average_previous_range)
+    approach_body_atr = abs(latest.close-latest.open)/atr
+    paranormal_bar_to_level = is_paranormal_body(latest.open, latest.close, atr)
     sharp_approach = bool(raw_config.get("sharp_approach")) or (approach_bars_count is not None and approach_bars_count <= 3) or paranormal_bar_to_level
     distance_travelled = optional_float(raw_config.get("distance_travelled_toward_level"), "false_breakouts[].distance_travelled_toward_level")
     atr_consumed_before_level = optional_float(raw_config.get("atr_consumed_before_level"), "false_breakouts[].atr_consumed_before_level")
@@ -1249,6 +1271,7 @@ def detect_false_breakout_reversal(raw_config: dict[str, Any], symbol: str | Non
             "level_price": level_price,
             "sharp_approach": sharp_approach,
             "approach_range_atr": round(approach_range_atr, 4),
+            "approach_body_atr": round(approach_body_atr, 4),
             "paranormal_bar_to_level": paranormal_bar_to_level,
             "atr_consumed_before_level": round(atr_consumed_before_level, 4) if atr_consumed_before_level is not None else None,
             "bars_since_last_contact": bars_since_last_contact,

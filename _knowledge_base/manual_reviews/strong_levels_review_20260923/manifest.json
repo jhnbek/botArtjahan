@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-09-23T05:26:53.897633+00:00",
+  "review_id": "strong_levels_review_20260923",
+  "journal_before_sha256": "09f2bf06735e5bc12e5a4b702e26c52cc3a7c1e16d337acb72b1d5cc801e3b01",
+  "journal_after_sha256": "517828436500457796788fe2b004119eebe0f38cd40f6fb33b0f930413aa3dcf",
+  "append_only": true,
+  "manual_prices_unchanged": true,
+  "source_snapshots": [
+    {
+      "path": "botArtjahan\\_knowledge_base\\manual_reviews\\inflection_algorithm_v2\\candles_before.json",
+      "sha256": "287f08115ee75d459609b0ced0b49893031b018ecd78c0fd5c89b5fe95f6a257",
+      "fetched_at": "2026-09-21T09:20:46.593455Z",
+      "bar_count": 700,
+      "first": "2024-10-22T00:00:00Z",
+      "last": "2026-09-21T00:00:00Z"
+    },
+    {
+      "path": "botArtjahan\\_knowledge_base\\live_market_cache\\bybit_linear_BTCUSDT_1d.json",
+      "sha256": "0a280d8f2d47903804a871c73254b20f83913937c06be7c593d413dd00fa23f5",
+      "fetched_at": "2026-09-23T04:25:49.136044Z",
+      "bar_count": 400,
+      "first": "2025-08-20T00:00:00Z",
+      "last": "2026-09-23T00:00:00Z"
+    }
+  ],
+  "snapshot_sha256": {
+    "calibration_after.json": "96e5a0e183fbeb07942400cffabc673e9f22fdf0f214c718b61a8e1a6c2aaf61",
+    "candles.json": "93a3205ca33754c421b1a9913f1fff542b9b8d204d46a863d2375334554d6a45",
+    "evidence.json": "223c28ad4256fe5427d1322469d3faa67629a05aeca9feba22fd4a8eb5d47b2c",
+    "feedback_after.jsonl": "517828436500457796788fe2b004119eebe0f38cd40f6fb33b0f930413aa3dcf",
+    "feedback_before.jsonl": "09f2bf06735e5bc12e5a4b702e26c52cc3a7c1e16d337acb72b1d5cc801e3b01",
+    "knowledge_references.json": "40f06b11a5854b03847214f385803cb62bca68aec3662818104096091ce0c995",
+    "manual_line_mapping.json": "b4ad08e49f289234191c543f2aa4bc19ac4efbdb4c05d5c18c7b915fcffbd50f",
+    "review.json": "7e4116085adecc408881ae3adac8baea31b22e22ade06b6c499557193543096e",
+    "README.md": "9351ea90e952fe28b324dc77e96c57d4ac643835579f19dc6832b98668914699"
+  }
+}

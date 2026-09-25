@@ -16,8 +16,7 @@ from typing import Any
 
 from detector_prototype import (
     BREAKOUT_CLOSE_NEAR_LEVEL_ATR,
-    PARANORMAL_RANGE_ATR,
-    PARANORMAL_RANGE_MULTIPLIER,
+    is_paranormal_body,
     contact_tolerance,
     detect_breakout_preconditions,
     detect_false_breakout_reversal,
@@ -189,13 +188,7 @@ def approach_motion(bars: list[Bar], level_price: float, atr: float,
         start_index = index
 
     latest = bars[-1]
-    previous = bars[max(0, len(bars) - 11):len(bars) - 1]
-    previous_avg_range = sum(bar_range(bar) for bar in previous) / len(previous) if previous else 0.0
-    latest_range = bar_range(latest)
-    paranormal = (
-        latest_range >= PARANORMAL_RANGE_ATR * atr
-        or (previous_avg_range > 0 and latest_range >= PARANORMAL_RANGE_MULTIPLIER * previous_avg_range)
-    )
+    paranormal = is_paranormal_body(latest.open, latest.close, atr)
     travelled = abs(latest.close - bars[start_index].close)
     near_window = bars[max(0, len(bars) - params.no_consolidation_lookback - 1):len(bars) - 1]
     near_closes = sum(
