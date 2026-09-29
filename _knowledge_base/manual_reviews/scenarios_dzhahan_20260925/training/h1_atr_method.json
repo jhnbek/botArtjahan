@@ -1,0 +1,35 @@
+{
+  "method": "pine_screenshot_5_150_50_closed_h1",
+  "timeframe": "1H",
+  "period": 5,
+  "filter_lower": 0.5,
+  "filter_upper": 1.5,
+  "range": "High-Low",
+  "source_formula": "For positive ranges: raw[t]=mean(range[t-4:t+1]); pass[t]=(0.5*raw[t]<=range[t]<=1.5*raw[t]). If pass[t-1] is false, use raw[t]. Otherwise each offset1..5 takes its range if passing, else nearest more recent passing offset; average five slots including repeats. Evaluate at last closed H1.",
+  "calculation_window": "10 positive closed H1 bars; each own raw5 filter; no execution-hour OHLC",
+  "refresh": "Recompute on each closed H1, freeze through next hour",
+  "user_confirmed_H1_timeframe_and_KB_source": true,
+  "specific_indicator_choice_user_confirmed": false,
+  "labels_are": "Derived from explicit author conditions under the recorded project convention; not individually confirmed exact execution hours",
+  "inferences": [
+    "hi0=high is inferred from the High-Low methodology; the declaration is above the screenshot viewport.",
+    "Choose the reproducible indicator excerpt over the separate manual similar-bar method.",
+    "Use only closed H1 bars; this deliberately prevents an unfinished trigger bar from changing its own ATR."
+  ],
+  "limitations": [
+    "Full Pine program is not available and the port has not been executed in Pine.",
+    "Zero-range bars and missing warmup abstain; Pine var/na startup semantics are not inferred.",
+    "Manual 4-5 similar bars with 1.8/0.5 exclusion is a different method and is not merged with this indicator."
+  ],
+  "source_snapshots_sha256": {
+    "training/atr_method_sources/closed_bar_transcript.md": "4e669e3cf5d4d92011c3500554a83c5edd8f9284ec293c2ea74886cd409e2b9d",
+    "training/atr_method_sources/indicator_settings.md": "bd130c9625be2c9a994bf8141c370549319478c9bbfa5b8dec81c13977eed48c",
+    "training/atr_method_sources/pine_excerpt.jpg": "a716a7e1532b2e8a46cdcc13a62a76c4d9367c052c332c826682f9948b8c8261"
+  },
+  "original_sources_sha256": {
+    "knowledge/blobs/a7/a716a7e1532b2e8a46cdcc13a62a76c4d9367c052c332c826682f9948b8c8261": "a716a7e1532b2e8a46cdcc13a62a76c4d9367c052c332c826682f9948b8c8261",
+    "knowledge/catalog/items/55/558a99c32a44e7ae8c4b1debdd7fcb8ae1bb841e1609480b9255ef86e0adac98.md": "bd130c9625be2c9a994bf8141c370549319478c9bbfa5b8dec81c13977eed48c",
+    "knowledge/catalog/lectures/9377d3ab8d3e5f2af6180dedba667dfacc6f6d7cc8077915c95c579c69ebe277/source_unit-0003.md": "4e669e3cf5d4d92011c3500554a83c5edd8f9284ec293c2ea74886cd409e2b9d"
+  },
+  "closed_bar_primary_evidence": "source_unit-0003.md at 02:11:24.620: only after the bar closes include its size in ATR"
+}

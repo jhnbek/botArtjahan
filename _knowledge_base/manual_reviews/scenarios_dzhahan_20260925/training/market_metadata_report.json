@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-09-27",
+  "target_count": 407,
+  "original_annotation_count": 409,
+  "user_authorized_skip": [
+    54,
+    85
+  ],
+  "requested_target_count": 407,
+  "user_scope_sha256": "eca177adaa7a2e05debe85d7ed707979db7245af87c877adfe05c74a9d1000cf",
+  "source_annotations_sha256": "8ec8353bded6a41339b9092278cc21a4a2f3431a9faa567b4d5d97fa091a22d3",
+  "metadata_builder_sha256": "18f87efacccf970e10ab6c15a23c540e46980bfb1bb2e533c1288b483b394efb",
+  "date_precision_counts": {
+    "day": 398,
+    "year_missing": 1,
+    "day_range": 8
+  },
+  "instrument_status_counts": {
+    "caption_transcribed": 401,
+    "caption_missing": 5,
+    "single_character_caption_needs_market_match": 1
+  },
+  "missing_instrument_ids": [
+    33,
+    51,
+    83,
+    111,
+    174
+  ],
+  "ambiguous_instrument_ids": [
+    277
+  ],
+  "unresolved_date_ids": [
+    13
+  ],
+  "future_caption_ids": [
+    78,
+    255,
+    404
+  ],
+  "market_verified_count": 0,
+  "meaning": "407 source pairs inventoried for market search. Captions alone do not establish actual market, D1 close, or entry time."
+}

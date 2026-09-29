@@ -1,0 +1,17 @@
+{
+  "verified_at_utc": "2026-09-29T07:50:40.998879+00:00",
+  "closed_D1_vectors_recomputed": 392,
+  "matching_vectors": 392,
+  "comparison_method": "All expanded vectors equal independently recomputed current market_v2 vectors for the same scenario IDs",
+  "fitted_count": 320,
+  "test_count": 72,
+  "test_in_fit": false,
+  "actual_fitted_normalization_matches_fit_only": true,
+  "new_entry_labels_created": 0,
+  "source_sha256": {
+    "direction_model.json": "d8de84f160162fe3da3e556a9c5161ac97a51a2132703e8039c75b48c585c7c8",
+    "training_report.json": "df16586f8f54ffdc5a2d87ed86017907807249aa84717d00a475eea7b9df4448",
+    "cases.jsonl": "2d6b7a771cd798cc3a230e4c1a0d3801d4db8b2640cc9a03cb75bb89784fc48e"
+  },
+  "audit": "../market_context_direction/verification_report.json"
+}

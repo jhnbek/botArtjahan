@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-29T08:36:48.554854+00:00",
+  "source": "Explicit user clarification in current conversation",
+  "scenario_id": 323,
+  "author_text": "ты говоришь что к открытию пробойного бара остается 0.48АТР, но ведь до этого бар был зеленым и значит движение шло без откатно. НУжно учитывать не двжиение одного бара, а в целом все движение.\n\nНапример ,если до уровня 2АТР и мы доходим одним большим ПН баром до уровня, то в таком случае не входим на пробой ,т.к. после ПН баром бывает откат.\n\nДругой пример, если до уровня остаается 2.2 АТР и мы проделали это движение двумя барами по 1.1АТР каждый, то в этом случае тоже не входим, потому что у нас было безоткатное движение двумя барами . В нашем примере 323 мы видим безоткатое движение несколькими барами, поэтому сразу не заходим",
+  "clarifies": "author_breakout_approach_20260929.json",
+  "semantic_requirements": [
+    "Count the whole uninterrupted movement toward the level, over one or several bars.",
+    "A new green bar does not reset the approach origin.",
+    "Small remaining distance before the breakout is not permission if the whole approach was large.",
+    "One author-described PN bar covering2H1ATR to the level: skip first breakout.",
+    "Two consecutive moves1.1H1ATR each, total2.2H1ATR to the level: skip first breakout.",
+    "For323, the author explicitly confirms a multibar uninterrupted approach and skipping the first breakout."
+  ],
+  "prior_half_ATR_permission": "Applies to a genuinely short complete approach from its established origin, not a late residual of a long approach",
+  "numeric_replay_convention": "Freeze H1 ATR from closed bars at the established approach origin; explicitly a project convention",
+  "net_move_not_sum_of_candle_ranges": true,
+  "paranormal_bar_classification_changed": false,
+  "existing_TVX_label_changed": false,
+  "trained_weights_changed": false
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-29T08:26:16.140509+00:00",
+  "source": "Explicit user teaching in current conversation",
+  "scenario_id": 323,
+  "author_text": "в 323 сразу на пробой не входим потому что после накопления до уровня остается довольно таки большое расстояние, если двжиение к уровню происходит в размере минимум 1АТР и это движение без остановки, то в таких случаях обычно происхоит откат и только на 2-3 разе удается закрепиться над уровнем. В нашем случае мы видим первый пробой уровня, а до этого было три зеленый бар и двжиение шло двумя барами без отката (включая бар пробития) Если же до уровня менее 0.5 АТР и начинается движение к уровню, то в таком случае можно входить сразу после пробития уровня",
+  "timeframe": "1H",
+  "timeframe_basis": "Prior author instruction: use hourly ATR for hourly scenarios",
+  "direction_confirmed": "long",
+  "rule_scope": "First breakout entry after approach from accumulation; permission filter, not unconditional entry",
+  "author_conditions": {
+    "skip_first": {
+      "minimum_uninterrupted_move_to_level_atr": 1.0,
+      "minimum_inclusive": true,
+      "uninterrupted_approach_required": true,
+      "action": "Skip first breakout; wait for a subsequent qualified setup"
+    },
+    "permit_first": {
+      "initial_distance_to_level_atr_less_than": 0.5,
+      "maximum_exclusive": true,
+      "action": "Immediate breakout entry permitted by this filter if other prerequisites hold"
+    },
+    "distance_half_to_one": "No universal decision specified",
+    "second_or_third_attempt": "Typical author observation, not guaranteed success or fixed mandatory ordinal"
+  },
+  "scenario_specific": {
+    "first_breakout_skipped": true,
+    "three_green_bars_before_first_breakout": true,
+    "last_two_bars_including_breakout_described_as_without_pullback": true,
+    "uninterrupted_approach_source": "explicit_author_statement",
+    "entry_remains_at_marked_repeated_breakout": true
+  },
+  "interpretation_limits": [
+    "Initial distance refers to the start of the approach, not the residual distance recomputed at every subsequent hour.",
+    "Exact accumulation reference price and numerical tolerance for a pullback are not defined by this message.",
+    "ATR snapshot time relative to approach start versus first breakout was not specified; diagnostics must label that choice.",
+    "H1 OHLC alone cannot verify absence of an intrabar pullback.",
+    "Author did not prescribe a universal entry exactly on the second or third touch.",
+    "Do not infer a short-side mirror from this long example without identifying it as an additional convention."
+  ],
+  "source_sha256": {
+    "images/1D_323.jpg": "a1c1669b71719a6074f3efa63d78255a7a955b3c6c249ae95884dc50213e3dad",
+    "images/1H_323.jpg": "02307da1ff6b474565de7489e802dd985fa0085c847e230317a1d2252d9ebba9",
+    "training/h1_atr_method.json": "16d625f1e2a8097ff62c9d559a8fc778ed1881e3ff1d0a4ca1618066a5fcb1e8"
+  },
+  "training_labels_changed": false,
+  "weights_changed": false,
+  "whole_approach_clarification_source": "author_whole_approach_20260929.json"
+}

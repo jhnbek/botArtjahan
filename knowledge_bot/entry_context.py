@@ -37,6 +37,8 @@ from detector_prototype import (
 from level_discovery import DiscoveryParams, Level, discover_levels
 from scn002_strict_kb_backtest import Bar, load_history
 from scenario_model import MODEL_PATH as SCENARIO_MODEL_PATH, daily_gate_for_context, entry_timing_advice
+from scenario_direction_model import MODEL_PATH as SCENARIO_DIRECTION_MODEL_PATH
+from scenario_entry_policy import build_learned_entry_advice
 from trend_direction import nearest_working_level
 
 
@@ -562,6 +564,14 @@ def build_entry_context(symbol: str, context_timeframe: str, execution_timeframe
         as_of=daily_gate.get("as_of"),
         model_path=SCENARIO_MODEL_PATH,
     )} if SCENARIO_MODEL_PATH.is_file() else {})
+    if (SCENARIO_MODEL_PATH.is_file() and SCENARIO_DIRECTION_MODEL_PATH.is_file()
+            and context_timeframe.lower() in {'1d', 'd1', 'd'}
+            and execution_timeframe.lower() in {'1h', 'h1', '60m', '60'}):
+        model_advice['learned_entry_advice'] = build_learned_entry_advice(
+            context_bars, execution_bars, level.price, as_of=daily_gate.get('as_of'),
+            direction_model_path=SCENARIO_DIRECTION_MODEL_PATH, entry_model_path=SCENARIO_MODEL_PATH,
+            structural_stop=(best or {}).get('stop_price'),
+        )
     return {
         "symbol": symbol,
         "context_timeframe": context_timeframe,

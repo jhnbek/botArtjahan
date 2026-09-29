@@ -1,0 +1,39 @@
+{
+  "target_pairs": 404,
+  "eligible_pairs": 404,
+  "pending_pairs": 0,
+  "output": "training/market_v2/results/index.html",
+  "rows": 404,
+  "user_skipped": [
+    23,
+    54,
+    59,
+    85,
+    109
+  ],
+  "stale_preparation_sources": [],
+  "pending_author_entry_ids": [],
+  "source_sha256": {
+    "training/market_v2/preparation_report.json": "77e763c67a3b776d456ca0c65ac741ecc22122e91b5b5c95069449cf69ae7731",
+    "training/market_v2/ledger.jsonl": "00262f6504e2f00e72122746f323565fbc7bc75690dc1ff9238524f7f2d2dc77",
+    "training/market_v2/cases.jsonl": "e644575264c74bb021461b50119ef0304f88847de6dac0870968de3da40e8ccf",
+    "training/market_daily_alignment.jsonl": "81538e14acae7f1aac95f62609d5bf41fcfc49647d17abf66f9daa303e442c66",
+    "training/market_hourly_alignment.jsonl": "86d3d2bf99c36cc0e15d9ad1f7c53e9f9487381ab471b8afdf6e3c0131818c76",
+    "training/market_direction_expanded/training_report.json": "df16586f8f54ffdc5a2d87ed86017907807249aa84717d00a475eea7b9df4448",
+    "training/market_direction_expanded/direction_model.json": "d8de84f160162fe3da3e556a9c5161ac97a51a2132703e8039c75b48c585c7c8",
+    "training/market_direction_expanded/cases.jsonl": "2d6b7a771cd798cc3a230e4c1a0d3801d4db8b2640cc9a03cb75bb89784fc48e",
+    "training/market_v2/pipeline_evaluation.json": "56208b10ae4529a928c30cab9b8ad52a116ec77c6e0cc613fd6debcc4d01566b",
+    "training/market_context_direction/training_report.json": "356368c39d831bfb5758c51239bdc9e85c22719ec327681bdb3ab396ca1e5114",
+    "training/market_context_direction/model.json": "4fff5d92332f5e9d44bdf14b385b3f23ad789b2dd1a78f81eabf177a421299b6",
+    "training/market_context_direction/cases.jsonl": "77a91a3ab6908a9a20dcec5341254da77ff8feff5f2a7ef4fc568f4aa4d09d63",
+    "training/market_context_direction/pipeline_evaluation.json": "a3ef8fdd456e47568ecb6042829040ea12be9cacccc606e7e0b2f809d767431c",
+    "training/market_v2/training_report.json": "997a4c929e138f374ae21ae4ee0b67265a278868cb46be14d83daa9b4ee398bd",
+    "training/market_timing_questions.jsonl": "8acf4dffef09b1162a312a9c5e13e38302756463e69600fa5f0165073645761d",
+    "training/market_daily_alignment_report.json": "fae49c66c71f66c344103c9dd46ced6d101e8d157d607423480d2e84bd905d64",
+    "training/market_hourly_alignment_report.json": "da113fd8f4ff989fdcf1c2053f1ecdf86316edf7602401fdffea9b8e53f43565",
+    "training/user_scope.json": "ec0f928bcfea07116055d2ae4aa2dbb83af3aab803754fce63b60813b1051cf0"
+  },
+  "html_sha256": "f6237d40c8a93fd29dc8912c0687f246091a2085ff1dbc0533cc40bb0079dc26",
+  "review_builder_sha256": "6892b2b4da4d1bdc7487ecf65a4af56c1401d1d184663e410ac6b161d3d4a1dd",
+  "images_modified": false
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "source": "Explicit author messages in the current conversation",
+  "instructions": [
+    {
+      "scenario_ids": [
+        27,
+        31,
+        41,
+        46,
+        51,
+        53,
+        56,
+        66,
+        68,
+        69,
+        72,
+        73,
+        76
+      ],
+      "author_text": "твх сразу после закрытия дневки"
+    },
+    {
+      "scenario_ids": [
+        40
+      ],
+      "author_text": "твх после закрытия дневки в тот момент, когда бар имел минимальное значение около уровня в пределах 0.2-0.3% до уровня",
+      "followup": "40 - ответ да",
+      "clarified_condition": "first approach to within 0.2-0.3 percent of level after actual D1 close",
+      "market_verification_status": "superseded_by_latest_author_distance_0.87_percent"
+    },
+    {
+      "scenario_ids": [
+        46,
+        47
+      ],
+      "author_text": "в первый час после закрытия дневки, т.к. там немного идем в лонг и тем самым уменьшаем размер стопа",
+      "interpretation": "price rebounds toward resistance; preserve existing short trade direction; store first-hour window, not an invented exact execution minute",
+      "46_note": "Both immediate and first-hour instructions are retained; the broader first-hour window includes the immediate boundary"
+    },
+    {
+      "scenario_ids": [
+        48,
+        49,
+        62,
+        67
+      ],
+      "author_text": "после закрытия дневки когда цена примерно приблизилась к уровню на 1-1.3% (это нужно для уменьшения стопа)",
+      "followup": "Движение к уровню на 1–1,3%",
+      "reference": "actual D1 close price, explicitly stated during market cross-check",
+      "later_author_correction": {
+        "49": 0.83,
+        "62": 0.6,
+        "67": 0.63
+      },
+      "later_author_text": "возьми значит 0.83, 0.60 и 0.63",
+      "rounding_tolerance_percentage_points_for_two_decimal_values": 0.005
+    },
+    {
+      "scenario_ids": [
+        52
+      ],
+      "author_text": "когда после закрытия дневки цена была на минимальной уровне возле уровня",
+      "followup": "возьми час, который ближе всего к уровню после закрытия дневки (это первые 1-3 часа после закрытия дневки)",
+      "label_selection": "closest hour among first three; retrospective author label only; predictive features exclude that hour",
+      "executable_live_rule": false
+    },
+    {
+      "scenario_ids": [
+        55
+      ],
+      "author_text": "когда цена приблизится к уровню на расстоянии менее 0.5%"
+    },
+    {
+      "scenario_ids": [
+        59,
+        109
+      ],
+      "author_text": "убрать из анализа"
+    },
+    {
+      "scenario_ids": [
+        74
+      ],
+      "author_text": "после закрытия дневки дожидаемся пробоя уровня и заходим после его закрытия (твх – начало бара в 4:00)",
+      "timezone_resolution": "04:00 UTC matches the actual preceding03:00 breakout candle; checked against Bybit OHLC"
+    },
+    {
+      "scenario_ids": [
+        40,
+        43
+      ],
+      "author_text": "40 - используй приближение около 0.87%,  43 - возьми ТВХ при приближении к уровню около 1%, если 1% нету, то возьми максимальное приближение",
+      "40_distance_percent": 0.87,
+      "40_rounding_tolerance_percentage_points": 0.005,
+      "43_fallback_window": "visible matched H1 history after actual D1 close",
+      "43_fallback_is_retrospective_label_only": true
+    }
+  ],
+  "original_early_entry_case_not_addressed": [],
+  "original_images_modified": false
+}

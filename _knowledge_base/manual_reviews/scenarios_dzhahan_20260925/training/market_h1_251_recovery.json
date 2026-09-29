@@ -1,0 +1,675 @@
+{
+  "scenario_id": 251,
+  "accepted": true,
+  "reason": "matched_geometry_different_original_D1_event",
+  "fingerprint": {
+    "source_sha256": "19d85b46a6b9bc7dc4380a6b92ee7f2f81dd1edc3191bf795f88a5b49f6a48da",
+    "width": 917,
+    "height": 523,
+    "origin_x": 3.5319203268641033,
+    "pitch": 10.372829417773241,
+    "levels_y": [
+      135.5
+    ],
+    "bars": [
+      {
+        "x": 4,
+        "slot": 0,
+        "color": "red",
+        "high": -465.0,
+        "low": -507.0
+      },
+      {
+        "x": 14,
+        "slot": 1,
+        "color": "green",
+        "high": -479.0,
+        "low": -491.0
+      },
+      {
+        "x": 24,
+        "slot": 2,
+        "color": "green",
+        "high": -466.0,
+        "low": -487.0
+      },
+      {
+        "x": 35,
+        "slot": 3,
+        "color": "red",
+        "high": -473.0,
+        "low": -500.0
+      },
+      {
+        "x": 45,
+        "slot": 4,
+        "color": "red",
+        "high": -486.0,
+        "low": -513.0
+      },
+      {
+        "x": 55,
+        "slot": 5,
+        "color": "green",
+        "high": -481.0,
+        "low": -502.0
+      },
+      {
+        "x": 66,
+        "slot": 6,
+        "color": "green",
+        "high": -469.0,
+        "low": -502.0
+      },
+      {
+        "x": 76,
+        "slot": 7,
+        "color": "green",
+        "high": -334.0,
+        "low": -481.0
+      },
+      {
+        "x": 86,
+        "slot": 8,
+        "color": "green",
+        "high": -337.0,
+        "low": -388.0
+      },
+      {
+        "x": 97,
+        "slot": 9,
+        "color": "green",
+        "high": -316.0,
+        "low": -363.0
+      },
+      {
+        "x": 107,
+        "slot": 10,
+        "color": "red",
+        "high": -300.0,
+        "low": -342.0
+      },
+      {
+        "x": 118,
+        "slot": 11,
+        "color": "red",
+        "high": -324.0,
+        "low": -355.0
+      },
+      {
+        "x": 128,
+        "slot": 12,
+        "color": "green",
+        "high": -308.0,
+        "low": -348.0
+      },
+      {
+        "x": 138,
+        "slot": 13,
+        "color": "green",
+        "high": -302.0,
+        "low": -333.0
+      },
+      {
+        "x": 149,
+        "slot": 14,
+        "color": "red",
+        "high": -308.0,
+        "low": -334.0
+      },
+      {
+        "x": 159,
+        "slot": 15,
+        "color": "green",
+        "high": -303.0,
+        "low": -333.0
+      },
+      {
+        "x": 170,
+        "slot": 16,
+        "color": "red",
+        "high": -295.0,
+        "low": -314.0
+      },
+      {
+        "x": 180,
+        "slot": 17,
+        "color": "red",
+        "high": -296.0,
+        "low": -321.0
+      },
+      {
+        "x": 190,
+        "slot": 18,
+        "color": "green",
+        "high": -295.0,
+        "low": -323.0
+      },
+      {
+        "x": 201,
+        "slot": 19,
+        "color": "red",
+        "high": -296.0,
+        "low": -328.0
+      },
+      {
+        "x": 211,
+        "slot": 20,
+        "color": "green",
+        "high": -231.0,
+        "low": -307.0
+      },
+      {
+        "x": 221,
+        "slot": 21,
+        "color": "red",
+        "high": -189.0,
+        "low": -263.0
+      },
+      {
+        "x": 232,
+        "slot": 22,
+        "color": "green",
+        "high": -232.0,
+        "low": -271.0
+      },
+      {
+        "x": 242,
+        "slot": 23,
+        "color": "green",
+        "high": -158.0,
+        "low": -244.0
+      },
+      {
+        "x": 252,
+        "slot": 24,
+        "color": "red",
+        "high": -178.0,
+        "low": -204.0
+      },
+      {
+        "x": 262,
+        "slot": 25,
+        "color": "green",
+        "high": -123.0,
+        "low": -207.0
+      },
+      {
+        "x": 273,
+        "slot": 26,
+        "color": "red",
+        "high": -129.0,
+        "low": -166.0
+      },
+      {
+        "x": 284,
+        "slot": 27,
+        "color": "red",
+        "high": -143.0,
+        "low": -191.0
+      },
+      {
+        "x": 294,
+        "slot": 28,
+        "color": "red",
+        "high": -167.0,
+        "low": -189.0
+      },
+      {
+        "x": 304,
+        "slot": 29,
+        "color": "red",
+        "high": -164.0,
+        "low": -228.0
+      },
+      {
+        "x": 315,
+        "slot": 30,
+        "color": "red",
+        "high": -203.0,
+        "low": -231.0
+      },
+      {
+        "x": 325,
+        "slot": 31,
+        "color": "red",
+        "high": -216.0,
+        "low": -244.0
+      },
+      {
+        "x": 335,
+        "slot": 32,
+        "color": "red",
+        "high": -226.0,
+        "low": -283.0
+      },
+      {
+        "x": 347,
+        "slot": 33,
+        "color": "green",
+        "high": -259.0,
+        "low": -287.0
+      },
+      {
+        "x": 356,
+        "slot": 34,
+        "color": "red",
+        "high": -244.0,
+        "low": -272.0
+      },
+      {
+        "x": 367,
+        "slot": 35,
+        "color": "red",
+        "high": -254.0,
+        "low": -283.0
+      },
+      {
+        "x": 377,
+        "slot": 36,
+        "color": "red",
+        "high": -278.0,
+        "low": -334.0
+      },
+      {
+        "x": 387,
+        "slot": 37,
+        "color": "green",
+        "high": -279.0,
+        "low": -324.0
+      },
+      {
+        "x": 398,
+        "slot": 38,
+        "color": "red",
+        "high": -276.0,
+        "low": -320.0
+      },
+      {
+        "x": 408,
+        "slot": 39,
+        "color": "green",
+        "high": -297.0,
+        "low": -316.0
+      },
+      {
+        "x": 418,
+        "slot": 40,
+        "color": "green",
+        "high": -275.0,
+        "low": -307.0
+      },
+      {
+        "x": 429,
+        "slot": 41,
+        "color": "green",
+        "high": -264.0,
+        "low": -289.0
+      },
+      {
+        "x": 439,
+        "slot": 42,
+        "color": "green",
+        "high": -201.0,
+        "low": -274.0
+      },
+      {
+        "x": 450,
+        "slot": 43,
+        "color": "red",
+        "high": -209.0,
+        "low": -247.0
+      },
+      {
+        "x": 460,
+        "slot": 44,
+        "color": "red",
+        "high": -225.0,
+        "low": -248.0
+      },
+      {
+        "x": 470,
+        "slot": 45,
+        "color": "red",
+        "high": -230.0,
+        "low": -263.0
+      },
+      {
+        "x": 481,
+        "slot": 46,
+        "color": "green",
+        "high": -178.0,
+        "low": -257.0
+      },
+      {
+        "x": 491,
+        "slot": 47,
+        "color": "red",
+        "high": -216.0,
+        "low": -287.0
+      },
+      {
+        "x": 501,
+        "slot": 48,
+        "color": "red",
+        "high": -264.0,
+        "low": -361.0
+      },
+      {
+        "x": 512,
+        "slot": 49,
+        "color": "green",
+        "high": -293.0,
+        "low": -333.0
+      },
+      {
+        "x": 522,
+        "slot": 50,
+        "color": "red",
+        "high": -304.0,
+        "low": -327.0
+      },
+      {
+        "x": 533,
+        "slot": 51,
+        "color": "green",
+        "high": -278.0,
+        "low": -321.0
+      },
+      {
+        "x": 543,
+        "slot": 52,
+        "color": "green",
+        "high": -249.0,
+        "low": -286.0
+      },
+      {
+        "x": 553,
+        "slot": 53,
+        "color": "red",
+        "high": -260.0,
+        "low": -297.0
+      },
+      {
+        "x": 564,
+        "slot": 54,
+        "color": "green",
+        "high": -243.0,
+        "low": -290.0
+      },
+      {
+        "x": 574,
+        "slot": 55,
+        "color": "red",
+        "high": -235.0,
+        "low": -268.0
+      },
+      {
+        "x": 584,
+        "slot": 56,
+        "color": "red",
+        "high": -244.0,
+        "low": -268.0
+      },
+      {
+        "x": 595,
+        "slot": 57,
+        "color": "red",
+        "high": -252.0,
+        "low": -278.0
+      },
+      {
+        "x": 605,
+        "slot": 58,
+        "color": "green",
+        "high": -256.0,
+        "low": -278.0
+      },
+      {
+        "x": 616,
+        "slot": 59,
+        "color": "green",
+        "high": -232.0,
+        "low": -284.0
+      },
+      {
+        "x": 626,
+        "slot": 60,
+        "color": "green",
+        "high": -207.0,
+        "low": -250.0
+      },
+      {
+        "x": 636,
+        "slot": 61,
+        "color": "red",
+        "high": -227.0,
+        "low": -253.0
+      },
+      {
+        "x": 647,
+        "slot": 62,
+        "color": "green",
+        "high": -216.0,
+        "low": -247.0
+      },
+      {
+        "x": 657,
+        "slot": 63,
+        "color": "red",
+        "high": -226.0,
+        "low": -261.0
+      },
+      {
+        "x": 667,
+        "slot": 64,
+        "color": "red",
+        "high": -233.0,
+        "low": -261.0
+      },
+      {
+        "x": 678,
+        "slot": 65,
+        "color": "red",
+        "high": -230.0,
+        "low": -279.0
+      },
+      {
+        "x": 688,
+        "slot": 66,
+        "color": "red",
+        "high": -262.0,
+        "low": -335.0
+      },
+      {
+        "x": 699,
+        "slot": 67,
+        "color": "green",
+        "high": -302.0,
+        "low": -325.0
+      },
+      {
+        "x": 709,
+        "slot": 68,
+        "color": "red",
+        "high": -301.0,
+        "low": -324.0
+      },
+      {
+        "x": 719,
+        "slot": 69,
+        "color": "red",
+        "high": -316.0,
+        "low": -351.0
+      },
+      {
+        "x": 730,
+        "slot": 70,
+        "color": "green",
+        "high": -316.0,
+        "low": -366.0
+      },
+      {
+        "x": 740,
+        "slot": 71,
+        "color": "green",
+        "high": -297.0,
+        "low": -338.0
+      },
+      {
+        "x": 750,
+        "slot": 72,
+        "color": "red",
+        "high": -302.0,
+        "low": -357.0
+      },
+      {
+        "x": 761,
+        "slot": 73,
+        "color": "green",
+        "high": -261.0,
+        "low": -336.0
+      },
+      {
+        "x": 771,
+        "slot": 74,
+        "color": "red",
+        "high": -229.0,
+        "low": -278.0
+      },
+      {
+        "x": 782,
+        "slot": 75,
+        "color": "green",
+        "high": -250.0,
+        "low": -295.0
+      },
+      {
+        "x": 792,
+        "slot": 76,
+        "color": "red",
+        "high": -248.0,
+        "low": -360.0
+      },
+      {
+        "x": 802,
+        "slot": 77,
+        "color": "red",
+        "high": -277.0,
+        "low": -403.0
+      },
+      {
+        "x": 813,
+        "slot": 78,
+        "color": "green",
+        "high": -353.0,
+        "low": -396.0
+      },
+      {
+        "x": 823,
+        "slot": 79,
+        "color": "red",
+        "high": -355.0,
+        "low": -397.0
+      },
+      {
+        "x": 832,
+        "slot": 80,
+        "color": "green",
+        "high": -372.0,
+        "low": -436.0
+      },
+      {
+        "x": 843,
+        "slot": 81,
+        "color": "green",
+        "high": -359.0,
+        "low": -387.0
+      },
+      {
+        "x": 854,
+        "slot": 82,
+        "color": "red",
+        "high": -344.0,
+        "low": -368.0
+      },
+      {
+        "x": 865,
+        "slot": 83,
+        "color": "red",
+        "high": -339.0,
+        "low": -374.0
+      },
+      {
+        "x": 875,
+        "slot": 84,
+        "color": "green",
+        "high": -346.0,
+        "low": -373.0
+      },
+      {
+        "x": 885,
+        "slot": 85,
+        "color": "red",
+        "high": -350.0,
+        "low": -399.0
+      },
+      {
+        "x": 896,
+        "slot": 86,
+        "color": "red",
+        "high": -389.0,
+        "low": -439.0
+      },
+      {
+        "x": 906,
+        "slot": 87,
+        "color": "red",
+        "high": -428.0,
+        "low": -461.0
+      }
+    ]
+  },
+  "symbol": "LINKUSDT",
+  "category": "linear",
+  "cache_file": "training/bybit_history/bybit_linear_LINKUSDT_1h_1780444800000_1783296000000.json",
+  "offset": 278,
+  "first_slot": 0,
+  "first_open_time_ms": 1781445600000,
+  "interval_ms": 3600000,
+  "price_axis_scale": "log",
+  "price_axis_slope": 0.0002554777885539017,
+  "price_axis_intercept": 2.18255283387771,
+  "median_range_error": 0.012758539253504375,
+  "p90_range_error": 0.023624683576205126,
+  "geometry_error": 0.024570881041606936,
+  "color_agreement": 1.0,
+  "quality": 0.024570881041606936,
+  "matched_stems": 88,
+  "quality_margin": null,
+  "candidates_checked": 705,
+  "geometry_only": true,
+  "training_eligible": false,
+  "needs_reviewed_decision_anchors": true,
+  "cache_file_sha256": "bb116d34ebb32c0d6f9abcf19a3eb3f23d53f0e43a4d1e7ecfd0c628a8461876",
+  "matcher_sha256": "8527bfe5b9c77ec4164347056381771671825b6f5c3c4d582d74aa59c10f0648",
+  "geometry_code_sha256": "d7ff87102f1ff0948dafd41f0c0f8624ca82599db4e142379fa2447d0e1c6e0f",
+  "original_paired_daily_scenario_id": 251,
+  "matching_daily_scenario_id": 249,
+  "duplicate_hourly_event_scenario_id": 249,
+  "joint_original_pair_eligible": false,
+  "source_images_modified": false,
+  "alignment_evidence": {
+    "H1_251_author_daily_close_hour_open": "2026-06-15T23:00:00+00:00",
+    "H1_251_author_entry_hour_open": "2026-06-16T12:00:00+00:00",
+    "H1_251_blue_level_price": 8.567154040728862,
+    "H1_249_author_daily_close_hour_open": "2026-06-15T23:00:00+00:00",
+    "H1_249_author_entry_hour_open": "2026-06-16T12:00:00+00:00",
+    "H1_249_blue_level_price": 8.566541376751275,
+    "D1_249_signal_open": "2026-06-15T00:00:00+00:00",
+    "D1_249_blue_level_price": 8.554194454738997,
+    "D1_251_signal_open": "2026-05-10T00:00:00+00:00",
+    "D1_251_blue_level_price": 10.844460719408728
+  },
+  "conclusion": "H1_251 independently matches the same LINK June16 author entry as H1_249. D1_251 independently matches LINK May10. Keep both original files and annotations, but do not join their different market events; H1_251 can be an alternate view of event249 and must be deduplicated."
+}

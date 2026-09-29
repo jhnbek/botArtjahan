@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "scenario_id": 323,
+  "symbol": "1000BONKUSDT",
+  "date_utc": "2025-07-05",
+  "status": "Author explanation with separate numerical research diagnostic; not a new model evaluation",
+  "level": 0.018306866288471335,
+  "level_source": "Reviewed blue image level mapped to exchange prices",
+  "author_source": "author_breakout_approach_20260929.json",
+  "atr_method": "pine_screenshot_5_150_50_closed_h1",
+  "primary_origin": {
+    "price": 0.017613,
+    "time_ms": 1751691600000,
+    "time_utc": "2025-07-05T05:00:00Z",
+    "definition": "Open of the penultimate bar in the author-described two-bar approach including first breakout",
+    "status": "Diagnostic convention; author did not supply a numeric origin price"
+  },
+  "atr_snapshots": {
+    "at_approach_start": {
+      "method": "pine_screenshot_5_150_50_closed_h1",
+      "value": 0.000405599999999999,
+      "as_of_close_time_ms": 1751691600000,
+      "timeframe": "1H",
+      "period": 5,
+      "filter_lower": 0.5,
+      "filter_upper": 1.5,
+      "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+      "raw_last_five_mean": 0.00038459999999999883,
+      "selected_bar_open_times_ms": [
+        1751684400000,
+        1751680800000,
+        1751677200000,
+        1751673600000,
+        1751670000000
+      ],
+      "selected_bar_ranges": [
+        0.00044199999999999795,
+        0.0004009999999999986,
+        0.00028500000000000053,
+        0.0004139999999999977,
+        0.0004860000000000003
+      ],
+      "source_history_open_times_ms": [
+        1751655600000,
+        1751659200000,
+        1751662800000,
+        1751666400000,
+        1751670000000,
+        1751673600000,
+        1751677200000,
+        1751680800000,
+        1751684400000,
+        1751688000000
+      ],
+      "indicator_choice_individually_confirmed_by_author": false,
+      "source_excerpt_port_not_full_Pine_execution": true
+    },
+    "at_first_breakout_hour_open": {
+      "method": "pine_screenshot_5_150_50_closed_h1",
+      "value": 0.00038459999999999883,
+      "as_of_close_time_ms": 1751695200000,
+      "timeframe": "1H",
+      "period": 5,
+      "filter_lower": 0.5,
+      "filter_upper": 1.5,
+      "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+      "raw_last_five_mean": 0.00041119999999999904,
+      "selected_bar_open_times_ms": [
+        1751688000000,
+        1751684400000,
+        1751680800000,
+        1751677200000,
+        1751673600000
+      ],
+      "selected_bar_ranges": [
+        0.0003809999999999994,
+        0.00044199999999999795,
+        0.0004009999999999986,
+        0.00028500000000000053,
+        0.0004139999999999977
+      ],
+      "source_history_open_times_ms": [
+        1751659200000,
+        1751662800000,
+        1751666400000,
+        1751670000000,
+        1751673600000,
+        1751677200000,
+        1751680800000,
+        1751684400000,
+        1751688000000,
+        1751691600000
+      ],
+      "indicator_choice_individually_confirmed_by_author": false,
+      "source_excerpt_port_not_full_Pine_execution": true
+    }
+  },
+  "first_breakout_hour_utc": [
+    "2025-07-05T06:00:00Z",
+    "2025-07-05T07:00:00Z"
+  ],
+  "distance_to_level_from_primary_origin": 0.0006938662884713349,
+  "distance_atr_frozen_at_approach_start": 1.7107157013593113,
+  "distance_atr_using_pre_breakout_snapshot": 1.8041245150060765,
+  "remaining_distance_at_first_breakout_hour_open": 0.0001848662884713359,
+  "remaining_distance_atr_at_first_breakout_hour_open": 0.48067157688855033,
+  "remaining_gap_is_not_an_approach_origin_reset": true,
+  "three_green_preceding_hours_utc": [
+    "03:00-04:00",
+    "04:00-05:00",
+    "05:00-06:00"
+  ],
+  "author_uninterrupted_two_bar_window_utc": [
+    "05:00",
+    "07:00"
+  ],
+  "no_pullback_source": "explicit_author_statement",
+  "intrabar_no_pullback_verified_from_OHLC": false,
+  "author_entry_window_utc": [
+    "2025-07-05T15:00:00Z",
+    "2025-07-05T16:00:00Z"
+  ],
+  "author_entry_label_unchanged": true,
+  "observed_bars": [
+    {
+      "open_time_ms": 1751684400000,
+      "close_time_ms": 1751688000000,
+      "open_time": "2025-07-05T03:00:00Z",
+      "close_time": "2025-07-05T04:00:00Z",
+      "open": 0.017468,
+      "high": 0.017886,
+      "low": 0.017444,
+      "close": 0.017596,
+      "volume": 319497300.0,
+      "turnover": 5650968.9119
+    },
+    {
+      "open_time_ms": 1751688000000,
+      "close_time_ms": 1751691600000,
+      "open_time": "2025-07-05T04:00:00Z",
+      "close_time": "2025-07-05T05:00:00Z",
+      "open": 0.017596,
+      "high": 0.01772,
+      "low": 0.017339,
+      "close": 0.017613,
+      "volume": 253710100.0,
+      "turnover": 4451393.6387
+    },
+    {
+      "open_time_ms": 1751691600000,
+      "close_time_ms": 1751695200000,
+      "open_time": "2025-07-05T05:00:00Z",
+      "close_time": "2025-07-05T06:00:00Z",
+      "open": 0.017613,
+      "high": 0.018149,
+      "low": 0.017602,
+      "close": 0.018122,
+      "volume": 302229300.0,
+      "turnover": 5412712.811
+    },
+    {
+      "open_time_ms": 1751695200000,
+      "close_time_ms": 1751698800000,
+      "open_time": "2025-07-05T06:00:00Z",
+      "close_time": "2025-07-05T07:00:00Z",
+      "open": 0.018122,
+      "high": 0.018822,
+      "low": 0.018072,
+      "close": 0.018557,
+      "volume": 801208800.0,
+      "turnover": 14828399.6569
+    },
+    {
+      "open_time_ms": 1751698800000,
+      "close_time_ms": 1751702400000,
+      "open_time": "2025-07-05T07:00:00Z",
+      "close_time": "2025-07-05T08:00:00Z",
+      "open": 0.018557,
+      "high": 0.018653,
+      "low": 0.018312,
+      "close": 0.018445,
+      "volume": 284018400.0,
+      "turnover": 5240085.778
+    },
+    {
+      "open_time_ms": 1751702400000,
+      "close_time_ms": 1751706000000,
+      "open_time": "2025-07-05T08:00:00Z",
+      "close_time": "2025-07-05T09:00:00Z",
+      "open": 0.018445,
+      "high": 0.018527,
+      "low": 0.018061,
+      "close": 0.018217,
+      "volume": 341898600.0,
+      "turnover": 6257404.0066
+    },
+    {
+      "open_time_ms": 1751706000000,
+      "close_time_ms": 1751709600000,
+      "open_time": "2025-07-05T09:00:00Z",
+      "close_time": "2025-07-05T10:00:00Z",
+      "open": 0.018217,
+      "high": 0.018243,
+      "low": 0.017895,
+      "close": 0.018205,
+      "volume": 319405300.0,
+      "turnover": 5774405.0325
+    },
+    {
+      "open_time_ms": 1751709600000,
+      "close_time_ms": 1751713200000,
+      "open_time": "2025-07-05T10:00:00Z",
+      "close_time": "2025-07-05T11:00:00Z",
+      "open": 0.018205,
+      "high": 0.018326,
+      "low": 0.017913,
+      "close": 0.017948,
+      "volume": 249729100.0,
+      "turnover": 4527618.4528
+    },
+    {
+      "open_time_ms": 1751713200000,
+      "close_time_ms": 1751716800000,
+      "open_time": "2025-07-05T11:00:00Z",
+      "close_time": "2025-07-05T12:00:00Z",
+      "open": 0.017948,
+      "high": 0.018281,
+      "low": 0.017942,
+      "close": 0.018005,
+      "volume": 184564000.0,
+      "turnover": 3347614.5573
+    },
+    {
+      "open_time_ms": 1751716800000,
+      "close_time_ms": 1751720400000,
+      "open_time": "2025-07-05T12:00:00Z",
+      "close_time": "2025-07-05T13:00:00Z",
+      "open": 0.018005,
+      "high": 0.018073,
+      "low": 0.017752,
+      "close": 0.017931,
+      "volume": 247945600.0,
+      "turnover": 4440414.4932
+    },
+    {
+      "open_time_ms": 1751720400000,
+      "close_time_ms": 1751724000000,
+      "open_time": "2025-07-05T13:00:00Z",
+      "close_time": "2025-07-05T14:00:00Z",
+      "open": 0.017931,
+      "high": 0.018208,
+      "low": 0.017855,
+      "close": 0.018006,
+      "volume": 288389000.0,
+      "turnover": 5206776.1748
+    },
+    {
+      "open_time_ms": 1751724000000,
+      "close_time_ms": 1751727600000,
+      "open_time": "2025-07-05T14:00:00Z",
+      "close_time": "2025-07-05T15:00:00Z",
+      "open": 0.018006,
+      "high": 0.01828,
+      "low": 0.018005,
+      "close": 0.01819,
+      "volume": 208604100.0,
+      "turnover": 3789098.3919
+    },
+    {
+      "open_time_ms": 1751727600000,
+      "close_time_ms": 1751731200000,
+      "open_time": "2025-07-05T15:00:00Z",
+      "close_time": "2025-07-05T16:00:00Z",
+      "open": 0.01819,
+      "high": 0.018478,
+      "low": 0.01803,
+      "close": 0.018223,
+      "volume": 566161200.0,
+      "turnover": 10346442.4766
+    },
+    {
+      "open_time_ms": 1751731200000,
+      "close_time_ms": 1751734800000,
+      "open_time": "2025-07-05T16:00:00Z",
+      "close_time": "2025-07-05T17:00:00Z",
+      "open": 0.018223,
+      "high": 0.018734,
+      "low": 0.018085,
+      "close": 0.018709,
+      "volume": 508987800.0,
+      "turnover": 9367939.6207
+    }
+  ],
+  "observed_bars_usage": "Historical evidence only; first-breakout-hour and later OHLC are not predictive features at earlier times",
+  "alternative_origin_start_03_utc": {
+    "price": 0.017468,
+    "atr": 0.0004021999999999998,
+    "distance_atr": 2.0856944019675154,
+    "status": "Sensitivity only; not assigned as author-selected origin"
+  },
+  "automatic_accumulation_origin_detected": false,
+  "automatic_pullback_threshold_defined": false,
+  "first_repeat_attempt_is_not_universally_assigned_from_any_wick_cross": true,
+  "training_labels_changed": false,
+  "weights_changed": false,
+  "previous_false_positive_states_unchanged": true,
+  "previous_false_positive_state_count_for_323": 4,
+  "source_sha256": {
+    "training/author_breakout_approach_20260929.json": "7dd93c07aca3a71b6c3720ed110ac23407e15612f84795f1ae28bd6ef934d9a1",
+    "training/h1_atr_method.json": "16d625f1e2a8097ff62c9d559a8fc778ed1881e3ff1d0a4ca1618066a5fcb1e8",
+    "training/market_v2/cases.jsonl": "e644575264c74bb021461b50119ef0304f88847de6dac0870968de3da40e8ccf",
+    "training/market_context_direction/pipeline_evaluation.json": "a3ef8fdd456e47568ecb6042829040ea12be9cacccc606e7e0b2f809d767431c",
+    "training/bybit_history/bybit_linear_1000BONKUSDT_1h_1750032000000_1752796800000.json": "93a1546f99f0de51af210953df5fcc927028c751003cc6149e907ae80b37de3c",
+    "images/1D_323.jpg": "a1c1669b71719a6074f3efa63d78255a7a955b3c6c249ae95884dc50213e3dad",
+    "images/1H_323.jpg": "02307da1ff6b474565de7489e802dd985fa0085c847e230317a1d2252d9ebba9",
+    "training/market_hourly_alignment.jsonl": "86d3d2bf99c36cc0e15d9ad1f7c53e9f9487381ab471b8afdf6e3c0131818c76",
+    "training/author_whole_approach_20260929.json": "48686a5ed1d5e454c434da2eca46e0b6a1c5e9ba8b71c752d4f6ab847a34b6d2"
+  },
+  "frozen_model_sha256": {
+    "market_v2/scenario_model.json": "6583a1b0fc4c4f25b47b61ea8c38782b6b46cc7981d8cca64b09b76b1939d48b",
+    "market_context_direction/model.json": "4fff5d92332f5e9d44bdf14b385b3f23ad789b2dd1a78f81eabf177a421299b6"
+  },
+  "code_sha256": {
+    "scenario_hourly_atr.py": "bcdfa41daca51c4eb968ef13f2fe6a1f1b4a36ccb5bb1916228c1b31079fdb47",
+    "scenario_breakout_approach.py": "68cea5018c281719e234e91c3826d27d02a79bb522edd89fdf02ce197320ee3d"
+  },
+  "rule_result_with_primary_diagnostic_origin": {
+    "direction": "long",
+    "first_breakout_permitted": false,
+    "reason": "at_least_one_H1_ATR_without_pullback",
+    "action": "skip_first_breakout_wait_for_repeated_setup",
+    "initial_distance_to_level_atr": 1.7107157013593113,
+    "uninterrupted_approach_confirmed": true,
+    "is_unconditional_entry_signal": false,
+    "specific_later_breakout_number": null
+  },
+  "rule_result_with_pre_breakout_ATR_same_origin": {
+    "direction": "long",
+    "first_breakout_permitted": false,
+    "reason": "at_least_one_H1_ATR_without_pullback",
+    "action": "skip_first_breakout_wait_for_repeated_setup",
+    "initial_distance_to_level_atr": 1.8041245150060765,
+    "uninterrupted_approach_confirmed": true,
+    "is_unconditional_entry_signal": false,
+    "specific_later_breakout_number": null
+  },
+  "rule_execution_scope": "Standalone diagnostic only; not applied to frozen model scores or historical waiting-state metrics",
+  "author_box_upper_edge_sensitivity": [
+    {
+      "name": "small_author_box_upper_edge",
+      "image_y_approx": 381,
+      "price_approx": 0.01777703760429198,
+      "distance_to_level_in_pre_breakout_ATR": 1.3776096832536575,
+      "causal_accumulation_origin_verified": false
+    },
+    {
+      "name": "large_author_box_upper_edge",
+      "image_y_approx": 400,
+      "price_approx": 0.01752124264673634,
+      "distance_to_level_in_pre_breakout_ATR": 2.0427031766380566,
+      "causal_accumulation_origin_verified": false
+    }
+  ],
+  "box_interpretation_limit": "Retrospective drawn boundaries; horizontal span may include later bars. Not automatically supplied as causal model features.",
+  "wick_cross_count_limit": "The10:00-11:00 bar has high0.018326 slightly above the reviewed level. Counting every wick touch gives a different ordinal from counting qualified breakout setups. Keep the marked15:00-16:00 entry; do not force entry on every second touch.",
+  "rule_tests": {
+    "run": 13,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK",
+    "command": ".venv312/Scripts/python.exe -m unittest tests.test_scenario_breakout_approach -v"
+  },
+  "whole_approach_prefix_result": {
+    "direction": "long",
+    "first_breakout_permitted": false,
+    "reason": "at_least_one_H1_ATR_without_pullback",
+    "action": "skip_first_breakout_wait_for_repeated_setup",
+    "initial_distance_to_level_atr": 1.7107157013593113,
+    "uninterrupted_approach_confirmed": true,
+    "is_unconditional_entry_signal": false,
+    "specific_later_breakout_number": null,
+    "approach_origin_price": 0.017613,
+    "level": 0.018306866288471335,
+    "hourly_atr_at_start": 0.000405599999999999,
+    "atr_basis": "frozen_at_approach_start",
+    "latest_observed_price": 0.018122,
+    "observations": 2,
+    "cumulative_net_progress_atr": 1.2549309664694286,
+    "remaining_distance_to_level_atr": 0.4557847348898825,
+    "level_reached_in_observed_prefix": false,
+    "first_observation_retained_as_origin": true,
+    "candle_ranges_summed": false,
+    "remaining_gap_used_as_initial_distance": false
+  },
+  "whole_approach_prefix_scope": "Historical author-confirmed uninterrupted approach; prices are origin05:00 and the close of05:00-06:00. Current residual is not substituted for the origin."
+}

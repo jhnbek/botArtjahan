@@ -1,0 +1,34 @@
+{
+  "source_pairs_read": 192,
+  "usable_visual_anchor_pairs": 186,
+  "pending_ids": [
+    192,
+    247,
+    256,
+    307,
+    327,
+    345
+  ],
+  "decision_timing_counts": {
+    "after_bar_close": 53,
+    "before_bar_open": 135,
+    "ambiguous": 4
+  },
+  "verified_exclusive_wait_intervals": [
+    272,
+    158,
+    159,
+    161,
+    195,
+    215,
+    219,
+    323,
+    329,
+    332,
+    357
+  ],
+  "source_hashes_verified": true,
+  "base_review_duplicate_ids": false,
+  "all_current_reviews_count": 408,
+  "scope": "manual visual anchors only, not numeric training admission; skip54 and85 per latest user scope"
+}

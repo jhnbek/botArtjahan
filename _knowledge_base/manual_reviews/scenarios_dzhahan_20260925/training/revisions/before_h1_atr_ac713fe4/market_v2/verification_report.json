@@ -1,0 +1,20 @@
+{
+  "verified_at_utc": "2026-09-28T18:38:07.962572+00:00",
+  "original_images_verified": 817,
+  "original_image_hash_mismatches": 0,
+  "prepared_scenarios": 387,
+  "prepared_states": 502,
+  "current_provenance_verified": true,
+  "actual_fitted_normalization_matches_fit_only": true,
+  "user_corrections_verified": true,
+  "full_suite": {
+    "run": 460,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK"
+  },
+  "model_sha256": {
+    "direction_model.json": "c5622e1b07d662ba1d27555707f7a7285635de7ae183a73873ad1e62a04045d8",
+    "scenario_model.json": "e73fe947017ddd1461d8b0b58f0d1dbd135aca13ff72151516e11fc583365192"
+  }
+}

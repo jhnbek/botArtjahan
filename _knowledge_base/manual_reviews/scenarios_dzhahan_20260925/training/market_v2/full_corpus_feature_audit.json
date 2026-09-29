@@ -1,0 +1,15 @@
+{
+  "verified_at_utc": "2026-09-29T07:37:45.680151+00:00",
+  "active_scenarios": 404,
+  "source_images_verified": 817,
+  "feature_vectors_recomputed_cases": 404,
+  "entry_states_recomputed": 519,
+  "all_features_match": true,
+  "all_entry_states_after_required_D1_close": true,
+  "all_predictive_H1_bars_closed_at_cutoff": true,
+  "source_hashes": {
+    "preparation_report.json": "77e763c67a3b776d456ca0c65ac741ecc22122e91b5b5c95069449cf69ae7731",
+    "cases.jsonl": "e644575264c74bb021461b50119ef0304f88847de6dac0870968de3da40e8ccf"
+  },
+  "distinct_cached_histories_read": 432
+}

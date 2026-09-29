@@ -1,0 +1,13 @@
+{
+  "rule": "A closed H1 entirely beyond the level, including both wicks; long low>level, short high<level; equality is still contact. Entry at following H1 open, after required D1 close.",
+  "primary_anchor": "lecture00:43:42.620",
+  "user_confirmed_case_311": "sixth H1 after D1 confirms; enter at seventh H1 open",
+  "source_snapshots_sha256": {
+    "training/chop_method_sources/catalog_MM_010_009.md": "83a3d1a0c61eba17730954e1dcc94117db1db7ffebae4bc1fa1e7a762c1149e7",
+    "training/chop_method_sources/lecture.md": "896702796674be8932c42041c754854f0fcc083229395634f80305343892cc5c"
+  },
+  "original_sources_sha256": {
+    "knowledge/catalog/lectures/44e0b8805b580f9c7690c0397623355cddbcf4bab9a964e030f03bc4846592a8/source_unit-0002.md": "896702796674be8932c42041c754854f0fcc083229395634f80305343892cc5c",
+    "knowledge/catalog/items/cf/cf8f5e114e74d2ed2f30908330b7dec255dcc8eae7bfacaf82a0c496f5df7113.md": "83a3d1a0c61eba17730954e1dcc94117db1db7ffebae4bc1fa1e7a762c1149e7"
+  }
+}

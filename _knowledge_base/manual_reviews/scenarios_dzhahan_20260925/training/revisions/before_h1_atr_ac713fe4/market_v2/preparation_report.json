@@ -1,0 +1,69 @@
+{
+  "target_pairs": 405,
+  "user_skipped": [
+    54,
+    59,
+    85,
+    109
+  ],
+  "eligible_pairs": 387,
+  "pending_pairs": 18,
+  "all_target_pairs_ready": false,
+  "reason_counts": {
+    "reviewed_entry_with_causal_market_OHLC": 363,
+    "entry_semantics_unresolved_in_review": 18,
+    "explicit_author_corrected_D1_close_entry": 24
+  },
+  "resolutions": {
+    "closed_hourly_bar": 167,
+    "pre_hour_proxy_not_exact_intrabar_entry": 220
+  },
+  "split_counts": {
+    "train": 257,
+    "test": 69,
+    "validation": 61
+  },
+  "source_sha256": {
+    "training/user_scope.json": "ac713fe4a0ec9ed96502fac003e2435d2e3714222075ebe5e40d83a5eff844bc",
+    "visual_analysis/scenario_analysis.jsonl": "8ec8353bded6a41339b9092278cc21a4a2f3431a9faa567b4d5d97fa091a22d3",
+    "training/market_daily_alignment.jsonl": "81538e14acae7f1aac95f62609d5bf41fcfc49647d17abf66f9daa303e442c66",
+    "training/market_hourly_alignment.jsonl": "86d3d2bf99c36cc0e15d9ad1f7c53e9f9487381ab471b8afdf6e3c0131818c76",
+    "training/market_daily_anchor_reviews.jsonl": "d68819c9a714c90076eaf4b6525aa9b7f1ba7f9258558a105abefb56e490004f",
+    "training/image_extraction_audit.json": "4b0f7c6879cd5e3f9b0ad1aa1fe49960b439cc0bfcff3d3e388d33d113a5a5e7",
+    "training/direction_training_ledger.jsonl": "982fff401a7993e81f83714ff8d03ca7e0ef1b1ac45550c97f569a26a6715406",
+    "training/market_daily_role_reviews_003_031.jsonl": "f80cd713df13b57741bb477596d61a6a52353ed4092a9820ea8bf988b5712191",
+    "training/market_daily_role_reviews_040_155.jsonl": "fd017b82726523a717f5c3db823e5899e21e108cf13df31a92e47c0e027fae41",
+    "training/market_daily_role_reviews_061_201.jsonl": "764f9d129643f6be735ee6e743250d9f1dce9f73536f17677eaadb3e09fd66f5",
+    "training/author_tvx_corrections_20260928.json": "7830c9804bca12397f4f867cbc56975f105b8e3f8f98b5212547fdfa40cb757c",
+    "training/market_direction_reviews.jsonl": "dd30c9403b116dd6a0cc433d4e1754c6b73c6e9f2246291165d1e082b34abed9",
+    "training/market_direction_pending_reviews.jsonl": "86e6f3a7b95d14cb9421a9d2b76dfef27eb59a66c825dd1c81132453f50cdee5",
+    "training/market_timing_questions.jsonl": "8acf4dffef09b1162a312a9c5e13e38302756463e69600fa5f0165073645761d"
+  },
+  "review_sources_sha256": {
+    "training/anchor_reviews_001_153.jsonl": "99bbc00b4e89daed1e216e7e03f7d9a7adfae6d3d251e106135886d920d24681",
+    "training/anchor_reviews_154_305.jsonl": "217a816831945063239fbabbd3fc82a44101497ff91d02e84eba772962ca6905",
+    "training/anchor_reviews_306_409.jsonl": "2ec553e61626ea970112cfcb18b391863577d864e17d2ff7b2823b782b5437e5",
+    "training/anchor_reviews_expansion_20260927.jsonl": "0d98561f044ab037743c59d84a98d16b14a472afe8167e85e77a8e528d302394",
+    "training/anchor_reviews_market_001_153.jsonl": "defc17af5a0b43a7b02b5004cde6dc9bea7a435649b5df838866b82935bedcd6",
+    "training/anchor_reviews_market_154_409.jsonl": "48e2d21d533a31ae8affdda048221ec79237f04f9a9ed717c1330956ea5c68f6",
+    "training/anchor_reviews_resume_20260927.jsonl": "d20e93e66b08ef53d4c1efb91da75a5b1d09d9446ccdf09a8b33c12ec708b9dc",
+    "training/anchor_alignment_supplement_20260927.jsonl": "5d3229345e5e08709372fd7878ad1cdb21e8b510099d666f5245f1de68e51586",
+    "training/anchor_alignment_supplement_delayed_20260927.jsonl": "8cb6a6135b8bf70ed9647cfc6b475fe4caa4bab39ac344fe45e61a8376891fbd",
+    "training/anchor_alignment_supplement_market_recovery.jsonl": "cf87ed5e20cde397265a61b1d213a197b1b0dc81088a56984fd9db9c08d7e9ba",
+    "training/anchor_alignment_supplement_market_root_conditions.jsonl": "114f1a37e02e22c0778dfc2b183efa29b5f4fb4465cf0a27f1efe8750aedbf9c",
+    "training/anchor_alignment_supplement_market_snap_levels.jsonl": "0ad4161254c4c1eb9a44f186e6de6e56693859bb947d52138acdab331ced32a1",
+    "training/anchor_alignment_supplement_zz_market_conditions.jsonl": "f79a14961a10c28562760207a1e4b22c742c9386f2ac27eade3c87da56ce2ab7"
+  },
+  "preparation_sha256": "d04c2217d8b64dbc7d404991474835dbe2c4905e4033b6360c9d62c749a5f6bf",
+  "feature_code_sha256": {
+    "scenario_prerequisites.py": "86cce76b3a6cf93ec1fb8de497d1d2b22e2b9b90039ba340ea0f7a8d4e4f9ae5",
+    "scenario_image_features.py": "0de84d215f09d9a518d7ffe4a6a6e0f4a702f576b520a7b9e78af088beb43120",
+    "scenario_model.py": "9b3c553e8ee0c88d718fc4921227b1af6a883d15974a795fb0254536c2840877",
+    "scenario_training_rules.py": "ef5641296ed4bb0365a72acc4230505db45817997e8bc7db3cb95b8a967a1ee1",
+    "scenario_author_entry.py": "0df87966b90f2ff2247e1c4eff6020c2d886caf258adaff70f7ed983823316b1"
+  },
+  "cases_sha256": "4a84bb749ac4f506350fad988a3939d57de18df0a779615bb8453aeebafb8049",
+  "automatic_order_execution_allowed": false,
+  "historical_test_was_previously_observed": true,
+  "profitability_evaluated": false
+}

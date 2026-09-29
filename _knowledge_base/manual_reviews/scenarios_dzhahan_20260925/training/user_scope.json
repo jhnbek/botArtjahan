@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "source_scenarios": 409,
+  "target_scenarios": 404,
+  "excluded_scenario_ids": [
+    23,
+    54,
+    59,
+    85,
+    109
+  ],
+  "exclusions": {
+    "54": "User explicitly excluded this scenario on 2026-09-28 after confirming the early-entry annotation was an error.",
+    "85": "User explicitly allowed skipping the scenario because the H1 image is missing.",
+    "59": "Explicit author instruction in author_tvx_corrections_20260928.json: exclude from analysis.",
+    "109": "Explicit author instruction in author_tvx_corrections_20260928.json: exclude from analysis.",
+    "23": "Explicit author instruction: remove scenario23 from analysis."
+  },
+  "daily_close_required": true,
+  "actual_exchange_daily_close_overrides_caption": true,
+  "early_entry_policy": "Preserve original early marks. Wait for the user to provide revised TVX; do not move entry automatically. Use the actual exchange D1 close.",
+  "direction_overrides": {
+    "103": "long"
+  },
+  "direction_override_source": "User confirmed on 2026-09-28 that scenario103 is long and the D1 short caption is a typo.",
+  "original_images_must_be_preserved": true,
+  "entry_time_requires_user_confirmation_ids": [],
+  "entry_overrides": {
+    "251": {
+      "timing": "immediately_after_signal_daily_close",
+      "ignore_mismatched_H1_image": true,
+      "source": "User explicitly instructed on 2026-09-28: use entry immediately after daily close for251."
+    },
+    "27": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "31": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "41": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "51": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "53": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "56": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "66": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "68": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "69": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "72": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "73": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "76": {
+      "timing": "immediately_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "46": {
+      "timing": "within_first_hour_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "47": {
+      "timing": "within_first_hour_after_signal_daily_close",
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "40": {
+      "timing": "first_approach_within_percent_after_daily_close",
+      "max_distance_percent": 0.87,
+      "source": "training/author_tvx_corrections_20260928.json",
+      "rounding_tolerance_percentage_points": 0.005
+    },
+    "55": {
+      "timing": "first_approach_within_percent_after_daily_close",
+      "max_distance_percent": 0.5,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "52": {
+      "timing": "author_selected_closest_of_first_hours",
+      "hours_after_daily_close": 3,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "74": {
+      "timing": "hour_open_after_closed_breakout",
+      "hour_utc": 4,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "48": {
+      "timing": "move_toward_level_from_daily_close",
+      "move_min_percent": 1.0,
+      "move_max_percent": 1.3,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "49": {
+      "timing": "move_toward_level_from_daily_close",
+      "move_min_percent": 0.83,
+      "move_max_percent": 0.83,
+      "rounding_tolerance_percentage_points": 0.005,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "62": {
+      "timing": "move_toward_level_from_daily_close",
+      "move_min_percent": 0.6,
+      "move_max_percent": 0.6,
+      "rounding_tolerance_percentage_points": 0.005,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "67": {
+      "timing": "move_toward_level_from_daily_close",
+      "move_min_percent": 0.63,
+      "move_max_percent": 0.63,
+      "rounding_tolerance_percentage_points": 0.005,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "43": {
+      "timing": "approach_or_closest_visible_after_daily_close",
+      "max_distance_percent": 1.0,
+      "source": "training/author_tvx_corrections_20260928.json"
+    },
+    "5": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "142": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "177": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "185": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "200": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "264": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "307": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "312": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "source": "training/author_h1_atr_corrections_20260928.json",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "113": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "caption_OR_branch": true,
+      "source": "training/atr_condition_reviews.jsonl",
+      "atr_method_source": "training/h1_atr_method.json",
+      "entry_hour_individually_author_verified": false
+    },
+    "36": {
+      "timing": "author_selected_closest_of_first_hours",
+      "hours_after_daily_close": 2,
+      "source": "training/author_final_entry_corrections_20260929.json"
+    },
+    "44": {
+      "timing": "first_level_breakout_after_daily_close",
+      "alternative_H1_ATR_allowed": true,
+      "source": "training/author_final_entry_corrections_20260929.json"
+    },
+    "58": {
+      "timing": "first_level_breakout_after_daily_close",
+      "alternative_H1_ATR_allowed": true,
+      "source": "training/author_final_entry_corrections_20260929.json"
+    },
+    "163": {
+      "timing": "first_approach_within_percent_after_daily_close",
+      "max_distance_percent": 0.2,
+      "source": "training/author_final_entry_corrections_20260929.json"
+    },
+    "247": {
+      "timing": "one_hourly_ATR_from_level_after_daily_close",
+      "atr_method_source": "training/h1_atr_method.json",
+      "source": "training/author_final_entry_corrections_20260929.json"
+    },
+    "256": {
+      "timing": "first_full_bar_beyond_level_after_daily_close",
+      "caption_OR_branch": true,
+      "source": "training/author_final_entry_corrections_20260929.json"
+    },
+    "311": {
+      "timing": "first_full_bar_beyond_level_after_daily_close",
+      "confirmation_bar_number": 6,
+      "source": "training/author_final_entry_corrections_20260929.json"
+    },
+    "176": {
+      "timing": "after_author_selected_hourly_close",
+      "hour_open_utc": 1,
+      "source": "training/author_final_entry_corrections_20260929.json",
+      "author_confirmed_entry_time_utc": "2025-10-24T02:00:00Z"
+    }
+  },
+  "entry_rule_market_confirmation_pending_ids": [],
+  "author_entry_corrections_source": "training/author_tvx_corrections_20260928.json",
+  "author_atr_entry_corrections_source": "training/author_h1_atr_corrections_20260928.json",
+  "atr_condition_review_source": "training/atr_condition_reviews.jsonl",
+  "author_final_entry_corrections_source": "training/author_final_entry_corrections_20260929.json"
+}

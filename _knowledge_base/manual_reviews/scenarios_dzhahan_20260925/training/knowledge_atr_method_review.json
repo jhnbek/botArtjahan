@@ -1,0 +1,398 @@
+{
+  "schema_version": "local_atr_method_review_v1",
+  "reviewed_at_utc": "2026-09-27T21:56:46.238333+00:00",
+  "scope": "Local knowledge, source transcripts, source screenshots, and existing project conventions only; no external methodology imported.",
+  "decision": {
+    "h1_exact_method_verified": false,
+    "new_executable_atr_rule_created": false,
+    "atr_only_entries_auto_resolved": 0,
+    "reason": "Manual method and visible script are different; no inspected source binds the author H1 entry condition to one exact calculation and update rule."
+  },
+  "authority_note": "Original author scenarios remain accepted as correct. Missing algorithm details are interpretation limits. Catalog imported_unverified status is unchanged; cited excerpts/frames were reviewed for this bounded question.",
+  "sources": [
+    {
+      "key": "manual_range_average",
+      "candidate_id": "MM-008-002",
+      "path": "knowledge/catalog/items/23/23aed1910104ffd054bc0fb5c10bd9a7961a6c7e8d5a906e00b1a79f7d9fa53e.md",
+      "sha256": "4331c62367a3aa98ea828cdb62bfb3442bbf2f745dddf22870e3ac987f43cd70",
+      "bytes": 3051,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "manual_range_average_duplicate",
+      "candidate_id": "MM-008-002",
+      "path": "knowledge/catalog/items/16/1648961a01bf5c2899762064ebaf78bc3af814b62cb50601fcfe421e33a2f99f.md",
+      "sha256": "1e82504925d7f953aecbd16e3fad946cb92639cf0a9de9d6e55bd56a153f7120",
+      "bytes": 3227,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "manual_abnormal_exclusion",
+      "candidate_id": "MM-008-004",
+      "path": "knowledge/catalog/items/c9/c97177c73b84413290de47c8f78aa287dba6ccbcedc3990684489e7d81f12f5d.md",
+      "sha256": "049d865fbf16a481ef08f17fe68257140872c88e0205a533c33bccb5d5c854c6",
+      "bytes": 5236,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "script_settings_and_daily_origin",
+      "candidate_id": "MM-040-024",
+      "path": "knowledge/catalog/items/55/558a99c32a44e7ae8c4b1debdd7fcb8ae1bb841e1609480b9255ef86e0adac98.md",
+      "sha256": "bd130c9625be2c9a994bf8141c370549319478c9bbfa5b8dec81c13977eed48c",
+      "bytes": 8071,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "tv_atr14_distinct",
+      "candidate_id": "MM-017-026",
+      "path": "knowledge/catalog/items/47/475b196acddde47c88a676a756084bc9354509033ed59ef1f6823b39cd0143a9.md",
+      "sha256": "3fe12f014f200b203c42a8e8545751b47cc110814515a4345e73b38ce5e28fbf",
+      "bytes": 2711,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "script_settings_stop_reference",
+      "candidate_id": "MM-059-003",
+      "path": "knowledge/catalog/items/75/75fe4aa7d42a6b46bcd458d1db4e882621748ce95502e335ffcfde947ed08b8d.md",
+      "sha256": "539e0b6c029a4046a4bb891a4df6d5883a19d0775c7487527de7848144bd38ac",
+      "bytes": 3631,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "lp_stop_reference",
+      "candidate_id": "MM-049-010",
+      "path": "knowledge/catalog/items/da/da3ff5944a62fe8b444c90914620bd8b494cfbb389a067b034c28a56f384c7ca.md",
+      "sha256": "5605d039e79077281381ba4574c972c6e8f06c1f20060302e2073f70c606954b",
+      "bytes": 13407,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "stop_position_sizing",
+      "candidate_id": "MM-017-066",
+      "path": "knowledge/catalog/items/1f/1f5dab9eb37bf772adee712f5685afe4b49895fbf6ff8a9faf60d843bd35c6ff.md",
+      "sha256": "11cc599110321f5b9d118e30f08d46dea4c2e0cb679bca1c4b1791acacfdfabb",
+      "bytes": 2100,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "lp_wait_for_return",
+      "candidate_id": "MM-038-010",
+      "path": "knowledge/catalog/items/4d/4d062d983af4b6a1ec5b9efc591c9d200f061e18ae52cb02c6ca0f6435a88ac5.md",
+      "sha256": "1a6048a884b25917e24bf37cb633a20b73860c41c1f3838cf9cb94eab58112ad",
+      "bytes": 10741,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "three_r_example",
+      "candidate_id": "MM-017-059",
+      "path": "knowledge/catalog/items/20/20dd84d9d616d4e3ef8bb32233b99dae524e12defb223fd74ed90975004dab41.md",
+      "sha256": "d6941bc5a5730660af68925544cf39a6b904584e59412f6f5f27e6c9c0a25c44",
+      "bytes": 4690,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "four_r_room",
+      "candidate_id": "MM-008-026",
+      "path": "knowledge/catalog/items/22/22e220cec1a111eef8c30e4f28d7209abfba796094ebf63b67d8108758f2a986.md",
+      "sha256": "22b7f8aee0bd883c321bbf872397842350cad7bc50fa4e19562ad56a8f308bda",
+      "bytes": 5483,
+      "review": "catalog_text_read",
+      "catalog_status_preserved": "imported_unverified"
+    },
+    {
+      "key": "manual_atr_transcript",
+      "path": "knowledge/catalog/lectures/1627fea7259a92d6d338819aa97614453c9225eaab35c1762e19db2d34472b69/source_unit-0001.md",
+      "sha256": "8aa04ed15fdd0f27f762cd8b3c6a3b7b5a96dd6e0a2e70ada05137c82f5caa4e",
+      "bytes": 69640,
+      "review": "relevant_text_read"
+    },
+    {
+      "key": "script_settings_transcript",
+      "path": "knowledge/catalog/lectures/9377d3ab8d3e5f2af6180dedba667dfacc6f6d7cc8077915c95c579c69ebe277/source_unit-0003.md",
+      "sha256": "4e669e3cf5d4d92011c3500554a83c5edd8f9284ec293c2ea74886cd409e2b9d",
+      "bytes": 77502,
+      "review": "relevant_text_read"
+    },
+    {
+      "key": "script_install_transcript",
+      "path": "knowledge/catalog/lectures/dc7d2f69e035f572b0d6c7434ccbc0f96c26ae5187910bea68fd62cb4f4c906f/source_unit-0001.md",
+      "sha256": "498218b79838e987a4ab06447c217081ab13d161037a6931dc22db98b4e7daf7",
+      "bytes": 9573,
+      "review": "relevant_text_read"
+    },
+    {
+      "key": "lp_stop_transcript",
+      "path": "knowledge/catalog/lectures/e80eb2a2e5fa7fa447b17846411a740b126b42051953c426a77f8ad9452ebb4f/source_unit-0002.md",
+      "sha256": "02a00339dbcd5cffdb7483bfdbe45e9dfbb585ca244187771a415303890aaf52",
+      "bytes": 75245,
+      "review": "relevant_text_read"
+    },
+    {
+      "key": "stop_sizing_transcript",
+      "path": "knowledge/catalog/lectures/c2ab8e97291758368cab69caf2cb8ebd0f933a39383a30373078b8a28855d591/source_unit-0004.md",
+      "sha256": "e1411733033208eeac8af11f34aef45e20cc5a711ec3e35287cb5531bdc3c9ed",
+      "bytes": 39113,
+      "review": "relevant_text_read"
+    },
+    {
+      "key": "script_source_header_frame",
+      "path": "knowledge/blobs/93/9379045234b7eff048b3aa165f2bc1bb0078ba229f8e20015fda5a2eb9c74aa4",
+      "sha256": "9379045234b7eff048b3aa165f2bc1bb0078ba229f8e20015fda5a2eb9c74aa4",
+      "bytes": 45239,
+      "review": "image_visually_inspected"
+    },
+    {
+      "key": "script_source_calculation_frame",
+      "path": "knowledge/blobs/a7/a716a7e1532b2e8a46cdcc13a62a76c4d9367c052c332c826682f9948b8c8261",
+      "sha256": "a716a7e1532b2e8a46cdcc13a62a76c4d9367c052c332c826682f9948b8c8261",
+      "bytes": 78579,
+      "review": "image_visually_inspected"
+    },
+    {
+      "key": "script_settings_frame",
+      "path": "knowledge/blobs/13/13418f0059b646a46118f6c73b311a974ed7ab063492c65b54292838d749bf25",
+      "sha256": "13418f0059b646a46118f6c73b311a974ed7ab063492c65b54292838d749bf25",
+      "bytes": 104226,
+      "review": "image_visually_inspected"
+    },
+    {
+      "key": "user_paranormal_methodology",
+      "path": "_knowledge_base/manual_reviews/paranormal_body_1_6_20260925/README.md",
+      "sha256": "655158166ff33e4fd2c0a0c5bb2b2cbf0261558ea2cce309ec157754a71e8dbc",
+      "bytes": 2256,
+      "review": "relevant_text_read"
+    },
+    {
+      "key": "existing_feature_code",
+      "path": "knowledge_bot/scenario_image_features.py",
+      "sha256": "0de84d215f09d9a518d7ffe4a6a6e0f4a702f576b520a7b9e78af088beb43120",
+      "bytes": 17628,
+      "review": "relevant_text_read"
+    },
+    {
+      "key": "existing_training_contract_code",
+      "path": "knowledge_bot/scenario_training_rules.py",
+      "sha256": "ef5641296ed4bb0365a72acc4230505db45817997e8bc7db3cb95b8a967a1ee1",
+      "bytes": 18762,
+      "review": "relevant_text_read"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E01",
+      "sources": [
+        "manual_range_average",
+        "manual_atr_transcript"
+      ],
+      "anchors": [
+        "00:03:59.080",
+        "00:04:29.410",
+        "00:04:57.900"
+      ],
+      "finding": "Manual trading ATR averages high-low ranges of four or five comparable D1 bars, not candle bodies."
+    },
+    {
+      "id": "E02",
+      "sources": [
+        "manual_abnormal_exclusion",
+        "manual_atr_transcript"
+      ],
+      "anchors": [
+        "00:17:26.030",
+        "00:17:50.020",
+        "00:17:59.360",
+        "00:19:13.710"
+      ],
+      "finding": "Demonstration skips small/large bars and goes farther backward to collect five acceptable bars. It is not a fixed last-five filter with fewer retained observations."
+    },
+    {
+      "id": "E03",
+      "sources": [
+        "manual_atr_transcript",
+        "script_settings_transcript",
+        "script_settings_frame"
+      ],
+      "anchors": [
+        "00:18:44.750",
+        "02:12:11.910"
+      ],
+      "finding": "Manual lecture remarks include 1.8 ATR as abnormal; later script settings show upper 150%, lower 50%. Do not combine these into an unqualified universal filter."
+    },
+    {
+      "id": "E04",
+      "sources": [
+        "script_settings_and_daily_origin",
+        "script_settings_transcript"
+      ],
+      "anchors": [
+        "02:10:53.610",
+        "02:11:24.620",
+        "02:12:11.910",
+        "02:15:03.950"
+      ],
+      "finding": "Lesson distinguishes reference range from current daily movement measured from previous daily close. It cautions against confusing daily and M5 ATR; it does not identify the author H1 convention."
+    },
+    {
+      "id": "E05",
+      "sources": [
+        "tv_atr14_distinct"
+      ],
+      "anchors": [
+        "00:28:33.360",
+        "00:29:25.500"
+      ],
+      "finding": "Catalog explicitly distinguishes TradingView screener ATR14 from the approximately five-day teaching range."
+    },
+    {
+      "id": "E06",
+      "sources": [
+        "script_install_transcript",
+        "script_source_header_frame",
+        "script_source_calculation_frame"
+      ],
+      "anchors": [
+        "00:01:01.430"
+      ],
+      "finding": "Actual Pine v4 source is visible in local screenshots; partial calculation observation is recorded separately below."
+    },
+    {
+      "id": "E07",
+      "sources": [
+        "script_settings_stop_reference",
+        "script_install_transcript",
+        "script_source_calculation_frame"
+      ],
+      "anchors": [
+        "00:02:22.040",
+        "00:02:31.890",
+        "00:03:14.830",
+        "00:03:23.030"
+      ],
+      "finding": "Lesson configures stop multiplier 0.1; visible code default is 0.2. Demonstrated reference about 14.30 gives displayed stop 1.43 after setting update."
+    },
+    {
+      "id": "E08",
+      "sources": [
+        "user_paranormal_methodology"
+      ],
+      "finding": "Project user-methodology record explicitly preserves mean of 14 preceding True Ranges without current bar for body >= 1.6 ATR paranormal classification. This scope is distinct from H1 entry ATR."
+    },
+    {
+      "id": "E09",
+      "sources": [
+        "existing_feature_code"
+      ],
+      "symbol": "features_from_ohlc",
+      "finding": "Existing feature scale is simple mean of up to 14 previous TRs, excluding decision bar, explicitly not Wilder ATR. It is a numerical normalization, not a recovered five-bar trading rule."
+    },
+    {
+      "id": "E10",
+      "sources": [
+        "lp_stop_reference",
+        "lp_stop_transcript",
+        "stop_position_sizing",
+        "stop_sizing_transcript"
+      ],
+      "anchors": [
+        "01:12:13.270",
+        "01:12:38.240",
+        "01:12:56.460",
+        "02:47:37.400",
+        "02:48:05.280",
+        "02:48:35.150"
+      ],
+      "finding": "Technical stop depends on entry/structure; behind LP wick is preferred when reasonable. 10% ATR is reference, not universal exact distance. Deep 2-3 reference stops may justify skipping. Position quantity equals money risk divided by stop distance."
+    }
+  ],
+  "manual_method": {
+    "range": "high-low",
+    "timeframe_explicit_in_lesson": "D1",
+    "sample_count": "4-5, five in worked example",
+    "selection": "Scan backward and skip dissimilar abnormal bars until five comparable bars are found.",
+    "initial_reference": "not deterministically specified",
+    "filter_iteration_order": "not deterministically specified",
+    "lookback_limit": "not specified",
+    "h1_binding": "not found"
+  },
+  "visible_pine_observation": {
+    "status": "partial_source_screenshot_observation_not_an_executed_port",
+    "source_key": "script_source_calculation_frame",
+    "settings": {
+      "length": 5,
+      "upper_multiplier": 1.5,
+      "lower_multiplier": 0.5,
+      "filter_enabled": true,
+      "source_stop_default": 0.2,
+      "demonstrated_stop_setting": 0.1
+    },
+    "visible_sequence": [
+      "lo0 = low; atr0 = hi0-lo0. The hi0 definition immediately above the viewport is not visible.",
+      "sum1 = sum(hi0-lo0, days1)/days1. If all ranges in the window are positive, atr1 := sum1 and date1 := time.",
+      "cdn1 compares atr0 to atr1*chg1 and atr1*chg2, or is true when filtering is disabled.",
+      "Arrays of length days1 are initialized with current values.",
+      "Only if cdn1[1] is true: loop i1=1..days1; use passing historical offset i1; on failure loop i2=i1 down to 1 until a passing more recent offset is found, copying it into this slot.",
+      "That block sets date1 := time[1] and atr1 := array.avg(arr3). Multiple slots can contain the same accepted historical bar.",
+      "If cdn1[1] is false, the replacement block does not run. Earlier raw-mean assignment remains when its positive-range condition was met.",
+      "sl = rounded(atr1 * input(0.2, step=0.05)); ch = rounded(abs(close-close[1])/atr1*100)."
+    ],
+    "not_equivalent_to": [
+      "Wilder ATR14",
+      "unfiltered mean last5 high-low",
+      "filter fixed last5 then average only retained values",
+      "scan back to five distinct accepted bars"
+    ],
+    "unresolved": [
+      "complete original script file/version not obtained",
+      "hi0 source definition not visible in this frame",
+      "runtime behavior not replayed in Pine",
+      "no author-H1-use binding",
+      "causal evaluation cutoff and reference update for scenario labels not specified"
+    ]
+  },
+  "safe_existing_conventions": {
+    "paranormal_detector": "Keep explicit project ATR14 prior-TR convention for body >=1.6 threshold.",
+    "feature_normalization": "Keep existing causal mean-prior-TR feature scale with accurate provenance.",
+    "entry_labels": "Preserve independently verified exact arrows and non-ATR alternative branches; do not synthesize ATR-only anchors.",
+    "stop": "Use supplied/verified structure; general 0.1 ATR reference does not supply exact structural stop or buffer.",
+    "targets": "3R/4R from actual entry and known structural stop are computed objectives, not observed outcomes."
+  },
+  "unresolved_author_h1_parameters": [
+    "Exact range statistic and sample selection algorithm or indicator source/version/settings",
+    "Initial comparison reference and filter order",
+    "Whether five means five last offsets or five distinct accepted earlier bars",
+    "Whether reference excludes current trigger bar and when reference updates",
+    "Exact first-crossing versus closed-hour confirmation semantics when not independently annotated"
+  ],
+  "affected_condition_review_ids": [
+    5,
+    23,
+    113,
+    142,
+    177,
+    185,
+    200,
+    202,
+    264,
+    307,
+    312,
+    327,
+    363
+  ],
+  "affected_id_note": "These IDs occur in ATR-related review conditions, not a blanket exclusion list. Some contain independent full-bar alternatives or explicit arrows and may already be resolved without an ATR calculation.",
+  "integrity": {
+    "original_images_modified": false,
+    "knowledge_sources_modified": false,
+    "existing_feature_or_model_code_modified": false,
+    "entry_labels_modified_by_this_review": false
+  }
+}

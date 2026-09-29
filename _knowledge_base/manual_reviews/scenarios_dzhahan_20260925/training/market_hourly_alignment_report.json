@@ -1,0 +1,16 @@
+{
+  "target_pairs": 407,
+  "recorded": 407,
+  "user_skipped": [
+    54,
+    85
+  ],
+  "accepted": 406,
+  "reasons": {
+    "matched_geometry": 406,
+    "no_color_compatible_window": 1
+  },
+  "training_eligible": false,
+  "scope": "historical alignment only; decision anchors separately reviewed",
+  "matcher_sha256": "b4d243ff20b7e337ae49e4c29c11feb2156f4dadb339fef80f9c72cb98abadf0"
+}

@@ -1,0 +1,736 @@
+{
+  "scenario_id": 194,
+  "fingerprint": {
+    "source_sha256": "e048d2dd3b48fdf646878e7ed6895255ac8ecf5e4726bbe6578f9b32b665f637",
+    "width": 681,
+    "height": 569,
+    "origin_x": 3.3891089108911316,
+    "pitch": 6.593351335133515,
+    "levels_y": [
+      288.5
+    ],
+    "bars": [
+      {
+        "x": 3,
+        "slot": 0,
+        "color": "red",
+        "high": -88.0,
+        "low": -125.0
+      },
+      {
+        "x": 10,
+        "slot": 1,
+        "color": "green",
+        "high": -76.0,
+        "low": -151.0
+      },
+      {
+        "x": 17,
+        "slot": 2,
+        "color": "green",
+        "high": -69.0,
+        "low": -115.0
+      },
+      {
+        "x": 23,
+        "slot": 3,
+        "color": "red",
+        "high": -92.0,
+        "low": -129.0
+      },
+      {
+        "x": 30,
+        "slot": 4,
+        "color": "red",
+        "high": -104.0,
+        "low": -146.0
+      },
+      {
+        "x": 36,
+        "slot": 5,
+        "color": "red",
+        "high": -116.0,
+        "low": -132.0
+      },
+      {
+        "x": 43,
+        "slot": 6,
+        "color": "green",
+        "high": -116.0,
+        "low": -134.0
+      },
+      {
+        "x": 50,
+        "slot": 7,
+        "color": "green",
+        "high": -111.0,
+        "low": -125.0
+      },
+      {
+        "x": 56,
+        "slot": 8,
+        "color": "green",
+        "high": -88.0,
+        "low": -120.0
+      },
+      {
+        "x": 63,
+        "slot": 9,
+        "color": "green",
+        "high": -66.0,
+        "low": -106.0
+      },
+      {
+        "x": 69,
+        "slot": 10,
+        "color": "green",
+        "high": -60.0,
+        "low": -82.0
+      },
+      {
+        "x": 76,
+        "slot": 11,
+        "color": "green",
+        "high": -66.0,
+        "low": -82.0
+      },
+      {
+        "x": 83,
+        "slot": 12,
+        "color": "red",
+        "high": -69.0,
+        "low": -89.0
+      },
+      {
+        "x": 89,
+        "slot": 13,
+        "color": "red",
+        "high": -81.0,
+        "low": -97.0
+      },
+      {
+        "x": 96,
+        "slot": 14,
+        "color": "green",
+        "high": -76.0,
+        "low": -106.0
+      },
+      {
+        "x": 102,
+        "slot": 15,
+        "color": "red",
+        "high": -88.0,
+        "low": -137.0
+      },
+      {
+        "x": 109,
+        "slot": 16,
+        "color": "red",
+        "high": -130.0,
+        "low": -148.0
+      },
+      {
+        "x": 115,
+        "slot": 17,
+        "color": "green",
+        "high": -116.0,
+        "low": -141.0
+      },
+      {
+        "x": 122,
+        "slot": 18,
+        "color": "green",
+        "high": -100.0,
+        "low": -132.0
+      },
+      {
+        "x": 129,
+        "slot": 19,
+        "color": "red",
+        "high": -114.0,
+        "low": -155.0
+      },
+      {
+        "x": 135,
+        "slot": 20,
+        "color": "green",
+        "high": -104.0,
+        "low": -137.0
+      },
+      {
+        "x": 142,
+        "slot": 21,
+        "color": "red",
+        "high": -91.0,
+        "low": -121.0
+      },
+      {
+        "x": 148,
+        "slot": 22,
+        "color": "red",
+        "high": -108.0,
+        "low": -134.0
+      },
+      {
+        "x": 155,
+        "slot": 23,
+        "color": "green",
+        "high": -121.0,
+        "low": -143.0
+      },
+      {
+        "x": 162,
+        "slot": 24,
+        "color": "green",
+        "high": -107.0,
+        "low": -129.0
+      },
+      {
+        "x": 168,
+        "slot": 25,
+        "color": "green",
+        "high": -99.0,
+        "low": -120.0
+      },
+      {
+        "x": 175,
+        "slot": 26,
+        "color": "green",
+        "high": -84.0,
+        "low": -101.0
+      },
+      {
+        "x": 181,
+        "slot": 27,
+        "color": "red",
+        "high": -95.0,
+        "low": -129.0
+      },
+      {
+        "x": 188,
+        "slot": 28,
+        "color": "red",
+        "high": -95.0,
+        "low": -121.0
+      },
+      {
+        "x": 195,
+        "slot": 29,
+        "color": "green",
+        "high": -102.0,
+        "low": -129.0
+      },
+      {
+        "x": 201,
+        "slot": 30,
+        "color": "red",
+        "high": -92.0,
+        "low": -110.0
+      },
+      {
+        "x": 208,
+        "slot": 31,
+        "color": "red",
+        "high": -97.0,
+        "low": -141.0
+      },
+      {
+        "x": 214,
+        "slot": 32,
+        "color": "red",
+        "high": -135.0,
+        "low": -193.0
+      },
+      {
+        "x": 221,
+        "slot": 33,
+        "color": "red",
+        "high": -154.0,
+        "low": -207.0
+      },
+      {
+        "x": 228,
+        "slot": 34,
+        "color": "red",
+        "high": -174.0,
+        "low": -241.0
+      },
+      {
+        "x": 234,
+        "slot": 35,
+        "color": "green",
+        "high": -160.0,
+        "low": -236.0
+      },
+      {
+        "x": 241,
+        "slot": 36,
+        "color": "green",
+        "high": -83.0,
+        "low": -173.0
+      },
+      {
+        "x": 247,
+        "slot": 37,
+        "color": "red",
+        "high": -121.0,
+        "low": -158.0
+      },
+      {
+        "x": 254,
+        "slot": 38,
+        "color": "red",
+        "high": -145.0,
+        "low": -202.0
+      },
+      {
+        "x": 261,
+        "slot": 39,
+        "color": "green",
+        "high": -166.0,
+        "low": -204.0
+      },
+      {
+        "x": 267,
+        "slot": 40,
+        "color": "green",
+        "high": -135.0,
+        "low": -170.0
+      },
+      {
+        "x": 274,
+        "slot": 41,
+        "color": "red",
+        "high": -135.0,
+        "low": -156.0
+      },
+      {
+        "x": 280,
+        "slot": 42,
+        "color": "green",
+        "high": -102.0,
+        "low": -146.0
+      },
+      {
+        "x": 287,
+        "slot": 43,
+        "color": "red",
+        "high": -108.0,
+        "low": -134.0
+      },
+      {
+        "x": 293,
+        "slot": 44,
+        "color": "red",
+        "high": -121.0,
+        "low": -151.0
+      },
+      {
+        "x": 300,
+        "slot": 45,
+        "color": "green",
+        "high": -133.0,
+        "low": -155.0
+      },
+      {
+        "x": 307,
+        "slot": 46,
+        "color": "green",
+        "high": -92.0,
+        "low": -151.0
+      },
+      {
+        "x": 313,
+        "slot": 47,
+        "color": "green",
+        "high": -92.0,
+        "low": -115.0
+      },
+      {
+        "x": 320,
+        "slot": 48,
+        "color": "green",
+        "high": -73.0,
+        "low": -120.0
+      },
+      {
+        "x": 326,
+        "slot": 49,
+        "color": "red",
+        "high": -76.0,
+        "low": -165.0
+      },
+      {
+        "x": 333,
+        "slot": 50,
+        "color": "red",
+        "high": -140.0,
+        "low": -182.0
+      },
+      {
+        "x": 340,
+        "slot": 51,
+        "color": "green",
+        "high": -162.0,
+        "low": -187.0
+      },
+      {
+        "x": 346,
+        "slot": 52,
+        "color": "green",
+        "high": -155.0,
+        "low": -194.0
+      },
+      {
+        "x": 353,
+        "slot": 53,
+        "color": "red",
+        "high": -150.0,
+        "low": -193.0
+      },
+      {
+        "x": 359,
+        "slot": 54,
+        "color": "green",
+        "high": -174.0,
+        "low": -209.0
+      },
+      {
+        "x": 366,
+        "slot": 55,
+        "color": "green",
+        "high": -162.0,
+        "low": -182.0
+      },
+      {
+        "x": 373,
+        "slot": 56,
+        "color": "green",
+        "high": -169.0,
+        "low": -194.0
+      },
+      {
+        "x": 379,
+        "slot": 57,
+        "color": "red",
+        "high": -154.0,
+        "low": -223.0
+      },
+      {
+        "x": 386,
+        "slot": 58,
+        "color": "green",
+        "high": -183.0,
+        "low": -209.0
+      },
+      {
+        "x": 392,
+        "slot": 59,
+        "color": "green",
+        "high": -172.0,
+        "low": -204.0
+      },
+      {
+        "x": 399,
+        "slot": 60,
+        "color": "red",
+        "high": -157.0,
+        "low": -211.0
+      },
+      {
+        "x": 406,
+        "slot": 61,
+        "color": "green",
+        "high": -166.0,
+        "low": -194.0
+      },
+      {
+        "x": 412,
+        "slot": 62,
+        "color": "green",
+        "high": -154.0,
+        "low": -185.0
+      },
+      {
+        "x": 419,
+        "slot": 63,
+        "color": "red",
+        "high": -150.0,
+        "low": -199.0
+      },
+      {
+        "x": 425,
+        "slot": 64,
+        "color": "red",
+        "high": -182.0,
+        "low": -216.0
+      },
+      {
+        "x": 432,
+        "slot": 65,
+        "color": "red",
+        "high": -205.0,
+        "low": -307.0
+      },
+      {
+        "x": 439,
+        "slot": 66,
+        "color": "red",
+        "high": -252.0,
+        "low": -285.0
+      },
+      {
+        "x": 445,
+        "slot": 67,
+        "color": "red",
+        "high": -279.0,
+        "low": -381.0
+      },
+      {
+        "x": 452,
+        "slot": 68,
+        "color": "green",
+        "high": -319.0,
+        "low": -346.0
+      },
+      {
+        "x": 458,
+        "slot": 69,
+        "color": "green",
+        "high": -314.0,
+        "low": -338.0
+      },
+      {
+        "x": 465,
+        "slot": 70,
+        "color": "green",
+        "high": -294.0,
+        "low": -330.0
+      },
+      {
+        "x": 472,
+        "slot": 71,
+        "color": "red",
+        "high": -304.0,
+        "low": -391.0
+      },
+      {
+        "x": 478,
+        "slot": 72,
+        "color": "green",
+        "high": -336.0,
+        "low": -404.0
+      },
+      {
+        "x": 485,
+        "slot": 73,
+        "color": "red",
+        "high": -331.0,
+        "low": -376.0
+      },
+      {
+        "x": 491,
+        "slot": 74,
+        "color": "green",
+        "high": -364.0,
+        "low": -395.0
+      },
+      {
+        "x": 498,
+        "slot": 75,
+        "color": "red",
+        "high": -349.0,
+        "low": -384.0
+      },
+      {
+        "x": 504,
+        "slot": 76,
+        "color": "red",
+        "high": -369.0,
+        "low": -402.0
+      },
+      {
+        "x": 511,
+        "slot": 77,
+        "color": "red",
+        "high": -382.0,
+        "low": -417.0
+      },
+      {
+        "x": 518,
+        "slot": 78,
+        "color": "green",
+        "high": -382.0,
+        "low": -409.0
+      },
+      {
+        "x": 524,
+        "slot": 79,
+        "color": "green",
+        "high": -374.0,
+        "low": -399.0
+      },
+      {
+        "x": 531,
+        "slot": 80,
+        "color": "green",
+        "high": -362.0,
+        "low": -402.0
+      },
+      {
+        "x": 537,
+        "slot": 81,
+        "color": "green",
+        "high": -340.0,
+        "low": -363.0
+      },
+      {
+        "x": 544,
+        "slot": 82,
+        "color": "red",
+        "high": -354.0,
+        "low": -379.0
+      },
+      {
+        "x": 551,
+        "slot": 83,
+        "color": "green",
+        "high": -321.0,
+        "low": -368.0
+      },
+      {
+        "x": 557,
+        "slot": 84,
+        "color": "green",
+        "high": -291.0,
+        "low": -338.0
+      },
+      {
+        "x": 564,
+        "slot": 85,
+        "color": "red",
+        "high": -322.0,
+        "low": -343.0
+      },
+      {
+        "x": 570,
+        "slot": 86,
+        "color": "red",
+        "high": -329.0,
+        "low": -363.0
+      },
+      {
+        "x": 577,
+        "slot": 87,
+        "color": "green",
+        "high": -336.0,
+        "low": -383.0
+      },
+      {
+        "x": 584,
+        "slot": 88,
+        "color": "green",
+        "high": -321.0,
+        "low": -346.0
+      },
+      {
+        "x": 590,
+        "slot": 89,
+        "color": "red",
+        "high": -342.0,
+        "low": -371.0
+      },
+      {
+        "x": 597,
+        "slot": 90,
+        "color": "red",
+        "high": -362.0,
+        "low": -393.0
+      },
+      {
+        "x": 603,
+        "slot": 91,
+        "color": "green",
+        "high": -369.0,
+        "low": -391.0
+      },
+      {
+        "x": 610,
+        "slot": 92,
+        "color": "red",
+        "high": -369.0,
+        "low": -399.0
+      },
+      {
+        "x": 617,
+        "slot": 93,
+        "color": "red",
+        "high": -390.0,
+        "low": -507.0
+      },
+      {
+        "x": 623,
+        "slot": 94,
+        "color": "green",
+        "high": -404.0,
+        "low": -495.0
+      },
+      {
+        "x": 630,
+        "slot": 95,
+        "color": "red",
+        "high": -427.0,
+        "low": -453.0
+      },
+      {
+        "x": 636,
+        "slot": 96,
+        "color": "red",
+        "high": -446.0,
+        "low": -539.0
+      },
+      {
+        "x": 643,
+        "slot": 97,
+        "color": "green",
+        "high": -493.0,
+        "low": -531.0
+      },
+      {
+        "x": 650,
+        "slot": 98,
+        "color": "red",
+        "high": -514.0,
+        "low": null
+      },
+      {
+        "x": 656,
+        "slot": 99,
+        "color": "red",
+        "high": -541.0,
+        "low": null
+      }
+    ]
+  },
+  "cache_file": "training/bybit_history/bybit_linear_ADAUSDT_1h_1777680000000_1782777600000.json",
+  "offset": 1189,
+  "first_slot": 0,
+  "first_open_time_ms": 1781960400000,
+  "interval_ms": 3600000,
+  "price_axis_scale": "log",
+  "price_axis_slope": 0.00026067633698567905,
+  "price_axis_intercept": -1.793713808384957,
+  "median_range_error": 0.0175928694283278,
+  "p90_range_error": 0.03930042278821199,
+  "geometry_error": 0.0372430808224338,
+  "color_agreement": 1.0,
+  "quality": 0.0372430808224338,
+  "matched_stems": 100,
+  "accepted": true,
+  "reason": "matched_geometry",
+  "quality_margin": null,
+  "candidates_checked": 1317,
+  "geometry_only": true,
+  "training_eligible": false,
+  "needs_reviewed_decision_anchors": true
+}

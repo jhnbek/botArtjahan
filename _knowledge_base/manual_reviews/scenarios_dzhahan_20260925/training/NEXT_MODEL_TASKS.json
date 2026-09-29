@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "updated_utc": "2026-09-29T08:42:06.057249+00:00",
+  "scope": "Remaining model work; original corpus preparation and first model fitting are complete",
+  "source_prepared": 404,
+  "fitted_scenarios": 329,
+  "test_scenarios": 75,
+  "excluded_scenarios": [
+    23,
+    54,
+    59,
+    85,
+    109
+  ],
+  "author_entry_label_questions_open": 0,
+  "author_images_need_correction": false,
+  "baseline_model_errors": {
+    "direction_error_ids": [
+      158,
+      166,
+      278,
+      290,
+      300,
+      320
+    ],
+    "entry_miss_ids": [
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      167,
+      173,
+      283,
+      285,
+      289,
+      290,
+      302,
+      307,
+      311,
+      312,
+      317,
+      320,
+      326
+    ],
+    "joint_failure_ids": [
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      166,
+      167,
+      173,
+      278,
+      283,
+      285,
+      289,
+      290,
+      300,
+      302,
+      307,
+      311,
+      312,
+      317,
+      320,
+      326
+    ],
+    "premature_signals": [
+      {
+        "scenario_id": 159,
+        "group": "WLD",
+        "utc": "2026-04-11T11:00:00+00:00",
+        "predicted_direction": "short",
+        "raw_entry_score": 0.9461479008322848
+      },
+      {
+        "scenario_id": 159,
+        "group": "WLD",
+        "utc": "2026-04-11T12:00:00+00:00",
+        "predicted_direction": "short",
+        "raw_entry_score": 0.5960413292463398
+      },
+      {
+        "scenario_id": 159,
+        "group": "WLD",
+        "utc": "2026-04-11T13:00:00+00:00",
+        "predicted_direction": "short",
+        "raw_entry_score": 0.9452618019021761
+      },
+      {
+        "scenario_id": 159,
+        "group": "WLD",
+        "utc": "2026-04-11T16:00:00+00:00",
+        "predicted_direction": "long",
+        "raw_entry_score": 0.04472519142247644
+      },
+      {
+        "scenario_id": 323,
+        "group": "1000BONK",
+        "utc": "2025-07-05T11:00:00+00:00",
+        "predicted_direction": "short",
+        "raw_entry_score": 1.0019424731225652
+      },
+      {
+        "scenario_id": 323,
+        "group": "1000BONK",
+        "utc": "2025-07-05T12:00:00+00:00",
+        "predicted_direction": "long",
+        "raw_entry_score": 0.487016077323103
+      },
+      {
+        "scenario_id": 323,
+        "group": "1000BONK",
+        "utc": "2025-07-05T13:00:00+00:00",
+        "predicted_direction": "long",
+        "raw_entry_score": 0.25844616477217475
+      },
+      {
+        "scenario_id": 323,
+        "group": "1000BONK",
+        "utc": "2025-07-05T14:00:00+00:00",
+        "predicted_direction": "long",
+        "raw_entry_score": 0.4261986959673594
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "priority": 1,
+      "id": "integrate_whole_approach",
+      "status": "standalone_rule_tested_not_integrated",
+      "task": "Use the full uninterrupted approach and first/repeated-breakout state in real prediction inputs or decision rules.",
+      "requirements": [
+        "Keep one origin for an entire approach; new green candles and a small residual do not reset it.",
+        "At least1H1ATR without a pullback: skip first breakout. One PN bar2ATR and two consecutive1.1ATR moves both qualify.",
+        "Less than0.5H1ATR permits the first breakout only when that is the whole initial approach.",
+        "Implement causal origin/accumulation and significant-pullback detection; do not replace them by hindsight chart boxes.",
+        "Distinguish permitted repeated setup from every second wick touch."
+      ],
+      "acceptance": [
+        "Current standalone tests continue to pass.",
+        "Frozen prediction path actually invokes the rule or uses the full approach features; a standalone diagnostic is insufficient.",
+        "Only data available at each decision time used; no final OHLC of an unfinished breakout bar.",
+        "Report all-case regressions as well as323 results."
+      ]
+    },
+    {
+      "priority": 2,
+      "id": "resolve_model_errors",
+      "status": "not_fixed",
+      "task": "Reduce premature entry signals, missed entries and wrong direction on the whole corpus.",
+      "current_error_counts": {
+        "premature_states": 8,
+        "premature_scenarios": 2,
+        "entry_misses": 20,
+        "direction_errors": 6,
+        "joint_failures": 23
+      },
+      "requirements": [
+        "159: wait for the accepted fully-beyond-level closed H1 condition.",
+        "323: skip the first extended approach and wait for the marked repeated setup; preserve whole-move memory.",
+        "Inspect entry misses, including307,311,312; recognize allowed entries as well as suppress early ones.",
+        "Add verified waiting examples; do not label every earlier hour as a negative by default."
+      ],
+      "acceptance": [
+        "Explain remaining failures explicitly with scenario/time/side.",
+        "Do not move correct author labels to fit model outputs.",
+        "Any learned revisions use the fitting partitions, not test labels as training data."
+      ]
+    },
+    {
+      "priority": 3,
+      "id": "retrain_and_evaluate",
+      "status": "required_after_integration",
+      "task": "Rebuild source-bound numerical features, train candidate models and compare against current baseline.",
+      "requirements": [
+        "Preserve current artifacts as baseline.",
+        "Current404target IDs and five exclusions stay unchanged.",
+        "Report training/validation/test coverage separately; test never updates fitting normalization or weights.",
+        "Current75test episodes have been observed and323 was used for rule development; obtain additional unseen episodes for an independent assessment.",
+        "Evaluate continuous history, not only the selected author entry hour."
+      ],
+      "acceptance": [
+        "Report direction, entry recall, verified-wait false positives and joint success separately.",
+        "Save candidate models, exact sources, code hashes and per-state predictions; run relevant tests."
+      ]
+    },
+    {
+      "priority": 4,
+      "id": "verify_exact_execution",
+      "status": "not_evaluated",
+      "task": "Validate entry price and timing beyond hourly proxies.",
+      "requirements": [
+        "234entries currently use a pre-hour feature proxy; exact intrabar minute/fill unknown.",
+        "Use finer historical bars or event data where available and required.",
+        "Do not use future extrema for live entry decisions; preserve retrospective labels36,43,52 as such."
+      ]
+    },
+    {
+      "priority": 5,
+      "id": "verify_risk_and_outcomes",
+      "status": "not_evaluated",
+      "task": "Connect and validate structural stop rules from the knowledge base and targets3-4R.",
+      "requirements": [
+        "Use the database/user stop methodology; do not invent universal stop distances.",
+        "Replay stop/target ordering, commissions and slippage with honest ambiguous-bar handling.",
+        "Label agreement92percent is not a win rate or profitability."
+      ]
+    },
+    {
+      "priority": 6,
+      "id": "connect_autonomous_levels",
+      "status": "later_stage",
+      "task": "Connect available level detection/selection in the project to the trained entry pipeline.",
+      "requirements": [
+        "Current training supplies author blue levels.",
+        "Evaluate level choice independently, then evaluate the combined pipeline offline.",
+        "Do not activate automatic order execution as part of a research model revision."
+      ]
+    }
+  ],
+  "possible_future_author_clarifications": [
+    "Where an approach starts and what magnitude/structure ends it with a significant pullback, if the knowledge base does not uniquely define it.",
+    "Distance in[0.5,1)H1ATR has no universal rule yet.",
+    "Exact H1ATR convention and freeze time if different from the recorded project conventions."
+  ],
+  "transfer": {
+    "required_paths": [
+      "knowledge_bot/",
+      "tests/",
+      "knowledge/",
+      "_knowledge_base/manual_reviews/scenarios_dzhahan_20260925/",
+      "TRAINING_HANDOFF.md",
+      "TRAINING_MARKET_RESULTS.md",
+      "SETUP_OTHER_PC.md",
+      "requirements-training.txt",
+      "requirements-desktop.txt",
+      ".gitignore",
+      ".gitattributes"
+    ],
+    "recreate_virtual_environment": true,
+    "rebuild_first_not_required": true,
+    "base_commit_before_research": "b73b40d7840e30b32ee3482e929972d8a2471832",
+    "checkpoint": "Commit containing this roadmap and current model artifacts",
+    "destination_branch": "origin/main",
+    "installed_commit_command": "git rev-parse HEAD"
+  },
+  "source_sha256": {
+    "market_context_direction/pipeline_evaluation.json": "a3ef8fdd456e47568ecb6042829040ea12be9cacccc606e7e0b2f809d767431c",
+    "market_context_direction/model.json": "4fff5d92332f5e9d44bdf14b385b3f23ad789b2dd1a78f81eabf177a421299b6",
+    "market_v2/scenario_model.json": "6583a1b0fc4c4f25b47b61ea8c38782b6b46cc7981d8cca64b09b76b1939d48b",
+    "market_v2/preparation_report.json": "77e763c67a3b776d456ca0c65ac741ecc22122e91b5b5c95069449cf69ae7731",
+    "author_whole_approach_20260929.json": "48686a5ed1d5e454c434da2eca46e0b6a1c5e9ba8b71c752d4f6ab847a34b6d2"
+  }
+}

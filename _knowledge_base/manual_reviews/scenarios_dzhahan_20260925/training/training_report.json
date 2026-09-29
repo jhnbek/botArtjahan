@@ -1,0 +1,1898 @@
+{
+  "version": "entry_demonstration_post_daily_close_v2",
+  "trained": true,
+  "source_scenarios": 409,
+  "eligible_scenarios": 81,
+  "excluded_scenarios": 328,
+  "excluded_reasons": {
+    "entry_anchor_not_yet_read": 256,
+    "insufficient_complete_contiguous_prior_bars": 20,
+    "entry_anchor_reading_not_numerically_resolved": 14,
+    "daily_close_alignment_needs_reading": 1,
+    "label_policy_exclusion": 16,
+    "daily_close_not_verified": 7,
+    "unknown_instrument_cannot_prevent_group_leakage": 6,
+    "annotated_bar_far_from_any_level": 6,
+    "anchor_between_bars": 2
+  },
+  "split_counts": {
+    "train": 54,
+    "validation": 13,
+    "test": 14
+  },
+  "split_instruments": {
+    "train": [
+      "ADA",
+      "BNB",
+      "BTC",
+      "DOGE",
+      "ETH",
+      "HYPE",
+      "LINK",
+      "LTC",
+      "NEAR",
+      "SOL",
+      "UNI",
+      "VIRTUAL",
+      "XAUT",
+      "XRP",
+      "ZEC"
+    ],
+    "validation": [
+      "BCH",
+      "ENA",
+      "LDO",
+      "XLM"
+    ],
+    "test": [
+      "1000BONK",
+      "AVAX",
+      "ONDO",
+      "TAO",
+      "WLD"
+    ]
+  },
+  "final_fit_scenarios": 67,
+  "selected_regularization": 0.01,
+  "regularization_selection_method": "validation_balanced_accuracy",
+  "state_counts": {
+    "train": {
+      "entries": 54,
+      "waits_after_d1": 25
+    },
+    "validation": {
+      "entries": 13,
+      "waits_after_d1": 6
+    },
+    "test": {
+      "entries": 14,
+      "waits_after_d1": 1
+    }
+  },
+  "entry_resolution_counts": {
+    "closed_hourly_bar": 68,
+    "pre_hourly_bar_proxy_for_marked_intrabar_entry": 13
+  },
+  "validation_search": [
+    {
+      "regularization": 0.01,
+      "evaluation": {
+        "scenarios": 13,
+        "entry_recall": 0.8461538461538461,
+        "wait_recall": 0.8333333333333334,
+        "balanced_accuracy": 0.8397435897435898,
+        "confusion": {
+          "entry_as_entry": 11,
+          "entry_as_wait": 2,
+          "wait_as_entry": 1,
+          "wait_as_wait": 5
+        },
+        "ranking": {
+          "scenarios": 1,
+          "pairwise_preference_agreement": 0.8333333333333334,
+          "strict_top1_fraction": 0.0,
+          "mean_author_state_rank": 2.0,
+          "metric_scope": "conditional preference for demonstrated entry vs earlier states; not trade accuracy or win rate",
+          "details": [
+            {
+              "scenario_id": 398,
+              "instrument_group": "BCH",
+              "state_offsets_before_entry": [
+                6,
+                5,
+                4,
+                3,
+                2,
+                1,
+                0
+              ],
+              "scores": [
+                -3.3283410199519805,
+                -1.7017219165255673,
+                -4.289464247843743,
+                -1.999801083171486,
+                -1.4360342687944077,
+                -1.6332821103586566,
+                -1.5774689167758014
+              ],
+              "author_state_rank": 2,
+              "tied_earlier_states": 0,
+              "pairwise_preference_agreement": 0.8333333333333334
+            }
+          ]
+        },
+        "details": [
+          {
+            "scenario_id": 248,
+            "group": "ENA",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.6643769728578368
+            ],
+            "selected_state_score": 1.6643769728578368
+          },
+          {
+            "scenario_id": 360,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.5737842291738882
+            ],
+            "selected_state_score": 1.5737842291738882
+          },
+          {
+            "scenario_id": 361,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              -0.5331520609010951
+            ],
+            "selected_state_score": -0.5331520609010951
+          },
+          {
+            "scenario_id": 365,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              3.298619129023217
+            ],
+            "selected_state_score": 3.298619129023217
+          },
+          {
+            "scenario_id": 366,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.9565096804483244
+            ],
+            "selected_state_score": 0.9565096804483244
+          },
+          {
+            "scenario_id": 377,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              5.433707953444024
+            ],
+            "selected_state_score": 5.433707953444024
+          },
+          {
+            "scenario_id": 381,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              2.882730202295085
+            ],
+            "selected_state_score": 2.882730202295085
+          },
+          {
+            "scenario_id": 383,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.851665776360941
+            ],
+            "selected_state_score": 1.851665776360941
+          },
+          {
+            "scenario_id": 384,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              4.065008810278847
+            ],
+            "selected_state_score": 4.065008810278847
+          },
+          {
+            "scenario_id": 385,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              3.9242022543834523
+            ],
+            "selected_state_score": 3.9242022543834523
+          },
+          {
+            "scenario_id": 393,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              5.529882324840333
+            ],
+            "selected_state_score": 5.529882324840333
+          },
+          {
+            "scenario_id": 394,
+            "group": "BCH",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.9379201228638385
+            ],
+            "selected_state_score": 1.9379201228638385
+          },
+          {
+            "scenario_id": 398,
+            "group": "BCH",
+            "state_offsets_before_entry": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            "scores": [
+              -1.878909378958558,
+              -0.2522902755321448,
+              -2.84003260685032,
+              -0.5503694421780636,
+              0.013397372199014823,
+              -0.18385046936523408,
+              -0.1280372757823789
+            ],
+            "selected_state_score": -0.1280372757823789
+          }
+        ],
+        "metric_scope": "author demonstrated entry vs post-D1 waiting states; not win rate or continuous-market detection"
+      }
+    },
+    {
+      "regularization": 0.1,
+      "evaluation": {
+        "scenarios": 13,
+        "entry_recall": 1.0,
+        "wait_recall": 0.5,
+        "balanced_accuracy": 0.75,
+        "confusion": {
+          "entry_as_entry": 13,
+          "entry_as_wait": 0,
+          "wait_as_entry": 3,
+          "wait_as_wait": 3
+        },
+        "ranking": {
+          "scenarios": 1,
+          "pairwise_preference_agreement": 0.6666666666666666,
+          "strict_top1_fraction": 0.0,
+          "mean_author_state_rank": 3.0,
+          "metric_scope": "conditional preference for demonstrated entry vs earlier states; not trade accuracy or win rate",
+          "details": [
+            {
+              "scenario_id": 398,
+              "instrument_group": "BCH",
+              "state_offsets_before_entry": [
+                6,
+                5,
+                4,
+                3,
+                2,
+                1,
+                0
+              ],
+              "scores": [
+                -0.9123307516673611,
+                -0.5313359532088882,
+                -1.3485376944994496,
+                -0.6257678585034738,
+                0.03407773868157149,
+                -0.24298219701865797,
+                -0.5035744316455742
+              ],
+              "author_state_rank": 3,
+              "tied_earlier_states": 0,
+              "pairwise_preference_agreement": 0.6666666666666666
+            }
+          ]
+        },
+        "details": [
+          {
+            "scenario_id": 248,
+            "group": "ENA",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.525591335773885
+            ],
+            "selected_state_score": 1.525591335773885
+          },
+          {
+            "scenario_id": 360,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.5299677346534695
+            ],
+            "selected_state_score": 0.5299677346534695
+          },
+          {
+            "scenario_id": 361,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.010618866166436702
+            ],
+            "selected_state_score": 0.010618866166436702
+          },
+          {
+            "scenario_id": 365,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.5129809124647422
+            ],
+            "selected_state_score": 1.5129809124647422
+          },
+          {
+            "scenario_id": 366,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.8985681146083551
+            ],
+            "selected_state_score": 0.8985681146083551
+          },
+          {
+            "scenario_id": 377,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              2.2266448880707417
+            ],
+            "selected_state_score": 2.2266448880707417
+          },
+          {
+            "scenario_id": 381,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.8517686049764985
+            ],
+            "selected_state_score": 0.8517686049764985
+          },
+          {
+            "scenario_id": 383,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.8445164164594916
+            ],
+            "selected_state_score": 0.8445164164594916
+          },
+          {
+            "scenario_id": 384,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.7356991249033062
+            ],
+            "selected_state_score": 1.7356991249033062
+          },
+          {
+            "scenario_id": 385,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.688022446955323
+            ],
+            "selected_state_score": 1.688022446955323
+          },
+          {
+            "scenario_id": 393,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              3.2186525286715293
+            ],
+            "selected_state_score": 3.2186525286715293
+          },
+          {
+            "scenario_id": 394,
+            "group": "BCH",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.9435673973008454
+            ],
+            "selected_state_score": 0.9435673973008454
+          },
+          {
+            "scenario_id": 398,
+            "group": "BCH",
+            "state_offsets_before_entry": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            "scores": [
+              -0.3065158689305144,
+              0.07447892952795854,
+              -0.7427228117626029,
+              -0.019952975766627135,
+              0.6398926214184182,
+              0.3628326857181887,
+              0.10224045109127244
+            ],
+            "selected_state_score": 0.10224045109127244
+          }
+        ],
+        "metric_scope": "author demonstrated entry vs post-D1 waiting states; not win rate or continuous-market detection"
+      }
+    },
+    {
+      "regularization": 1.0,
+      "evaluation": {
+        "scenarios": 13,
+        "entry_recall": 0.9230769230769231,
+        "wait_recall": 0.0,
+        "balanced_accuracy": 0.46153846153846156,
+        "confusion": {
+          "entry_as_entry": 12,
+          "entry_as_wait": 1,
+          "wait_as_entry": 6,
+          "wait_as_wait": 0
+        },
+        "ranking": {
+          "scenarios": 1,
+          "pairwise_preference_agreement": 0.3333333333333333,
+          "strict_top1_fraction": 0.0,
+          "mean_author_state_rank": 5.0,
+          "metric_scope": "conditional preference for demonstrated entry vs earlier states; not trade accuracy or win rate",
+          "details": [
+            {
+              "scenario_id": 398,
+              "instrument_group": "BCH",
+              "state_offsets_before_entry": [
+                6,
+                5,
+                4,
+                3,
+                2,
+                1,
+                0
+              ],
+              "scores": [
+                -0.02611568942696292,
+                0.06223301551027291,
+                -0.1937337496086594,
+                -0.08513362809087527,
+                0.13151585306246874,
+                0.00888951311239411,
+                -0.06048043671486075
+              ],
+              "author_state_rank": 5,
+              "tied_earlier_states": 0,
+              "pairwise_preference_agreement": 0.3333333333333333
+            }
+          ]
+        },
+        "details": [
+          {
+            "scenario_id": 248,
+            "group": "ENA",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.5531934861377742
+            ],
+            "selected_state_score": 0.5531934861377742
+          },
+          {
+            "scenario_id": 360,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.08107677099957289
+            ],
+            "selected_state_score": 0.08107677099957289
+          },
+          {
+            "scenario_id": 361,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              -0.1400332245610968
+            ],
+            "selected_state_score": -0.1400332245610968
+          },
+          {
+            "scenario_id": 365,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.4548940997421578
+            ],
+            "selected_state_score": 0.4548940997421578
+          },
+          {
+            "scenario_id": 366,
+            "group": "LDO",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.19500652487524137
+            ],
+            "selected_state_score": 0.19500652487524137
+          },
+          {
+            "scenario_id": 377,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.6663610327647022
+            ],
+            "selected_state_score": 0.6663610327647022
+          },
+          {
+            "scenario_id": 381,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.35100246573911564
+            ],
+            "selected_state_score": 0.35100246573911564
+          },
+          {
+            "scenario_id": 383,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.13218487368006454
+            ],
+            "selected_state_score": 0.13218487368006454
+          },
+          {
+            "scenario_id": 384,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.8072187254530387
+            ],
+            "selected_state_score": 0.8072187254530387
+          },
+          {
+            "scenario_id": 385,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.4247391272988539
+            ],
+            "selected_state_score": 0.4247391272988539
+          },
+          {
+            "scenario_id": 393,
+            "group": "XLM",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              1.2140172154647564
+            ],
+            "selected_state_score": 1.2140172154647564
+          },
+          {
+            "scenario_id": 394,
+            "group": "BCH",
+            "state_offsets_before_entry": [
+              0
+            ],
+            "scores": [
+              0.5292477402761084
+            ],
+            "selected_state_score": 0.5292477402761084
+          },
+          {
+            "scenario_id": 398,
+            "group": "BCH",
+            "state_offsets_before_entry": [
+              6,
+              5,
+              4,
+              3,
+              2,
+              1,
+              0
+            ],
+            "scores": [
+              0.1804391444344084,
+              0.26878784937164424,
+              0.01282108425271189,
+              0.12142120577049603,
+              0.33807068692384,
+              0.2154443469737654,
+              0.14607439714651055
+            ],
+            "selected_state_score": 0.14607439714651055
+          }
+        ],
+        "metric_scope": "author demonstrated entry vs post-D1 waiting states; not win rate or continuous-market detection"
+      }
+    }
+  ],
+  "train_evaluation": {
+    "scenarios": 67,
+    "entry_recall": 0.7910447761194029,
+    "wait_recall": 0.9354838709677419,
+    "balanced_accuracy": 0.8632643235435724,
+    "confusion": {
+      "entry_as_entry": 53,
+      "entry_as_wait": 14,
+      "wait_as_entry": 2,
+      "wait_as_wait": 29
+    },
+    "ranking": {
+      "scenarios": 8,
+      "pairwise_preference_agreement": 0.8125,
+      "strict_top1_fraction": 0.625,
+      "mean_author_state_rank": 1.5,
+      "metric_scope": "conditional preference for demonstrated entry vs earlier states; not trade accuracy or win rate",
+      "details": [
+        {
+          "scenario_id": 98,
+          "instrument_group": "HYPE",
+          "state_offsets_before_entry": [
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "scores": [
+            -3.8690529096616277,
+            -3.206828758493851,
+            -2.406258445325107,
+            -2.621748254696292,
+            -2.3756435536039557,
+            -2.3213350238003203,
+            -2.126163555437465
+          ],
+          "author_state_rank": 1,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 1.0
+        },
+        {
+          "scenario_id": 104,
+          "instrument_group": "HYPE",
+          "state_offsets_before_entry": [
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "scores": [
+            -2.6815877993185193,
+            -1.5903419763803022,
+            -2.0892350808988773,
+            -2.5720928589163057,
+            -2.7051563259868647,
+            -2.1411624777713527,
+            -1.3049693277125176
+          ],
+          "author_state_rank": 1,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 1.0
+        },
+        {
+          "scenario_id": 132,
+          "instrument_group": "ZEC",
+          "state_offsets_before_entry": [
+            1,
+            0
+          ],
+          "scores": [
+            -4.147714132985009,
+            -1.7655498161966559
+          ],
+          "author_state_rank": 1,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 1.0
+        },
+        {
+          "scenario_id": 133,
+          "instrument_group": "ZEC",
+          "state_offsets_before_entry": [
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "scores": [
+            -3.036879138627026,
+            -2.279066526638311,
+            -3.8830900204923724,
+            -2.040743322401594,
+            0.11665795211942309
+          ],
+          "author_state_rank": 1,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 1.0
+        },
+        {
+          "scenario_id": 146,
+          "instrument_group": "ZEC",
+          "state_offsets_before_entry": [
+            1,
+            0
+          ],
+          "scores": [
+            -3.673297498525355,
+            0.8080884611661574
+          ],
+          "author_state_rank": 1,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 1.0
+        },
+        {
+          "scenario_id": 182,
+          "instrument_group": "DOGE",
+          "state_offsets_before_entry": [
+            1,
+            0
+          ],
+          "scores": [
+            -3.1043853681732214,
+            -4.050298094164976
+          ],
+          "author_state_rank": 2,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 0.0
+        },
+        {
+          "scenario_id": 230,
+          "instrument_group": "NEAR",
+          "state_offsets_before_entry": [
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "scores": [
+            -4.105937118244497,
+            -2.6035779276598205,
+            -1.357254991859766,
+            -0.9442879797014003,
+            -2.638338719804212,
+            -2.2633606878113395,
+            -1.9981704893995564
+          ],
+          "author_state_rank": 3,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 0.6666666666666666
+        },
+        {
+          "scenario_id": 398,
+          "instrument_group": "BCH",
+          "state_offsets_before_entry": [
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          "scores": [
+            -3.8912960892395603,
+            -3.014155267175064,
+            -4.949236740687401,
+            -2.9719064212220996,
+            -1.900075102549222,
+            -2.5078333176730796,
+            -2.048880185838722
+          ],
+          "author_state_rank": 2,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 0.8333333333333334
+        }
+      ]
+    },
+    "details": [
+      {
+        "scenario_id": 1,
+        "group": "BTC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          7.385319958715971
+        ],
+        "selected_state_score": 7.385319958715971
+      },
+      {
+        "scenario_id": 17,
+        "group": "ETH",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          1.3003220684359849
+        ],
+        "selected_state_score": 1.3003220684359849
+      },
+      {
+        "scenario_id": 46,
+        "group": "ETH",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.1409979562057524
+        ],
+        "selected_state_score": 2.1409979562057524
+      },
+      {
+        "scenario_id": 69,
+        "group": "SOL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.1041393036810168
+        ],
+        "selected_state_score": 3.1041393036810168
+      },
+      {
+        "scenario_id": 73,
+        "group": "SOL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.7884869306753456
+        ],
+        "selected_state_score": 0.7884869306753456
+      },
+      {
+        "scenario_id": 75,
+        "group": "SOL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          7.262819717595077
+        ],
+        "selected_state_score": 7.262819717595077
+      },
+      {
+        "scenario_id": 77,
+        "group": "SOL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          5.353466206299754
+        ],
+        "selected_state_score": 5.353466206299754
+      },
+      {
+        "scenario_id": 79,
+        "group": "SOL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.04761028256901745
+        ],
+        "selected_state_score": -0.04761028256901745
+      },
+      {
+        "scenario_id": 82,
+        "group": "SOL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          6.910816404954452
+        ],
+        "selected_state_score": 6.910816404954452
+      },
+      {
+        "scenario_id": 86,
+        "group": "HYPE",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          1.14890129051553
+        ],
+        "selected_state_score": 1.14890129051553
+      },
+      {
+        "scenario_id": 89,
+        "group": "HYPE",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.36092043304221977
+        ],
+        "selected_state_score": -0.36092043304221977
+      },
+      {
+        "scenario_id": 98,
+        "group": "HYPE",
+        "state_offsets_before_entry": [
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "scores": [
+          -2.327722932671046,
+          -1.665498781503269,
+          -0.8649284683345246,
+          -1.0804182777057096,
+          -0.8343135766133736,
+          -0.7800050468097381,
+          -0.5848335784468828
+        ],
+        "selected_state_score": -0.5848335784468828
+      },
+      {
+        "scenario_id": 104,
+        "group": "HYPE",
+        "state_offsets_before_entry": [
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "scores": [
+          -1.1402578223279372,
+          -0.04901199938972001,
+          -0.5479051039082952,
+          -1.0307628819257235,
+          -1.1638263489962826,
+          -0.5998325007807706,
+          0.23636064927806455
+        ],
+        "selected_state_score": 0.23636064927806455
+      },
+      {
+        "scenario_id": 112,
+        "group": "XRP",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.7253319614640836
+        ],
+        "selected_state_score": 2.7253319614640836
+      },
+      {
+        "scenario_id": 114,
+        "group": "XRP",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.251010318559868
+        ],
+        "selected_state_score": 3.251010318559868
+      },
+      {
+        "scenario_id": 116,
+        "group": "XRP",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          7.357794112170757
+        ],
+        "selected_state_score": 7.357794112170757
+      },
+      {
+        "scenario_id": 124,
+        "group": "XRP",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.7311288682215766
+        ],
+        "selected_state_score": 0.7311288682215766
+      },
+      {
+        "scenario_id": 128,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.538188994806678
+        ],
+        "selected_state_score": 3.538188994806678
+      },
+      {
+        "scenario_id": 132,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          1,
+          0
+        ],
+        "scores": [
+          -2.6063841559944274,
+          -0.2242198392060737
+        ],
+        "selected_state_score": -0.2242198392060737
+      },
+      {
+        "scenario_id": 133,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "scores": [
+          -1.495549161636444,
+          -0.7377365496477288,
+          -2.3417600435017905,
+          -0.4994133454110117,
+          1.6579879291100053
+        ],
+        "selected_state_score": 1.6579879291100053
+      },
+      {
+        "scenario_id": 136,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.0989678348753236
+        ],
+        "selected_state_score": 2.0989678348753236
+      },
+      {
+        "scenario_id": 137,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          7.503586314278914
+        ],
+        "selected_state_score": 7.503586314278914
+      },
+      {
+        "scenario_id": 143,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          7.832006625469761
+        ],
+        "selected_state_score": 7.832006625469761
+      },
+      {
+        "scenario_id": 146,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          1,
+          0
+        ],
+        "scores": [
+          -2.131967521534773,
+          2.3494184381567393
+        ],
+        "selected_state_score": 2.3494184381567393
+      },
+      {
+        "scenario_id": 151,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          9.01108468805603
+        ],
+        "selected_state_score": 9.01108468805603
+      },
+      {
+        "scenario_id": 154,
+        "group": "ZEC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          5.5356181790052315
+        ],
+        "selected_state_score": 5.5356181790052315
+      },
+      {
+        "scenario_id": 182,
+        "group": "DOGE",
+        "state_offsets_before_entry": [
+          1,
+          0
+        ],
+        "scores": [
+          -1.5630553911826393,
+          -2.508968117174394
+        ],
+        "selected_state_score": -2.508968117174394
+      },
+      {
+        "scenario_id": 184,
+        "group": "DOGE",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          6.375279694998191
+        ],
+        "selected_state_score": 6.375279694998191
+      },
+      {
+        "scenario_id": 187,
+        "group": "DOGE",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.7865427064566326
+        ],
+        "selected_state_score": 3.7865427064566326
+      },
+      {
+        "scenario_id": 189,
+        "group": "DOGE",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          4.684871827679729
+        ],
+        "selected_state_score": 4.684871827679729
+      },
+      {
+        "scenario_id": 191,
+        "group": "DOGE",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.34781634045753695
+        ],
+        "selected_state_score": -0.34781634045753695
+      },
+      {
+        "scenario_id": 196,
+        "group": "ADA",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.484814807699147
+        ],
+        "selected_state_score": 0.484814807699147
+      },
+      {
+        "scenario_id": 204,
+        "group": "ADA",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          8.90602294351913
+        ],
+        "selected_state_score": 8.90602294351913
+      },
+      {
+        "scenario_id": 205,
+        "group": "ADA",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.9826467938511172
+        ],
+        "selected_state_score": 0.9826467938511172
+      },
+      {
+        "scenario_id": 226,
+        "group": "NEAR",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.7991989261506112
+        ],
+        "selected_state_score": 0.7991989261506112
+      },
+      {
+        "scenario_id": 229,
+        "group": "NEAR",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.862149286588713
+        ],
+        "selected_state_score": -0.862149286588713
+      },
+      {
+        "scenario_id": 230,
+        "group": "NEAR",
+        "state_offsets_before_entry": [
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "scores": [
+          -2.564607141253915,
+          -1.0622479506692384,
+          0.1840749851308161,
+          0.5970419972891818,
+          -1.0970087428136297,
+          -0.7220307108207573,
+          -0.4568405124089743
+        ],
+        "selected_state_score": -0.4568405124089743
+      },
+      {
+        "scenario_id": 258,
+        "group": "LINK",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.29751866999975607
+        ],
+        "selected_state_score": -0.29751866999975607
+      },
+      {
+        "scenario_id": 261,
+        "group": "LINK",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.07281655868399461
+        ],
+        "selected_state_score": -0.07281655868399461
+      },
+      {
+        "scenario_id": 263,
+        "group": "BNB",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.3175136742499105
+        ],
+        "selected_state_score": 2.3175136742499105
+      },
+      {
+        "scenario_id": 265,
+        "group": "BNB",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          1.9325400487119206
+        ],
+        "selected_state_score": 1.9325400487119206
+      },
+      {
+        "scenario_id": 271,
+        "group": "BNB",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.15118020329640713
+        ],
+        "selected_state_score": -0.15118020329640713
+      },
+      {
+        "scenario_id": 273,
+        "group": "XAUT",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.3411174297384303
+        ],
+        "selected_state_score": 3.3411174297384303
+      },
+      {
+        "scenario_id": 275,
+        "group": "XAUT",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.680288222666822
+        ],
+        "selected_state_score": 3.680288222666822
+      },
+      {
+        "scenario_id": 331,
+        "group": "UNI",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          7.525844449593086
+        ],
+        "selected_state_score": 7.525844449593086
+      },
+      {
+        "scenario_id": 336,
+        "group": "UNI",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          6.014774615621167
+        ],
+        "selected_state_score": 6.014774615621167
+      },
+      {
+        "scenario_id": 343,
+        "group": "LTC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          6.839402435630466
+        ],
+        "selected_state_score": 6.839402435630466
+      },
+      {
+        "scenario_id": 346,
+        "group": "LTC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.8243084914191818
+        ],
+        "selected_state_score": -0.8243084914191818
+      },
+      {
+        "scenario_id": 347,
+        "group": "LTC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.7880734966365726
+        ],
+        "selected_state_score": 3.7880734966365726
+      },
+      {
+        "scenario_id": 349,
+        "group": "LTC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.2975297403885959
+        ],
+        "selected_state_score": 0.2975297403885959
+      },
+      {
+        "scenario_id": 352,
+        "group": "LTC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          7.137091349410526
+        ],
+        "selected_state_score": 7.137091349410526
+      },
+      {
+        "scenario_id": 354,
+        "group": "LTC",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          1.6105233570523623
+        ],
+        "selected_state_score": 1.6105233570523623
+      },
+      {
+        "scenario_id": 407,
+        "group": "VIRTUAL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -0.866390698885233
+        ],
+        "selected_state_score": -0.866390698885233
+      },
+      {
+        "scenario_id": 409,
+        "group": "VIRTUAL",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.9778441148337735
+        ],
+        "selected_state_score": 0.9778441148337735
+      },
+      {
+        "scenario_id": 248,
+        "group": "ENA",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.291350295077433
+        ],
+        "selected_state_score": 2.291350295077433
+      },
+      {
+        "scenario_id": 360,
+        "group": "LDO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          1.771517223690846
+        ],
+        "selected_state_score": 1.771517223690846
+      },
+      {
+        "scenario_id": 361,
+        "group": "LDO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.5623652195685811
+        ],
+        "selected_state_score": 0.5623652195685811
+      },
+      {
+        "scenario_id": 365,
+        "group": "LDO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.902422412475403
+        ],
+        "selected_state_score": 2.902422412475403
+      },
+      {
+        "scenario_id": 366,
+        "group": "LDO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          1.6399220994957788
+        ],
+        "selected_state_score": 1.6399220994957788
+      },
+      {
+        "scenario_id": 377,
+        "group": "XLM",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          5.598113951560241
+        ],
+        "selected_state_score": 5.598113951560241
+      },
+      {
+        "scenario_id": 381,
+        "group": "XLM",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.748433490716868
+        ],
+        "selected_state_score": 2.748433490716868
+      },
+      {
+        "scenario_id": 383,
+        "group": "XLM",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.643753843232038
+        ],
+        "selected_state_score": 2.643753843232038
+      },
+      {
+        "scenario_id": 384,
+        "group": "XLM",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          4.73857712429625
+        ],
+        "selected_state_score": 4.73857712429625
+      },
+      {
+        "scenario_id": 385,
+        "group": "XLM",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.3197044567538962
+        ],
+        "selected_state_score": 3.3197044567538962
+      },
+      {
+        "scenario_id": 393,
+        "group": "XLM",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          6.342355510868248
+        ],
+        "selected_state_score": 6.342355510868248
+      },
+      {
+        "scenario_id": 394,
+        "group": "BCH",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.0109205025635077
+        ],
+        "selected_state_score": 2.0109205025635077
+      },
+      {
+        "scenario_id": 398,
+        "group": "BCH",
+        "state_offsets_before_entry": [
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "scores": [
+          -2.3499661122489783,
+          -1.4728252901844818,
+          -3.407906763696819,
+          -1.4305764442315174,
+          -0.3587451255586398,
+          -0.9665033406824974,
+          -0.5075502088481396
+        ],
+        "selected_state_score": -0.5075502088481396
+      }
+    ],
+    "metric_scope": "author demonstrated entry vs post-D1 waiting states; not win rate or continuous-market detection"
+  },
+  "test_evaluation": {
+    "scenarios": 14,
+    "entry_recall": 0.7857142857142857,
+    "wait_recall": 1.0,
+    "balanced_accuracy": 0.8928571428571428,
+    "confusion": {
+      "entry_as_entry": 11,
+      "entry_as_wait": 3,
+      "wait_as_entry": 0,
+      "wait_as_wait": 1
+    },
+    "ranking": {
+      "scenarios": 1,
+      "pairwise_preference_agreement": 1.0,
+      "strict_top1_fraction": 1.0,
+      "mean_author_state_rank": 1.0,
+      "metric_scope": "conditional preference for demonstrated entry vs earlier states; not trade accuracy or win rate",
+      "details": [
+        {
+          "scenario_id": 173,
+          "instrument_group": "WLD",
+          "state_offsets_before_entry": [
+            1,
+            0
+          ],
+          "scores": [
+            -3.574757578972717,
+            -3.5356919829187445
+          ],
+          "author_state_rank": 1,
+          "tied_earlier_states": 0,
+          "pairwise_preference_agreement": 1.0
+        }
+      ]
+    },
+    "details": [
+      {
+        "scenario_id": 173,
+        "group": "WLD",
+        "state_offsets_before_entry": [
+          1,
+          0
+        ],
+        "scores": [
+          -2.033427601982135,
+          -1.9943620059281624
+        ],
+        "selected_state_score": -1.9943620059281624
+      },
+      {
+        "scenario_id": 279,
+        "group": "AVAX",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.5959494821281395
+        ],
+        "selected_state_score": 0.5959494821281395
+      },
+      {
+        "scenario_id": 282,
+        "group": "AVAX",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          5.585365565896106
+        ],
+        "selected_state_score": 5.585365565896106
+      },
+      {
+        "scenario_id": 283,
+        "group": "AVAX",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -1.5387146672101408
+        ],
+        "selected_state_score": -1.5387146672101408
+      },
+      {
+        "scenario_id": 292,
+        "group": "ONDO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.028206863250735
+        ],
+        "selected_state_score": 3.028206863250735
+      },
+      {
+        "scenario_id": 296,
+        "group": "ONDO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          8.687527371207239
+        ],
+        "selected_state_score": 8.687527371207239
+      },
+      {
+        "scenario_id": 301,
+        "group": "TAO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          6.897203239333708
+        ],
+        "selected_state_score": 6.897203239333708
+      },
+      {
+        "scenario_id": 303,
+        "group": "TAO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.1066410190688276
+        ],
+        "selected_state_score": 3.1066410190688276
+      },
+      {
+        "scenario_id": 305,
+        "group": "TAO",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.42863448455517
+        ],
+        "selected_state_score": 2.42863448455517
+      },
+      {
+        "scenario_id": 317,
+        "group": "1000BONK",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          -3.6040097760109964
+        ],
+        "selected_state_score": -3.6040097760109964
+      },
+      {
+        "scenario_id": 318,
+        "group": "1000BONK",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          1.0246508081222978
+        ],
+        "selected_state_score": 1.0246508081222978
+      },
+      {
+        "scenario_id": 324,
+        "group": "1000BONK",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          3.555011045402721
+        ],
+        "selected_state_score": 3.555011045402721
+      },
+      {
+        "scenario_id": 325,
+        "group": "1000BONK",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          2.6235306317393166
+        ],
+        "selected_state_score": 2.6235306317393166
+      },
+      {
+        "scenario_id": 326,
+        "group": "1000BONK",
+        "state_offsets_before_entry": [
+          0
+        ],
+        "scores": [
+          0.7808687950797699
+        ],
+        "selected_state_score": 0.7808687950797699
+      }
+    ],
+    "metric_scope": "author demonstrated entry vs post-D1 waiting states; not win rate or continuous-market detection"
+  },
+  "baselines": {
+    "random_pair_preference": 0.5,
+    "most_recent_state_on_these_preselected_windows": 1.0,
+    "limitation": "Entry endpoint is known when constructing examples. No time/index feature is supplied, but this conditional metric is not proof of finding entries in a continuous market stream."
+  },
+  "limitations": [
+    "Approximate pixel OHLC; accepted anchors are manually reviewed.",
+    "Author chosen entries are preferences, earlier moments are not labeled losses.",
+    "Only successful scenarios were supplied; no success probability is learned.",
+    "User levels are supplied; drawing them with hindsight was not independently ruled out.",
+    "D1/H1 alignment follows author arrows, not independently verified market timestamps.",
+    "Marked intrabar entries use a pre-hour proxy, without the future OHLC of the execution hour.",
+    "Absolute entry/SL/TP cannot be learned from unscaled images; KB risk rules remain.",
+    "This model has not been validated as a live entry trigger."
+  ]
+}

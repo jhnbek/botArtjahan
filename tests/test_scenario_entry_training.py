@@ -35,6 +35,69 @@ def synthetic_cases():
 
 
 class ScenarioEntryTrainingTests(unittest.TestCase):
+    def test_readiness_learns_from_immediate_entries_without_inventing_waits(self):
+        cases = synthetic_cases()
+        for case in cases[:20]:
+            case['states'] = case['states'][-1:]
+            case['offsets'] = [0]
+        model = trainer.fit_entry_readiness(cases, list(FEATURE_NAMES), .1)
+        history = model['optimization']['objective_history']
+        self.assertLess(history[-1], history[0])
+        result = trainer.evaluate_readiness(cases, list(FEATURE_NAMES), model)
+        counts = result['confusion']
+        self.assertEqual(counts['entry_as_entry']+counts['entry_as_wait'], 30)
+        self.assertEqual(counts['wait_as_entry']+counts['wait_as_wait'], 30)
+        self.assertGreater(result['balanced_accuracy'], .9)
+        for case in cases:
+            case['states'] = case['states'][-1:]
+        with self.assertRaisesRegex(ValueError, 'post-D1 wait'):
+            trainer.fit_entry_readiness(cases, list(FEATURE_NAMES), .1)
+
+    def test_unreviewed_audit_cannot_build_cases_or_write_training_outputs(self):
+        with tempfile.TemporaryDirectory() as temp:
+            collection = Path(temp)
+            (collection / 'training').mkdir()
+            output = collection / 'new-output'
+            for flag in (None, False, 1, 'true'):
+                audit = {'records': [], 'entry_training_review_complete': flag}
+                (collection / 'training/image_extraction_audit.json').write_text(
+                    json.dumps(audit), encoding='utf-8')
+                with self.subTest(flag=flag), patch.object(trainer, 'fit_ranker') as fit:
+                    with self.assertRaisesRegex(RuntimeError, 'manually reviewed'):
+                        trainer.run(collection, output)
+                    with self.assertRaisesRegex(RuntimeError, 'manually reviewed'):
+                        trainer.build_cases(collection, audit)
+                    fit.assert_not_called()
+                    self.assertFalse(output.exists())
+
+    def test_invalid_regularization_is_rejected(self):
+        for value in (0, -1, float('nan'), float('inf'), True, '0.1'):
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, 'Regularization'):
+                trainer.fit_ranker(synthetic_cases(), list(FEATURE_NAMES), value)
+
+    def test_each_case_needs_two_states(self):
+        for count in (0, 1):
+            cases = synthetic_cases()
+            cases[0]['states'] = cases[0]['states'][:count]
+            with self.subTest(count=count), self.assertRaisesRegex(ValueError, 'two states'):
+                trainer.fit_ranker(cases, list(FEATURE_NAMES), .1)
+
+    def test_training_rejects_wrong_schema_and_nonfinite_values(self):
+        for names in (sorted(FEATURE_NAMES), list(FEATURE_NAMES)[:-1]):
+            with self.subTest(names=names), self.assertRaisesRegex(ValueError, 'canonical'):
+                trainer.fit_ranker(synthetic_cases(), names, .1)
+        for change in ('missing', 'extra', float('nan'), float('inf'), True, '1'):
+            cases = synthetic_cases()
+            state = cases[0]['states'][0]
+            if change == 'missing':
+                state.pop(FEATURE_NAMES[0])
+            elif change == 'extra':
+                state['future_return'] = 1.
+            else:
+                state[FEATURE_NAMES[0]] = change
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                trainer.fit_ranker(cases, list(FEATURE_NAMES), .1)
+
     def test_real_fit_reduces_pairwise_objective_and_learns_nonzero_weights(self):
         cases = synthetic_cases()
         fitted = trainer.fit_ranker(cases, list(FEATURE_NAMES), .1)
@@ -78,7 +141,7 @@ class ScenarioEntryTrainingTests(unittest.TestCase):
                               if assigned[case["scenario_id"]] == split}
                       for split in ("train", "validation", "test")}
         fits = []
-        fit = trainer.fit_ranker
+        fit = trainer.fit_entry_readiness
 
         def observe_fit(inputs, names, regularization):
             fits.append({case["scenario_id"] for case in inputs})
@@ -89,11 +152,13 @@ class ScenarioEntryTrainingTests(unittest.TestCase):
             collection = Path(temp)
             (collection/"training").mkdir()
             (collection/"visual_analysis").mkdir()
-            (collection/"training/image_extraction_audit.json").write_text('{"records": []}', encoding="utf-8")
-            (collection/"visual_analysis/scenario_analysis.jsonl").write_text('{}\n', encoding="utf-8")
+            (collection/"training/image_extraction_audit.json").write_text(
+                '{"records": [], "entry_training_review_complete": true}', encoding="utf-8")
+            (collection/"visual_analysis/scenario_analysis.jsonl").write_text(
+                ''.join(json.dumps(dict(scenario_id=c['scenario_id'], instrument=c['group']))+'\n' for c in cases), encoding="utf-8")
             with patch.object(trainer, "build_cases", return_value=(deepcopy(cases), ledger)), \
                  patch.object(trainer, "build_training_contract", return_value={}), \
-                 patch.object(trainer, "fit_ranker", side_effect=observe_fit):
+                 patch.object(trainer, "fit_entry_readiness", side_effect=observe_fit):
                 report = trainer.run(collection)
             artifact = json.loads((collection/"training/scenario_model.json").read_text(encoding="utf-8"))
         self.assertEqual(len(fits), 4)

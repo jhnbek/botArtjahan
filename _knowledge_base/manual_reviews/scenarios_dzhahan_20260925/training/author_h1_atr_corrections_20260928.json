@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "source": "Explicit current author message",
+  "atr_timeframe": "1H",
+  "atr_data_source": "exchange H1 OHLC",
+  "atr_method_source": "local knowledge database as explicitly directed by author",
+  "author_general_text": "есть 1АТР на дневке, есть 1АТР на часовике. В данном случае на часовиках нужно счиитать средний АТР от часовых баров. Как считать АТР - эта информация есть в базе данных. У тебя есть информация по размерам барам из биржи, считай оттуда",
+  "instructions": [
+    {
+      "scenario_id": 5,
+      "direction": "long",
+      "condition": "one H1 ATR away from working level on long rebound",
+      "author_text": "после того как откатились в лонг от уровня на 1АТР(часовика), то в этот момент заходим в сделку"
+    },
+    {
+      "scenario_id": 23,
+      "exclude": true,
+      "author_text": "убираем из анализа"
+    },
+    {
+      "scenario_id": 177,
+      "condition": "one H1 ATR",
+      "author_text": "после того как будет пройден 1атр (часовика)"
+    },
+    {
+      "scenario_id": 142,
+      "direction": "long",
+      "condition": "one H1 ATR above working level after long breakout",
+      "author_text": "твх после того как будет пройден 1атр(часовика) после пробития уровня в лонг"
+    },
+    {
+      "scenario_id": 185,
+      "direction": "long",
+      "condition": "one H1 ATR above working level after long breakout",
+      "author_text": "твх после того как будет пройден 1атр(часовика) после пробития уровня в лонг"
+    },
+    {
+      "scenario_id": 200,
+      "direction": "long",
+      "condition": "one H1 ATR above working level after long breakout",
+      "author_text": "твх после того как будет пройден 1атр(часовика) после пробития уровня в лонг"
+    },
+    {
+      "scenario_id": 264,
+      "direction": "long",
+      "condition": "one H1 ATR above working level after long breakout",
+      "author_text": "твх после того как будет пройден 1атр(часовика) после пробития уровня в лонг"
+    },
+    {
+      "scenario_id": 307,
+      "direction": "long",
+      "condition": "one H1 ATR above working level after long breakout",
+      "author_text": "твх после того как будет пройден 1атр(часовика) после пробития уровня в лонг"
+    },
+    {
+      "scenario_id": 312,
+      "direction": "short",
+      "condition": "one H1 ATR below working level",
+      "author_text": "твх после того как будет пройден 1атр(часовика) от уровня в шорт"
+    }
+  ],
+  "original_images_modified": false,
+  "daily_close_still_required": true
+}

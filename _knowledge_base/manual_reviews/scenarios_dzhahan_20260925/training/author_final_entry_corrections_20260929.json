@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "source": "Explicit author response on2026-09-29",
+  "instructions": [
+    {
+      "scenario_ids": [
+        36
+      ],
+      "author_text": "после закрытия дневки в моменте приближения цены к уровню (твх на максимальном минимальном значении от уровня (это первые 1-2 бара после закрытия дневки",
+      "interpretation": "closest hour among first two after required D1; retrospective teacher label only"
+    },
+    {
+      "scenario_ids": [
+        44,
+        58
+      ],
+      "author_text": "твх сразу после пробития уровня, но можно и после пробития уровня когда будет пройден 1атр",
+      "chosen_branch": "immediate breakout after closed daily context; ATR alternative also permitted"
+    },
+    {
+      "scenario_ids": [
+        163
+      ],
+      "author_text": "внутри его когда до уровня остается около 0.2%"
+    },
+    {
+      "scenario_ids": [
+        176
+      ],
+      "author_text": "после закрытия",
+      "followup_author_text": "После красного — ТВХ в 02:00 UTC",
+      "confirmed_entry_utc": "2025-10-24T02:00:00Z"
+    },
+    {
+      "scenario_ids": [
+        247
+      ],
+      "author_text": "после пробоя уровня и прохождение цены в размере 1атр на часовике"
+    },
+    {
+      "scenario_ids": [
+        256
+      ],
+      "author_text": "тейк (это опечатка, правильно будет - твх)",
+      "chosen_branch": "first full closed H1 beyond level; allowed ATR alternative may occur earlier"
+    },
+    {
+      "scenario_ids": [
+        311
+      ],
+      "author_text": "распил уровня заканчивается тогда - когда один из баров полностью закрепится над или под уровнем и его хвосты не будут касаться уровня. В данном случае это после закрытия дневки - это 6 бар, твх - начало открытия 7-го бара"
+    }
+  ],
+  "source_originals_modified": false
+}

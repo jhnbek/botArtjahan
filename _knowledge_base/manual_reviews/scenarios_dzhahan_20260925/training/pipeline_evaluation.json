@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "evaluated_at_utc": "2026-09-27T20:06:49.236058+00:00",
+  "research_only": true,
+  "action": "no_order",
+  "automatic_order_execution_allowed": false,
+  "models_refitted": false,
+  "parameters_or_thresholds_tuned": false,
+  "number_of_cases": 6,
+  "scenario_ids": [
+    173,
+    279,
+    282,
+    283,
+    292,
+    303
+  ],
+  "instrument_groups": [
+    "AVAX",
+    "ONDO",
+    "TAO",
+    "WLD"
+  ],
+  "direction_correct": 6,
+  "selected_states_predicted_entry": 4,
+  "correct_direction_and_entry": 4,
+  "correct_direction_and_entry_fraction": 0.6666666666666666,
+  "waiting_states": {
+    "total": 1,
+    "predicted_wait": 1,
+    "predicted_entry": 0,
+    "correct_direction_and_wait": 1
+  },
+  "scenarios_with_wait_states": 1,
+  "fit_group_overlap": false,
+  "source_sha256": {
+    "direction_model": "f1b9e3501b9e494230a4d7f42905ab20d214eb53e33e3faf9b0a1eaf68d6586c",
+    "entry_model": "9845201957bfa7c5b6994bf5ecdec37551a1dcd229fc067f8654fc4f9dd557b9",
+    "annotations": "8ec8353bded6a41339b9092278cc21a4a2f3431a9faa567b4d5d97fa091a22d3",
+    "reviewed_entry_extraction": "dd5e78a725dd1ab0ac4661831cac1e19030c148cc2b254fe5202560d7a8407a2",
+    "original_daily_extraction": "4b0f7c6879cd5e3f9b0ad1aa1fe49960b439cc0bfcff3d3e388d33d113a5a5e7",
+    "entry_training_cases": "ce733087051a823e26805022f815f99065a5d9311a6577cbcf581e2ffea8e07a"
+  },
+  "metric_scope": "author direction and entry-pattern agreement on the intersection of both fixed instrument-held-out test sets",
+  "waiting_label_meaning": "earlier author-unselected states after D1 close, not losing trades",
+  "profitability_evaluated": false,
+  "continuous_market_entry_detection_evaluated": false,
+  "limitations": [
+    "The shared held-out intersection is small and does not represent all 409 scenarios.",
+    "Entry endpoints and price levels were preselected from author examples.",
+    "Pixel OHLC and daily-close alignment are approximate readings of annotations.",
+    "Intrabar examples use a closed-hour proxy before their actual intrabar trigger.",
+    "Several wait observations may belong to the same scenario and are not independent trades.",
+    "Combined agreement is not win rate, profitability, or permission to enter a trade."
+  ],
+  "details": [
+    {
+      "scenario_id": 173,
+      "instrument_group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "direction_correct": true,
+      "raw_daily_direction_score": 1.697595577978664,
+      "author_long_probability": 0.8452204426161608,
+      "selected_state_raw_entry_score": -1.994362005928162,
+      "selected_state_demonstrated_entry_pattern": false,
+      "correct_direction_and_entry": false,
+      "entry_state_resolution": "pre_hourly_bar_proxy_for_marked_intrabar_entry",
+      "states": [
+        {
+          "offset_before_author_entry": 1,
+          "author_label": "wait",
+          "raw_entry_score": -2.033427601982134,
+          "demonstrated_entry_pattern": false
+        },
+        {
+          "offset_before_author_entry": 0,
+          "author_label": "entry",
+          "raw_entry_score": -1.994362005928162,
+          "demonstrated_entry_pattern": false
+        }
+      ]
+    },
+    {
+      "scenario_id": 279,
+      "instrument_group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "direction_correct": true,
+      "raw_daily_direction_score": 1.6719394134676098,
+      "author_long_probability": 0.8418342240526137,
+      "selected_state_raw_entry_score": 0.5959494821281397,
+      "selected_state_demonstrated_entry_pattern": true,
+      "correct_direction_and_entry": true,
+      "entry_state_resolution": "closed_hourly_bar",
+      "states": [
+        {
+          "offset_before_author_entry": 0,
+          "author_label": "entry",
+          "raw_entry_score": 0.5959494821281397,
+          "demonstrated_entry_pattern": true
+        }
+      ]
+    },
+    {
+      "scenario_id": 282,
+      "instrument_group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "direction_correct": true,
+      "raw_daily_direction_score": 2.780446134424353,
+      "author_long_probability": 0.9416099780412486,
+      "selected_state_raw_entry_score": 5.585365565896106,
+      "selected_state_demonstrated_entry_pattern": true,
+      "correct_direction_and_entry": true,
+      "entry_state_resolution": "closed_hourly_bar",
+      "states": [
+        {
+          "offset_before_author_entry": 0,
+          "author_label": "entry",
+          "raw_entry_score": 5.585365565896106,
+          "demonstrated_entry_pattern": true
+        }
+      ]
+    },
+    {
+      "scenario_id": 283,
+      "instrument_group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "direction_correct": true,
+      "raw_daily_direction_score": 1.6021902355367879,
+      "author_long_probability": 0.8323242781905268,
+      "selected_state_raw_entry_score": -1.5387146672101408,
+      "selected_state_demonstrated_entry_pattern": false,
+      "correct_direction_and_entry": false,
+      "entry_state_resolution": "closed_hourly_bar",
+      "states": [
+        {
+          "offset_before_author_entry": 0,
+          "author_label": "entry",
+          "raw_entry_score": -1.5387146672101408,
+          "demonstrated_entry_pattern": false
+        }
+      ]
+    },
+    {
+      "scenario_id": 292,
+      "instrument_group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "direction_correct": true,
+      "raw_daily_direction_score": 2.119099322033111,
+      "author_long_probability": 0.8927457193792596,
+      "selected_state_raw_entry_score": 3.028206863250735,
+      "selected_state_demonstrated_entry_pattern": true,
+      "correct_direction_and_entry": true,
+      "entry_state_resolution": "closed_hourly_bar",
+      "states": [
+        {
+          "offset_before_author_entry": 0,
+          "author_label": "entry",
+          "raw_entry_score": 3.028206863250735,
+          "demonstrated_entry_pattern": true
+        }
+      ]
+    },
+    {
+      "scenario_id": 303,
+      "instrument_group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "direction_correct": true,
+      "raw_daily_direction_score": 1.899148378380407,
+      "author_long_probability": 0.8697951085150027,
+      "selected_state_raw_entry_score": 3.1066410190688276,
+      "selected_state_demonstrated_entry_pattern": true,
+      "correct_direction_and_entry": true,
+      "entry_state_resolution": "closed_hourly_bar",
+      "states": [
+        {
+          "offset_before_author_entry": 0,
+          "author_label": "entry",
+          "raw_entry_score": 3.1066410190688276,
+          "demonstrated_entry_pattern": true
+        }
+      ]
+    }
+  ]
+}

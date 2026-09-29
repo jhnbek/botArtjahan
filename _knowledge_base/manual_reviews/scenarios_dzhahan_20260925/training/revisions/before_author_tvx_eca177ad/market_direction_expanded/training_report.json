@@ -1,0 +1,3264 @@
+{
+  "target_pairs": 407,
+  "user_skipped": [
+    54,
+    85
+  ],
+  "eligible_direction_scenarios": 395,
+  "pending_direction_scenarios": 12,
+  "entry_eligible_scenarios": 364,
+  "entry_pending_scenarios": 43,
+  "supplemental_direction_ids": [
+    23,
+    27,
+    31,
+    36,
+    40,
+    41,
+    43,
+    44,
+    46,
+    47,
+    48,
+    49,
+    51,
+    52,
+    53,
+    55,
+    56,
+    58,
+    59,
+    62,
+    66,
+    67,
+    68,
+    69,
+    72,
+    73,
+    74,
+    76,
+    109,
+    113,
+    163,
+    176,
+    177,
+    200,
+    247,
+    256
+  ],
+  "new_entry_labels_created": 0,
+  "provenance": {
+    "base_market_v2": {
+      "preparation_report_sha256": "89b382dafca0199c593e429c2a13f5209f80f4b94d4cac23a722407ac2cb5491",
+      "cases_sha256": "522e3e502e75d06bb347a409cbd1636ab186065c6d4d182718f10f26eebd4046",
+      "source_sha256": {
+        "training/user_scope.json": "eca177adaa7a2e05debe85d7ed707979db7245af87c877adfe05c74a9d1000cf",
+        "visual_analysis/scenario_analysis.jsonl": "8ec8353bded6a41339b9092278cc21a4a2f3431a9faa567b4d5d97fa091a22d3",
+        "training/market_daily_alignment.jsonl": "81538e14acae7f1aac95f62609d5bf41fcfc49647d17abf66f9daa303e442c66",
+        "training/market_hourly_alignment.jsonl": "86d3d2bf99c36cc0e15d9ad1f7c53e9f9487381ab471b8afdf6e3c0131818c76",
+        "training/market_daily_anchor_reviews.jsonl": "d68819c9a714c90076eaf4b6525aa9b7f1ba7f9258558a105abefb56e490004f",
+        "training/image_extraction_audit.json": "4b0f7c6879cd5e3f9b0ad1aa1fe49960b439cc0bfcff3d3e388d33d113a5a5e7",
+        "training/direction_training_ledger.jsonl": "982fff401a7993e81f83714ff8d03ca7e0ef1b1ac45550c97f569a26a6715406",
+        "training/market_daily_role_reviews_003_031.jsonl": "f80cd713df13b57741bb477596d61a6a52353ed4092a9820ea8bf988b5712191",
+        "training/market_daily_role_reviews_040_155.jsonl": "fd017b82726523a717f5c3db823e5899e21e108cf13df31a92e47c0e027fae41",
+        "training/market_daily_role_reviews_061_201.jsonl": "764f9d129643f6be735ee6e743250d9f1dce9f73536f17677eaadb3e09fd66f5",
+        "training/market_direction_reviews.jsonl": "dd30c9403b116dd6a0cc433d4e1754c6b73c6e9f2246291165d1e082b34abed9",
+        "training/market_timing_questions.jsonl": "8acf4dffef09b1162a312a9c5e13e38302756463e69600fa5f0165073645761d"
+      },
+      "review_sources_sha256": {
+        "training/anchor_reviews_001_153.jsonl": "99bbc00b4e89daed1e216e7e03f7d9a7adfae6d3d251e106135886d920d24681",
+        "training/anchor_reviews_154_305.jsonl": "217a816831945063239fbabbd3fc82a44101497ff91d02e84eba772962ca6905",
+        "training/anchor_reviews_306_409.jsonl": "2ec553e61626ea970112cfcb18b391863577d864e17d2ff7b2823b782b5437e5",
+        "training/anchor_reviews_expansion_20260927.jsonl": "0d98561f044ab037743c59d84a98d16b14a472afe8167e85e77a8e528d302394",
+        "training/anchor_reviews_market_001_153.jsonl": "defc17af5a0b43a7b02b5004cde6dc9bea7a435649b5df838866b82935bedcd6",
+        "training/anchor_reviews_market_154_409.jsonl": "48e2d21d533a31ae8affdda048221ec79237f04f9a9ed717c1330956ea5c68f6",
+        "training/anchor_reviews_resume_20260927.jsonl": "d20e93e66b08ef53d4c1efb91da75a5b1d09d9446ccdf09a8b33c12ec708b9dc",
+        "training/anchor_alignment_supplement_20260927.jsonl": "5d3229345e5e08709372fd7878ad1cdb21e8b510099d666f5245f1de68e51586",
+        "training/anchor_alignment_supplement_delayed_20260927.jsonl": "8cb6a6135b8bf70ed9647cfc6b475fe4caa4bab39ac344fe45e61a8376891fbd",
+        "training/anchor_alignment_supplement_market_recovery.jsonl": "cf87ed5e20cde397265a61b1d213a197b1b0dc81088a56984fd9db9c08d7e9ba",
+        "training/anchor_alignment_supplement_market_root_conditions.jsonl": "114f1a37e02e22c0778dfc2b183efa29b5f4fb4465cf0a27f1efe8750aedbf9c",
+        "training/anchor_alignment_supplement_market_snap_levels.jsonl": "0ad4161254c4c1eb9a44f186e6de6e56693859bb947d52138acdab331ced32a1",
+        "training/anchor_alignment_supplement_zz_market_conditions.jsonl": "f79a14961a10c28562760207a1e4b22c742c9386f2ac27eade3c87da56ce2ab7"
+      },
+      "preparation_sha256": "8d78d2dc2f3e236dca02785990f4246bac53a352ddd74a13c2b1e5deb991e39d",
+      "feature_code_sha256": {
+        "scenario_prerequisites.py": "86cce76b3a6cf93ec1fb8de497d1d2b22e2b9b90039ba340ea0f7a8d4e4f9ae5",
+        "scenario_image_features.py": "0de84d215f09d9a518d7ffe4a6a6e0f4a702f576b520a7b9e78af088beb43120",
+        "scenario_model.py": "9b3c553e8ee0c88d718fc4921227b1af6a883d15974a795fb0254536c2840877",
+        "scenario_training_rules.py": "ef5641296ed4bb0365a72acc4230505db45817997e8bc7db3cb95b8a967a1ee1"
+      },
+      "training_code_sha256": "ed0b14c43734f05653868cc37e0f0059b8a2bef535d6baadfc22f928940c38b7",
+      "fitting_helper_sha256": {
+        "scenario_direction_model.py": "65f1d38bcca4e05c853f017a268c4088330737650242cf1f7cf00e9b7b0ba666",
+        "train_scenario_entry_model.py": "75e4c97f26a8f355c796954eb890e6f856d104e4b853679dd812604b8fa11800"
+      }
+    },
+    "source_sha256": {
+      "training/market_direction_pending_reviews.jsonl": "86e6f3a7b95d14cb9421a9d2b76dfef27eb59a66c825dd1c81132453f50cdee5",
+      "training/market_v2/ledger.jsonl": "a95f4722692993eef96e2a154f8857e56e6a7e11aa26160190b924ceb647821b"
+    },
+    "code_sha256": {
+      "train_market_direction.py": "c1862f05440fc4fbd5c5c3fafe63d661f7f53d30027625ed9a76c46fa305ab07",
+      "scenario_direction_model.py": "65f1d38bcca4e05c853f017a268c4088330737650242cf1f7cf00e9b7b0ba666",
+      "scenario_prerequisites.py": "86cce76b3a6cf93ec1fb8de497d1d2b22e2b9b90039ba340ea0f7a8d4e4f9ae5",
+      "scenario_market_match.py": "8527bfe5b9c77ec4164347056381771671825b6f5c3c4d582d74aa59c10f0648",
+      "prepare_market_training.py": "8d78d2dc2f3e236dca02785990f4246bac53a352ddd74a13c2b1e5deb991e39d"
+    },
+    "direction_cases_sha256": "980f7063aabbfa3978df87ce1f02f95fc5f25ba1d3f474ecc4c736c29185d84b"
+  },
+  "trained": true,
+  "fitted_scenario_ids": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    84,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    181,
+    182,
+    183,
+    184,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209,
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258,
+    259,
+    260,
+    261,
+    262,
+    263,
+    265,
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    277,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    337,
+    338,
+    339,
+    340,
+    341,
+    342,
+    343,
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    352,
+    353,
+    354,
+    355,
+    356,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380,
+    381,
+    382,
+    383,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391,
+    392,
+    393,
+    394,
+    395,
+    396,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    407,
+    408,
+    409
+  ],
+  "splits": {
+    "train": {
+      "scenarios": 262,
+      "scenario_ids": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        84,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        181,
+        182,
+        183,
+        184,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236,
+        237,
+        238,
+        249,
+        250,
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261,
+        262,
+        263,
+        265,
+        266,
+        267,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        277,
+        327,
+        328,
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338,
+        339,
+        340,
+        341,
+        342,
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355,
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408,
+        409
+      ],
+      "groups": [
+        "AAVE",
+        "ADA",
+        "BNB",
+        "BTC",
+        "DOGE",
+        "ETH",
+        "H",
+        "HYPE",
+        "LINK",
+        "LIT",
+        "LTC",
+        "NEAR",
+        "SOL",
+        "SUI",
+        "UNI",
+        "VIRTUAL",
+        "XAUT",
+        "XRP",
+        "ZEC"
+      ]
+    },
+    "validation": {
+      "scenarios": 61,
+      "scenario_ids": [
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391,
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401
+      ],
+      "groups": [
+        "1000PEPE",
+        "BCH",
+        "ENA",
+        "LDO",
+        "XLM"
+      ]
+    },
+    "test": {
+      "scenarios": 72,
+      "scenario_ids": [
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        278,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296,
+        297,
+        298,
+        299,
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        308,
+        309,
+        310,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326
+      ],
+      "groups": [
+        "1000BONK",
+        "AVAX",
+        "ONDO",
+        "TAO",
+        "WLD"
+      ]
+    }
+  },
+  "validation_search": [
+    {
+      "regularization": 0.01,
+      "validation": {
+        "scenarios": 61,
+        "class_counts": {
+          "short": 30,
+          "long": 31
+        },
+        "accuracy": 0.8524590163934426,
+        "balanced_accuracy": 0.8526881720430108,
+        "confusion_true_rows_predicted_columns": {
+          "short": {
+            "short": 26,
+            "long": 4
+          },
+          "long": {
+            "short": 5,
+            "long": 26
+          }
+        },
+        "log_loss": 0.37988672985050187,
+        "majority_baseline": {
+          "direction_chosen_from_fit_partition": "long",
+          "accuracy": 0.5081967213114754,
+          "balanced_accuracy": 0.5
+        },
+        "details": [
+          {
+            "scenario_id": 216,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.27295035469191253
+          },
+          {
+            "scenario_id": 217,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.23790161951581787
+          },
+          {
+            "scenario_id": 218,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3050618243705781
+          },
+          {
+            "scenario_id": 219,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9799296951475438
+          },
+          {
+            "scenario_id": 220,
+            "instrument_group": "1000PEPE",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9596502784085961
+          },
+          {
+            "scenario_id": 221,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.07731076588661603
+          },
+          {
+            "scenario_id": 239,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9452701237178314
+          },
+          {
+            "scenario_id": 240,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.21218467605944027
+          },
+          {
+            "scenario_id": 241,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7968711098007474
+          },
+          {
+            "scenario_id": 242,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7740831970356271
+          },
+          {
+            "scenario_id": 243,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.05204074659948474
+          },
+          {
+            "scenario_id": 244,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9028786963778176
+          },
+          {
+            "scenario_id": 245,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.01804375768051635
+          },
+          {
+            "scenario_id": 246,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.049143913856427086
+          },
+          {
+            "scenario_id": 247,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9104480446220231
+          },
+          {
+            "scenario_id": 248,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9746937790935926
+          },
+          {
+            "scenario_id": 356,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.05470826056393769
+          },
+          {
+            "scenario_id": 357,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9428568438844549
+          },
+          {
+            "scenario_id": 358,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.062406723436727304
+          },
+          {
+            "scenario_id": 359,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5262955695413655
+          },
+          {
+            "scenario_id": 360,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9707146813381652
+          },
+          {
+            "scenario_id": 361,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.11794044379132602
+          },
+          {
+            "scenario_id": 362,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.06332643568260225
+          },
+          {
+            "scenario_id": 364,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9554539902135902
+          },
+          {
+            "scenario_id": 365,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9336979552348983
+          },
+          {
+            "scenario_id": 366,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9878628044542491
+          },
+          {
+            "scenario_id": 367,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.23169101648765006
+          },
+          {
+            "scenario_id": 368,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.13088186197649787
+          },
+          {
+            "scenario_id": 369,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8723638644185836
+          },
+          {
+            "scenario_id": 370,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.043887065717285186
+          },
+          {
+            "scenario_id": 371,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.22874271227813656
+          },
+          {
+            "scenario_id": 372,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9748332597598532
+          },
+          {
+            "scenario_id": 373,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9842177200809995
+          },
+          {
+            "scenario_id": 374,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.13151551146781165
+          },
+          {
+            "scenario_id": 375,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9854029805051309
+          },
+          {
+            "scenario_id": 376,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9614931794857794
+          },
+          {
+            "scenario_id": 377,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9546938111849572
+          },
+          {
+            "scenario_id": 378,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.04851945469604195
+          },
+          {
+            "scenario_id": 379,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.13513304904748605
+          },
+          {
+            "scenario_id": 380,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.1699769846626843
+          },
+          {
+            "scenario_id": 381,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.10573490263809388
+          },
+          {
+            "scenario_id": 382,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.28683060899596374
+          },
+          {
+            "scenario_id": 383,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9911529191334494
+          },
+          {
+            "scenario_id": 384,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9813742380421508
+          },
+          {
+            "scenario_id": 385,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9690342542510504
+          },
+          {
+            "scenario_id": 386,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8751085036809375
+          },
+          {
+            "scenario_id": 387,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.31199261628047764
+          },
+          {
+            "scenario_id": 388,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.22384229611994913
+          },
+          {
+            "scenario_id": 389,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.24029957736480836
+          },
+          {
+            "scenario_id": 390,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9838892785978356
+          },
+          {
+            "scenario_id": 391,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.05909173165960681
+          },
+          {
+            "scenario_id": 392,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.985352019855543
+          },
+          {
+            "scenario_id": 393,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9777902460053175
+          },
+          {
+            "scenario_id": 394,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.12186735673481075
+          },
+          {
+            "scenario_id": 395,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.13880348971743997
+          },
+          {
+            "scenario_id": 396,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.033083523784855164
+          },
+          {
+            "scenario_id": 397,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9934913930757859
+          },
+          {
+            "scenario_id": 398,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9893612889559322
+          },
+          {
+            "scenario_id": 399,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.25844178554835945
+          },
+          {
+            "scenario_id": 400,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9906537492089068
+          },
+          {
+            "scenario_id": 401,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.14766513160266845
+          }
+        ],
+        "metric_scope": "agreement with author direction; not profitability or entry accuracy"
+      }
+    },
+    {
+      "regularization": 0.1,
+      "validation": {
+        "scenarios": 61,
+        "class_counts": {
+          "short": 30,
+          "long": 31
+        },
+        "accuracy": 0.8524590163934426,
+        "balanced_accuracy": 0.8526881720430108,
+        "confusion_true_rows_predicted_columns": {
+          "short": {
+            "short": 26,
+            "long": 4
+          },
+          "long": {
+            "short": 5,
+            "long": 26
+          }
+        },
+        "log_loss": 0.40930293535253887,
+        "majority_baseline": {
+          "direction_chosen_from_fit_partition": "long",
+          "accuracy": 0.5081967213114754,
+          "balanced_accuracy": 0.5
+        },
+        "details": [
+          {
+            "scenario_id": 216,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.430193937323822
+          },
+          {
+            "scenario_id": 217,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4208466632024433
+          },
+          {
+            "scenario_id": 218,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.45897008676062534
+          },
+          {
+            "scenario_id": 219,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9280009750010193
+          },
+          {
+            "scenario_id": 220,
+            "instrument_group": "1000PEPE",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9034902559777406
+          },
+          {
+            "scenario_id": 221,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.14119447079930864
+          },
+          {
+            "scenario_id": 239,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9017945838858036
+          },
+          {
+            "scenario_id": 240,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3258737365430599
+          },
+          {
+            "scenario_id": 241,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6948385058373097
+          },
+          {
+            "scenario_id": 242,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.768683221944978
+          },
+          {
+            "scenario_id": 243,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.13568925717564184
+          },
+          {
+            "scenario_id": 244,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8521356833959866
+          },
+          {
+            "scenario_id": 245,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.08034147195958093
+          },
+          {
+            "scenario_id": 246,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.1343907714445362
+          },
+          {
+            "scenario_id": 247,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8317901754566183
+          },
+          {
+            "scenario_id": 248,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8879830598818194
+          },
+          {
+            "scenario_id": 356,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.17635820774411978
+          },
+          {
+            "scenario_id": 357,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7995058904563384
+          },
+          {
+            "scenario_id": 358,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.19520470097669745
+          },
+          {
+            "scenario_id": 359,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6942647978765017
+          },
+          {
+            "scenario_id": 360,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9274555421060384
+          },
+          {
+            "scenario_id": 361,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.23932081276272024
+          },
+          {
+            "scenario_id": 362,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.15966847071850154
+          },
+          {
+            "scenario_id": 364,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8194808313248252
+          },
+          {
+            "scenario_id": 365,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8802572087850381
+          },
+          {
+            "scenario_id": 366,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9296907605605647
+          },
+          {
+            "scenario_id": 367,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.40378479203240475
+          },
+          {
+            "scenario_id": 368,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3018318275265256
+          },
+          {
+            "scenario_id": 369,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8180042916968114
+          },
+          {
+            "scenario_id": 370,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.12396237122137439
+          },
+          {
+            "scenario_id": 371,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3824233019805528
+          },
+          {
+            "scenario_id": 372,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9111321670078957
+          },
+          {
+            "scenario_id": 373,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9409235175831709
+          },
+          {
+            "scenario_id": 374,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.29040849223148746
+          },
+          {
+            "scenario_id": 375,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8984252823097315
+          },
+          {
+            "scenario_id": 376,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9178837886043646
+          },
+          {
+            "scenario_id": 377,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9077268186267002
+          },
+          {
+            "scenario_id": 378,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.15089140136623966
+          },
+          {
+            "scenario_id": 379,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.2923070495016518
+          },
+          {
+            "scenario_id": 380,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3825458163468015
+          },
+          {
+            "scenario_id": 381,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.20339190622080813
+          },
+          {
+            "scenario_id": 382,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4497918034350586
+          },
+          {
+            "scenario_id": 383,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9337250065736798
+          },
+          {
+            "scenario_id": 384,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9325406134755826
+          },
+          {
+            "scenario_id": 385,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8997339030065767
+          },
+          {
+            "scenario_id": 386,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7699798873495846
+          },
+          {
+            "scenario_id": 387,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.41810410201076836
+          },
+          {
+            "scenario_id": 388,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3101927324614928
+          },
+          {
+            "scenario_id": 389,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4375580512743523
+          },
+          {
+            "scenario_id": 390,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9382116386531494
+          },
+          {
+            "scenario_id": 391,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.19013716622543994
+          },
+          {
+            "scenario_id": 392,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9109506529024859
+          },
+          {
+            "scenario_id": 393,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9098281747735587
+          },
+          {
+            "scenario_id": 394,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.21768064734620296
+          },
+          {
+            "scenario_id": 395,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.25495198011487546
+          },
+          {
+            "scenario_id": 396,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.10994010018004673
+          },
+          {
+            "scenario_id": 397,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9582422418317946
+          },
+          {
+            "scenario_id": 398,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9412979523157855
+          },
+          {
+            "scenario_id": 399,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.36030165766675615
+          },
+          {
+            "scenario_id": 400,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.9338056417027729
+          },
+          {
+            "scenario_id": 401,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.2391477555092737
+          }
+        ],
+        "metric_scope": "agreement with author direction; not profitability or entry accuracy"
+      }
+    },
+    {
+      "regularization": 1.0,
+      "validation": {
+        "scenarios": 61,
+        "class_counts": {
+          "short": 30,
+          "long": 31
+        },
+        "accuracy": 0.7704918032786885,
+        "balanced_accuracy": 0.7672043010752688,
+        "confusion_true_rows_predicted_columns": {
+          "short": {
+            "short": 17,
+            "long": 13
+          },
+          "long": {
+            "short": 1,
+            "long": 30
+          }
+        },
+        "log_loss": 0.5527947749825377,
+        "majority_baseline": {
+          "direction_chosen_from_fit_partition": "long",
+          "accuracy": 0.5081967213114754,
+          "balanced_accuracy": 0.5
+        },
+        "details": [
+          {
+            "scenario_id": 216,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6640985805479105
+          },
+          {
+            "scenario_id": 217,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.657654191302896
+          },
+          {
+            "scenario_id": 218,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6607025639935243
+          },
+          {
+            "scenario_id": 219,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7963339525551776
+          },
+          {
+            "scenario_id": 220,
+            "instrument_group": "1000PEPE",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7817331254088078
+          },
+          {
+            "scenario_id": 221,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.378623815125095
+          },
+          {
+            "scenario_id": 239,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7877198910985392
+          },
+          {
+            "scenario_id": 240,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5853812871106533
+          },
+          {
+            "scenario_id": 241,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6176953368998674
+          },
+          {
+            "scenario_id": 242,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7395400525482495
+          },
+          {
+            "scenario_id": 243,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.36172943381425526
+          },
+          {
+            "scenario_id": 244,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7863703809039488
+          },
+          {
+            "scenario_id": 245,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.30866812192931076
+          },
+          {
+            "scenario_id": 246,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3475093696573226
+          },
+          {
+            "scenario_id": 247,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6175743701022683
+          },
+          {
+            "scenario_id": 248,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7294362732811066
+          },
+          {
+            "scenario_id": 356,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3675747164689241
+          },
+          {
+            "scenario_id": 357,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5931947460250847
+          },
+          {
+            "scenario_id": 358,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4473778635439696
+          },
+          {
+            "scenario_id": 359,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7030891733109286
+          },
+          {
+            "scenario_id": 360,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8037045837435173
+          },
+          {
+            "scenario_id": 361,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4286200819987926
+          },
+          {
+            "scenario_id": 362,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4118604670526617
+          },
+          {
+            "scenario_id": 364,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7069167032831821
+          },
+          {
+            "scenario_id": 365,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7733397582052861
+          },
+          {
+            "scenario_id": 366,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7761518364632932
+          },
+          {
+            "scenario_id": 367,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6235835745351066
+          },
+          {
+            "scenario_id": 368,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6021058276671771
+          },
+          {
+            "scenario_id": 369,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7525195393357276
+          },
+          {
+            "scenario_id": 370,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.37874986927504223
+          },
+          {
+            "scenario_id": 371,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6148810219901203
+          },
+          {
+            "scenario_id": 372,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7762193251528291
+          },
+          {
+            "scenario_id": 373,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8006272633482564
+          },
+          {
+            "scenario_id": 374,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5109012630895963
+          },
+          {
+            "scenario_id": 375,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7392951126852665
+          },
+          {
+            "scenario_id": 376,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8040713797006749
+          },
+          {
+            "scenario_id": 377,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7858037820144491
+          },
+          {
+            "scenario_id": 378,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3697836670708899
+          },
+          {
+            "scenario_id": 379,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5030415899711178
+          },
+          {
+            "scenario_id": 380,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6275945045799279
+          },
+          {
+            "scenario_id": 381,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4169282873850362
+          },
+          {
+            "scenario_id": 382,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.651577814372027
+          },
+          {
+            "scenario_id": 383,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7760141180877292
+          },
+          {
+            "scenario_id": 384,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8002917374486429
+          },
+          {
+            "scenario_id": 385,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7536427057335353
+          },
+          {
+            "scenario_id": 386,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7173421068111477
+          },
+          {
+            "scenario_id": 387,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4433890093885004
+          },
+          {
+            "scenario_id": 388,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.551375039122491
+          },
+          {
+            "scenario_id": 389,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6659926943698938
+          },
+          {
+            "scenario_id": 390,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7920591664598632
+          },
+          {
+            "scenario_id": 391,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.3775986838658567
+          },
+          {
+            "scenario_id": 392,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7626614795630006
+          },
+          {
+            "scenario_id": 393,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7575477620094463
+          },
+          {
+            "scenario_id": 394,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.42117416061055435
+          },
+          {
+            "scenario_id": 395,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.4455958002201649
+          },
+          {
+            "scenario_id": 396,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.33904150806988737
+          },
+          {
+            "scenario_id": 397,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.8248157388401719
+          },
+          {
+            "scenario_id": 398,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7986430945997446
+          },
+          {
+            "scenario_id": 399,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.47857339513056785
+          },
+          {
+            "scenario_id": 400,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.7658814419208382
+          },
+          {
+            "scenario_id": 401,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "short",
+            "author_long_probability": 0.43561266484441197
+          }
+        ],
+        "metric_scope": "agreement with author direction; not profitability or entry accuracy"
+      }
+    },
+    {
+      "regularization": 10.0,
+      "validation": {
+        "scenarios": 61,
+        "class_counts": {
+          "short": 30,
+          "long": 31
+        },
+        "accuracy": 0.5081967213114754,
+        "balanced_accuracy": 0.5,
+        "confusion_true_rows_predicted_columns": {
+          "short": {
+            "short": 0,
+            "long": 30
+          },
+          "long": {
+            "short": 0,
+            "long": 31
+          }
+        },
+        "log_loss": 0.6805881167076909,
+        "majority_baseline": {
+          "direction_chosen_from_fit_partition": "long",
+          "accuracy": 0.5081967213114754,
+          "balanced_accuracy": 0.5
+        },
+        "details": [
+          {
+            "scenario_id": 216,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6573170870602454
+          },
+          {
+            "scenario_id": 217,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6528984178577811
+          },
+          {
+            "scenario_id": 218,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6520951140021235
+          },
+          {
+            "scenario_id": 219,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6712510603355157
+          },
+          {
+            "scenario_id": 220,
+            "instrument_group": "1000PEPE",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6680967295304334
+          },
+          {
+            "scenario_id": 221,
+            "instrument_group": "1000PEPE",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5782678571200408
+          },
+          {
+            "scenario_id": 239,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6712376472913292
+          },
+          {
+            "scenario_id": 240,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6352752426051664
+          },
+          {
+            "scenario_id": 241,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.621267667737361
+          },
+          {
+            "scenario_id": 242,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.663484478969563
+          },
+          {
+            "scenario_id": 243,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5691143903156548
+          },
+          {
+            "scenario_id": 244,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6775329232485999
+          },
+          {
+            "scenario_id": 245,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5555264681355405
+          },
+          {
+            "scenario_id": 246,
+            "instrument_group": "ENA",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5621949439030862
+          },
+          {
+            "scenario_id": 247,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6032370297434402
+          },
+          {
+            "scenario_id": 248,
+            "instrument_group": "ENA",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6470309416683707
+          },
+          {
+            "scenario_id": 356,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5610787224036571
+          },
+          {
+            "scenario_id": 357,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6025803272921563
+          },
+          {
+            "scenario_id": 358,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5936163587798532
+          },
+          {
+            "scenario_id": 359,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6514077463029162
+          },
+          {
+            "scenario_id": 360,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6735155597723856
+          },
+          {
+            "scenario_id": 361,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5806957742087939
+          },
+          {
+            "scenario_id": 362,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5865334520352905
+          },
+          {
+            "scenario_id": 364,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6488885593040596
+          },
+          {
+            "scenario_id": 365,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6676965503583646
+          },
+          {
+            "scenario_id": 366,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6619533680499531
+          },
+          {
+            "scenario_id": 367,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6417802094796198
+          },
+          {
+            "scenario_id": 368,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6421736463231886
+          },
+          {
+            "scenario_id": 369,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6652594657431005
+          },
+          {
+            "scenario_id": 370,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5786235643463162
+          },
+          {
+            "scenario_id": 371,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.641055771743105
+          },
+          {
+            "scenario_id": 372,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6653446306015882
+          },
+          {
+            "scenario_id": 373,
+            "instrument_group": "LDO",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6688637128471191
+          },
+          {
+            "scenario_id": 374,
+            "instrument_group": "LDO",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6073984896354001
+          },
+          {
+            "scenario_id": 375,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6513961257427715
+          },
+          {
+            "scenario_id": 376,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6765333120231376
+          },
+          {
+            "scenario_id": 377,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6690779914533533
+          },
+          {
+            "scenario_id": 378,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5680982408099442
+          },
+          {
+            "scenario_id": 379,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6034903549765923
+          },
+          {
+            "scenario_id": 380,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6441483096073303
+          },
+          {
+            "scenario_id": 381,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5822874097757342
+          },
+          {
+            "scenario_id": 382,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6490979373579571
+          },
+          {
+            "scenario_id": 383,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6616627498785307
+          },
+          {
+            "scenario_id": 384,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6716874211594769
+          },
+          {
+            "scenario_id": 385,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6567196577760741
+          },
+          {
+            "scenario_id": 386,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6564360280256253
+          },
+          {
+            "scenario_id": 387,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.569313148114355
+          },
+          {
+            "scenario_id": 388,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6237232657750656
+          },
+          {
+            "scenario_id": 389,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.656327744421942
+          },
+          {
+            "scenario_id": 390,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6636130135059214
+          },
+          {
+            "scenario_id": 391,
+            "instrument_group": "XLM",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5634691335732795
+          },
+          {
+            "scenario_id": 392,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6612803948722491
+          },
+          {
+            "scenario_id": 393,
+            "instrument_group": "XLM",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6562514646321675
+          },
+          {
+            "scenario_id": 394,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5818097113627958
+          },
+          {
+            "scenario_id": 395,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.587632557061622
+          },
+          {
+            "scenario_id": 396,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5628582152490031
+          },
+          {
+            "scenario_id": 397,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6784082821445663
+          },
+          {
+            "scenario_id": 398,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6696542918755535
+          },
+          {
+            "scenario_id": 399,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5899677582000367
+          },
+          {
+            "scenario_id": 400,
+            "instrument_group": "BCH",
+            "author_direction": "long",
+            "predicted_direction": "long",
+            "author_long_probability": 0.6553381704735377
+          },
+          {
+            "scenario_id": 401,
+            "instrument_group": "BCH",
+            "author_direction": "short",
+            "predicted_direction": "long",
+            "author_long_probability": 0.5862204005946031
+          }
+        ],
+        "metric_scope": "agreement with author direction; not profitability or entry accuracy"
+      }
+    }
+  ],
+  "selected_regularization": 0.01,
+  "held_out_test": {
+    "scenarios": 72,
+    "class_counts": {
+      "long": 50,
+      "short": 22
+    },
+    "accuracy": 0.9166666666666666,
+    "balanced_accuracy": 0.9145454545454546,
+    "confusion_true_rows_predicted_columns": {
+      "short": {
+        "short": 20,
+        "long": 2
+      },
+      "long": {
+        "short": 4,
+        "long": 46
+      }
+    },
+    "log_loss": 0.28171131435439456,
+    "majority_baseline": {
+      "direction_chosen_from_fit_partition": "long",
+      "accuracy": 0.6944444444444444,
+      "balanced_accuracy": 0.5
+    },
+    "details": [
+      {
+        "scenario_id": 155,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.893166812359037
+      },
+      {
+        "scenario_id": 156,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9129513811012147
+      },
+      {
+        "scenario_id": 157,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.075143066737339
+      },
+      {
+        "scenario_id": 158,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "short",
+        "author_long_probability": 0.21908933045412968
+      },
+      {
+        "scenario_id": 159,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.8928426602793037
+      },
+      {
+        "scenario_id": 160,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.1729912395125536
+      },
+      {
+        "scenario_id": 161,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.7952999826170344
+      },
+      {
+        "scenario_id": 162,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.17510105121434189
+      },
+      {
+        "scenario_id": 163,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9607701097160309
+      },
+      {
+        "scenario_id": 164,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.94619772381247
+      },
+      {
+        "scenario_id": 165,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.065889051135309
+      },
+      {
+        "scenario_id": 166,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.8884787964014279
+      },
+      {
+        "scenario_id": 167,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9845639002428201
+      },
+      {
+        "scenario_id": 168,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9589089609078282
+      },
+      {
+        "scenario_id": 169,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.6029941168363278
+      },
+      {
+        "scenario_id": 170,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9435440328417601
+      },
+      {
+        "scenario_id": 171,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9224332772165275
+      },
+      {
+        "scenario_id": 172,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.3059538216931216
+      },
+      {
+        "scenario_id": 173,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9068904007707018
+      },
+      {
+        "scenario_id": 174,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.07898928288728388
+      },
+      {
+        "scenario_id": 175,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9790936105335981
+      },
+      {
+        "scenario_id": 176,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9818401488107485
+      },
+      {
+        "scenario_id": 177,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.8582814343669223
+      },
+      {
+        "scenario_id": 178,
+        "instrument_group": "WLD",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9821537401406193
+      },
+      {
+        "scenario_id": 179,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.15934477772700337
+      },
+      {
+        "scenario_id": 180,
+        "instrument_group": "WLD",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.11247519479708193
+      },
+      {
+        "scenario_id": 278,
+        "instrument_group": "AVAX",
+        "author_direction": "short",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9906030837997742
+      },
+      {
+        "scenario_id": 279,
+        "instrument_group": "AVAX",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9345860359215734
+      },
+      {
+        "scenario_id": 280,
+        "instrument_group": "AVAX",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.05580997622934969
+      },
+      {
+        "scenario_id": 281,
+        "instrument_group": "AVAX",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.953202181135423
+      },
+      {
+        "scenario_id": 282,
+        "instrument_group": "AVAX",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9111925033403928
+      },
+      {
+        "scenario_id": 283,
+        "instrument_group": "AVAX",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.8861431416048785
+      },
+      {
+        "scenario_id": 284,
+        "instrument_group": "AVAX",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9531480782200596
+      },
+      {
+        "scenario_id": 285,
+        "instrument_group": "AVAX",
+        "author_direction": "short",
+        "predicted_direction": "long",
+        "author_long_probability": 0.8879808771376622
+      },
+      {
+        "scenario_id": 286,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.983133939231718
+      },
+      {
+        "scenario_id": 287,
+        "instrument_group": "ONDO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.09176149154331531
+      },
+      {
+        "scenario_id": 288,
+        "instrument_group": "ONDO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.018856577416104865
+      },
+      {
+        "scenario_id": 289,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.5724859853738328
+      },
+      {
+        "scenario_id": 290,
+        "instrument_group": "ONDO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.06375477469224712
+      },
+      {
+        "scenario_id": 291,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9758274843175527
+      },
+      {
+        "scenario_id": 292,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9374808927637885
+      },
+      {
+        "scenario_id": 293,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.923567339420316
+      },
+      {
+        "scenario_id": 294,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9329371559957602
+      },
+      {
+        "scenario_id": 295,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9905261572436262
+      },
+      {
+        "scenario_id": 296,
+        "instrument_group": "ONDO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9634087684687367
+      },
+      {
+        "scenario_id": 297,
+        "instrument_group": "ONDO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.06001027590280818
+      },
+      {
+        "scenario_id": 298,
+        "instrument_group": "ONDO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.020461901865653997
+      },
+      {
+        "scenario_id": 299,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.952932714756059
+      },
+      {
+        "scenario_id": 300,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "short",
+        "author_long_probability": 0.04270242042238382
+      },
+      {
+        "scenario_id": 301,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9578317591619924
+      },
+      {
+        "scenario_id": 302,
+        "instrument_group": "TAO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.04077358566526955
+      },
+      {
+        "scenario_id": 303,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.8900529199431061
+      },
+      {
+        "scenario_id": 304,
+        "instrument_group": "TAO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.11154926005786663
+      },
+      {
+        "scenario_id": 305,
+        "instrument_group": "TAO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.11700490240148226
+      },
+      {
+        "scenario_id": 306,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9702862353387423
+      },
+      {
+        "scenario_id": 308,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.7959467685127906
+      },
+      {
+        "scenario_id": 309,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9944372863495423
+      },
+      {
+        "scenario_id": 310,
+        "instrument_group": "TAO",
+        "author_direction": "long",
+        "predicted_direction": "short",
+        "author_long_probability": 0.43410424368985673
+      },
+      {
+        "scenario_id": 313,
+        "instrument_group": "TAO",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.01409152386837328
+      },
+      {
+        "scenario_id": 314,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9751951631558675
+      },
+      {
+        "scenario_id": 315,
+        "instrument_group": "1000BONK",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.0435413830258486
+      },
+      {
+        "scenario_id": 316,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9128368205633529
+      },
+      {
+        "scenario_id": 317,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9921237930464025
+      },
+      {
+        "scenario_id": 318,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9670918757414512
+      },
+      {
+        "scenario_id": 319,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9605820375150725
+      },
+      {
+        "scenario_id": 320,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "short",
+        "author_long_probability": 0.15873208183181722
+      },
+      {
+        "scenario_id": 321,
+        "instrument_group": "1000BONK",
+        "author_direction": "short",
+        "predicted_direction": "short",
+        "author_long_probability": 0.17766591216036784
+      },
+      {
+        "scenario_id": 322,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9859483429758643
+      },
+      {
+        "scenario_id": 323,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9203589498544632
+      },
+      {
+        "scenario_id": 324,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.8939655852216241
+      },
+      {
+        "scenario_id": 325,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9768752834152097
+      },
+      {
+        "scenario_id": 326,
+        "instrument_group": "1000BONK",
+        "author_direction": "long",
+        "predicted_direction": "long",
+        "author_long_probability": 0.9592676124730205
+      }
+    ],
+    "metric_scope": "agreement with author direction; not profitability or entry accuracy"
+  },
+  "historical_test_was_previously_observed": true,
+  "profitability_evaluated": false,
+  "automatic_order_execution_allowed": false,
+  "limitations": [
+    "Selected author demonstrations include stop-outs; labels are not all profitable trades.",
+    "Earlier verified waiting states are not losing-trade labels.",
+    "Intrabar demonstrations may use a pre-hour proxy; exact execution prices are not learned.",
+    "Caption-derived OR branches are valid examples, not proof of the author's earliest chosen entry.",
+    "The author's blue levels are supplied; autonomous level discovery is not trained.",
+    "Instrument groups were fixed before eligibility, but their earlier test results were already observed.",
+    "Metrics measure author-label agreement, not profit, win rate, or continuous-market detection.",
+    "Models do not learn stop or take-profit regression and never authorize orders."
+  ],
+  "cases_sha256": "980f7063aabbfa3978df87ce1f02f95fc5f25ba1d3f474ecc4c736c29185d84b",
+  "model_sha256": "d1549fd1097d5fa39df97705eca1e68cfaff84d0493730247e300535d0fba89b"
+}

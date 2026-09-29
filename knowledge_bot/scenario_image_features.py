@@ -196,6 +196,7 @@ def extract_image_features(
     anchor_override: Mapping | None = None,
     signal_x: float | None = None, signal_x_verified: bool = False,
     include_signal_bar: bool = False,
+    level_y_override: float | None = None,
 ) -> dict:
     """Extract one image, or return explicit abstention diagnostics.
 
@@ -301,10 +302,18 @@ def extract_image_features(
         result["drawn_level_pixel_prices"] = levels
         if not levels:
             raise ValueError("no_blue_horizontal_level")
-        level = min(levels, key=lambda price: abs(price-bars[-1]["close"]))
+        if level_y_override is not None:
+            if not signal_x_verified or not np.isfinite(level_y_override):
+                raise ValueError('unverified_level_override')
+            level = min(levels, key=lambda price: abs(price+level_y_override))
+            if abs(level+level_y_override) > 3:
+                raise ValueError('reviewed_level_not_found_in_blue_lines')
+        else:
+            level = min(levels, key=lambda price: abs(price-bars[-1]["close"]))
         result["selected_level_pixel_price"] = level
         result["level"] = level
-        result["level_selection"] = "nearest_to_annotated_bar_close_without_direction_label"
+        result["level_selection"] = ("visually_reviewed_existing_blue_level" if level_y_override is not None
+                                     else "nearest_to_annotated_bar_close_without_direction_label")
         features = features_from_ohlc(bars, level)
         if abs(features["bar_0_close_from_level_tr"]) > 2:
             raise ValueError("annotated_bar_far_from_any_level")

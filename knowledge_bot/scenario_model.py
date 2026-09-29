@@ -18,6 +18,7 @@ from typing import Any, Mapping, Sequence
 MODEL_PATH = (Path(__file__).resolve().parents[1] / "_knowledge_base" /
               "manual_reviews/scenarios_dzhahan_20260925/training/scenario_model.json")
 MODEL_KIND = "entry_pairwise_ranker"
+READINESS_MODEL_KIND = "entry_demonstration_readiness"
 MIN_CLOSED_BARS = 16  # fourteen prior TR values, each with its previous close
 
 
@@ -40,7 +41,7 @@ def validate_model(artifact: Mapping[str, Any]) -> dict[str, Any]:
     """Reject stale, corrupt or incompatible artifacts before inference."""
     if not isinstance(artifact, Mapping):
         raise ValueError("Model must be a JSON object")
-    if artifact.get("schema_version") != 1 or artifact.get("model_kind") != MODEL_KIND:
+    if artifact.get("schema_version") != 1 or artifact.get("model_kind") not in {MODEL_KIND, READINESS_MODEL_KIND}:
         raise ValueError("Unsupported model schema or task")
     names = artifact.get("feature_names")
     expected = list(_feature_module().FEATURE_NAMES)
@@ -230,6 +231,7 @@ def entry_timing_advice(execution_bars: Sequence[Any], level: float, direction: 
         return {**result, "status": "unavailable", "reason": "model_not_found"}
     try:
         model = load_model(path)
+        result['model_kind'] = model['model_kind']
         now = datetime.now(timezone.utc)
         cutoff = now if as_of is None else min(_utc_time(as_of), now)
         closed = closed_hourly_bars(execution_bars, cutoff)
@@ -243,12 +245,17 @@ def entry_timing_advice(execution_bars: Sequence[Any], level: float, direction: 
             return {**result, "status": "abstain", "reason": "insufficient_closed_history"}
         scores = []
         for end in range(max(MIN_CLOSED_BARS, len(closed)-6), len(closed)+1):
+            if _utc_time(closed[end-1]['close_time']) < _utc_time(daily_gate['daily_signal_close_time']):
+                continue
             values = features_for_entry(closed[:end], level, direction)
             scores.append({"as_of": closed[end-1]["close_time"],
                            "raw_entry_score": score_features(values, model)})
         latest = scores[-1]["raw_entry_score"]
         rank = 1 + sum(row["raw_entry_score"] > latest + 1e-12 for row in scores[:-1])
-        return {**result, "entry_readiness_rank": rank, "compared_states": len(scores),
+        preference = ({'demonstrated_entry_pattern': latest >= 0,
+                       'preference_meaning': 'author entry geometry versus post-D1 wait examples, not permission to trade'}
+                      if model['model_kind'] == READINESS_MODEL_KIND else {})
+        return {**result, **preference, "entry_readiness_rank": rank, "compared_states": len(scores),
                 "raw_entry_score": latest, "recent_state_scores": scores,
                 "direction_supplied_by_rules": direction,
                 "latest_closed_bar": closed[-1]["open_time"],

@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Any, Mapping
 
 
-RULES_VERSION = "dzhahan-409-knowledge-contract-2026-09-25-v1"
+RULES_VERSION = "dzhahan-409-knowledge-contract-2026-09-27-v2"
 ALLOWED_LEVEL_TYPES = ("limit", "mirror", "paranormal", "inflection")
 EXCLUDED_LEVEL_TYPES = ("gap", "consolidation", "false_breakout")
 PARANORMAL_MIN_BODY_ATR = 1.6
@@ -21,31 +21,32 @@ ATR_PERIOD = 14
 DAILY_HISTORY_MONTHS = 18
 MINIMUM_LEVEL_SPACING_PERCENT = 1.5
 
-# Dataset-specific corrections identify ambiguous *labels*, not trading rules.
-# The original annotated records and images are retained without rewriting.
-LABEL_CONFLICTS = {
-    30: "D1 and H1 show opposing directions; pair direction is unclear.",
-    68: "Written compression direction conflicts with the pictured approach.",
-    83: "Written compression direction conflicts with the pictured approach.",
-    103: "Written short breakout conflicts with the pictured long entry.",
-    160: "Written rise conflicts with the pictured fall and H1 annotation.",
+# The user confirmed the original scenarios are correct. These are unresolved
+# interpretations of those annotations by the extraction/review process, not
+# claims that the author's examples are wrong. Retain the original images.
+DIRECTION_INTERPRETATION_REVIEW = {
+    30: "Our D1/H1 direction interpretation needs alignment across the pair.",
+    68: "Our reading of compression direction and approach needs verification.",
+    83: "Our reading of compression direction and approach needs verification.",
+    103: "Our reading of the breakout and entry directions needs verification.",
+    160: "Our reading of the move direction across D1/H1 needs verification.",
 }
 DATE_REVIEW_IDS = (13, 78, 255, 404)
 DUPLICATE_SCENARIO_GROUPS = ((281, 284),)
 H1_DEPENDENT_DIRECTION_IDS = (276, 307)
-ENTRY_LABEL_REVIEW = {
-    54: "Entry precedes D1 close; superseded by the user's mandatory closed-D1 rule.",
-    36: "No explicit H1 entry arrow or trigger.",
-    58: "Entry is not individually marked.",
-    156: "D1-close arrow and H1 entry moment are ambiguous.",
-    177: "One-ATR condition has no independently marked execution bar.",
-    201: "D1 signal arrow and time marker disagree.",
-    247: "No specific H1 entry bar is marked.",
-    256: "The written label says take-profit, not entry; do not silently relabel it.",
-    264: "One-ATR condition has no separate entry-bar arrow.",
-    278: "Entry arrow occurs before the separately described full-bar confirmation.",
-    311: "End of chop is not precisely specified; no entry-bar arrow.",
-    363: "Two D1 arrows leave the decision-time alignment ambiguous.",
+ENTRY_INTERPRETATION_REVIEW = {
+    54: "Our extracted entry appears before D1 close; resolve the alignment and enforce the user's closed-D1 rule.",
+    36: "The H1 entry arrow or trigger has not yet been confidently located.",
+    58: "The individual entry mark has not yet been confidently located.",
+    156: "Our alignment of the D1-close arrow and H1 entry needs verification.",
+    177: "Our interpretation of the one-ATR condition needs an aligned execution bar.",
+    201: "Our alignment of the D1 signal arrow and time marker needs verification.",
+    247: "The specific H1 entry bar has not yet been confidently located.",
+    256: "Our reading identifies a take-profit label; locate the entry separately without relabelling that mark.",
+    264: "Our interpretation of the one-ATR condition needs a verified entry-bar alignment.",
+    278: "Our entry-arrow alignment appears before full-bar confirmation; verify both timestamps.",
+    311: "Our reading of the end of chop needs a precisely located entry bar.",
+    363: "Our interpretation of the two D1 arrows needs verified decision-time alignment.",
 }
 
 
@@ -164,12 +165,22 @@ def source_fingerprints(workspace: Path | str | None = None) -> list[dict[str, A
 
     Missing sources raise FileNotFoundError: a new training manifest must not
     silently claim that an unavailable knowledge source was checked.
+
+    ``workspace`` is the repository root. Historical references retain the old
+    checkout prefix as ``original_path``; ``path`` resolves within this checkout
+    even after it has been downloaded or renamed on another computer.
     """
-    root = Path(workspace) if workspace is not None else Path(__file__).resolve().parents[2]
+    root = Path(workspace).resolve() if workspace is not None else Path(__file__).resolve().parents[1]
     result = []
     for source in SOURCE_REFERENCES:
-        data = (root / source["path"]).read_bytes()
-        result.append({**source, "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data)})
+        original_path = source["path"]
+        prefix, separator, remainder = original_path.partition("/")
+        local_path = remainder if separator and prefix in ("botArtjahan", "botArtjahan-main") else original_path
+        data = (root / local_path).read_bytes()
+        result.append({
+            **source, "path": local_path, "original_path": original_path,
+            "sha256": hashlib.sha256(data).hexdigest(), "bytes": len(data),
+        })
     return result
 
 
@@ -191,14 +202,26 @@ def build_training_contract(workspace: Path | str | None = None) -> dict[str, An
             "chop": "Adjacent repeated same-side wick-return bars are chop, not multiple LP1 entries.",
             "confirms_level": False,
         },
-        "label_source": "visual_interpretation_of_user_annotations_not_verified_market_outcome",
+        "label_source": "interpretation_of_user_confirmed_correct_annotations_not_verified_market_outcome",
+        "annotation_authority": "Original user scenarios are accepted as correct; unresolved flags concern our extraction or interpretation, not the author's labels.",
         "training_target": "Rank the user-annotated H1 entry state above earlier unselected states of the same scenario.",
-        "direction_role": "Known D1/H1 scenario context supplied to the entry model; not the prediction target.",
+        "direction_role": "Long/short direction is a separate learning target from pre-entry prerequisites; the entry ranker consumes direction context. Training status is recorded in each component's own report.",
+        "direction_rule": "Compare the prerequisites for long and short available at decision time; the side with more supporting prerequisites is preferred. Equal or unresolved evidence does not justify inventing a direction.",
         "daily_close_required": True,
         "daily_close_rule_source": "Latest user clarification: a daily false breakout is not confirmed until the D1 bar closes; all TVH candidates must wait for D1 close.",
         "comparison_label_meaning": "Earlier unselected states are not labelled losing trades and do not prove a later entry was profitable.",
         "unavailable_numeric_targets": ["level_price", "entry_price", "stop_price", "take_profit_price", "realized_return"],
         "unknown_numeric_target_policy": "Keep null; do not derive targets from profitable outcome pixels or assume fixed ATR multiples.",
+        "risk_policy": {
+            "stop": "Use the supplied technical stop beyond the relevant structure; a false-breakout stop lies beyond its extreme.",
+            "atr_reference": "10% ATR is a knowledge-base reference, not a universal fixed stop or an inferred chart label.",
+            "take_profit_multiples": [3.0, 4.0],
+            "take_profit_source": "Latest user instruction, supported by knowledge-base reward/risk examples.",
+            "take_profit_calculation": "Entry plus/minus 3 or 4 times the distance to a real supplied structural stop; calculated targets are not observed outcomes.",
+            "price_inputs_required": ["entry", "structural_stop"],
+            "channel_room_source_key": "channel_room_for_risk",
+            "fees_and_slippage_included": False,
+        },
         "feature_cutoff": "Only observations available before the annotated decision; result descriptions and future chart pixels are forbidden live predictive features.",
         "split_policy": "Keep both timeframes, repeated dates/instruments and duplicate scenarios together; chronological validation needs verified dates.",
         "known_duplicate_groups": [list(group) for group in DUPLICATE_SCENARIO_GROUPS],
@@ -208,34 +231,34 @@ def build_training_contract(workspace: Path | str | None = None) -> dict[str, An
 
 
 def scenario_training_policy(row: Mapping[str, Any]) -> dict[str, Any]:
-    """Expose annotation conflicts separately from missing outcome/price labels."""
+    """Expose interpretation uncertainty separately from absent numeric labels."""
     identifier = int(row["scenario_id"])
     reasons = []
     if row.get("direction") not in ("long", "short"):
         reasons.append("direction_not_labelled")
-    if identifier in LABEL_CONFLICTS:
-        reasons.append("annotation_direction_or_approach_conflict")
+    if identifier in DIRECTION_INTERPRETATION_REVIEW:
+        reasons.append("direction_or_approach_interpretation_requires_review")
     missing_hourly = not any("1H_" in str(path) for path in row.get("image_files", ()))
     entry_reasons = []
     if row.get("direction") not in ("long", "short"):
         entry_reasons.append("scenario_direction_unknown")
     if identifier in (30, 103, 160):
-        entry_reasons.append("contradictory_direction_annotations")
+        entry_reasons.append("direction_interpretation_requires_review")
     if missing_hourly:
         entry_reasons.append("missing_hourly_image")
-    if identifier in ENTRY_LABEL_REVIEW:
+    if identifier in ENTRY_INTERPRETATION_REVIEW:
         entry_reasons.append("entry_bar_or_decision_time_requires_review")
     return {
         "scenario_id": identifier,
         "eligible": not entry_reasons,
         "reasons": entry_reasons,
         "entry_ranking_eligible": not entry_reasons,
-        "entry_review_detail": ENTRY_LABEL_REVIEW.get(identifier),
+        "entry_review_detail": ENTRY_INTERPRETATION_REVIEW.get(identifier),
         "entry_coordinates_must_be_verified": True,
-        "approach_annotation_conflict": identifier in (68, 83),
+        "approach_interpretation_requires_review": identifier in (68, 83),
         "direction_training_eligible": not reasons,
         "direction_exclusion_reasons": reasons,
-        "conflict_detail": LABEL_CONFLICTS.get(identifier),
+        "interpretation_review_detail": DIRECTION_INTERPRETATION_REVIEW.get(identifier),
         "hourly_image_present": not missing_hourly,
         "date_requires_review": identifier in DATE_REVIEW_IDS,
         "daily_only_direction_eligible": not reasons and identifier not in H1_DEPENDENT_DIRECTION_IDS,
@@ -243,6 +266,12 @@ def scenario_training_policy(row: Mapping[str, Any]) -> dict[str, Any]:
         "numeric_trade_labels_available": False,
         "profitability_label_available": False,
     }
+
+
+def _validate_positive_numbers(values: Mapping[str, Any]) -> None:
+    for name, value in values.items():
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value <= 0:
+            raise ValueError(f"{name} must be a finite positive number")
 
 
 def assess_risk_geometry(
@@ -261,9 +290,7 @@ def assess_risk_geometry(
     values = {"entry": entry, "stop": stop, "target": target, "minimum_reward_risk": minimum_reward_risk}
     if prior_atr is not None:
         values["prior_atr"] = prior_atr
-    for name, value in values.items():
-        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value <= 0:
-            raise ValueError(f"{name} must be a finite positive number")
+    _validate_positive_numbers(values)
     sign = 1 if direction == "long" else -1
     risk = sign * (entry - stop)
     reward = sign * (target - entry)
@@ -279,10 +306,43 @@ def assess_risk_geometry(
         "reward_distance": reward,
         "reward_risk": ratio,
         "minimum_reward_risk": minimum_reward_risk,
-        "meets_supplied_geometry": ratio >= minimum_reward_risk,
+        "meets_supplied_geometry": ratio >= minimum_reward_risk or math.isclose(ratio, minimum_reward_risk, rel_tol=1e-12),
         "stop_atr": risk / prior_atr if prior_atr is not None else None,
         "technical_stop_verified": False,
         "fees_and_slippage_included": False,
         "prices_source": "caller_supplied_not_model_predicted",
         "automatic_order_execution_allowed": False,
     }
+
+
+def calculate_take_profit_targets(
+    *, direction: str, entry: float, stop: float, prior_atr: float | None = None,
+) -> dict[str, dict[str, Any]]:
+    """Calculate the user's 3R/4R prices from an actual entry and structural stop.
+
+    The caller supplies the stop beyond the relevant structure (the wick extreme
+    for LP). This arithmetic cannot verify that placement or infer it from ATR.
+    No market outcome, execution cost or permission to place an order is implied.
+    An impossible nonpositive target is rejected, including on short positions.
+    """
+    if direction not in ("long", "short"):
+        raise ValueError("direction must be long or short")
+    _validate_positive_numbers({"entry": entry, "stop": stop})
+    sign = 1 if direction == "long" else -1
+    risk = sign * (entry - stop)
+    if risk <= 0:
+        raise ValueError("stop must be adverse to entry")
+    result = {}
+    for multiple in (3.0, 4.0):
+        geometry = assess_risk_geometry(
+            direction=direction, entry=entry, stop=stop,
+            target=entry + sign * multiple * risk,
+            prior_atr=prior_atr, minimum_reward_risk=multiple,
+        )
+        result[f"{multiple:g}R"] = {
+            **geometry,
+            "prices_source": "entry_and_stop_caller_supplied_target_calculated",
+            "target_multiple": multiple,
+            "target_source": "user_requested_reward_risk_not_observed_outcome",
+        }
+    return result

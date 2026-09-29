@@ -1,0 +1,27 @@
+{
+  "verified_at_utc": "2026-09-27T22:03:00.105345+00:00",
+  "original_images_verified": 817,
+  "original_image_hash_mismatches": [],
+  "prepared_scenarios": 364,
+  "prepared_states": 479,
+  "models_validate": true,
+  "current_provenance_verified": true,
+  "user_corrections_verified": true,
+  "full_suite": {
+    "tests": 440,
+    "result": "OK",
+    "seconds": 316.063,
+    "log": "training_market_verification_20260928.txt",
+    "shell_note": "PowerShell classified unittest stderr as NativeCommandError and returned1; unittest summary was OK."
+  },
+  "focused_tests": {
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK"
+  },
+  "model_sha256": {
+    "direction_model.json": "9bdc003e37eef815ac4f3b78dcf5c1d48640725dd5bad4668bbaf22fe827ac3b",
+    "scenario_model.json": "bf64c7fe03fe1d1b3ffb79efed4f7c8c929910d4858d833f318f37f92ec2d6d9"
+  }
+}

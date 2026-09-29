@@ -1,0 +1,2271 @@
+{
+  "schema_version": 1,
+  "evaluated_at_utc": "2026-09-28T04:56:24.853183+00:00",
+  "metric_scope": "selected_demonstrated_episodes_with_supplied_author_levels",
+  "evaluation_split": "intersection_of_saved_direction_and_entry_test_partitions",
+  "model_pair": "original_market_v2_direction_and_entry",
+  "expanded_direction_model_used": false,
+  "expanded_direction_model_scope": "separate experiment; not evaluated by this paired pipeline",
+  "scenarios": 69,
+  "scenario_ids": [
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    178,
+    179,
+    180,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286,
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293,
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    308,
+    309,
+    310,
+    313,
+    314,
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326
+  ],
+  "groups": [
+    "1000BONK",
+    "AVAX",
+    "ONDO",
+    "TAO",
+    "WLD"
+  ],
+  "direction": {
+    "correct": 63,
+    "total": 69,
+    "accuracy": 0.9130434782608695
+  },
+  "entry_at_demonstrated_state": {
+    "score_greater_than_or_equal_to_zero": 54,
+    "total": 69,
+    "rate": 0.782608695652174
+  },
+  "joint": {
+    "correct_direction_and_nonnegative_entry_score": 51,
+    "total": 69,
+    "accuracy": 0.7391304347826086
+  },
+  "verified_waits": {
+    "states": 16,
+    "false_positives": 3,
+    "true_negatives": 13,
+    "false_positive_rate": 0.1875
+  },
+  "entry_score_threshold": 0.0,
+  "threshold_selected_on_test": false,
+  "hourly_features_use": "predicted_direction_only_recomputed_from_closed_OHLC",
+  "resolution_counts": {
+    "pre_hour_proxy_not_exact_intrabar_entry": 46,
+    "closed_hourly_bar": 23
+  },
+  "entry_label_sources": {
+    "reviewed_author_entry_anchor": 69
+  },
+  "weights_fitted": false,
+  "labels_created": false,
+  "future_ohlc_used": false,
+  "profitability_evaluated": false,
+  "continuous_market_entry_detection_evaluated": false,
+  "historical_test_was_previously_observed": true,
+  "research_only": true,
+  "automatic_order_execution_allowed": false,
+  "preparation_provenance": {
+    "preparation_report_sha256": "89b382dafca0199c593e429c2a13f5209f80f4b94d4cac23a722407ac2cb5491",
+    "cases_sha256": "522e3e502e75d06bb347a409cbd1636ab186065c6d4d182718f10f26eebd4046",
+    "source_sha256": {
+      "training/user_scope.json": "eca177adaa7a2e05debe85d7ed707979db7245af87c877adfe05c74a9d1000cf",
+      "visual_analysis/scenario_analysis.jsonl": "8ec8353bded6a41339b9092278cc21a4a2f3431a9faa567b4d5d97fa091a22d3",
+      "training/market_daily_alignment.jsonl": "81538e14acae7f1aac95f62609d5bf41fcfc49647d17abf66f9daa303e442c66",
+      "training/market_hourly_alignment.jsonl": "86d3d2bf99c36cc0e15d9ad1f7c53e9f9487381ab471b8afdf6e3c0131818c76",
+      "training/market_daily_anchor_reviews.jsonl": "d68819c9a714c90076eaf4b6525aa9b7f1ba7f9258558a105abefb56e490004f",
+      "training/image_extraction_audit.json": "4b0f7c6879cd5e3f9b0ad1aa1fe49960b439cc0bfcff3d3e388d33d113a5a5e7",
+      "training/direction_training_ledger.jsonl": "982fff401a7993e81f83714ff8d03ca7e0ef1b1ac45550c97f569a26a6715406",
+      "training/market_daily_role_reviews_003_031.jsonl": "f80cd713df13b57741bb477596d61a6a52353ed4092a9820ea8bf988b5712191",
+      "training/market_daily_role_reviews_040_155.jsonl": "fd017b82726523a717f5c3db823e5899e21e108cf13df31a92e47c0e027fae41",
+      "training/market_daily_role_reviews_061_201.jsonl": "764f9d129643f6be735ee6e743250d9f1dce9f73536f17677eaadb3e09fd66f5",
+      "training/market_direction_reviews.jsonl": "dd30c9403b116dd6a0cc433d4e1754c6b73c6e9f2246291165d1e082b34abed9",
+      "training/market_timing_questions.jsonl": "8acf4dffef09b1162a312a9c5e13e38302756463e69600fa5f0165073645761d"
+    },
+    "review_sources_sha256": {
+      "training/anchor_reviews_001_153.jsonl": "99bbc00b4e89daed1e216e7e03f7d9a7adfae6d3d251e106135886d920d24681",
+      "training/anchor_reviews_154_305.jsonl": "217a816831945063239fbabbd3fc82a44101497ff91d02e84eba772962ca6905",
+      "training/anchor_reviews_306_409.jsonl": "2ec553e61626ea970112cfcb18b391863577d864e17d2ff7b2823b782b5437e5",
+      "training/anchor_reviews_expansion_20260927.jsonl": "0d98561f044ab037743c59d84a98d16b14a472afe8167e85e77a8e528d302394",
+      "training/anchor_reviews_market_001_153.jsonl": "defc17af5a0b43a7b02b5004cde6dc9bea7a435649b5df838866b82935bedcd6",
+      "training/anchor_reviews_market_154_409.jsonl": "48e2d21d533a31ae8affdda048221ec79237f04f9a9ed717c1330956ea5c68f6",
+      "training/anchor_reviews_resume_20260927.jsonl": "d20e93e66b08ef53d4c1efb91da75a5b1d09d9446ccdf09a8b33c12ec708b9dc",
+      "training/anchor_alignment_supplement_20260927.jsonl": "5d3229345e5e08709372fd7878ad1cdb21e8b510099d666f5245f1de68e51586",
+      "training/anchor_alignment_supplement_delayed_20260927.jsonl": "8cb6a6135b8bf70ed9647cfc6b475fe4caa4bab39ac344fe45e61a8376891fbd",
+      "training/anchor_alignment_supplement_market_recovery.jsonl": "cf87ed5e20cde397265a61b1d213a197b1b0dc81088a56984fd9db9c08d7e9ba",
+      "training/anchor_alignment_supplement_market_root_conditions.jsonl": "114f1a37e02e22c0778dfc2b183efa29b5f4fb4465cf0a27f1efe8750aedbf9c",
+      "training/anchor_alignment_supplement_market_snap_levels.jsonl": "0ad4161254c4c1eb9a44f186e6de6e56693859bb947d52138acdab331ced32a1",
+      "training/anchor_alignment_supplement_zz_market_conditions.jsonl": "f79a14961a10c28562760207a1e4b22c742c9386f2ac27eade3c87da56ce2ab7"
+    },
+    "preparation_sha256": "8d78d2dc2f3e236dca02785990f4246bac53a352ddd74a13c2b1e5deb991e39d",
+    "feature_code_sha256": {
+      "scenario_prerequisites.py": "86cce76b3a6cf93ec1fb8de497d1d2b22e2b9b90039ba340ea0f7a8d4e4f9ae5",
+      "scenario_image_features.py": "0de84d215f09d9a518d7ffe4a6a6e0f4a702f576b520a7b9e78af088beb43120",
+      "scenario_model.py": "9b3c553e8ee0c88d718fc4921227b1af6a883d15974a795fb0254536c2840877",
+      "scenario_training_rules.py": "ef5641296ed4bb0365a72acc4230505db45817997e8bc7db3cb95b8a967a1ee1"
+    },
+    "training_code_sha256": "ed0b14c43734f05653868cc37e0f0059b8a2bef535d6baadfc22f928940c38b7",
+    "fitting_helper_sha256": {
+      "scenario_direction_model.py": "65f1d38bcca4e05c853f017a268c4088330737650242cf1f7cf00e9b7b0ba666",
+      "train_scenario_entry_model.py": "75e4c97f26a8f355c796954eb890e6f856d104e4b853679dd812604b8fa11800"
+    }
+  },
+  "limitations": [
+    "Selected demonstrated episodes and supplied blue levels, not a continuous market stream.",
+    "Agreement with author direction and entry labels is not profitability or a win rate.",
+    "Pre-hour proxies exclude execution-hour final OHLC and do not identify exact intrabar execution.",
+    "Caption-derived OR branches need not be the author's earliest selected execution.",
+    "Verified waiting states are sparse; unlabelled earlier hours are never treated as negatives.",
+    "The fixed instrument test groups have been observed previously; this is not a fresh independent test.",
+    "The historical availability of supplied author levels is not independently established.",
+    "Stop losses, take profits, costs, slippage and autonomous level discovery are not evaluated."
+  ],
+  "warnings": [
+    "Previously observed fixed test groups; no new independent test is claimed.",
+    "Only 16 verified waiting states; false-positive estimates are fragile."
+  ],
+  "details": [
+    {
+      "scenario_id": 155,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.8742729788501713,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1781481600000,
+      "last_used_daily_open_time_ms": 1781395200000,
+      "decision_time_ms": 1781488800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1781488800000,
+          "last_used_hourly_open_time_ms": 1781485200000,
+          "last_used_hourly_close_time_ms": 1781488800000,
+          "label": "entry",
+          "raw_entry_score": -1.2304441952363752,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 156,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.8970888457081029,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1779062400000,
+      "last_used_daily_open_time_ms": 1778976000000,
+      "decision_time_ms": 1779062400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1779062400000,
+          "last_used_hourly_open_time_ms": 1779058800000,
+          "last_used_hourly_close_time_ms": 1779062400000,
+          "label": "entry",
+          "raw_entry_score": 0.27142367227575515,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 157,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.07555236226555555,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1778457600000,
+      "last_used_daily_open_time_ms": 1778371200000,
+      "decision_time_ms": 1778457600000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1778457600000,
+          "last_used_hourly_open_time_ms": 1778454000000,
+          "last_used_hourly_close_time_ms": 1778457600000,
+          "label": "entry",
+          "raw_entry_score": 0.08876457617687555,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 158,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "short",
+      "author_long_probability": 0.2078763378915044,
+      "direction_correct": false,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1777852800000,
+      "last_used_daily_open_time_ms": 1777766400000,
+      "decision_time_ms": 1777852800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1777852800000,
+          "last_used_hourly_open_time_ms": 1777849200000,
+          "last_used_hourly_close_time_ms": 1777852800000,
+          "label": "entry",
+          "raw_entry_score": -1.0480815886089951,
+          "predicts_entry": false,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 159,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.8828535529562908,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1775865600000,
+      "last_used_daily_open_time_ms": 1775779200000,
+      "decision_time_ms": 1775926800000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1775905200000,
+          "last_used_hourly_open_time_ms": 1775901600000,
+          "last_used_hourly_close_time_ms": 1775905200000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.35595786076335656,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1775908800000,
+          "last_used_hourly_open_time_ms": 1775905200000,
+          "last_used_hourly_close_time_ms": 1775908800000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.3132587919285383,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1775912400000,
+          "last_used_hourly_open_time_ms": 1775908800000,
+          "last_used_hourly_close_time_ms": 1775912400000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.3190325547370632,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1775916000000,
+          "last_used_hourly_open_time_ms": 1775912400000,
+          "last_used_hourly_close_time_ms": 1775916000000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.41951922524854224,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1775919600000,
+          "last_used_hourly_open_time_ms": 1775916000000,
+          "last_used_hourly_close_time_ms": 1775919600000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.31665346726362414,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1775923200000,
+          "last_used_hourly_open_time_ms": 1775919600000,
+          "last_used_hourly_close_time_ms": 1775923200000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.24056624692899614,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1775926800000,
+          "last_used_hourly_open_time_ms": 1775923200000,
+          "last_used_hourly_close_time_ms": 1775926800000,
+          "label": "entry",
+          "raw_entry_score": -0.34255300569542857,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 160,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.20538224225406834,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1774569600000,
+      "last_used_daily_open_time_ms": 1774483200000,
+      "decision_time_ms": 1774591200000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1774591200000,
+          "last_used_hourly_open_time_ms": 1774587600000,
+          "last_used_hourly_close_time_ms": 1774591200000,
+          "label": "entry",
+          "raw_entry_score": -0.2416100641323471,
+          "predicts_entry": false,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 161,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.7834896439918272,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1773619200000,
+      "last_used_daily_open_time_ms": 1773532800000,
+      "decision_time_ms": 1773630000000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1773619200000,
+          "last_used_hourly_open_time_ms": 1773615600000,
+          "last_used_hourly_close_time_ms": 1773619200000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.5156192211677427,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1773622800000,
+          "last_used_hourly_open_time_ms": 1773619200000,
+          "last_used_hourly_close_time_ms": 1773622800000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.4083524468156329,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1773626400000,
+          "last_used_hourly_open_time_ms": 1773622800000,
+          "last_used_hourly_close_time_ms": 1773626400000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.33445287061564183,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1773630000000,
+          "last_used_hourly_open_time_ms": 1773626400000,
+          "last_used_hourly_close_time_ms": 1773630000000,
+          "label": "entry",
+          "raw_entry_score": -0.20469669005421953,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 162,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.18075922746944983,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1772064000000,
+      "last_used_daily_open_time_ms": 1771977600000,
+      "decision_time_ms": 1772064000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1772064000000,
+          "last_used_hourly_open_time_ms": 1772060400000,
+          "last_used_hourly_close_time_ms": 1772064000000,
+          "label": "entry",
+          "raw_entry_score": 0.0425936726299153,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 164,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9325398981979136,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1770854400000,
+      "last_used_daily_open_time_ms": 1770768000000,
+      "decision_time_ms": 1770854400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1770854400000,
+          "last_used_hourly_open_time_ms": 1770850800000,
+          "last_used_hourly_close_time_ms": 1770854400000,
+          "label": "entry",
+          "raw_entry_score": 0.24399794620852672,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 165,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.053650328873739286,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1770163200000,
+      "last_used_daily_open_time_ms": 1770076800000,
+      "decision_time_ms": 1770174000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1770174000000,
+          "last_used_hourly_open_time_ms": 1770170400000,
+          "last_used_hourly_close_time_ms": 1770174000000,
+          "label": "entry",
+          "raw_entry_score": 0.34077076434381093,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 166,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.8698971626187677,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1769558400000,
+      "last_used_daily_open_time_ms": 1769472000000,
+      "decision_time_ms": 1769634000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1769634000000,
+          "last_used_hourly_open_time_ms": 1769630400000,
+          "last_used_hourly_close_time_ms": 1769634000000,
+          "label": "entry",
+          "raw_entry_score": -0.7245643224827489,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 167,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9836225465596647,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1767398400000,
+      "last_used_daily_open_time_ms": 1767312000000,
+      "decision_time_ms": 1767409200000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1767409200000,
+          "last_used_hourly_open_time_ms": 1767405600000,
+          "last_used_hourly_close_time_ms": 1767409200000,
+          "label": "entry",
+          "raw_entry_score": -0.2537227099509457,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 168,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9537300192767939,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1767225600000,
+      "last_used_daily_open_time_ms": 1767139200000,
+      "decision_time_ms": 1767240000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1767240000000,
+          "last_used_hourly_open_time_ms": 1767236400000,
+          "last_used_hourly_close_time_ms": 1767240000000,
+          "label": "entry",
+          "raw_entry_score": 0.5446027314458463,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 169,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.5939346025229147,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1766102400000,
+      "last_used_daily_open_time_ms": 1766016000000,
+      "decision_time_ms": 1766106000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1766106000000,
+          "last_used_hourly_open_time_ms": 1766102400000,
+          "last_used_hourly_close_time_ms": 1766106000000,
+          "label": "entry",
+          "raw_entry_score": 0.5824306781125091,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 170,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9432280588561084,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1765152000000,
+      "last_used_daily_open_time_ms": 1765065600000,
+      "decision_time_ms": 1765152000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1765152000000,
+          "last_used_hourly_open_time_ms": 1765148400000,
+          "last_used_hourly_close_time_ms": 1765152000000,
+          "label": "entry",
+          "raw_entry_score": 0.7310693653286005,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 171,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9144790382383523,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1764633600000,
+      "last_used_daily_open_time_ms": 1764547200000,
+      "decision_time_ms": 1764662400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1764662400000,
+          "last_used_hourly_open_time_ms": 1764658800000,
+          "last_used_hourly_close_time_ms": 1764662400000,
+          "label": "entry",
+          "raw_entry_score": 0.8109668975693509,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 172,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.2931189053508265,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1761523200000,
+      "last_used_daily_open_time_ms": 1761436800000,
+      "decision_time_ms": 1761530400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1761530400000,
+          "last_used_hourly_open_time_ms": 1761526800000,
+          "last_used_hourly_close_time_ms": 1761530400000,
+          "label": "entry",
+          "raw_entry_score": 0.43091887884268587,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 173,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9051447241465111,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1757203200000,
+      "last_used_daily_open_time_ms": 1757116800000,
+      "decision_time_ms": 1757206800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1757203200000,
+          "last_used_hourly_open_time_ms": 1757199600000,
+          "last_used_hourly_close_time_ms": 1757203200000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.745296662916724,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1757206800000,
+          "last_used_hourly_open_time_ms": 1757203200000,
+          "last_used_hourly_close_time_ms": 1757206800000,
+          "label": "entry",
+          "raw_entry_score": -0.6416717929417838,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 174,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.06847004989022103,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1756339200000,
+      "last_used_daily_open_time_ms": 1756252800000,
+      "decision_time_ms": 1756357200000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1756357200000,
+          "last_used_hourly_open_time_ms": 1756353600000,
+          "last_used_hourly_close_time_ms": 1756357200000,
+          "label": "entry",
+          "raw_entry_score": 0.5234803512856797,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 175,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9786606393425288,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1755302400000,
+      "last_used_daily_open_time_ms": 1755216000000,
+      "decision_time_ms": 1755345600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1755345600000,
+          "last_used_hourly_open_time_ms": 1755342000000,
+          "last_used_hourly_close_time_ms": 1755345600000,
+          "label": "entry",
+          "raw_entry_score": 0.8201323202700463,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 178,
+      "group": "WLD",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9833911292580267,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1754524800000,
+      "last_used_daily_open_time_ms": 1754438400000,
+      "decision_time_ms": 1754535600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1754535600000,
+          "last_used_hourly_open_time_ms": 1754532000000,
+          "last_used_hourly_close_time_ms": 1754535600000,
+          "label": "entry",
+          "raw_entry_score": 0.22692462096558952,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 179,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.1402891286232578,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1751241600000,
+      "last_used_daily_open_time_ms": 1751155200000,
+      "decision_time_ms": 1751241600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1751241600000,
+          "last_used_hourly_open_time_ms": 1751238000000,
+          "last_used_hourly_close_time_ms": 1751241600000,
+          "label": "entry",
+          "raw_entry_score": 1.613676865604017,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 180,
+      "group": "WLD",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.0923935564841883,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1739577600000,
+      "last_used_daily_open_time_ms": 1739491200000,
+      "decision_time_ms": 1739584800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1739584800000,
+          "last_used_hourly_open_time_ms": 1739581200000,
+          "last_used_hourly_close_time_ms": 1739584800000,
+          "label": "entry",
+          "raw_entry_score": 0.2715184106155698,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 278,
+      "group": "AVAX",
+      "author_direction": "short",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9898625850088711,
+      "direction_correct": false,
+      "entry_score_nonnegative": true,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1780358400000,
+      "last_used_daily_open_time_ms": 1780272000000,
+      "decision_time_ms": 1780380000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1780380000000,
+          "last_used_hourly_open_time_ms": 1780376400000,
+          "last_used_hourly_close_time_ms": 1780380000000,
+          "label": "entry",
+          "raw_entry_score": 0.5353425182525321,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 279,
+      "group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.920319342566986,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1773014400000,
+      "last_used_daily_open_time_ms": 1772928000000,
+      "decision_time_ms": 1773014400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1773014400000,
+          "last_used_hourly_open_time_ms": 1773010800000,
+          "last_used_hourly_close_time_ms": 1773014400000,
+          "label": "entry",
+          "raw_entry_score": 0.49611528896936247,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 280,
+      "group": "AVAX",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.051514860463968505,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1757808000000,
+      "last_used_daily_open_time_ms": 1757721600000,
+      "decision_time_ms": 1757829600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1757829600000,
+          "last_used_hourly_open_time_ms": 1757826000000,
+          "last_used_hourly_close_time_ms": 1757829600000,
+          "label": "entry",
+          "raw_entry_score": 0.828936072275302,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 281,
+      "group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.946640593969504,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1751068800000,
+      "last_used_daily_open_time_ms": 1750982400000,
+      "decision_time_ms": 1751072400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1751072400000,
+          "last_used_hourly_open_time_ms": 1751068800000,
+          "last_used_hourly_close_time_ms": 1751072400000,
+          "label": "entry",
+          "raw_entry_score": 0.27518792835226435,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 282,
+      "group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.92537108003731,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1757462400000,
+      "last_used_daily_open_time_ms": 1757376000000,
+      "decision_time_ms": 1757462400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1757462400000,
+          "last_used_hourly_open_time_ms": 1757458800000,
+          "last_used_hourly_close_time_ms": 1757462400000,
+          "label": "entry",
+          "raw_entry_score": 0.24399727425022288,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 283,
+      "group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.8903840085878068,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1753660800000,
+      "last_used_daily_open_time_ms": 1753574400000,
+      "decision_time_ms": 1753660800000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1753660800000,
+          "last_used_hourly_open_time_ms": 1753657200000,
+          "last_used_hourly_close_time_ms": 1753660800000,
+          "label": "entry",
+          "raw_entry_score": -0.6029170425079383,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 284,
+      "group": "AVAX",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9465824133706244,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1751068800000,
+      "last_used_daily_open_time_ms": 1750982400000,
+      "decision_time_ms": 1751072400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1751072400000,
+          "last_used_hourly_open_time_ms": 1751068800000,
+          "last_used_hourly_close_time_ms": 1751072400000,
+          "label": "entry",
+          "raw_entry_score": 0.27392227378207656,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 285,
+      "group": "AVAX",
+      "author_direction": "short",
+      "predicted_direction": "long",
+      "author_long_probability": 0.8802098770674915,
+      "direction_correct": false,
+      "entry_score_nonnegative": true,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1750464000000,
+      "last_used_daily_open_time_ms": 1750377600000,
+      "decision_time_ms": 1750510800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1750510800000,
+          "last_used_hourly_open_time_ms": 1750507200000,
+          "last_used_hourly_close_time_ms": 1750510800000,
+          "label": "entry",
+          "raw_entry_score": 0.639161617671849,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 286,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9830941989276367,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1780358400000,
+      "last_used_daily_open_time_ms": 1780272000000,
+      "decision_time_ms": 1780365600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1780365600000,
+          "last_used_hourly_open_time_ms": 1780362000000,
+          "last_used_hourly_close_time_ms": 1780365600000,
+          "label": "entry",
+          "raw_entry_score": 0.5875132358169789,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 287,
+      "group": "ONDO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.0811831049145206,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1779667200000,
+      "last_used_daily_open_time_ms": 1779580800000,
+      "decision_time_ms": 1779670800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1779670800000,
+          "last_used_hourly_open_time_ms": 1779667200000,
+          "last_used_hourly_close_time_ms": 1779670800000,
+          "label": "entry",
+          "raw_entry_score": 0.3231695426985687,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 288,
+      "group": "ONDO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.01732916867990214,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1778544000000,
+      "last_used_daily_open_time_ms": 1778457600000,
+      "decision_time_ms": 1778551200000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1778551200000,
+          "last_used_hourly_open_time_ms": 1778547600000,
+          "last_used_hourly_close_time_ms": 1778551200000,
+          "label": "entry",
+          "raw_entry_score": 0.740167296872934,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 289,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.6613385490008344,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1778112000000,
+      "last_used_daily_open_time_ms": 1778025600000,
+      "decision_time_ms": 1778140800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1778140800000,
+          "last_used_hourly_open_time_ms": 1778137200000,
+          "last_used_hourly_close_time_ms": 1778140800000,
+          "label": "entry",
+          "raw_entry_score": -0.9076807937073306,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 290,
+      "group": "ONDO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.05873257754864054,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1777248000000,
+      "last_used_daily_open_time_ms": 1777161600000,
+      "decision_time_ms": 1777258800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1777258800000,
+          "last_used_hourly_open_time_ms": 1777255200000,
+          "last_used_hourly_close_time_ms": 1777258800000,
+          "label": "entry",
+          "raw_entry_score": 0.6794380786587201,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 291,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9746563417871467,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1774310400000,
+      "last_used_daily_open_time_ms": 1774224000000,
+      "decision_time_ms": 1774371600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1774371600000,
+          "last_used_hourly_open_time_ms": 1774368000000,
+          "last_used_hourly_close_time_ms": 1774371600000,
+          "label": "entry",
+          "raw_entry_score": 0.8506605117972572,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 292,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.934547334538682,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1765152000000,
+      "last_used_daily_open_time_ms": 1765065600000,
+      "decision_time_ms": 1765152000000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1765152000000,
+          "last_used_hourly_open_time_ms": 1765148400000,
+          "last_used_hourly_close_time_ms": 1765152000000,
+          "label": "entry",
+          "raw_entry_score": 0.730111243852929,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 293,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.920972130726174,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1764633600000,
+      "last_used_daily_open_time_ms": 1764547200000,
+      "decision_time_ms": 1764662400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1764662400000,
+          "last_used_hourly_open_time_ms": 1764658800000,
+          "last_used_hourly_close_time_ms": 1764662400000,
+          "label": "entry",
+          "raw_entry_score": 0.6756628096941671,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 294,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9307137157015074,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1763769600000,
+      "last_used_daily_open_time_ms": 1763683200000,
+      "decision_time_ms": 1763787600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1763787600000,
+          "last_used_hourly_open_time_ms": 1763784000000,
+          "last_used_hourly_close_time_ms": 1763787600000,
+          "label": "entry",
+          "raw_entry_score": 0.4011393519503771,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 295,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9915718595519826,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1761177600000,
+      "last_used_daily_open_time_ms": 1761091200000,
+      "decision_time_ms": 1761177600000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1761177600000,
+          "last_used_hourly_open_time_ms": 1761174000000,
+          "last_used_hourly_close_time_ms": 1761177600000,
+          "label": "entry",
+          "raw_entry_score": 0.4536931215379427,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 296,
+      "group": "ONDO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9587782191418996,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1760745600000,
+      "last_used_daily_open_time_ms": 1760659200000,
+      "decision_time_ms": 1760745600000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1760745600000,
+          "last_used_hourly_open_time_ms": 1760742000000,
+          "last_used_hourly_close_time_ms": 1760745600000,
+          "label": "entry",
+          "raw_entry_score": 0.27012914608490163,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 297,
+      "group": "ONDO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.048444455511415886,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1758240000000,
+      "last_used_daily_open_time_ms": 1758153600000,
+      "decision_time_ms": 1758240000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1758240000000,
+          "last_used_hourly_open_time_ms": 1758236400000,
+          "last_used_hourly_close_time_ms": 1758240000000,
+          "label": "entry",
+          "raw_entry_score": 0.1568677274369532,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 298,
+      "group": "ONDO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.026939743436474848,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1752278400000,
+      "last_used_daily_open_time_ms": 1752192000000,
+      "decision_time_ms": 1752285600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1752285600000,
+          "last_used_hourly_open_time_ms": 1752282000000,
+          "last_used_hourly_close_time_ms": 1752285600000,
+          "label": "entry",
+          "raw_entry_score": 0.24608064043021957,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 299,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.945920733440454,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1782432000000,
+      "last_used_daily_open_time_ms": 1782345600000,
+      "decision_time_ms": 1782439200000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1782439200000,
+          "last_used_hourly_open_time_ms": 1782435600000,
+          "last_used_hourly_close_time_ms": 1782439200000,
+          "label": "entry",
+          "raw_entry_score": 0.561417563837683,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 300,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "short",
+      "author_long_probability": 0.041373146035124805,
+      "direction_correct": false,
+      "entry_score_nonnegative": true,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1778025600000,
+      "last_used_daily_open_time_ms": 1777939200000,
+      "decision_time_ms": 1778058000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1778058000000,
+          "last_used_hourly_open_time_ms": 1778054400000,
+          "last_used_hourly_close_time_ms": 1778058000000,
+          "label": "entry",
+          "raw_entry_score": 0.6120140641760157,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 301,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9568286147037561,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1775174400000,
+      "last_used_daily_open_time_ms": 1775088000000,
+      "decision_time_ms": 1775174400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1775174400000,
+          "last_used_hourly_open_time_ms": 1775170800000,
+          "last_used_hourly_close_time_ms": 1775174400000,
+          "label": "entry",
+          "raw_entry_score": 0.26533865514581123,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 302,
+      "group": "TAO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.05035767730351252,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1774483200000,
+      "last_used_daily_open_time_ms": 1774396800000,
+      "decision_time_ms": 1774486800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1774486800000,
+          "last_used_hourly_open_time_ms": 1774483200000,
+          "last_used_hourly_close_time_ms": 1774486800000,
+          "label": "entry",
+          "raw_entry_score": 0.12498899138668423,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 303,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.8941291791407363,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1772928000000,
+      "last_used_daily_open_time_ms": 1772841600000,
+      "decision_time_ms": 1772928000000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1772928000000,
+          "last_used_hourly_open_time_ms": 1772924400000,
+          "last_used_hourly_close_time_ms": 1772928000000,
+          "label": "entry",
+          "raw_entry_score": 1.1134174011905602,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 304,
+      "group": "TAO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.09515590246677576,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1770076800000,
+      "last_used_daily_open_time_ms": 1769990400000,
+      "decision_time_ms": 1770148800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1770148800000,
+          "last_used_hourly_open_time_ms": 1770145200000,
+          "last_used_hourly_close_time_ms": 1770148800000,
+          "label": "entry",
+          "raw_entry_score": 0.9074255152305304,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 305,
+      "group": "TAO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.09999563091218078,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1754352000000,
+      "last_used_daily_open_time_ms": 1754265600000,
+      "decision_time_ms": 1754352000000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1754352000000,
+          "last_used_hourly_open_time_ms": 1754348400000,
+          "last_used_hourly_close_time_ms": 1754352000000,
+          "label": "entry",
+          "raw_entry_score": 0.5061522072969424,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 306,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9722220822236772,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1749254400000,
+      "last_used_daily_open_time_ms": 1749168000000,
+      "decision_time_ms": 1749254400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1749254400000,
+          "last_used_hourly_open_time_ms": 1749250800000,
+          "last_used_hourly_close_time_ms": 1749254400000,
+          "label": "entry",
+          "raw_entry_score": 0.703992622540835,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 308,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.797603258752881,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1744329600000,
+      "last_used_daily_open_time_ms": 1744243200000,
+      "decision_time_ms": 1744383600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1744383600000,
+          "last_used_hourly_open_time_ms": 1744380000000,
+          "last_used_hourly_close_time_ms": 1744383600000,
+          "label": "entry",
+          "raw_entry_score": -0.05648823354103366,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 309,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9943279597155235,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1743724800000,
+      "last_used_daily_open_time_ms": 1743638400000,
+      "decision_time_ms": 1743764400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1743764400000,
+          "last_used_hourly_open_time_ms": 1743760800000,
+          "last_used_hourly_close_time_ms": 1743764400000,
+          "label": "entry",
+          "raw_entry_score": 1.0867904781423294,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 310,
+      "group": "TAO",
+      "author_direction": "long",
+      "predicted_direction": "short",
+      "author_long_probability": 0.45862074136935915,
+      "direction_correct": false,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1742688000000,
+      "last_used_daily_open_time_ms": 1742601600000,
+      "decision_time_ms": 1742688000000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1742688000000,
+          "last_used_hourly_open_time_ms": 1742684400000,
+          "last_used_hourly_close_time_ms": 1742688000000,
+          "label": "entry",
+          "raw_entry_score": -0.882364125414473,
+          "predicts_entry": false,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 313,
+      "group": "TAO",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.014729072825509079,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1738195200000,
+      "last_used_daily_open_time_ms": 1738108800000,
+      "decision_time_ms": 1738245600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1738245600000,
+          "last_used_hourly_open_time_ms": 1738242000000,
+          "last_used_hourly_close_time_ms": 1738245600000,
+          "label": "entry",
+          "raw_entry_score": 0.888164006072046,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 314,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9740017237933271,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1782691200000,
+      "last_used_daily_open_time_ms": 1782604800000,
+      "decision_time_ms": 1782691200000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1782691200000,
+          "last_used_hourly_open_time_ms": 1782687600000,
+          "last_used_hourly_close_time_ms": 1782691200000,
+          "label": "entry",
+          "raw_entry_score": 0.30349041096856316,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 315,
+      "group": "1000BONK",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.030966915684060316,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1780358400000,
+      "last_used_daily_open_time_ms": 1780272000000,
+      "decision_time_ms": 1780358400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1780358400000,
+          "last_used_hourly_open_time_ms": 1780354800000,
+          "last_used_hourly_close_time_ms": 1780358400000,
+          "label": "entry",
+          "raw_entry_score": 0.3881586572170426,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 316,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9099021356579601,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1778716800000,
+      "last_used_daily_open_time_ms": 1778630400000,
+      "decision_time_ms": 1778727600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1778727600000,
+          "last_used_hourly_open_time_ms": 1778724000000,
+          "last_used_hourly_close_time_ms": 1778727600000,
+          "label": "entry",
+          "raw_entry_score": 0.5042044170682998,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 317,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.991510088627803,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1775433600000,
+      "last_used_daily_open_time_ms": 1775347200000,
+      "decision_time_ms": 1775433600000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1775433600000,
+          "last_used_hourly_open_time_ms": 1775430000000,
+          "last_used_hourly_close_time_ms": 1775433600000,
+          "label": "entry",
+          "raw_entry_score": -0.6110540843261179,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 318,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9692089287971423,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1775174400000,
+      "last_used_daily_open_time_ms": 1775088000000,
+      "decision_time_ms": 1775174400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1775174400000,
+          "last_used_hourly_open_time_ms": 1775170800000,
+          "last_used_hourly_close_time_ms": 1775174400000,
+          "label": "entry",
+          "raw_entry_score": 0.4123208603086524,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 319,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9541462906497666,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1774828800000,
+      "last_used_daily_open_time_ms": 1774742400000,
+      "decision_time_ms": 1774828800000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1774828800000,
+          "last_used_hourly_open_time_ms": 1774825200000,
+          "last_used_hourly_close_time_ms": 1774828800000,
+          "label": "entry",
+          "raw_entry_score": 0.42643496727362645,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 320,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "short",
+      "author_long_probability": 0.13698493066006107,
+      "direction_correct": false,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1774224000000,
+      "last_used_daily_open_time_ms": 1774137600000,
+      "decision_time_ms": 1774256400000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1774256400000,
+          "last_used_hourly_open_time_ms": 1774252800000,
+          "last_used_hourly_close_time_ms": 1774256400000,
+          "label": "entry",
+          "raw_entry_score": -0.7288344367104401,
+          "predicts_entry": false,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 321,
+      "group": "1000BONK",
+      "author_direction": "short",
+      "predicted_direction": "short",
+      "author_long_probability": 0.18683858962511904,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1765324800000,
+      "last_used_daily_open_time_ms": 1765238400000,
+      "decision_time_ms": 1765396800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1765396800000,
+          "last_used_hourly_open_time_ms": 1765393200000,
+          "last_used_hourly_close_time_ms": 1765396800000,
+          "label": "entry",
+          "raw_entry_score": 1.1964779303783752,
+          "predicts_entry": true,
+          "features_direction": "short"
+        }
+      ]
+    },
+    {
+      "scenario_id": 322,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.988227918429508,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1761696000000,
+      "last_used_daily_open_time_ms": 1761609600000,
+      "decision_time_ms": 1761724800000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1761724800000,
+          "last_used_hourly_open_time_ms": 1761721200000,
+          "last_used_hourly_close_time_ms": 1761724800000,
+          "label": "entry",
+          "raw_entry_score": 0.35969917715203176,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 323,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9275671831911498,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1751673600000,
+      "last_used_daily_open_time_ms": 1751587200000,
+      "decision_time_ms": 1751727600000,
+      "entry_resolution": "pre_hour_proxy_not_exact_intrabar_entry",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1751706000000,
+          "last_used_hourly_open_time_ms": 1751702400000,
+          "last_used_hourly_close_time_ms": 1751706000000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.44511969288073305,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1751709600000,
+          "last_used_hourly_open_time_ms": 1751706000000,
+          "last_used_hourly_close_time_ms": 1751709600000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.32438029433090465,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1751713200000,
+          "last_used_hourly_open_time_ms": 1751709600000,
+          "last_used_hourly_close_time_ms": 1751713200000,
+          "label": "verified_wait",
+          "raw_entry_score": -0.04830959052186523,
+          "predicts_entry": false,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1751716800000,
+          "last_used_hourly_open_time_ms": 1751713200000,
+          "last_used_hourly_close_time_ms": 1751716800000,
+          "label": "verified_wait",
+          "raw_entry_score": 0.02112720612806293,
+          "predicts_entry": true,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1751720400000,
+          "last_used_hourly_open_time_ms": 1751716800000,
+          "last_used_hourly_close_time_ms": 1751720400000,
+          "label": "verified_wait",
+          "raw_entry_score": 0.008212667199711282,
+          "predicts_entry": true,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1751724000000,
+          "last_used_hourly_open_time_ms": 1751720400000,
+          "last_used_hourly_close_time_ms": 1751724000000,
+          "label": "verified_wait",
+          "raw_entry_score": 0.06443014439215632,
+          "predicts_entry": true,
+          "features_direction": "long"
+        },
+        {
+          "state_close_time_ms": 1751727600000,
+          "last_used_hourly_open_time_ms": 1751724000000,
+          "last_used_hourly_close_time_ms": 1751727600000,
+          "label": "entry",
+          "raw_entry_score": 0.0869855124497787,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 324,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.870021175887427,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1747526400000,
+      "last_used_daily_open_time_ms": 1747440000000,
+      "decision_time_ms": 1747526400000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1747526400000,
+          "last_used_hourly_open_time_ms": 1747522800000,
+          "last_used_hourly_close_time_ms": 1747526400000,
+          "label": "entry",
+          "raw_entry_score": 0.26311785944866956,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 325,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9768561612750682,
+      "direction_correct": true,
+      "entry_score_nonnegative": true,
+      "joint_correct": true,
+      "daily_information_cutoff_ms": 1742169600000,
+      "last_used_daily_open_time_ms": 1742083200000,
+      "decision_time_ms": 1742169600000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1742169600000,
+          "last_used_hourly_open_time_ms": 1742166000000,
+          "last_used_hourly_close_time_ms": 1742169600000,
+          "label": "entry",
+          "raw_entry_score": 0.6066342632170642,
+          "predicts_entry": true,
+          "features_direction": "long"
+        }
+      ]
+    },
+    {
+      "scenario_id": 326,
+      "group": "1000BONK",
+      "author_direction": "long",
+      "predicted_direction": "long",
+      "author_long_probability": 0.9601442392692222,
+      "direction_correct": true,
+      "entry_score_nonnegative": false,
+      "joint_correct": false,
+      "daily_information_cutoff_ms": 1736812800000,
+      "last_used_daily_open_time_ms": 1736726400000,
+      "decision_time_ms": 1736812800000,
+      "entry_resolution": "closed_hourly_bar",
+      "entry_label_source": "reviewed_author_entry_anchor",
+      "author_exact_execution_hour_verified": null,
+      "earliest_OR_execution_verified": null,
+      "state_results": [
+        {
+          "state_close_time_ms": 1736812800000,
+          "last_used_hourly_open_time_ms": 1736809200000,
+          "last_used_hourly_close_time_ms": 1736812800000,
+          "label": "entry",
+          "raw_entry_score": -0.2859351291410252,
+          "predicts_entry": false,
+          "features_direction": "long"
+        }
+      ]
+    }
+  ],
+  "model_sha256": {
+    "direction_model.json": "9bdc003e37eef815ac4f3b78dcf5c1d48640725dd5bad4668bbaf22fe827ac3b",
+    "scenario_model.json": "bf64c7fe03fe1d1b3ffb79efed4f7c8c929910d4858d833f318f37f92ec2d6d9"
+  },
+  "training_report_sha256": "73d9da551a6ed185c2b225eb05ab86d77e0bd707cd92e3c5e5d254e7a9f4f2ef",
+  "evaluation_code_sha256": "564c3c06409974c5d6b31536d82398e1dec07ea212952cb377d3b88761e22b6c",
+  "market_cache_validation_code_sha256": "1f098e37b8588e727282e5f66ca8b32b520931ba5ed70cf3c480afaea18ae132"
+}

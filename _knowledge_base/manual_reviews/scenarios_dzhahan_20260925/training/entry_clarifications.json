@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-09-28T18:40:52.373884+00:00",
+  "pending_scenario_ids": [],
+  "source_sha256": {
+    "training/market_v2/ledger.jsonl": "00262f6504e2f00e72122746f323565fbc7bc75690dc1ff9238524f7f2d2dc77",
+    "training/market_hourly_alignment.jsonl": "86d3d2bf99c36cc0e15d9ad1f7c53e9f9487381ab471b8afdf6e3c0131818c76",
+    "visual_analysis/scenario_analysis.jsonl": "8ec8353bded6a41339b9092278cc21a4a2f3431a9faa567b4d5d97fa091a22d3",
+    "training/user_scope.json": "ec0f928bcfea07116055d2ae4aa2dbb83af3aab803754fce63b60813b1051cf0"
+  },
+  "review_sources_sha256": {
+    "training/anchor_reviews_001_153.jsonl": "99bbc00b4e89daed1e216e7e03f7d9a7adfae6d3d251e106135886d920d24681",
+    "training/anchor_reviews_154_305.jsonl": "217a816831945063239fbabbd3fc82a44101497ff91d02e84eba772962ca6905",
+    "training/anchor_reviews_306_409.jsonl": "2ec553e61626ea970112cfcb18b391863577d864e17d2ff7b2823b782b5437e5",
+    "training/anchor_reviews_expansion_20260927.jsonl": "0d98561f044ab037743c59d84a98d16b14a472afe8167e85e77a8e528d302394",
+    "training/anchor_reviews_market_001_153.jsonl": "defc17af5a0b43a7b02b5004cde6dc9bea7a435649b5df838866b82935bedcd6",
+    "training/anchor_reviews_market_154_409.jsonl": "48e2d21d533a31ae8affdda048221ec79237f04f9a9ed717c1330956ea5c68f6",
+    "training/anchor_reviews_resume_20260927.jsonl": "d20e93e66b08ef53d4c1efb91da75a5b1d09d9446ccdf09a8b33c12ec708b9dc",
+    "training/anchor_alignment_supplement_20260927.jsonl": "5d3229345e5e08709372fd7878ad1cdb21e8b510099d666f5245f1de68e51586",
+    "training/anchor_alignment_supplement_delayed_20260927.jsonl": "8cb6a6135b8bf70ed9647cfc6b475fe4caa4bab39ac344fe45e61a8376891fbd",
+    "training/anchor_alignment_supplement_market_recovery.jsonl": "cf87ed5e20cde397265a61b1d213a197b1b0dc81088a56984fd9db9c08d7e9ba",
+    "training/anchor_alignment_supplement_market_root_conditions.jsonl": "114f1a37e02e22c0778dfc2b183efa29b5f4fb4465cf0a27f1efe8750aedbf9c",
+    "training/anchor_alignment_supplement_market_snap_levels.jsonl": "0ad4161254c4c1eb9a44f186e6de6e56693859bb947d52138acdab331ced32a1",
+    "training/anchor_alignment_supplement_zz_market_conditions.jsonl": "f79a14961a10c28562760207a1e4b22c742c9386f2ac27eade3c87da56ce2ab7"
+  },
+  "rows": [],
+  "entry_labels_created": 0,
+  "author_response_required": false,
+  "markdown_sha256": "cd99a91756730749bd5a0a42471d6622bc582183b692af4c7363e6d5487f154d",
+  "resolved_by": "training/author_final_entry_corrections_20260929.json"
+}

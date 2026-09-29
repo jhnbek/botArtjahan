@@ -1,0 +1,965 @@
+{
+  "method": "pine_screenshot_5_150_50_closed_h1",
+  "individual_author_conditions_count": 8,
+  "caption_OR_branch_count": 1,
+  "rows": [
+    {
+      "scenario_id": 5,
+      "symbol": "BTCUSDT",
+      "direction": "long",
+      "daily_close_utc": "2026-04-20 00:00",
+      "entry_hour_open_utc": "2026-04-20 00:00",
+      "entry_hour_close_utc": "2026-04-20 01:00",
+      "level": 73771.47898643458,
+      "atr": 467.93999999999943,
+      "threshold_price": 74239.41898643458,
+      "source_images_sha256": {
+        "images/1D_5.jpg": "0f99362440688713212056d213411457998d8e04a38a13edb787e7d7d4e3ef9f",
+        "images/1H_5.jpg": "c6eb74c3a4cb1bd39385c8c294a2464063d43a9c7887b8875d005db95a0bf68f"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_BTCUSDT_1h_1775260800000_1777939200000.json",
+      "source_hourly_cache_sha256": "3e40449d02ac12684e228b197577efb03a667ea4ea34086da9db36ead0a25451",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 467.93999999999943,
+        "as_of_close_time_ms": 1776643200000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 459.56000000000057,
+        "selected_bar_open_times_ms": [
+          1776636000000,
+          1776632400000,
+          1776628800000,
+          1776625200000,
+          1776621600000
+        ],
+        "selected_bar_ranges": [
+          678.1999999999971,
+          478.6000000000058,
+          563.0,
+          303.1999999999971,
+          316.6999999999971
+        ],
+        "source_history_open_times_ms": [
+          1776607200000,
+          1776610800000,
+          1776614400000,
+          1776618000000,
+          1776621600000,
+          1776625200000,
+          1776628800000,
+          1776632400000,
+          1776636000000,
+          1776639600000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2026-04-20 00:00",
+          "atr": 467.93999999999943,
+          "threshold_price": 74239.41898643458,
+          "previous_closed_price": 73765.8,
+          "observed_hour_high": 74330.0,
+          "observed_hour_low": 73653.6,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 113,
+      "symbol": "XRPUSDT",
+      "direction": "long",
+      "daily_close_utc": "2025-11-10 00:00",
+      "entry_hour_open_utc": "2025-11-10 00:00",
+      "entry_hour_close_utc": "2025-11-10 01:00",
+      "level": 2.362144758197706,
+      "atr": 0.024240000000000084,
+      "threshold_price": 2.3863847581977065,
+      "source_images_sha256": {
+        "images/1D_113.jpg": "ed434b9d6a36655bebf749621aa1c0547ce79f2ea026f67f197f18a828fd5171",
+        "images/1H_113.jpg": "8179aad02de13f2d9637d523b33a54f10e02dfd8962d67f23cb0cb6ab855a903"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_XRPUSDT_1h_1760918400000_1764374400000.json",
+      "source_hourly_cache_sha256": "9942af3cbaf2316f6513f53765f4adb31ef37ca49a1ea1f8e45cfa20bf9c88c1",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 0.024240000000000084,
+        "as_of_close_time_ms": 1762732800000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 0.026900000000000014,
+        "selected_bar_open_times_ms": [
+          1762725600000,
+          1762722000000,
+          1762718400000,
+          1762714800000,
+          1762711200000
+        ],
+        "selected_bar_ranges": [
+          0.03210000000000024,
+          0.012599999999999945,
+          0.021199999999999886,
+          0.027000000000000135,
+          0.028300000000000214
+        ],
+        "source_history_open_times_ms": [
+          1762696800000,
+          1762700400000,
+          1762704000000,
+          1762707600000,
+          1762711200000,
+          1762714800000,
+          1762718400000,
+          1762722000000,
+          1762725600000,
+          1762729200000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "caption_condition_derived_ATR_branch",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2025-11-10 00:00",
+          "atr": 0.024240000000000084,
+          "threshold_price": 2.3863847581977065,
+          "previous_closed_price": 2.3653,
+          "observed_hour_high": 2.4278,
+          "observed_hour_low": 2.3448,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 142,
+      "symbol": "ZECUSDT",
+      "direction": "long",
+      "daily_close_utc": "2025-10-02 00:00",
+      "entry_hour_open_utc": "2025-10-02 04:00",
+      "entry_hour_close_utc": "2025-10-02 05:00",
+      "level": 130.03338897290084,
+      "atr": 6.440000000000003,
+      "threshold_price": 136.47338897290084,
+      "source_images_sha256": {
+        "images/1D_142.jpg": "a3e9c79dec6978dd4d5834fa48989407ee005c01f0c4fdd290d752d161a806ef",
+        "images/1H_142.jpg": "004057f582b54ffa741c650a0eb54b80b6add46fb1d08e7a8aaff1a82936c18a"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_ZECUSDT_1h_1757116800000_1760227200000.json",
+      "source_hourly_cache_sha256": "431de84ea2cec052f9390b751fb884660225ec1a14aa2c7e3a2d0f71e812960e",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 6.440000000000003,
+        "as_of_close_time_ms": 1759377600000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 6.806,
+        "selected_bar_open_times_ms": [
+          1759370400000,
+          1759366800000,
+          1759363200000,
+          1759359600000,
+          1759356000000
+        ],
+        "selected_bar_ranges": [
+          7.560000000000002,
+          5.359999999999999,
+          5.290000000000006,
+          6.75,
+          7.240000000000009
+        ],
+        "source_history_open_times_ms": [
+          1759341600000,
+          1759345200000,
+          1759348800000,
+          1759352400000,
+          1759356000000,
+          1759359600000,
+          1759363200000,
+          1759366800000,
+          1759370400000,
+          1759374000000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2025-10-02 00:00",
+          "atr": 9.579999999999998,
+          "threshold_price": 139.61338897290085,
+          "previous_closed_price": 120.84,
+          "observed_hour_high": 122.48,
+          "observed_hour_low": 117.19,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-10-02 01:00",
+          "atr": 8.309999999999999,
+          "threshold_price": 138.34338897290084,
+          "previous_closed_price": 118.81,
+          "observed_hour_high": 121.74,
+          "observed_hour_low": 116.38,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-10-02 02:00",
+          "atr": 6.748000000000002,
+          "threshold_price": 136.78138897290083,
+          "previous_closed_price": 120.32,
+          "observed_hour_high": 126.77,
+          "observed_hour_low": 119.21,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-10-02 03:00",
+          "atr": 6.200000000000003,
+          "threshold_price": 136.23338897290085,
+          "previous_closed_price": 124.25,
+          "observed_hour_high": 129.7,
+          "observed_hour_low": 120.63,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-10-02 04:00",
+          "atr": 6.440000000000003,
+          "threshold_price": 136.47338897290084,
+          "previous_closed_price": 122.2,
+          "observed_hour_high": 141.33,
+          "observed_hour_low": 120.75,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 177,
+      "symbol": "WLDUSDT",
+      "direction": "long",
+      "daily_close_utc": "2025-09-02 00:00",
+      "entry_hour_open_utc": "2025-09-02 01:00",
+      "entry_hour_close_utc": "2025-09-02 02:00",
+      "level": 0.8521599443436583,
+      "atr": 0.01374000000000002,
+      "threshold_price": 0.8658999443436582,
+      "source_images_sha256": {
+        "images/1D_177.jpg": "ceec12e971bfa44aadfc6a07455356162a1072338df079eeabcba438afcc6523",
+        "images/1H_177.jpg": "06b2fc8b3a37cbc38a355ef9c31bf15966562d93347ddf9829bf434d811378cf"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_WLDUSDT_1h_1755388800000_1757635200000.json",
+      "source_hourly_cache_sha256": "c413bb9218574c37d0e064ea08eb0d22a24a6e913af68b81f53149eeaf659c57",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 0.01374000000000002,
+        "as_of_close_time_ms": 1756774800000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 0.015980000000000015,
+        "selected_bar_open_times_ms": [
+          1756767600000,
+          1756764000000,
+          1756760400000,
+          1756760400000,
+          1756753200000
+        ],
+        "selected_bar_ranges": [
+          0.014599999999999946,
+          0.010600000000000054,
+          0.018900000000000028,
+          0.018900000000000028,
+          0.005700000000000038
+        ],
+        "source_history_open_times_ms": [
+          1756738800000,
+          1756742400000,
+          1756746000000,
+          1756749600000,
+          1756753200000,
+          1756756800000,
+          1756760400000,
+          1756764000000,
+          1756767600000,
+          1756771200000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2025-09-02 00:00",
+          "atr": 0.012560000000000038,
+          "threshold_price": 0.8647199443436583,
+          "previous_closed_price": 0.8547,
+          "observed_hour_high": 0.8566,
+          "observed_hour_low": 0.8511,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-09-02 01:00",
+          "atr": 0.01374000000000002,
+          "threshold_price": 0.8658999443436582,
+          "previous_closed_price": 0.8548,
+          "observed_hour_high": 0.866,
+          "observed_hour_low": 0.8504,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 185,
+      "symbol": "DOGEUSDT",
+      "direction": "long",
+      "daily_close_utc": "2026-03-16 00:00",
+      "entry_hour_open_utc": "2026-03-16 03:00",
+      "entry_hour_close_utc": "2026-03-16 04:00",
+      "level": 0.09791392365024373,
+      "atr": 0.0011780000000000041,
+      "threshold_price": 0.09909192365024373,
+      "source_images_sha256": {
+        "images/1D_185.jpg": "ce03818669f4ea999934af37472c260a05d67a556115d77112bfa441a9648afe",
+        "images/1H_185.jpg": "4f2c74ae23a450015340e7cc31b6a3086ea2801239a5306c2b4c41fcae03d9b0"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_DOGEUSDT_1h_1771977600000_1775174400000.json",
+      "source_hourly_cache_sha256": "21d9a81ee3e1e3a583dd5080adeb91bd641f8d20a2bd1fda896d8f3fea9dc603",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 0.0011780000000000041,
+        "as_of_close_time_ms": 1773630000000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 0.0014420000000000017,
+        "selected_bar_open_times_ms": [
+          1773622800000,
+          1773619200000,
+          1773615600000,
+          1773615600000,
+          1773608400000
+        ],
+        "selected_bar_ranges": [
+          0.0008800000000000058,
+          0.0009800000000000086,
+          0.0014900000000000052,
+          0.0014900000000000052,
+          0.0010499999999999954
+        ],
+        "source_history_open_times_ms": [
+          1773594000000,
+          1773597600000,
+          1773601200000,
+          1773604800000,
+          1773608400000,
+          1773612000000,
+          1773615600000,
+          1773619200000,
+          1773622800000,
+          1773626400000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2026-03-16 00:00",
+          "atr": 0.0013099999999999974,
+          "threshold_price": 0.09922392365024373,
+          "previous_closed_price": 0.09735,
+          "observed_hour_high": 0.09818,
+          "observed_hour_low": 0.0972,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-03-16 01:00",
+          "atr": 0.001124,
+          "threshold_price": 0.09903792365024373,
+          "previous_closed_price": 0.09794,
+          "observed_hour_high": 0.09814,
+          "observed_hour_low": 0.09726,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-03-16 02:00",
+          "atr": 0.0011880000000000029,
+          "threshold_price": 0.09910192365024374,
+          "previous_closed_price": 0.09759,
+          "observed_hour_high": 0.09845,
+          "observed_hour_low": 0.09701,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-03-16 03:00",
+          "atr": 0.0011780000000000041,
+          "threshold_price": 0.09909192365024373,
+          "previous_closed_price": 0.09809,
+          "observed_hour_high": 0.10141,
+          "observed_hour_low": 0.09779,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 200,
+      "symbol": "ADAUSDT",
+      "direction": "long",
+      "daily_close_utc": "2026-01-05 00:00",
+      "entry_hour_open_utc": "2026-01-05 15:00",
+      "entry_hour_close_utc": "2026-01-05 16:00",
+      "level": 0.40761936856986647,
+      "atr": 0.0040000000000000036,
+      "threshold_price": 0.4116193685698665,
+      "source_images_sha256": {
+        "images/1D_200.jpg": "20640da7f7f0c329a612d1b2106c75cd3654e2cd0b9e50422691956e07630740",
+        "images/1H_200.jpg": "c9f09de946eab356aa8240ab736240d9296bce8b49dfde68768530e4934b6cda"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_ADAUSDT_1h_1765411200000_1770076800000.json",
+      "source_hourly_cache_sha256": "8c8c165cbd82549e962acb0550f54662191e0d14662fec4ad9bbbeec796c17a9",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 0.0040000000000000036,
+        "as_of_close_time_ms": 1767625200000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 0.005479999999999996,
+        "selected_bar_open_times_ms": [
+          1767618000000,
+          1767614400000,
+          1767610800000,
+          1767607200000,
+          1767603600000
+        ],
+        "selected_bar_ranges": [
+          0.0050000000000000044,
+          0.003699999999999981,
+          0.003400000000000014,
+          0.0040999999999999925,
+          0.0038000000000000256
+        ],
+        "source_history_open_times_ms": [
+          1767589200000,
+          1767592800000,
+          1767596400000,
+          1767600000000,
+          1767603600000,
+          1767607200000,
+          1767610800000,
+          1767614400000,
+          1767618000000,
+          1767621600000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2026-01-05 00:00",
+          "atr": 0.004700000000000015,
+          "threshold_price": 0.4123193685698665,
+          "previous_closed_price": 0.4005,
+          "observed_hour_high": 0.4032,
+          "observed_hour_low": 0.3976,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 01:00",
+          "atr": 0.0044800000000000065,
+          "threshold_price": 0.41209936856986645,
+          "previous_closed_price": 0.4014,
+          "observed_hour_high": 0.4077,
+          "observed_hour_low": 0.4006,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 02:00",
+          "atr": 0.004559999999999997,
+          "threshold_price": 0.4121793685698665,
+          "previous_closed_price": 0.406,
+          "observed_hour_high": 0.4071,
+          "observed_hour_low": 0.4007,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 03:00",
+          "atr": 0.0052399999999999895,
+          "threshold_price": 0.41285936856986644,
+          "previous_closed_price": 0.404,
+          "observed_hour_high": 0.4053,
+          "observed_hour_low": 0.4019,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 04:00",
+          "atr": 0.005499999999999994,
+          "threshold_price": 0.4131193685698665,
+          "previous_closed_price": 0.403,
+          "observed_hour_high": 0.4033,
+          "observed_hour_low": 0.3936,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 05:00",
+          "atr": 0.005379999999999996,
+          "threshold_price": 0.41299936856986647,
+          "previous_closed_price": 0.3971,
+          "observed_hour_high": 0.4006,
+          "observed_hour_low": 0.3959,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 06:00",
+          "atr": 0.00626000000000001,
+          "threshold_price": 0.41387936856986646,
+          "previous_closed_price": 0.3977,
+          "observed_hour_high": 0.3998,
+          "observed_hour_low": 0.3951,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 07:00",
+          "atr": 0.00526000000000002,
+          "threshold_price": 0.4128793685698665,
+          "previous_closed_price": 0.3994,
+          "observed_hour_high": 0.4025,
+          "observed_hour_low": 0.3987,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 08:00",
+          "atr": 0.004780000000000018,
+          "threshold_price": 0.4123993685698665,
+          "previous_closed_price": 0.4009,
+          "observed_hour_high": 0.4038,
+          "observed_hour_low": 0.3981,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 09:00",
+          "atr": 0.004260000000000019,
+          "threshold_price": 0.4118793685698665,
+          "previous_closed_price": 0.3982,
+          "observed_hour_high": 0.3992,
+          "observed_hour_low": 0.3954,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 10:00",
+          "atr": 0.004720000000000013,
+          "threshold_price": 0.41233936856986647,
+          "previous_closed_price": 0.3962,
+          "observed_hour_high": 0.3999,
+          "observed_hour_low": 0.3958,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 11:00",
+          "atr": 0.004540000000000011,
+          "threshold_price": 0.41215936856986646,
+          "previous_closed_price": 0.3977,
+          "observed_hour_high": 0.3997,
+          "observed_hour_low": 0.3963,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 12:00",
+          "atr": 0.004420000000000002,
+          "threshold_price": 0.41203936856986645,
+          "previous_closed_price": 0.3996,
+          "observed_hour_high": 0.4018,
+          "observed_hour_low": 0.3981,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 13:00",
+          "atr": 0.004160000000000008,
+          "threshold_price": 0.41177936856986647,
+          "previous_closed_price": 0.4005,
+          "observed_hour_high": 0.4018,
+          "observed_hour_low": 0.3968,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 14:00",
+          "atr": 0.00414,
+          "threshold_price": 0.41175936856986645,
+          "previous_closed_price": 0.3982,
+          "observed_hour_high": 0.4083,
+          "observed_hour_low": 0.3971,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-01-05 15:00",
+          "atr": 0.0040000000000000036,
+          "threshold_price": 0.4116193685698665,
+          "previous_closed_price": 0.4036,
+          "observed_hour_high": 0.4141,
+          "observed_hour_low": 0.401,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 264,
+      "symbol": "BNBUSDT",
+      "direction": "long",
+      "daily_close_utc": "2026-04-22 00:00",
+      "entry_hour_open_utc": "2026-04-22 02:00",
+      "entry_hour_close_utc": "2026-04-22 03:00",
+      "level": 633.5660896752925,
+      "atr": 2.9399999999999635,
+      "threshold_price": 636.5060896752924,
+      "source_images_sha256": {
+        "images/1D_264.jpg": "77c44e02eb8be1563995d6c77e048eca467d09940ca56f4ead8d643c3eb721ba",
+        "images/1H_264.jpg": "6c0b928e085b31f17bfe2ba23e2713467287275d130501fcdf60119781c42c2b"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_BNBUSDT_1h_1775001600000_1778371200000.json",
+      "source_hourly_cache_sha256": "d0eea6cc33e1a2d32d9bba3dfa8a500f432f690fca8365af7a6dc59632107e6d",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 2.9399999999999635,
+        "as_of_close_time_ms": 1776823200000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 2.1799999999999953,
+        "selected_bar_open_times_ms": [
+          1776816000000,
+          1776812400000,
+          1776808800000,
+          1776808800000,
+          1776801600000
+        ],
+        "selected_bar_ranges": [
+          1.6000000000000227,
+          3.6000000000000227,
+          2.099999999999909,
+          2.099999999999909,
+          5.2999999999999545
+        ],
+        "source_history_open_times_ms": [
+          1776787200000,
+          1776790800000,
+          1776794400000,
+          1776798000000,
+          1776801600000,
+          1776805200000,
+          1776808800000,
+          1776812400000,
+          1776816000000,
+          1776819600000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2026-04-22 00:00",
+          "atr": 3.37999999999995,
+          "threshold_price": 636.9460896752925,
+          "previous_closed_price": 631.3,
+          "observed_hour_high": 632.9,
+          "observed_hour_low": 631.3,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-04-22 01:00",
+          "atr": 3.67999999999995,
+          "threshold_price": 637.2460896752924,
+          "previous_closed_price": 632.5,
+          "observed_hour_high": 632.7,
+          "observed_hour_low": 630.6,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2026-04-22 02:00",
+          "atr": 2.9399999999999635,
+          "threshold_price": 636.5060896752924,
+          "previous_closed_price": 632.1,
+          "observed_hour_high": 640.6,
+          "observed_hour_low": 632.1,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 307,
+      "symbol": "TAOUSDT",
+      "direction": "long",
+      "daily_close_utc": "2025-04-20 00:00",
+      "entry_hour_open_utc": "2025-04-20 06:00",
+      "entry_hour_close_utc": "2025-04-20 07:00",
+      "level": 298.5215256361096,
+      "atr": 5.795999999999992,
+      "threshold_price": 304.31752563610956,
+      "source_images_sha256": {
+        "images/1D_307.jpg": "f177b778ec4504b1697cf9c86230413e9dbbfdc992f2dbc023111f592d130ccb",
+        "images/1H_307.jpg": "6455d3ae165ffc646c669e8f0998dda08586f6ec13f0d599a0bd550d0e3875ac"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_TAOUSDT_1h_1742947200000_1745971200000.json",
+      "source_hourly_cache_sha256": "91d2d3bd7f82ce9568f46c039bc657e396871f6ea40e672a918136fd28e2d5c9",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 5.795999999999992,
+        "as_of_close_time_ms": 1745128800000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 6.459999999999991,
+        "selected_bar_open_times_ms": [
+          1745121600000,
+          1745118000000,
+          1745114400000,
+          1745110800000,
+          1745107200000
+        ],
+        "selected_bar_ranges": [
+          4.1299999999999955,
+          5.509999999999991,
+          6.579999999999984,
+          6.8799999999999955,
+          5.8799999999999955
+        ],
+        "source_history_open_times_ms": [
+          1745092800000,
+          1745096400000,
+          1745100000000,
+          1745103600000,
+          1745107200000,
+          1745110800000,
+          1745114400000,
+          1745118000000,
+          1745121600000,
+          1745125200000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2025-04-20 00:00",
+          "atr": 6.034000000000003,
+          "threshold_price": 304.55552563610956,
+          "previous_closed_price": 290.22,
+          "observed_hour_high": 294.17,
+          "observed_hour_low": 288.29,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-04-20 01:00",
+          "atr": 6.968000000000006,
+          "threshold_price": 305.4895256361096,
+          "previous_closed_price": 291.44,
+          "observed_hour_high": 297.88,
+          "observed_hour_low": 291.0,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-04-20 02:00",
+          "atr": 6.994000000000005,
+          "threshold_price": 305.5155256361096,
+          "previous_closed_price": 297.52,
+          "observed_hour_high": 298.7,
+          "observed_hour_low": 292.12,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-04-20 03:00",
+          "atr": 7.170000000000004,
+          "threshold_price": 305.6915256361096,
+          "previous_closed_price": 295.61,
+          "observed_hour_high": 299.39,
+          "observed_hour_low": 293.88,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-04-20 04:00",
+          "atr": 7.112,
+          "threshold_price": 305.6335256361096,
+          "previous_closed_price": 299.03,
+          "observed_hour_high": 299.29,
+          "observed_hour_low": 295.16,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-04-20 05:00",
+          "atr": 6.8559999999999945,
+          "threshold_price": 305.37752563610957,
+          "previous_closed_price": 297.76,
+          "observed_hour_high": 304.37,
+          "observed_hour_low": 295.17,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-04-20 06:00",
+          "atr": 5.795999999999992,
+          "threshold_price": 304.31752563610956,
+          "previous_closed_price": 303.38,
+          "observed_hour_high": 309.54,
+          "observed_hour_low": 302.25,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    },
+    {
+      "scenario_id": 312,
+      "symbol": "TAOUSDT",
+      "direction": "short",
+      "daily_close_utc": "2025-03-04 00:00",
+      "entry_hour_open_utc": "2025-03-04 01:00",
+      "entry_hour_close_utc": "2025-03-04 02:00",
+      "level": 298.57570144908453,
+      "atr": 9.651999999999987,
+      "threshold_price": 288.92370144908455,
+      "source_images_sha256": {
+        "images/1D_312.jpg": "5be3a010dacc620e01b3982f651f62fcea5ea58737f44d3551a55784d1c8a570",
+        "images/1H_312.jpg": "6b86a3bd892e78721a5381ab303c512e6dd0c9f4781d14ca85d4396c86985420"
+      },
+      "source_hourly_cache": "training/bybit_history/bybit_linear_TAOUSDT_1h_1739577600000_1743379200000.json",
+      "source_hourly_cache_sha256": "89e635fb8ff4568e0d974717df7a7a5bed47d85bf0ec97b19a888adb32a122f8",
+      "atr_evidence": {
+        "method": "pine_screenshot_5_150_50_closed_h1",
+        "value": 9.651999999999987,
+        "as_of_close_time_ms": 1741050000000,
+        "timeframe": "1H",
+        "period": 5,
+        "filter_lower": 0.5,
+        "filter_upper": 1.5,
+        "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+        "raw_last_five_mean": 8.445999999999993,
+        "selected_bar_open_times_ms": [
+          1741042800000,
+          1741039200000,
+          1741035600000,
+          1741032000000,
+          1741028400000
+        ],
+        "selected_bar_ranges": [
+          7.800000000000011,
+          7.25,
+          11.799999999999955,
+          8.569999999999993,
+          12.839999999999975
+        ],
+        "source_history_open_times_ms": [
+          1741014000000,
+          1741017600000,
+          1741021200000,
+          1741024800000,
+          1741028400000,
+          1741032000000,
+          1741035600000,
+          1741039200000,
+          1741042800000,
+          1741046400000
+        ],
+        "indicator_choice_individually_confirmed_by_author": false,
+        "source_excerpt_port_not_full_Pine_execution": true
+      },
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "author_exact_execution_hour_verified": false,
+      "pre_entry_trace": [
+        {
+          "hour_open_utc": "2025-03-04 00:00",
+          "atr": 10.659999999999979,
+          "threshold_price": 287.91570144908457,
+          "previous_closed_price": 295.04,
+          "observed_hour_high": 298.84,
+          "observed_hour_low": 292.03,
+          "reached": false,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        },
+        {
+          "hour_open_utc": "2025-03-04 01:00",
+          "atr": 9.651999999999987,
+          "threshold_price": 288.92370144908455,
+          "previous_closed_price": 292.77,
+          "observed_hour_high": 293.33,
+          "observed_hour_low": 279.26,
+          "reached": true,
+          "role_of_hour_OHLC": "teacher_label_only_not_predictor_input"
+        }
+      ]
+    }
+  ],
+  "models_retrained": true,
+  "source_sha256": {
+    "training/market_v2/cases.jsonl": "534f3ece7166a18acc574488d2be540bf38812d6b77459739f0593fe1eb3c8c8",
+    "training/market_v2/preparation_report.json": "de088a3af6f1e53c5b2d63e48c5eb6ad5b43b9f893f7d6e80d9010043adaee98",
+    "training/h1_atr_method.json": "16d625f1e2a8097ff62c9d559a8fc778ed1881e3ff1d0a4ca1618066a5fcb1e8",
+    "training/author_h1_atr_corrections_20260928.json": "2817a3315287995e7fa70f2ececf7e0a08680728546405e579e5fc3ae5040513",
+    "training/atr_condition_reviews.jsonl": "d0a710bf857b230423b101ae1837c8d504eab54f50a84a1db7527817d3145799"
+  }
+}

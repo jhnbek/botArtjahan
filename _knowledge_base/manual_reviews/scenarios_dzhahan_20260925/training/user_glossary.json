@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "source": "Explicit author clarification in the current conversation",
+  "terms": {
+    "ЛП": {
+      "meaning": "ложный пробой",
+      "concept": "false_breakout"
+    },
+    "ПН": {
+      "meaning": "паранормальный бар",
+      "concept": "paranormal_bar"
+    }
+  },
+  "case_sensitive": false,
+  "scope": "Interpretation of the author's scenario captions",
+  "daily_false_breakout_requires_daily_close": true,
+  "new_entry_labels_created": false,
+  "entry_time_overrides": {},
+  "paranormal_numeric_threshold_changed_by_this_clarification": false
+}

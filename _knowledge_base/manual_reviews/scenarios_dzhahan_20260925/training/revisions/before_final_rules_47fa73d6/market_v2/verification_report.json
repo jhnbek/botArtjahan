@@ -1,0 +1,29 @@
+{
+  "verified_at_utc": "2026-09-28T19:42:13.606928+00:00",
+  "original_images_verified": 817,
+  "original_image_hash_mismatches": 0,
+  "prepared_scenarios": 396,
+  "prepared_states": 511,
+  "current_provenance_verified": true,
+  "actual_fitted_normalization_matches_fit_only": true,
+  "new_H1_ATR_cases_recomputed": 9,
+  "trigger_H1_OHLC_excluded_from_features": true,
+  "all_ATR_source_intervals_close_before_or_at_decision": true,
+  "author_conditions_applied": true,
+  "individual_computed_hours_author_verified": false,
+  "focused_tests": {
+    "run": 38,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK"
+  },
+  "historical_full_suite": {
+    "run": 460,
+    "result": "OK",
+    "applies_to": "before_H1_ATR_change"
+  },
+  "model_sha256": {
+    "direction_model.json": "ec5fa6e4c237ec4c98adade67dd5a1cfe40734086c5346e4d1b0a550a720be6a",
+    "scenario_model.json": "7fd57c7c90cfee3846ab0afa04f3f318a9dfc0247cd44f3abf5f70ad57df13ce"
+  }
+}

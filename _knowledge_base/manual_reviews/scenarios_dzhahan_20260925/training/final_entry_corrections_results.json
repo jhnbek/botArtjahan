@@ -1,0 +1,242 @@
+{
+  "source_sha256": {
+    "training/author_final_entry_corrections_20260929.json": "6384f97543eac7f6c9203b5b75b5d7616e796ce2e80a39facd64f97e35d16bd9",
+    "training/chop_end_method.json": "d3a6348bc0914ddac3b914e36e12f8b9ea55774c262ebe2cf82bca3bc5ce56c9",
+    "training/user_scope.json": "ec0f928bcfea07116055d2ae4aa2dbb83af3aab803754fce63b60813b1051cf0",
+    "training/market_v2/cases.jsonl": "e644575264c74bb021461b50119ef0304f88847de6dac0870968de3da40e8ccf"
+  },
+  "rows": [
+    {
+      "scenario_id": 36,
+      "direction": "short",
+      "signal_D1_close_utc": "2025-07-22 00:00",
+      "annotated_D1_event_open_utc": "2025-07-21 00:00",
+      "entry_window_utc": [
+        "2025-07-22 01:00",
+        "2025-07-22 02:00"
+      ],
+      "level": 3820.77754272387,
+      "entry_label_source": "explicit_author_correction_author_selected_closest_of_first_hours",
+      "correction_evidence": {
+        "retrospective_author_label": true,
+        "executable_live_rule": false,
+        "author_selection_window_end_ms": 1753149600000,
+        "selected_hour_distance_to_level": 19.77754272386983,
+        "exact_intrabar_path_unknown": true
+      },
+      "source_images_sha256": {
+        "images/1D_36.jpg": "d55aa6cb5b343257b7c2a78f4531e185490bc63481e044e16f51ebc562b50f5f",
+        "images/1H_36.jpg": "2463dafc168bc91379aa3b4fcf0dab857fd20ccb3597cd054611a6e80abb50bb"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    },
+    {
+      "scenario_id": 44,
+      "direction": "short",
+      "signal_D1_close_utc": "2025-03-28 00:00",
+      "annotated_D1_event_open_utc": "2025-03-28 00:00",
+      "entry_window_utc": [
+        "2025-03-28 04:00",
+        "2025-03-28 05:00"
+      ],
+      "level": 1969.3846051015994,
+      "entry_label_source": "explicit_author_correction_first_level_breakout_after_daily_close",
+      "correction_evidence": {
+        "selected_authorized_branch": "immediate_level_breakout",
+        "alternative_H1_ATR_allowed": true,
+        "exact_intrabar_path_unknown": true
+      },
+      "source_images_sha256": {
+        "images/1D_44.jpg": "1e75211a07965f696f5147d26f75e14fea4b1b6d84f6193ba896816a27b5e754",
+        "images/1H_44.jpg": "fd69d41cc5a116c57ac49165eac62d43beaa28d5cf2bb692f8a6ef57cd1c1bba"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    },
+    {
+      "scenario_id": 58,
+      "direction": "long",
+      "signal_D1_close_utc": "2025-08-07 00:00",
+      "annotated_D1_event_open_utc": "2025-08-07 00:00",
+      "entry_window_utc": [
+        "2025-08-07 10:00",
+        "2025-08-07 11:00"
+      ],
+      "level": 115752.5778641366,
+      "entry_label_source": "explicit_author_correction_first_level_breakout_after_daily_close",
+      "correction_evidence": {
+        "selected_authorized_branch": "immediate_level_breakout",
+        "alternative_H1_ATR_allowed": true,
+        "exact_intrabar_path_unknown": true
+      },
+      "source_images_sha256": {
+        "images/1D_58.jpg": "25881aaf7eb31536889f3522e79eb3b24503b634874ea75c4ac725e587f9f525",
+        "images/1H_58.jpg": "f5f43e7d55b8e05bad3ef265bde3a67fdd0ccda7030fd54f4639ee313fd3f981"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    },
+    {
+      "scenario_id": 163,
+      "direction": "long",
+      "signal_D1_close_utc": "2026-02-24 00:00",
+      "annotated_D1_event_open_utc": "2026-02-23 00:00",
+      "entry_window_utc": [
+        "2026-02-24 04:00",
+        "2026-02-24 05:00"
+      ],
+      "level": 0.364151213700972,
+      "entry_label_source": "explicit_author_correction_first_approach_within_percent_after_daily_close",
+      "correction_evidence": {
+        "condition_zone_price_bounds": [
+          0.364151213700972,
+          0.36487951612837394
+        ],
+        "condition_hour_open_time_ms": 1771905600000,
+        "exact_intrabar_path_unknown": true
+      },
+      "source_images_sha256": {
+        "images/1D_163.jpg": "1fdf9339c226cc3526bef6d3e348549f8fe38899dcad409875239c9aef3560be",
+        "images/1H_163.jpg": "82d4daf6335f583861808316e8c4872c5cba1243ff3c718d408458205a5afb6e"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    },
+    {
+      "scenario_id": 176,
+      "direction": "long",
+      "signal_D1_close_utc": "2025-10-24 00:00",
+      "annotated_D1_event_open_utc": "2025-10-23 00:00",
+      "entry_window_utc": [
+        "2025-10-24 02:00",
+        "2025-10-24 02:00"
+      ],
+      "level": 0.8519630198021738,
+      "entry_label_source": "explicit_author_correction_after_author_selected_hourly_close",
+      "correction_evidence": {
+        "confirmation_bar_open_time_ms": 1761267600000
+      },
+      "source_images_sha256": {
+        "images/1D_176.jpg": "b6d4eda6beedb2afad0b12db6fca8f4e83bee274e232498c2713857d49933506",
+        "images/1H_176.jpg": "8cb2b6b37699c6f7f043bb0b1754284ea2a3665b653edd2c03275e1bf63499b4"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    },
+    {
+      "scenario_id": 247,
+      "direction": "long",
+      "signal_D1_close_utc": "2025-07-10 00:00",
+      "annotated_D1_event_open_utc": "2025-07-09 00:00",
+      "entry_window_utc": [
+        "2025-07-10 16:00",
+        "2025-07-10 17:00"
+      ],
+      "level": 0.2969449616681231,
+      "entry_label_source": "author_condition_derived_one_H1_ATR_from_level",
+      "correction_evidence": {
+        "hourly_atr": {
+          "method": "pine_screenshot_5_150_50_closed_h1",
+          "value": 0.0034599999999999965,
+          "as_of_close_time_ms": 1752163200000,
+          "timeframe": "1H",
+          "period": 5,
+          "filter_lower": 0.5,
+          "filter_upper": 1.5,
+          "branch": "previous_filter_passed_use_prior_slots_with_replacement",
+          "raw_last_five_mean": 0.0051400000000000005,
+          "selected_bar_open_times_ms": [
+            1752156000000,
+            1752156000000,
+            1752148800000,
+            1752145200000,
+            1752141600000
+          ],
+          "selected_bar_ranges": [
+            0.004699999999999982,
+            0.004699999999999982,
+            0.0029000000000000137,
+            0.0030999999999999917,
+            0.0019000000000000128
+          ],
+          "source_history_open_times_ms": [
+            1752127200000,
+            1752130800000,
+            1752134400000,
+            1752138000000,
+            1752141600000,
+            1752145200000,
+            1752148800000,
+            1752152400000,
+            1752156000000,
+            1752159600000
+          ],
+          "indicator_choice_individually_confirmed_by_author": false,
+          "source_excerpt_port_not_full_Pine_execution": true
+        },
+        "threshold_price": 0.30040496166812314,
+        "level_distance_origin": 0.2969449616681231,
+        "condition_already_met_at_boundary": false,
+        "threshold_recalculation": "after_each_closed_H1_then_frozen_during_next_hour",
+        "exact_intrabar_path_unknown": true,
+        "entry_hour_derived_under_project_ATR_convention": true
+      },
+      "source_images_sha256": {
+        "images/1D_247.jpg": "41f5ae4dcd3d33600f7a08d18f46dc8f1592ddc6d8e104d54e7401a2bf15bd8e",
+        "images/1H_247.jpg": "a17b833a643657be46267f1007302354a0f0ac2ad059cc3d6afdfaf6e5fe9055"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    },
+    {
+      "scenario_id": 256,
+      "direction": "short",
+      "signal_D1_close_utc": "2025-09-21 00:00",
+      "annotated_D1_event_open_utc": "2025-09-20 00:00",
+      "entry_window_utc": [
+        "2025-09-22 01:00",
+        "2025-09-22 01:00"
+      ],
+      "level": 23.07106440241765,
+      "entry_label_source": "caption_condition_derived_closed_branch",
+      "correction_evidence": {
+        "confirmation_bar_open_time_ms": 1758499200000,
+        "confirmation_bar_number": 25,
+        "strict_wick_separation": true,
+        "level_touch_does_not_confirm": true
+      },
+      "source_images_sha256": {
+        "images/1D_256.jpg": "beb165975d78d93470aa7f76002ece0ea4e22917634f73fe18c181e7829c7d97",
+        "images/1H_256.jpg": "54b9c31c7a7f240bfd7d2a1b2795dc11d55b93191c0ca07f4f7bac24062e3257"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    },
+    {
+      "scenario_id": 311,
+      "direction": "short",
+      "signal_D1_close_utc": "2025-03-29 00:00",
+      "annotated_D1_event_open_utc": "2025-03-28 00:00",
+      "entry_window_utc": [
+        "2025-03-29 06:00",
+        "2025-03-29 06:00"
+      ],
+      "level": 242.7397332305631,
+      "entry_label_source": "explicit_author_correction_first_full_bar_beyond_level_after_daily_close",
+      "correction_evidence": {
+        "confirmation_bar_open_time_ms": 1743224400000,
+        "confirmation_bar_number": 6,
+        "strict_wick_separation": true,
+        "level_touch_does_not_confirm": true
+      },
+      "source_images_sha256": {
+        "images/1D_311.jpg": "fb8313d7e2d32807eca9197ead6d50855ea96d5dd0649d4a86b40904cb175ae5",
+        "images/1H_311.jpg": "9b9b67dfe3f48a88eb2789509a37858d7fcc33254fdf53ddfc9bcbac28b5dd79"
+      },
+      "exact_execution_price": null,
+      "earlier_wait_labels_created": 0
+    }
+  ],
+  "pending_entry_ids": []
+}

@@ -1,0 +1,73 @@
+{
+  "audited_at_utc": "2026-09-28T18:42:16.068737+00:00",
+  "goal_complete": false,
+  "target_scenarios": 405,
+  "source_scenarios": 409,
+  "user_excluded": [
+    54,
+    59,
+    85,
+    109
+  ],
+  "original_images_verified": 817,
+  "source_scope_verified": true,
+  "entry_prepared": 387,
+  "entry_pending_ids": [
+    5,
+    23,
+    36,
+    44,
+    58,
+    113,
+    142,
+    163,
+    176,
+    177,
+    185,
+    200,
+    247,
+    256,
+    264,
+    307,
+    311,
+    312
+  ],
+  "pending_author_replacement_TVX": [],
+  "direction_prepared": 393,
+  "direction_fitted": 321,
+  "direction_test": 72,
+  "new_entry_labels_created": 23,
+  "required_missing_evidence": "Precise author entry timing/conditions for18 remaining ambiguous cases, including9 H1 ATR conditions.",
+  "blocker_revalidated": true,
+  "full_goal_requires_user_label_clarifications": true,
+  "focused_tests_passed": 25,
+  "actual_fitted_normalization_matches_fit_only": true,
+  "current_model_and_source_hashes_verified": true,
+  "source_reports": {
+    "user_scope.json": "ac713fe4a0ec9ed96502fac003e2435d2e3714222075ebe5e40d83a5eff844bc",
+    "market_v2/preparation_report.json": "2196d76dacee2ad9604f0ecaa3094590406659f012dbbb21aa931d4aa161de18",
+    "market_v2/training_report.json": "5bcdf0b1bf973d079e2467f20790f34b30b3b9c816269f79cf04f15010a6fcef",
+    "market_v2/pipeline_evaluation.json": "16aa91d164722112a544917a14e10c4c9b643679a5cb83a15b6801f2a1235dbd",
+    "market_direction_expanded/training_report.json": "a89590e22a33480bf3c409d1c2e77a4dd987e73af765daf78e39cfad7612c351",
+    "entry_clarifications.json": "534d82a1710bee19a340dba414610f8ee475356121598055f2e1562d39641108"
+  },
+  "full_suite_tests_passed": 460,
+  "blocked_audit": {
+    "condition": "Missing author-selected execution timing or H1 ATR convention for the same18 pending scenarios",
+    "consecutive_goal_turns_with_same_condition": 3,
+    "previous_goal_turn_classification": "progress: created source-bound clarification worksheet and independently checked23 corrected examples",
+    "current_goal_turn_classification": "no progress in coverage: authoritative sources and labels unchanged",
+    "new_author_overrides_for_pending_ids": false,
+    "safe_autonomous_label_assignment_available": false,
+    "clarification_sources_unchanged": true,
+    "required_next_external_event": "Author supplies requested entry hours/conditions or exact H1 ATR method",
+    "clarification_document": "entry_clarifications.md"
+  },
+  "requirements": {
+    "source_scope": "405 active after explicit exclusions54,59,85,109; all accounted in ledger",
+    "market_alignment_and_closed_feature_prefixes": "current prepared dataset and provenance valid",
+    "all_entry_examples_resolved": "incomplete:387 prepared,18 require author evidence",
+    "model_fit_and_held_out_evaluation": "completed for admitted subset;318 entry fit,69 test; does not satisfy full scope",
+    "reproducible_results_and_coverage_report": "saved with current model and source hashes"
+  }
+}

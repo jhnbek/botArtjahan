@@ -1,0 +1,13 @@
+{
+  "experiment": "relaxed_color_thresholds_without_decoder_change",
+  "accepted_for_training": false,
+  "reason": "No D1 coverage improvement and H1 decreased 146 to139; broad threshold captures volume pixels. No source code changed.",
+  "original_usable_D1": 174,
+  "original_usable_H1": 146,
+  "candidate_usable": {
+    "1D": 174,
+    "1H": 139
+  },
+  "recommended_next_step": "Match original screenshot to historical exchange OHLC; then align independently reviewed anchors.",
+  "daily_anchor_review_count": 27
+}

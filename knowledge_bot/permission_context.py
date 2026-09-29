@@ -197,6 +197,10 @@ def build_hard_gate_input(entry_report: dict[str, Any], manual_context: dict[str
     candidate_rejects = collect_hard_rejects(best)
 
     no_trade_gates: list[str] = []
+    daily_confirmation = entry_report.get('daily_confirmation')
+    if (entry_report.get('status') == 'waiting_for_daily_close'
+            or (daily_confirmation is not None and daily_confirmation.get('confirmed') is not True)):
+        no_trade_gates.append('daily_signal_not_confirmed')
     if best and best.get("status") == "reject":
         no_trade_gates.extend(candidate_rejects or ["entry_candidate_rejected"])
     if level.get("kb_hard_rejects"):

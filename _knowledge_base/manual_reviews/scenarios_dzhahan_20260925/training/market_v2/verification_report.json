@@ -1,0 +1,43 @@
+{
+  "verified_at_utc": "2026-09-29T07:50:40.998879+00:00",
+  "original_images_verified": 817,
+  "original_image_hash_mismatches": 0,
+  "prepared_scenarios": 404,
+  "prepared_states": 519,
+  "current_provenance_verified": true,
+  "actual_fitted_normalization_matches_fit_only": true,
+  "all_feature_vectors_recomputed": true,
+  "feature_audit": "full_corpus_feature_audit.json",
+  "normalization_audit": "../market_context_direction/verification_report.json",
+  "author_conditions_applied": true,
+  "new_final_entry_rules_applied": 8,
+  "H1_ATR_derived_entries": 10,
+  "individual_computed_ATR_hours_author_verified": false,
+  "trigger_H1_OHLC_excluded_from_features": true,
+  "full_suite": {
+    "run": 472,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK",
+    "log": "market_v2/final_corpus_tests.log",
+    "applies_to": "Full suite after final eight author-entry rules, before creation of context-direction module"
+  },
+  "new_context_module_tests": {
+    "run": 7,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK",
+    "test_module": "tests.test_market_context_direction",
+    "evidence": "Completed focused unittest command exit0 after Windows byte-hash regression fix; agent atr_method_binding",
+    "separate_from_full_suite": true
+  },
+  "source_sha256": {
+    "preparation_report.json": "77e763c67a3b776d456ca0c65ac741ecc22122e91b5b5c95069449cf69ae7731",
+    "cases.jsonl": "e644575264c74bb021461b50119ef0304f88847de6dac0870968de3da40e8ccf",
+    "direction_model.json": "c62551db1eb6c50a62d97f27266415d738215fd48b5f0533d3db64300ffbaf36",
+    "scenario_model.json": "6583a1b0fc4c4f25b47b61ea8c38782b6b46cc7981d8cca64b09b76b1939d48b",
+    "training_report.json": "997a4c929e138f374ae21ae4ee0b67265a278868cb46be14d83daa9b4ee398bd",
+    "pipeline_evaluation.json": "56208b10ae4529a928c30cab9b8ad52a116ec77c6e0cc613fd6debcc4d01566b",
+    "full_corpus_feature_audit.json": "413ed1cc013f7dd828f91f40b6214e521d9ce7cc43d194da3f195e18a21dc7eb"
+  }
+}

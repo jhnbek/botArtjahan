@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "identity": {
+    "symbol": "BTCUSDT",
+    "category": "linear",
+    "interval": "1d",
+    "start_ms": 1778284800000,
+    "end_ms_exclusive": 1778457600000,
+    "base_url": "https://api.bybit.com"
+  },
+  "fetched_at": "2026-09-27T20:42:58.290000Z",
+  "exchange_snapshot_ms": 1790534259727,
+  "pages": [
+    {
+      "request": {
+        "category": "linear",
+        "symbol": "BTCUSDT",
+        "interval": "D",
+        "start": 1778284800000,
+        "end": 1778457599999,
+        "limit": 1000
+      },
+      "exchange_time_ms": 1790534259727,
+      "rows": 2,
+      "response_sha256": "c491d78681b539bee6b30108291ca21b8d107fbcdc7a5dfe713482541ec95885"
+    }
+  ],
+  "bars": [
+    {
+      "open_time_ms": 1778284800000,
+      "close_time_ms": 1778371200000,
+      "open_time": "2026-05-09T00:00:00Z",
+      "close_time": "2026-05-10T00:00:00Z",
+      "open": 80158.1,
+      "high": 81049.9,
+      "low": 80083.0,
+      "close": 80628.0,
+      "volume": 21430.024,
+      "turnover": 1724401948.9917
+    },
+    {
+      "open_time_ms": 1778371200000,
+      "close_time_ms": 1778457600000,
+      "open_time": "2026-05-10T00:00:00Z",
+      "close_time": "2026-05-11T00:00:00Z",
+      "open": 80628.0,
+      "high": 82450.0,
+      "low": 80206.3,
+      "close": 82181.9,
+      "volume": 44667.358,
+      "turnover": 3625937847.1746
+    }
+  ],
+  "cache_sha256": "4c831463131532c492e77a4976a72bd273c3f96dc51428ef5af734f5c54a8849"
+}

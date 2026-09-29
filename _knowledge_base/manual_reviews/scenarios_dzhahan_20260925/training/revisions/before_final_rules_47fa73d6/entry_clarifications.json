@@ -1,0 +1,143 @@
+{
+  "created_utc": "2026-09-28T18:40:52.373884+00:00",
+  "pending_scenario_ids": [
+    36,
+    44,
+    58,
+    163,
+    176,
+    247,
+    256,
+    311
+  ],
+  "source_sha256": {
+    "training/market_v2/ledger.jsonl": "11697d8332bfd07853881efec3ad78423a73fe77937ca95cfd9e19623b6fb91b",
+    "training/market_hourly_alignment.jsonl": "86d3d2bf99c36cc0e15d9ad1f7c53e9f9487381ab471b8afdf6e3c0131818c76",
+    "visual_analysis/scenario_analysis.jsonl": "8ec8353bded6a41339b9092278cc21a4a2f3431a9faa567b4d5d97fa091a22d3",
+    "training/user_scope.json": "47fa73d6006f9b98e19086ccd7f8a17781920bfaad73aa26a6d3fd634b131a62"
+  },
+  "review_sources_sha256": {
+    "training/anchor_reviews_001_153.jsonl": "99bbc00b4e89daed1e216e7e03f7d9a7adfae6d3d251e106135886d920d24681",
+    "training/anchor_reviews_154_305.jsonl": "217a816831945063239fbabbd3fc82a44101497ff91d02e84eba772962ca6905",
+    "training/anchor_reviews_306_409.jsonl": "2ec553e61626ea970112cfcb18b391863577d864e17d2ff7b2823b782b5437e5",
+    "training/anchor_reviews_expansion_20260927.jsonl": "0d98561f044ab037743c59d84a98d16b14a472afe8167e85e77a8e528d302394",
+    "training/anchor_reviews_market_001_153.jsonl": "defc17af5a0b43a7b02b5004cde6dc9bea7a435649b5df838866b82935bedcd6",
+    "training/anchor_reviews_market_154_409.jsonl": "48e2d21d533a31ae8affdda048221ec79237f04f9a9ed717c1330956ea5c68f6",
+    "training/anchor_reviews_resume_20260927.jsonl": "d20e93e66b08ef53d4c1efb91da75a5b1d09d9446ccdf09a8b33c12ec708b9dc",
+    "training/anchor_alignment_supplement_20260927.jsonl": "5d3229345e5e08709372fd7878ad1cdb21e8b510099d666f5245f1de68e51586",
+    "training/anchor_alignment_supplement_delayed_20260927.jsonl": "8cb6a6135b8bf70ed9647cfc6b475fe4caa4bab39ac344fe45e61a8376891fbd",
+    "training/anchor_alignment_supplement_market_recovery.jsonl": "cf87ed5e20cde397265a61b1d213a197b1b0dc81088a56984fd9db9c08d7e9ba",
+    "training/anchor_alignment_supplement_market_root_conditions.jsonl": "114f1a37e02e22c0778dfc2b183efa29b5f4fb4465cf0a27f1efe8750aedbf9c",
+    "training/anchor_alignment_supplement_market_snap_levels.jsonl": "0ad4161254c4c1eb9a44f186e6de6e56693859bb947d52138acdab331ced32a1",
+    "training/anchor_alignment_supplement_zz_market_conditions.jsonl": "f79a14961a10c28562760207a1e4b22c742c9386f2ac27eade3c87da56ce2ab7"
+  },
+  "rows": [
+    {
+      "scenario_id": 36,
+      "symbol": "ETHUSDT",
+      "original_date_label": "21 ИЮЛЯ 2025",
+      "question": "Укажите час ТВХ или точное условие входа после закрытия D1: на H1 нет однозначной отметки исполнения.",
+      "source_review_file": "training/anchor_reviews_market_001_153.jsonl",
+      "source_review_reason": "H1 has only bars and the blue level: no entry arrow, TVX caption, or uniquely stated condition. D1 false-break prerequisites do not determine a unique H1 execution hour.",
+      "source_images_sha256": {
+        "images/1D_36.jpg": "d55aa6cb5b343257b7c2a78f4531e185490bc63481e044e16f51ebc562b50f5f",
+        "images/1H_36.jpg": "2463dafc168bc91379aa3b4fcf0dab857fd20ccb3597cd054611a6e80abb50bb"
+      },
+      "entry_label_created": false
+    },
+    {
+      "scenario_id": 44,
+      "symbol": "ETHUSDT",
+      "original_date_label": "28 МАРТА 2025",
+      "question": "Пробойный H1 начинается 28.03.2025 в 04:00 UTC. Вход внутри него или в 05:00 UTC после его закрытия? Вопрос уже отправлен в чате.",
+      "source_review_file": "training/anchor_reviews_001_153.jsonl",
+      "source_review_reason": "H1 arrow marks the level-break event near x684; surrounding labels are prerequisites, not an explicit TVX instruction. Cannot decide intrabar execution versus waiting for its close from this source.",
+      "source_images_sha256": {
+        "images/1D_44.jpg": "1e75211a07965f696f5147d26f75e14fea4b1b6d84f6193ba896816a27b5e754",
+        "images/1H_44.jpg": "fd69d41cc5a116c57ac49165eac62d43beaa28d5cf2bb692f8a6ef57cd1c1bba"
+      },
+      "entry_label_created": false
+    },
+    {
+      "scenario_id": 58,
+      "symbol": "BTCUSDT",
+      "original_date_label": "7 августа 2025",
+      "question": "Укажите час ТВХ или условие исполнения: прямоугольники показывают накопление, но не определяют единственный вход.",
+      "source_review_file": "training/anchor_reviews_market_001_153.jsonl",
+      "source_review_reason": "H1 has accumulation rectangles and working levels, but no TVX arrow or exact execution condition. D1 compression/breakout prerequisites do not uniquely select an H1 entry.",
+      "source_images_sha256": {
+        "images/1D_58.jpg": "25881aaf7eb31536889f3522e79eb3b24503b634874ea75c4ac725e587f9f525",
+        "images/1H_58.jpg": "f5f43e7d55b8e05bad3ef265bde3a67fdd0ccda7030fd54f4639ee313fd3f981"
+      },
+      "entry_label_created": false
+    },
+    {
+      "scenario_id": 163,
+      "symbol": "WLDUSDT",
+      "original_date_label": "23 февраля 2026",
+      "question": "Стрелка между H1 от 24.02.2026 03:00 и 04:00 UTC. Какой час выбран и вход внутри него или после закрытия?",
+      "source_review_file": "training/anchor_reviews_154_305.jsonl",
+      "source_review_reason": "Horizontal TVX arrow tip near x414 lies between stems near x407 and x418; both are plausible. Preserve the explicit entry region, but do not choose one hour arbitrarily.",
+      "source_images_sha256": {
+        "images/1D_163.jpg": "1fdf9339c226cc3526bef6d3e348549f8fe38899dcad409875239c9aef3560be",
+        "images/1H_163.jpg": "82d4daf6335f583861808316e8c4872c5cba1243ff3c718d408458205a5afb6e"
+      },
+      "entry_label_created": false
+    },
+    {
+      "scenario_id": 176,
+      "symbol": "WLDUSDT",
+      "original_date_label": "23 октября 2025",
+      "question": "Стрелка между H1 от 24.10.2025 01:00 и 02:00 UTC. Какой час выбран и вход внутри него или после закрытия?",
+      "source_review_file": "training/anchor_reviews_154_305.jsonl",
+      "source_review_reason": "Дневное закрытие x501 отдельно от стрелки ТВХ на небольшом откате x528 над уровнем. Закрытие часа как условие не указано; итог этого бара исключён.",
+      "source_images_sha256": {
+        "images/1D_176.jpg": "b6d4eda6beedb2afad0b12db6fca8f4e83bee274e232498c2713857d49933506",
+        "images/1H_176.jpg": "8cb2b6b37699c6f7f043bb0b1754284ea2a3665b653edd2c03275e1bf63499b4"
+      },
+      "entry_label_created": false
+    },
+    {
+      "scenario_id": 247,
+      "symbol": "ENAUSDT",
+      "original_date_label": "9 июля 2025",
+      "question": "Стрелка описывает накопление как предпосылку. Укажите ТВХ или точное условие исполнения после D1.",
+      "source_review_file": "training/anchor_reviews_market_154_409.jsonl",
+      "source_review_reason": "H1 arrow labels accumulation as a good breakout prerequisite. D1 close-near-level and compression text does not state immediate breakout, 1 ATR, or closed-hour entry. No independently marked TVX hour.",
+      "source_images_sha256": {
+        "images/1D_247.jpg": "41f5ae4dcd3d33600f7a08d18f46dc8f1592ddc6d8e104d54e7401a2bf15bd8e",
+        "images/1H_247.jpg": "a17b833a643657be46267f1007302354a0f0ac2ad059cc3d6afdfaf6e5fe9055"
+      },
+      "entry_label_created": false
+    },
+    {
+      "scenario_id": 256,
+      "symbol": "LINKUSDT",
+      "original_date_label": "20 сентября 2026",
+      "question": "Условие «полный бар ниже уровня ИЛИ 1 ATR» подписано TAKE: это тейк или опечатка вместо ТВХ? Если тейк, отдельно нужна ТВХ. Вопрос уже отправлен в чате.",
+      "source_review_file": "training/anchor_reviews_market_154_409.jsonl",
+      "source_review_reason": "H1 paragraph literally labels the full-bar-below OR 1-ATR condition as TAKE, not TVX. Another arrow marks absence of response to a false break. D1 text does not resolve whether TAKE is a typo; do not silently reinterpret it as entry.",
+      "source_images_sha256": {
+        "images/1D_256.jpg": "beb165975d78d93470aa7f76002ece0ea4e22917634f73fe18c181e7829c7d97",
+        "images/1H_256.jpg": "54b9c31c7a7f240bfd7d2a1b2795dc11d55b93191c0ca07f4f7bac24062e3257"
+      },
+      "entry_label_created": false
+    },
+    {
+      "scenario_id": 311,
+      "symbol": "TAOUSDT",
+      "original_date_label": "28 МАРТА 2025",
+      "question": "Какой H1-бар означает завершение проторговки и где ТВХ? Последующий сильный импульс не позволяет определить авторский вход однозначно.",
+      "source_review_file": "training/anchor_reviews_306_409.jsonl",
+      "source_review_reason": "Caption says enter after the level chop ends, but no TVX arrow or causal numerical definition of chop ending is supplied. Choosing the later sustained drop would use its future continuation.",
+      "source_images_sha256": {
+        "images/1D_311.jpg": "fb8313d7e2d32807eca9197ead6d50855ea96d5dd0649d4a86b40904cb175ae5",
+        "images/1H_311.jpg": "9b9b67dfe3f48a88eb2789509a37858d7fcc33254fdf53ddfc9bcbac28b5dd79"
+      },
+      "entry_label_created": false
+    }
+  ],
+  "entry_labels_created": 0,
+  "author_response_required": true,
+  "markdown_sha256": "4be66be384d058a8d7b8780ac7d7cb417c9ff7b623679d46e30f0d32eaeb7301"
+}

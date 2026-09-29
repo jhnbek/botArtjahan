@@ -1,0 +1,39 @@
+{
+  "verified_at_utc": "2026-09-29T10:11:33.199117+00:00",
+  "full_suite": {
+    "run": 492,
+    "failures": 0,
+    "errors": 0,
+    "result": "OK",
+    "exit_code": 0,
+    "unittest_seconds": 294.411,
+    "log": "market_v2/pre_publish_tests.log",
+    "log_sha256": "d032406e5bd52c82b008abe9983c8b4996416d3a7db4512f5cb8662abb877d19",
+    "command": ".venv312/Scripts/python.exe -m unittest discover -s tests -v",
+    "applies_to": "Entire current pre-publication suite including D1/H1 context and whole-approach rule"
+  },
+  "prepared_scenarios": 404,
+  "fitted_scenarios": 329,
+  "test_scenarios": 75,
+  "original_images": 817,
+  "models_retrained_during_publication": false,
+  "whole_approach_rule_integrated_into_models": false,
+  "artifact_hashes_verified": true,
+  "code_byte_portability": {
+    "referenced_python_modules_checked": 24,
+    "CRLF_normalization_mismatches": 0,
+    "method": "Git hash-object clean filters compared with raw blob hashes; current code already LF",
+    "manual_reviews_bytes_preserved_by_gitattributes": true
+  },
+  "source_sha256": {
+    "market_v2/preparation_report.json": "77e763c67a3b776d456ca0c65ac741ecc22122e91b5b5c95069449cf69ae7731",
+    "market_v2/scenario_model.json": "6583a1b0fc4c4f25b47b61ea8c38782b6b46cc7981d8cca64b09b76b1939d48b",
+    "market_context_direction/model.json": "4fff5d92332f5e9d44bdf14b385b3f23ad789b2dd1a78f81eabf177a421299b6",
+    "market_context_direction/training_report.json": "356368c39d831bfb5758c51239bdc9e85c22719ec327681bdb3ab396ca1e5114",
+    "market_context_direction/pipeline_evaluation.json": "a3ef8fdd456e47568ecb6042829040ea12be9cacccc606e7e0b2f809d767431c",
+    "NEXT_MODEL_TASKS.json": "ded06ba83d912db7ba960a614a4e6521af41728db866c41ff2635fc3b29436de",
+    "author_whole_approach_20260929.json": "48686a5ed1d5e454c434da2eca46e0b6a1c5e9ba8b71c752d4f6ab847a34b6d2",
+    "whole_approach_rule_examples.json": "28e6ed3fb003cb70face0ca04c7213bb395caa716089be090106dc1404e017bd",
+    "market_v2/pre_publish_tests.log": "d032406e5bd52c82b008abe9983c8b4996416d3a7db4512f5cb8662abb877d19"
+  }
+}

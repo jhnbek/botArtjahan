@@ -1,0 +1,66 @@
+{
+  "audited_at_utc": "2026-09-28T19:42:13.606928+00:00",
+  "goal_complete": false,
+  "target_scenarios": 404,
+  "source_scenarios": 409,
+  "user_excluded": [
+    23,
+    54,
+    59,
+    85,
+    109
+  ],
+  "original_images_verified": 817,
+  "source_scope_verified": true,
+  "entry_prepared": 396,
+  "entry_pending_ids": [
+    36,
+    44,
+    58,
+    163,
+    176,
+    247,
+    256,
+    311
+  ],
+  "pending_author_replacement_TVX": [],
+  "direction_prepared": 392,
+  "direction_fitted": 320,
+  "direction_test": 72,
+  "new_entry_labels_created": 9,
+  "required_missing_evidence": "Author execution timing/conditions for8 remaining ambiguous entries.",
+  "blocker_revalidated": false,
+  "full_goal_requires_user_label_clarifications": true,
+  "focused_tests_passed": 38,
+  "actual_fitted_normalization_matches_fit_only": true,
+  "current_model_and_source_hashes_verified": true,
+  "source_reports": {
+    "user_scope.json": "47fa73d6006f9b98e19086ccd7f8a17781920bfaad73aa26a6d3fd634b131a62",
+    "market_v2/preparation_report.json": "de088a3af6f1e53c5b2d63e48c5eb6ad5b43b9f893f7d6e80d9010043adaee98",
+    "market_v2/training_report.json": "05d40340468691a4bc91803bc2ae0eaa023e4460d41dd3021e0ce93c47136b17",
+    "market_v2/pipeline_evaluation.json": "e5155faf9e792400970e3f2616f515c3a3db2b7c081fb854343eee1331a945ba",
+    "market_direction_expanded/training_report.json": "ad353099b9cd370373c60614a35ff8f1949d956291d140c068b130dc9524c55d",
+    "entry_clarifications.json": "09b892a3659f9c9d128dd32ed5467333536604f25b44e0785dda7888cf48d978",
+    "h1_atr_method.json": "16d625f1e2a8097ff62c9d559a8fc778ed1881e3ff1d0a4ca1618066a5fcb1e8",
+    "h1_atr_entry_results.json": "7aaa4ad1e9863fcc409b85f67940e03cbc0505eb26baeaa5adf0a738e7e69d79"
+  },
+  "requirements": {
+    "source_scope": "404 active after explicit exclusions23,54,59,85,109; all accounted in ledger",
+    "market_alignment_and_closed_feature_prefixes": "current sources, code and caches verified;9 new H1 ATR cases independently recomputed without trigger-hour features",
+    "all_entry_examples_resolved": "incomplete:396 prepared,8 await author clarification",
+    "model_fit_and_held_out_evaluation": "completed on admitted subset:324 entry fit,72 test; full-scope completion not claimed",
+    "reproducible_results_and_coverage_report": "current hashes, source-bound H1 ATR convention and per-hour traces saved"
+  },
+  "prior_blocked_audit": {
+    "condition": "Missing author-selected execution timing or H1 ATR convention for the same18 pending scenarios",
+    "consecutive_goal_turns_with_same_condition": 3,
+    "previous_goal_turn_classification": "progress: created source-bound clarification worksheet and independently checked23 corrected examples",
+    "current_goal_turn_classification": "no progress in coverage: authoritative sources and labels unchanged",
+    "new_author_overrides_for_pending_ids": false,
+    "safe_autonomous_label_assignment_available": false,
+    "clarification_sources_unchanged": true,
+    "required_next_external_event": "Author supplies requested entry hours/conditions or exact H1 ATR method",
+    "clarification_document": "entry_clarifications.md"
+  },
+  "historical_full_suite_tests_passed_before_H1_ATR_change": 460
+}

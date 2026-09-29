@@ -1,0 +1,15 @@
+{
+  "target_pairs": 408,
+  "recorded": 408,
+  "user_skipped": [
+    85
+  ],
+  "accepted": 405,
+  "reasons": {
+    "matched_geometry": 405,
+    "no_confirmed_market_alignment": 3
+  },
+  "training_eligible": false,
+  "scope": "historical alignment only; decision anchors separately reviewed",
+  "matcher_sha256": "dfde4b4d4da09e69de6dedb798368700b5b34c08c2505ab144ab900865bf62da"
+}

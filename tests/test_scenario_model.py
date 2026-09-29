@@ -86,13 +86,16 @@ class ScenarioModelTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             path = Path(temp)/"model.json"
             path.write_text(json.dumps(artifact()), encoding="utf-8")
-            a = model.entry_timing_advice(history, 104., "long", as_of=cutoff, model_path=path)
-            b = model.entry_timing_advice(altered, 104., "long", as_of=cutoff, model_path=path)
+            a = model.entry_timing_advice(history, 104., "long", as_of=cutoff, model_path=path,
+                                         daily_signal_open_time="2024-12-31T00:00:00Z")
+            b = model.entry_timing_advice(altered, 104., "long", as_of=cutoff, model_path=path,
+                                         daily_signal_open_time="2024-12-31T00:00:00Z")
         self.assertEqual(a, b)
         self.assertEqual(a["status"], "research_only")
         self.assertEqual(a["closed_bars_used"], 21)
         self.assertEqual(a["decision_available_at"], "2025-01-01T21:00:00+00:00")
         self.assertLessEqual(a["compared_states"], 7)
+        self.assertTrue(math.isfinite(a["raw_entry_score"]))
         self.assertFalse(a["score_is_probability"])
 
     def test_timestamp_order_and_non_hourly_inputs_fail_closed(self):
@@ -105,12 +108,43 @@ class ScenarioModelTests(unittest.TestCase):
         result = model.entry_timing_advice(history, 102., "long", interval="1d")
         self.assertEqual(result["reason"], "model_trained_for_h1_only")
 
+    def test_daily_close_boundary_and_missing_confirmation(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path = Path(temp) / 'model.json'
+            path.write_text(json.dumps(artifact()), encoding='utf-8')
+            for cutoff, expected in (
+                ('2025-01-01T23:59:59Z', 'waiting_for_daily_close'),
+                ('2025-01-02T00:00:00Z', 'research_only'),
+                ('2025-01-02T00:00:01Z', 'research_only'),
+            ):
+                with self.subTest(cutoff=cutoff):
+                    advice = model.entry_timing_advice(
+                        bars(26), 104., 'long', as_of=cutoff, model_path=path,
+                        daily_signal_open_time='2025-01-01T00:00:00Z')
+                    self.assertEqual(advice['status'], expected)
+                    self.assertEqual(advice['action'], 'no_order')
+                    if expected == 'research_only':
+                        self.assertEqual(advice['closed_bars_used'], 24)
+                        self.assertEqual(advice['compared_states'], 1)
+                        self.assertTrue(math.isfinite(advice['raw_entry_score']))
+                    else:
+                        self.assertNotIn('raw_entry_score', advice)
+            for signal in (None, 'invalid'):
+                with self.subTest(signal=signal):
+                    advice = model.entry_timing_advice(
+                        bars(26), 104., 'long', as_of='2025-01-02T00:00:00Z',
+                        model_path=path, daily_signal_open_time=signal)
+                    self.assertEqual(advice['status'], 'abstain')
+                    self.assertNotIn('raw_entry_score', advice)
+
     def test_advice_is_an_added_field_never_a_new_entry_or_risk_decision(self):
         import entry_context as entries
         from level_discovery import Level
         from scn002_strict_kb_backtest import Bar
         history = [Bar(int(datetime.fromisoformat(b["open_time"]).timestamp()*1000),
                        b["open"], b["high"], b["low"], b["close"], 1.) for b in bars()]
+        daily = [Bar(int(datetime(2024, 12, 31, tzinfo=timezone.utc).timestamp()*1000),
+                     100., 106., 99., 104., 1.)]
         level = Level(102., 0, "2025-01-01T00:00:00Z", "support")
         candidate = dict(model="existing_entry", status="trigger", entry_price=104.,
                          stop_price=103., target_price=110., manual_review=[])
@@ -123,16 +157,60 @@ class ScenarioModelTests(unittest.TestCase):
              patch.object(entries, "build_bsu_bpu_candidate", return_value=candidate), \
              patch.object(entries, "build_primary_impulse_candidate", return_value=candidate):
             path = Path(temp)/"model.json"
-            with patch.object(entries, "SCENARIO_MODEL_PATH", path):
-                before = entries.build_entry_context("TEST", "1d", "1h", history, history,
+            with patch.object(entries, "SCENARIO_MODEL_PATH", path), \
+                 patch.object(entries, 'SCENARIO_DIRECTION_MODEL_PATH', Path(temp)/'missing-direction.json'):
+                before = entries.build_entry_context("TEST", "1d", "1h", daily, history,
                                                      [level], "auto", entries.EntryParams())
                 path.write_text(json.dumps(artifact()), encoding="utf-8")
-                after = entries.build_entry_context("TEST", "1d", "1h", history, history,
+                after = entries.build_entry_context("TEST", "1d", "1h", daily, history,
                                                     [level], "auto", entries.EntryParams())
         advice = after.pop("scenario_model")
         self.assertEqual(before, after)
+        self.assertEqual(before['status'], 'trigger')
+        self.assertEqual(before['best_entry'], candidate)
         self.assertEqual(advice["status"], "research_only")
+        self.assertTrue(math.isfinite(advice['raw_entry_score']))
         self.assertFalse(advice["changes_entry_or_risk_rules"])
+
+    def test_daily_gate_reaches_permission_and_close_does_not_create_an_entry(self):
+        import entry_context as entries
+        import permission_context as permissions
+        from level_discovery import Level
+        from scn002_strict_kb_backtest import Bar
+
+        history = [Bar(int(datetime.fromisoformat(b['open_time']).timestamp()*1000),
+                       b['open'], b['high'], b['low'], b['close'], 1.) for b in bars(24)]
+        daily = [Bar(int(datetime(2025, 1, 1, tzinfo=timezone.utc).timestamp()*1000),
+                     100., 106., 99., 104., 1.)]
+        level = Level(102., 0, '2025-01-01T00:00:00Z', 'support')
+        approach = dict(status='setup', atr=2., nearest_level=dict(price=102., kb_status='pass'))
+        for entry_status in ('setup', 'trigger'):
+            candidate = dict(model='existing_entry', status=entry_status, direction='long',
+                             entry_price=104., stop_price=103., target_price=110., manual_review=[])
+            with self.subTest(entry_status=entry_status), \
+                 patch.object(entries, 'build_approach_context', return_value=approach), \
+                 patch.object(entries, 'nearest_working_level', return_value=level), \
+                 patch.object(entries, 'scenario_from_approach',
+                              return_value=dict(direction='long', valid=True, family='breakout')), \
+                 patch.object(entries, 'build_fixation_candidate', return_value=candidate), \
+                 patch.object(entries, 'build_bsu_bpu_candidate', return_value=candidate), \
+                 patch.object(entries, 'build_primary_impulse_candidate', return_value=candidate):
+                before = entries.build_entry_context('TEST', '1d', '1h', daily, history[:23],
+                                                     [level], 'auto', entries.EntryParams())
+                after = entries.build_entry_context('TEST', '1d', '1h', daily, history,
+                                                    [level], 'auto', entries.EntryParams())
+            self.assertEqual(before['status'], 'waiting_for_daily_close')
+            self.assertFalse(before['scenario']['valid'])
+            self.assertTrue(all(c['status'] == 'waiting_for_daily_close'
+                                for c in before['entry_candidates']))
+            permission = permissions.build_permission_context(before)
+            self.assertIn('daily_signal_not_confirmed', permission['hard_gate_input']['no_trade_gates'])
+            self.assertEqual(permission['hard_gate']['status'], 'reject')
+            self.assertEqual(permission['advisor_status'], 'blocked')
+            self.assertEqual(after['status'], entry_status)
+            self.assertTrue(after['scenario']['valid'])
+            after_permission = permissions.build_permission_context(after)
+            self.assertNotIn('daily_signal_not_confirmed', after_permission['hard_gate_input']['no_trade_gates'])
 
 
 if __name__ == "__main__":

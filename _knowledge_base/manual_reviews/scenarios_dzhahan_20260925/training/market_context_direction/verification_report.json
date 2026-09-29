@@ -1,0 +1,49 @@
+{
+  "verified_at_utc": "2026-09-29T07:48:57.438623+00:00",
+  "all_target_404_context_vectors_recomputed": true,
+  "all_context_features_match": true,
+  "H1_current_and_future_bars_excluded": true,
+  "author_side_not_used_in_context_features": true,
+  "closed_D1_required": true,
+  "current_provenance_verified": true,
+  "normalizations": {
+    "market_context_direction/model.json": {
+      "fitted_scenarios": 329,
+      "test_scenarios": 75,
+      "fit_only_normalization_matches": true,
+      "sha256": "4fff5d92332f5e9d44bdf14b385b3f23ad789b2dd1a78f81eabf177a421299b6"
+    },
+    "market_v2/direction_model.json": {
+      "fitted_scenarios": 320,
+      "test_scenarios": 72,
+      "fit_only_normalization_matches": true,
+      "sha256": "c62551db1eb6c50a62d97f27266415d738215fd48b5f0533d3db64300ffbaf36"
+    },
+    "market_v2/scenario_model.json": {
+      "fitted_scenarios": 329,
+      "test_scenarios": 75,
+      "fit_only_normalization_matches": true,
+      "sha256": "6583a1b0fc4c4f25b47b61ea8c38782b6b46cc7981d8cca64b09b76b1939d48b"
+    },
+    "market_direction_expanded/direction_model.json": {
+      "fitted_scenarios": 320,
+      "test_scenarios": 72,
+      "fit_only_normalization_matches": true,
+      "sha256": "d8de84f160162fe3da3e556a9c5161ac97a51a2132703e8039c75b48c585c7c8"
+    }
+  },
+  "expanded_direction_vectors_equal_audited_base": true,
+  "full_test_75_direction_predictions_recomputed": true,
+  "direction_correct": 69,
+  "joint_correct": 52,
+  "verified_waits": 16,
+  "premature_entries": 8,
+  "html_rows": 404,
+  "html_sources_current": true,
+  "source_sha256": {
+    "cases.jsonl": "77a91a3ab6908a9a20dcec5341254da77ff8feff5f2a7ef4fc568f4aa4d09d63",
+    "model.json": "4fff5d92332f5e9d44bdf14b385b3f23ad789b2dd1a78f81eabf177a421299b6",
+    "training_report.json": "356368c39d831bfb5758c51239bdc9e85c22719ec327681bdb3ab396ca1e5114",
+    "pipeline_evaluation.json": "a3ef8fdd456e47568ecb6042829040ea12be9cacccc606e7e0b2f809d767431c"
+  }
+}

@@ -7,7 +7,10 @@ The caller must supply closed candles; a full-chart result is retrospective.
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from math import isclose, floor, log10
-from detector_prototype import is_paranormal_body
+try:
+    from .detector_prototype import is_paranormal_body
+except ImportError:
+    from detector_prototype import is_paranormal_body
 
 
 @dataclass(frozen=True)

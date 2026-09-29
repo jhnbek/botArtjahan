@@ -1,0 +1,25 @@
+# Local ATR method review
+
+The local evidence does **not yet identify one reproducible ATR algorithm for the author's H1 entry condition**. No new execution-rule module or inferred entry label was created. This is uncertainty about our reconstruction, not a rejection of the author's scenarios.
+
+This review distinguishes three different uses of the word ATR. Source byte hashes and exact evidence anchors are in [knowledge_atr_method_review.json](knowledge_atr_method_review.json).
+
+| Context | Verified local evidence | Consequence |
+| --- | --- | --- |
+| Existing paranormal-body detector | The 2026-09-25 user-methodology record explicitly retains the mean of 14 previous True Ranges, excluding the current bar, for the body >= 1.6 ATR threshold. | Preserve that detector's convention. It is not proof of the separate H1 entry convention. |
+| Existing numerical feature normalization | `features_from_ohlc` uses a simple mean of up to 14 previous True Ranges, excluding the decision bar; it explicitly is not Wilder ATR. | Preserve this causal numerical scale. Do not label it the author's five-bar trading ATR. |
+| Lecturer's manually calculated ATR | MM-008-002/004: average high-low ranges of 4–5 similar daily bars; skip unusually small/large bars. The demonstration goes farther back until five acceptable bars are collected. | This establishes selected comparable bars, not merely filtering a fixed last-five window. Initial reference and complete deterministic selection rules remain unspecified. |
+| Lecturer's ATR script | MM-040-024 and MM-059-003: input length 5, upper deviation 150%, lower 50%, filter enabled; demonstrated stop reference 0.1 ATR. Source-code screenshots were found. | The visible script has a different replacement algorithm from the manual description; a settings summary alone is insufficient to reproduce it. |
+| Author's H1 condition | Scenario reviews contain instructions to move one hourly ATR from the working level. | No inspected local source specifies which exact manual/script algorithm, inclusion boundary, or refresh rule the author used on H1. |
+
+The manual demonstration at 00:17:26–00:19:29 of lecture `1627fea…` explicitly skips small bars and continues backward to obtain five bars. It does not state an executable way to choose the initial representative range. Another remark uses 1.8 ATR for an abnormal large bar, whereas the later script settings show 1.5. These should not be merged into one invented filter.
+
+The Pine code is visible in the local image `knowledge/blobs/a7/a716a7e1532b2e8a46cdcc13a62a76c4d9367c052c332c826682f9948b8c8261`. It first computes the unfiltered five-bar mean. Each bar's filter condition compares its range against that bar's reference. If the immediately previous bar passed, the script loops over offsets 1…5; a rejected offset is filled using a passing **more recent** offset inside that range. Thus an accepted bar may be repeated. This does not select five older distinct normal bars. If the immediately previous bar failed, that replacement block is skipped. The current-bar raw mean is assigned earlier in the visible code. These are observations from a partial source screenshot, not a fully executed and validated Pine port. The `hi0` definition immediately above the viewport is not visible; the visible line is `lo0 = low`.
+
+The same screenshot has a source default stop multiplier of 0.2, while the lesson explicitly changes the setting to 0.1. A default found in code must not replace the demonstrated setting. The lessons also distinguish the previous daily close to current price movement from the normal range used as its denominator. A daily movement origin cannot silently become the working-level origin in an H1 entry condition.
+
+Stop evidence is clearer: the technical stop is behind the relevant structure, and for a false breakout behind its extreme after penetration and return. Ten percent of daily ATR is a reference for an ordinary intraday stop, not an exact stop label for every scenario. Position size uses money risk divided by actual stop distance. The exact buffer beyond the wick is not supplied by these general statements. Targets at 3R or 4R can be calculated only after an actual entry and structural stop are known; they are calculated objectives, not observed outcome labels.
+
+For training, keep explicit entry arrows and independently verified non-ATR alternatives. In an instruction of the form “full bar OR ATR”, a verified closed full-bar branch can stand on its own. Do not infer an ATR-only entry timestamp from ATR(14), silently average the last five ranges, or implement the visible script's unusual replacement behavior as the author's rule without a source binding. The remaining information needed is the author's H1 ATR convention: the exact five-bar selection/filter algorithm or indicator version/settings, which bars are available to the reference, and when that reference updates.
+
+All original images, knowledge items, existing feature/model files and entry labels were left unchanged by this review.
